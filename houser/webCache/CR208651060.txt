@@ -1,0 +1,2909 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Leonard Sullivan-Oklahoma County Assessor View Similar Sales Search</title>
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19780856-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body onload="FP_preloadImgs(/*url*/'button8A.jpg', /*url*/'button8B.jpg', /*url*/'button8D.jpg', /*url*/'button8E.jpg', /*url*/'button90.jpg', /*url*/'button91.jpg', /*url*/'button93.jpg', /*url*/'button94.jpg', /*url*/'button96.jpg', /*url*/'button97.jpg')">
+
+
+<script language="JavaScript">
+<!--
+
+if (document.images) {
+  image1on = new Image();
+  image1on.src = "../images/home_hover1.jpg";
+
+  image2on = new Image();
+  image2on.src = "../images/contact_hover.jpg";
+
+  image3on = new Image();
+  image3on.src = "../images/search_hover1.jpg";
+
+  image4on = new Image();
+  image4on.src = "../images/faq_hover.jpg";
+
+  image1off = new Image();
+  image1off.src = "../images/home_button1.jpg";
+
+  image2off = new Image();
+  image2off.src = "../images/contact_button.jpg";
+
+  image3off = new Image();
+  image3off.src = "../images/search_button1.jpg";
+
+  image4off = new Image();
+  image4off.src = "../images/faq_button.jpg";
+
+}
+
+function changeImages() {
+  if (document.images) {
+    for (var i=0; i<changeImages.arguments.length; i+=2) {
+      document[changeImages.arguments[i]].src = eval(changeImages.arguments[i+1] + ".src");
+    }
+  }
+}
+
+dayName = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+monName = new Array ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+now = new Date
+
+// -->
+</script>
+
+
+<table border="0" cellspacing="0" width="90%" cellpadding="0">
+  <tr>
+      <td width="771" valign="top" colspan="3">&nbsp;<b><font face="Verdana" size="1"> <SCRIPT LANGUAGE="JavaScript">
+document.write(dayName[now.getDay()] + ", " + monName[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear()  );
+        </script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leonard 
+		Sullivan-Oklahoma County Assessor Public Access System (Live Records)
+      </font></b></td>
+  </tr>
+  <tr>
+      <td width="188" valign="top">
+		<img border="0" src="Top_leftSearch.gif" width="188" height="109"></td>
+      <td width="100%" background="../dynamic-free/images/stretch_cell_bg1.gif" valign="top">&nbsp;</td>
+      <td width="583"><nobr>
+		<img border="0" src="../dynamic-free/images/topnav_buffer1.gif" width="29" height="109"><a onMouseOver="changeImages('image1', 'image1on')" onMouseOut="changeImages('image1', 'image1off')" href="http://www.oklahomacounty.org/assessor"><img name="image1" src="../dynamic-free/images/home_button1.jpg" alt="County Assessor Home Page" border=0 width="118" height="109"></a><a onMouseOver="changeImages('image2', 'image2on')" onMouseOut="changeImages('image2', 'image2off')" href="mailto:micmor@oklahomacounty.org?subject=Oklahoma County Assessor Website"><img name="image2" src="../dynamic-free/images/contact_button.jpg" alt="Contact Webmaster" border=0 width="117" height="109"></a><a onMouseOver="changeImages('image3', 'image3on')" onMouseOut="changeImages('image3', 'image3off')" href="http://www.oklahomacounty.org/assessor/SearchMethod.htm"><img name="image3" src="../dynamic-free/images/search_button1.jpg" alt="Available Search Methods" border=0 width="128" height="109"></a><a onMouseOver="changeImages('image4', 'image4on')" onMouseOut="changeImages('image4', 'image4off')" href="http://www.oklahomacounty.org/assessor/GeneralInfo.htm"><img name="image4" src="../dynamic-free/images/faq_button.jpg" alt="Frequently Asked Questions" border=0 width="126" height="109"></a><img border="0" src="../dynamic-free/images/top_right.gif" width="36" height="109"></nobr></td>
+  </tr>
+</table><table border="0" cellspacing="0" width="90%" cellpadding="0">
+<p>&nbsp;</br>
+<div align="left">
+  <center>
+  </table>
+<div align="left">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="724" height="76" bgcolor="#FFFFFF">
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="140" width="703" align="center" colspan="5" rowspan="7">
+      <table width="700" border="1" style="border:2px ridge #000000; border-collapse: collapse" bordercolor="#C0C0C0">
+		<thead>
+			<tr>
+				<th bgcolor="#666666" height="30" colspan="5" style="border-left:0px solid #FFFFFF; border-right:0px solid #FFFFFF; border-top:0px solid #FFFFFF; " background="../images/CompSaleBack.jpg">
+				<font color="#FFFFFF" size="5">Subject 
+				Property Information</font></th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000" height="20"><font size="2" color="#FFFFFF">Subject 
+				Account #</font></th>
+				<th bgcolor="#000000" height="20"><font size="2" color="#FFFFFF">Posted As 
+				Of</font></th>
+				<th bgcolor="#000000" height="20"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" height="20">
+				<font size="2" color="#FFFFFF">2012 Market Value</font></th>
+				<th bgcolor="#000000" height="20">
+				<font size="2" color="#FFFFFF">GIS/Map Link</font></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td height="19">
+				<p align="center"><font size="2">
+				R208651060</font></td>
+				<td height="19" bgcolor="#FFFFCC">
+				<p align="center"><font size="1">3/14/2012 7:05:17 PM</font></td>
+				<td height="19">
+				<p align="center"><font size="2">
+				13150   WHITEBUD PL</font></td>
+				<td height="19">
+				<p align="center"><font size="2">
+				June 2012</font></td>
+				</font></td>
+				<td align="center" height="19"><font size="2">
+				<input type="button" name="loc"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&qlyr=9&qzoom=true&qbuf=250&qhlt=true&qry=OKLAHOMA_SQL.PARCEL.PIN%3D%271239208651060%27');" value="Map Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+			</tr>
+			<tr>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;</font></td>
+				<td height="19">
+				<p align="center">&nbsp;</td>
+				<td rowspan="6" height="19" bgcolor="#FFFFCC">
+				<p align="center"><font size="2"><a target="_blank" href="Sketches/sketchfile/1239/R208651060001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651060001.jpg" width="112" height="90" align="top"></a></font><br>
+				<font size="2">Sketch</font></td>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Quality</font></td>
+				<td align="center" height="19"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Property Type</font></td>
+				<td height="19">
+				<p align="center"><font size="2">
+				Residential</font></td>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Built As</font></td>
+				<td align="center" height="19"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Subject Parcel #</font></td>
+				<td height="19">
+				<p align="center"><font size="2">
+				R208651060</font></td>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;# of Bedrooms</font></td>
+				<td align="center" height="19"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Subject Year Built</font></td>
+				<td height="19">
+				<p align="center"><font size="2" color="#0000FF">
+				2008</font></td>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;# of Baths</font></td>
+				<td align="center" height="19"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Total SQFT</font></td>
+				<td bgcolor="#CAE3FF" height="19">
+				<p align="center"><font size="2">
+				           2,247</font></td>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Exterior</font></td>
+				<td align="center" height="19"><font size="2">
+				Frame Masonry Veneer </font></td>
+			</tr>
+			<tr>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;Valued Per SQFT</font></td>
+				<td height="19">
+				<p align="center"><font size="2">
+				$     110.96</font></td>
+				<td height="19" bgcolor="#000000">
+				<font size="2" color="#FFFFFF">&nbsp;PIN Number&nbsp;</font></td>
+				<td align="center" height="19"><font size="2">
+				1239208651060</font></td>
+			</tr>
+			</tbody>
+		</table>
+		<p><font size="2">Sales are pulled over a 3 year period from current date:<br>
+		Using Built As and sorted by Sale Date, +/- 5 years of subject 
+		year built, +/- 20% sqft of subject, and Quality Rating</font></td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="143" align="center" style="border-top: 2px ridge #CC9900">
+      &nbsp;</td>
+      <td height="20" width="140" align="center" style="border-top: 2px ridge #CC9900">
+      &nbsp;</td>
+      <td height="20" width="140" align="center" style="border-top: 2px ridge #CC9900">
+      &nbsp;</td>
+      <td height="20" width="140" align="center" style="border-top: 2px ridge #CC9900">
+      &nbsp;</td>
+      <td height="20" width="140" align="center" style="border-top: 2px ridge #CC9900">
+      &nbsp;</td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" width="9">&nbsp;</td>
+      <td height="20" width="143" align="center">
+      <a href="../guestBook.asp">
+		<img border="0" id="img1" src="button89.jpg" height="25" width="138" alt="Guest Book" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'button8A.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'button89.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'button8B.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'button8A.jpg')" fp-style="fp-btn: Metal Tab 5; fp-proportional: 0" fp-title="Guest Book"></a></td>
+      <td height="20" width="140" align="center">
+      <a href="../taxrates.htm">
+		<img border="0" id="img2" src="button8C.jpg" height="25" width="138" alt="TXD Levies" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button8D.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button8C.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button8E.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button8D.jpg')" fp-style="fp-btn: Metal Tab 5; fp-proportional: 0" fp-title="TXD Levies"></a></td>
+      <td height="20" width="140" align="center">
+      <a href="../glossary.htm">
+		<img border="0" id="img3" src="button8F.jpg" height="25" width="138" alt="Glossary" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'button90.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button8F.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'button91.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'button90.jpg')" fp-style="fp-btn: Metal Tab 5; fp-proportional: 0" fp-title="Glossary"></a></td>
+      <td height="20" width="140" align="center">
+      <a href="http://oklahoma.latitudegeo.com/imf/sites/oklahoma/launch.html">
+		<img border="0" id="img4" src="button92.jpg" height="25" width="138" alt="Map/GIS Search" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'button93.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'button92.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'button94.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'button93.jpg')" fp-style="fp-btn: Metal Tab 5; fp-proportional: 0" fp-title="Map/GIS Search"></a></td>
+      <td height="20" width="140" align="center">
+      <a href="DefaultSearch.asp">
+		<img border="0" id="img5" src="button95.jpg" height="25" width="138" alt="New Search" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button96.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button95.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button97.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button96.jpg')" fp-style="fp-btn: Metal Tab 5; fp-proportional: 0" fp-title="New Search"></a></td>
+      <td height="20" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="12" width="9">
+      &nbsp;</td>
+      <td height="12" width="703" colspan="5">
+      <table width="700" border="2" cellpadding="0" style="border:2px solid #000000; border-collapse: collapse" cellspacing="0">
+		<thead>
+			<tr>
+      <td align="center" bgcolor="#39527B" height="20" colspan="7" width="700">
+      <p align="right"><font color="#FFFFFF" size="2">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Screen Produced&nbsp;&nbsp; &nbsp;3/14/2012 7:05:17 PM&nbsp; </font>
+		</font></td>
+    		</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611390">
+
+				R206611390</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				12/08/2011</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13165   RED OAK DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $226,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611390');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611390</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611390001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611390001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				4</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2011</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   744</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,078</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $108.76</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611390001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611390001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611390001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611390001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611390001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611390001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611390001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611390001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611390001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611390001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611390001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611390001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611390001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611390001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611390001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611390001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611070">
+
+				R206611070</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				10/19/2011</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13141   AUSTRIAN PINE DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $185,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611070');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611070</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611070001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611070001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				4</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2009</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   462</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,828</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $101.20</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611070001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611070001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611070001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611070001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611070001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611070001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611070001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611070001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611070001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611070001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611070001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611070001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611070001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611070001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611070001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611070001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611360">
+
+				R206611360</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				07/16/2011</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13156   AUSTRIAN PINE DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $175,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611360');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611360</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611360001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611360001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				4</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2006</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   420</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,800</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				        $97.22</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611360001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611360001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611360001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611360001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611360001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611360001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611360001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611360001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611360001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611360001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611360001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611360001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611360001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611360001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611360001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611360001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611790">
+
+				R206611790</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				03/31/2011</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13161   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $203,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611790');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611790</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611790001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611790001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				4</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2007</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   715</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,916</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $105.95</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611790001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611790001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611790001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611790001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611790001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611790001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611790001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611790001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611790001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611790001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611790001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611790001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611790001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611790001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611790001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611790001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611770">
+
+				R206611770</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				03/16/2011</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13169   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $242,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611770');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611770</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611770001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611770001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2010</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   724</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,183</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $111.09</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611770001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611770001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611770001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611770001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611770001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611770001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611770001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611770001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611770001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611770001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611770001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611770001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611770001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611770001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611770001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611770001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611160">
+
+				R206611160</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				03/02/2011</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				2323   AUSTRIAN PINE DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $176,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611160');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611160</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611160001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611160001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2010</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   550</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,843</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				        $95.50</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611160001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611160001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611160001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611160001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611160001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611160001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611160001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611160001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611160001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611160001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611160001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611160001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611160001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611160001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611160001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611160001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611710">
+
+				R206611710</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				11/02/2010</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13150   RED OAK DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $207,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611710');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611710</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611710001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611710001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				4</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2006</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   607</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,990</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $104.27</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611710001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611710001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611710001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611710001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611710001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611710001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611710001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611710001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611710001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611710001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611710001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611710001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611710001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611710001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611710001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611710001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651040">
+
+				R208651040</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				10/12/2010</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13142   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $250,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651040');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651040</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651040001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651040001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2010</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   791</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,249</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $111.16</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651040001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651040001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651040001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651040001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651040001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651040001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651040001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651040001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651040001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651040001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651040001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651040001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651040001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651040001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651040001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651040001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651100">
+
+				R208651100</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				09/17/2010</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13166   WHITE BUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $241,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651100');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651100</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651100001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651100001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2010</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   729</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,276</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $106.11</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651100001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651100001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651100001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651100001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651100001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651100001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651100001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651100001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651100001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651100001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651100001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651100001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651100001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651100001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651100001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651100001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651080">
+
+				R208651080</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				08/31/2010</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13158   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $258,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651080');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651080</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651080001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651080001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2010</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   829</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,302</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $112.29</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651080001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651080001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651080001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651080001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651080001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651080001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651080001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651080001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651080001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651080001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651080001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651080001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651080001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651080001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651080001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651080001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611210">
+
+				R206611210</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				07/30/2010</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				2413   AUSTRIAN PINE DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $185,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611210');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611210</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611210001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611210001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2010</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   532</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,854</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				        $99.78</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611210001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611210001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611210001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611210001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611210001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611210001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611210001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611210001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611210001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611210001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611210001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611210001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611210001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611210001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611210001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611210001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651070">
+
+				R208651070</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				03/12/2010</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13154   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $245,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651070');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651070</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651070001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651070001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2009</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   930</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,242</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $109.28</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651070001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651070001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651070001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651070001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651070001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651070001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651070001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651070001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651070001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651070001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651070001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651070001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651070001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651070001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651070001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651070001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611190">
+
+				R206611190</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				12/10/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				2405   AUSTRIAN PINE DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $171,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611190');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611190</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611190001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611190001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2009</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   420</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,844</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				        $93.00</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611190001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611190001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611190001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611190001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611190001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611190001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611190001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611190001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611190001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611190001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611190001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611190001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611190001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611190001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611190001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611190001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611420">
+
+				R206611420</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				11/24/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13153   RED OAK DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $281,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611420');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611420</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611420001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611420001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2009</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   733</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,643</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $106.51</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611420001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611420001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611420001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611420001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611420001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611420001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611420001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611420001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611420001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611420001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611420001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611420001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611420001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611420001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611420001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611420001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651020">
+
+				R208651020</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				11/13/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13134   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $225,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651020');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651020</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651020001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651020001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2008</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   686</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,000</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $112.50</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651020001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651020001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651020001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651020001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651020001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651020001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651020001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651020001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651020001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651020001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651020001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651020001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651020001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651020001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651020001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651020001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651050">
+
+				R208651050</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				10/22/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13146   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $238,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651050');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651050</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651050001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651050001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2009</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   654</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,165</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $109.93</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651050001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651050001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651050001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651050001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651050001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651050001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651050001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651050001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651050001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651050001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651050001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651050001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651050001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651050001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651050001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651050001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611780">
+
+				R206611780</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				09/09/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13165   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $235,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611780');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611780</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611780001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611780001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2009</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   748</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,277</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $103.21</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611780001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611780001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611780001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611780001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611780001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611780001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611780001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611780001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611780001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611780001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611780001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611780001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611780001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611780001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611780001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611780001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651000">
+
+				R208651000</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				09/08/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13128   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $233,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651000');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651000</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651000001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651000001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2009</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   672</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,089</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $111.54</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651000001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651000001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651000001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651000001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651000001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651000001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651000001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651000001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651000001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651000001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651000001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651000001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651000001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651000001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651000001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651000001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R206611220">
+
+				R206611220</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				09/01/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				2417   AUSTRIAN PINE DR</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $189,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239206611220');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239206611220</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R206611220001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R206611220001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2008</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   691</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   1,954</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				        $96.98</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R206611220001qA.jpg"><img border="1" src="sketches/picfile/1239/R206611220001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R206611220001rA.jpg"><img border="1" src="sketches/picfile/1239/R206611220001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R206611220001sA.jpg"><img border="1" src="sketches/picfile/1239/R206611220001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R206611220001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R206611220001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R206611220001uA.jpg"><img border="1" src="sketches/picfile/1239/R206611220001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R206611220001vA.jpg"><img border="1" src="sketches/picfile/1239/R206611220001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R206611220001wA.jpg"><img border="1" src="sketches/picfile/1239/R206611220001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R206611220001xA.jpg"><img border="1" src="sketches/picfile/1239/R206611220001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651060">
+
+				R208651060</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				07/27/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13150   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $249,500.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651060');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651060</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651060001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651060001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2008</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   709</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,247</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $111.04</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651060001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651060001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651060001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651060001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651060001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651060001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651060001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651060001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651060001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651060001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651060001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651060001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651060001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651060001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651060001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651060001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			<tr>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				<a href="AN-R.asp?ACCOUNTNO=R208651090">
+
+				R208651090</font></td>
+				<td align="center" bgcolor="#FFFFCC" bordercolor="#C0C0C0"><font size="2">
+				04/17/2009</font></td>
+				<td bordercolor="#C0C0C0">
+				<p align="center"><font size="2">
+				13162   WHITEBUD PL</font></td>
+				<td bordercolor="#C0C0C0" colspan="2">
+				<p align="center"><font size="2" color="#FF0000">
+				   $248,000.00</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Average</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#B4DAB5" bordercolor="#C0C0C0">
+				<p align="center"><font size="2"><input type="button" name="loc1"  onClick="window.open ('http://oklahoma.latitudegeo.com/imf/imf.jsp?site=oklahoma&subjectProperty=1239208651060&comparableProperties=1239208651090');" value="Map Sale & Subject" style="font-family:Times New Roman; color:#000000; font-size:8pt"></font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#B4DAB5"><font size="2">
+				1239208651090</font></td>
+				<td rowspan="9" align="center" valign="top" bgcolor="#FFFFCC" bordercolor="#C0C0C0">
+				<p align="center">
+      <font size="2">
+      <a target="_blank" href="Sketches/sketchfile/1239/R208651090001.jpg">
+      <img border="2" src="Sketches/sketchfile/1239/R208651090001.jpg" width="112" height="89" align="top" vspace="10"></a></font><br>
+		<font size="2">Sketch</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2"><font size="2">&nbsp;Built As</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Ranch 1 Story</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Neighborhood#</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				1239</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Bedrooms</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				3</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Property Type</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				Residential</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;# of Baths</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				2.5</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Year Built</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				2008</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Attached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				   676</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Total Square Ft.</font></td>
+				<td align="center" bgcolor="#CAE3FF" bordercolor="#C0C0C0"><font size="2">
+				   2,154</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Detached Garage</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0">
+      <font size="2">&nbsp;Dollar Per/SQFT</font></td>
+				<td align="center" bordercolor="#C0C0C0"><font size="2">
+				       $115.13</font></td>
+				<td bgcolor="#EBEBEB" bordercolor="#C0C0C0" colspan="2">
+      <font size="2">&nbsp;Exterior</font></td>
+				<td align="center" bordercolor="#C0C0C0" colspan="2"><font size="2">
+				Frame Masonry Veneer</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E59A97" bordercolor="#C0C0C0" rowspan="3">
+				<p align="center"><font size="2">&nbsp;Subject Parcel Number 
+				will be<br>
+&nbsp;Mapped with this color</font></td>
+				<td align="center" bordercolor="#C0C0C0" bgcolor="#E59A97" rowspan="3"><font size="2">
+				1239208651060</font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" colspan="4" align="right" style="border: 1px solid #FFFFCC; ">
+      <p align="center"><font size="1" color="#B70000">Parcel Photo if available</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2012<a target="_blank" href="sketches/picfile/1239/R208651090001qA.jpg"><img border="1" src="sketches/picfile/1239/R208651090001qA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2011<a target="_blank" href="sketches/picfile/1239/R208651090001rA.jpg"><img border="1" src="sketches/picfile/1239/R208651090001rA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2010<a target="_blank" href="sketches/picfile/1239/R208651090001sA.jpg"><img border="1" src="sketches/picfile/1239/R208651090001sA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border: 1px solid #FFFFCC; ">
+      <font size="2">2009<a href="sketches/picfile/1239/R208651090001tA.jpg" target="_blank"><img border="1" src="sketches/picfile/1239/R208651090001tA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a> </font></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <p><font size="2">&nbsp;&nbsp;2008<a target="_blank" href="sketches/picfile/1239/R208651090001uA.jpg"><img border="1" src="sketches/picfile/1239/R208651090001uA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2007<a target="_blank" href="sketches/picfile/1239/R208651090001vA.jpg"><img border="1" src="sketches/picfile/1239/R208651090001vA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2006<a target="_blank" href="sketches/picfile/1239/R208651090001wA.jpg"><img border="1" src="sketches/picfile/1239/R208651090001wA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+				<td bgcolor="#FFFFCC" bordercolor="#C0C0C0" align="right" style="border-left:1px solid #FFFFCC; border-right:1px solid #FFFFCC; border-top:1px solid #FFFFCC; border-bottom:1px solid #C0C0C0; ">
+      <font size="2">2005<a target="_blank" href="sketches/picfile/1239/R208651090001xA.jpg"><img border="1" src="sketches/picfile/1239/R208651090001xA.jpg" align="middle" width="20" height="14" hspace="1" vspace="1"></a></font></td>
+			</tr>
+			<tr>
+				<th bgcolor="#FFFFFF" height="2" colspan="7">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Account #</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Sale Date</font></th>
+				<th bgcolor="#000000"><font size="2" color="#FFFFFF">Physical 
+				Address</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Sales Price</font></th>
+				<th bgcolor="#000000" colspan="2"><font size="2" color="#FFFFFF">Quality</font></th>
+			</tr>
+			</tbody>
+		</table>
+		
+  </div>
+  </center>
+</div>
+
+
+</form>
+
+</body>
+
+</html>

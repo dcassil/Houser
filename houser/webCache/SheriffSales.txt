@@ -1,0 +1,482 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Oklahoma County Sheriff's Office -- Sheriff Sales</title>
+<style type="text/css" media="screen">@import "../stylesheets/sheriff.css";</style>
+<script type="text/javascript">
+<!-- 
+var imagenumber = 3 ;
+var randomnumber = Math.random() ;
+var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1 ;
+images = new Array
+images[1] = "../images/Larry_Yarbrough.gif"
+images[2] = "../images/Ronald_Lee_small.jpg"
+images[3] = "../images/Russell_Henson_small.jpg"
+
+
+var image = images[rand1]
+
+links = new Array
+links[1] = "LINK #1"
+var link = links[rand1]
+
+// -- End Hiding Here -->
+
+</script>
+</head>
+
+<body topmargin="0" marginheight="0" marginwidth="0">
+<!--Table for header image-->
+ <table align="center" cellpadding="0" cellspacing="0" border="0" width="760">
+   <tr>
+     <td>
+	   <table width="760" cellpadding="0" cellspacing="1" border="0">
+	     <tr>
+		   <td align="center">
+		      <a href="../">
+			    <img src="../images/countySheriff_banner.jpg" alt="Oklahoma County Sheriff's Department" width="760" height="83" border="0"/>
+			  </a>
+		   </td>
+		 </tr>
+	   </table>
+	 </td>
+   </tr>
+</table>
+<!-- End of table for header image-->
+<!--Navigation Bar Table-->
+<table align="center" bgcolor="#000066" width="760" cellspacing="0" cellpadding="1" border="0">
+  <tr>
+    <td width="760" align="center" bgcolor="#000066">
+	  <table cellpadding="0" cellspacing="0" border="0" align="center">
+	    <tr>
+		  <td></td>
+		  <td><font color="#000066">&nbsp;|&nbsp;</font></td>
+		  <td></td>
+		  <td><font color="#000066">&nbsp;|&nbsp;</font></td>
+		  <td></td>
+		  <td><font color="#000066">&nbsp;|&nbsp;</font></td>
+		  <td></td>
+		  <td><font color="#000066">&nbsp;|&nbsp;</font></td>
+		  <td></td>
+		  <td><font color="#000066">&nbsp;|&nbsp;</font></td>
+		  <td></td>
+		  <td><font color="#000066">&nbsp;|&nbsp;</font></td>
+		  <td></td>
+		  <td><font color="#000066">&nbsp;|&nbsp;</font></td>
+		  <td></td>
+		</tr>
+	  </table>
+	</td>
+  </tr>
+</table>
+<!--End Navigation Bar Table-->
+<!--Left sidebar table-->
+<table align="center" width="760" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td width="150" valign="top" bgcolor="#f5f5f5">
+	  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+	    <tr>
+		  <td height="16">&nbsp;</td>
+		</tr>
+		<tr >
+		  <td align="center">
+		    <font class="featureFont"><strong>General Info: </strong></font><br />
+			<font class="featureFont"><strong>(405) 713-1000</strong></font><br /><br />
+			<font class="featureFont"><strong>EMERGENCIES: Dial 911</strong></font>
+		  </td>
+		</tr>
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height = "28" >
+		   <center>
+		    <a href="../whetsel" class="leftnav" title="Oklahoma County Administrative Services">Meet Sheriff Whetsel</a>
+		   </center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height = "28" >
+		   <center>
+		    <a href="../adminservices" class="leftnav" title="Oklahoma County Administrative Services">Administrative Services</a>
+		   </center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../amberalert" class="leftnav">Amber Alert Plan</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1" ><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../crashs" class="leftnav">C.R.A.S.H.S. Court</a> 
+		    </center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../detentionservices" class="leftnav">Detention Services</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../fieldservices" class="leftnav" title="Oklahoma County Sheriff Field Services">Field Services</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../homelandsecurity" class="leftnav" title="Oklahoma County Homeland Security Strategy">Homeland Security</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../history" class="leftnav" title="Oklahoma County Sheriff History">History</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../detentionservices/mailpolicy.asp" class="leftnav">Inmate Mail Policy</a> 
+		    </center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+		    <a href="../detentionservices/visitationpolicy.asp" class="leftnav">Inmate Visitation Policy</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../judicialservices" class="leftnav">Judicial Services</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28"><center><a href="../explore" class="leftnav">Law Enforcement Explorers</a>
+</center></td>
+  </tr>
+  <tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+		    <a href="../mostwanted" class="leftnav">Most Wanted</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../news" class="leftnav">News</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../careers" class="leftnav">O.C.S.O. Careers</a>			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../safezone" class="leftnav">Safe Zone</a>
+			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28"><center><a href="../search" class="leftnav">Search</a>
+</center></td>
+  </tr>
+  <tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28"><center><a href="../sheriffsales" class="leftnav">Sheriff Sales</a></center></td>
+  </tr>
+  <tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28"><center><a href="../surrender" class="leftnav">Surrender</a></center></td>
+  </tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="../rollover" class="leftnav">Rollover Simulator</a>
+			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+		<tr bgcolor="#000066" onMouseover="style.backgroundColor='#336699'" onMouseout="style.backgroundColor='#000066'">
+		  <td height="28">
+		    <center>
+			  <a href="http://www.vinelink.com" class="leftnav" target="_blank">VINELink</a>
+			</center>
+		  </td>
+		</tr>
+		<tr bgcolor="#336699">
+		  <td height="1"><img src="images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+		</tr>
+	  </table>
+
+	  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+	    <tr>
+		  <td height="16">&nbsp;</td>
+		</tr>
+		<tr >
+		  <td align="center">&nbsp;</td>
+		</tr>
+		<tr>
+	     <td>
+		   <img src="../images/transparentdot.gif" width="1" height="8" border="0" />
+		 </td>
+	   </tr>
+		<tr>
+		  <td class="featureFont">&nbsp;
+		    
+		  </td>
+		</tr>
+		<tr>
+		  <td class="featureFont">&nbsp;
+		    
+		  </td>
+		</tr>
+		<tr>
+		  <td class="featureFont">&nbsp;
+		    
+		  </td>
+		</tr>
+		<tr>
+		  <td class="featureFont">&nbsp;
+		    
+		  </td>
+		</tr>
+		<tr>
+		  <td class="featureFont">&nbsp;
+		    
+		  </td>
+		</tr>
+	  </table>
+	    <br />
+	    <br />
+    </td>
+	    <td width="1" bgcolor="#336699"><img src="../images/transparentdot.gif" alt=" " width="1" height="1" /></td>
+	    <td width="10"><img src="../images/transparentdot.gif" width="10" height="1" border="0"></td>
+    <td width="479" valign="top">
+	     <br />
+	     <font class="featureFont">
+		   <strong>
+		    <center>
+	        Oklahoma County Sheriff's Office -- Sheriff Sales 
+		    </center>
+		   </strong>
+	     </font>
+		 <hr width="100%" color="#000066" noshade size="1"/>
+		 <p class="featureFont">
+		   The Oklahoma County Sheriff�s Foreclosure Sale is published monthly for two consecutive weeks at least thirty days prior to the date of sale.  The foreclosed properties are published in local newspapers in which the property is located.  The public may also buy property sale lists for $4.00 at the Oklahoma County Sheriff�s Office Civil Division located at 201 N. Shartel in Oklahoma City.
+		 </p>
+		 <p class="featureFont">
+		   The Sheriff's Foreclosure Sales are located in the Oklahoma County Courthouse Annex Building at 320 Robert S. Kerr, Room 513, and 
+		   start promptly at 2:00 p.m. every other Thursday.  
+		 </p>
+         <font class="featureFont">
+		   To purchase a property you must meet the following requirements:
+           <br /><br />   
+         <li class="featureFont">Minimum bid must be at least two-thirds of the appraised price of the property.</li><br />
+		   <li class="featureFont">Down payment of at least 10% of the purchase price is due within 24 hours of sale. The remaining 90% of the purchase price is due within 3 to 4 weeks of the sale date, before the confirmation hearing.</li>
+	  </font>
+		 <p class="featureFont">
+		  Certified funds are required, made payable to Patricia Presley, Court Clerk. Any sale is subject to cancellation by the plaintiff.
+		 </p>
+		 <p class="featureFont">
+		  Participants must provide photo identification in order to bid on properties.
+		 </p>
+		 <p class="featureFont">
+		   For further information please contact Ann Marie Randolph at (405) 713-1056 or via e-mail at <a href="mailto:SOANNSEN@oklahomacounty.org?subject=Sheriff Sales">soannsen@oklahomacounty.org</a>
+		 </p>
+		 <p class="featureFont">
+		  <strong>
+		   If you would like to print a listing of the properties in the Sheriff�s Foreclosure Sale for this month, 
+		   you will need to click on the listings and then change your browser�s page setup to landscape view.
+		   To view the listings <a href="print.asp">click here</a>.
+		   For instructions on how to print, please <a href="instructions.asp">click here</a>.
+		  </strong>
+		 </p>
+		 <p class="featureFont">
+		   To view the latest properties available for the Sheriff Foreclosure Sales choose a date from the menu below. 
+		 </p>
+		 <p>
+      <center>
+		    <form name="SheriffSale" method="post" action="saledetail.asp">
+		     <select name="SaleDates" dir="ltr">
+		       
+		       <option value="3/15/2012">3/15/2012</option>
+		       
+		       <option value="3/29/2012">3/29/2012</option>
+		       
+		       <option value="4/12/2012">4/12/2012</option>
+		       
+			 </select>
+			 <input type="submit" value="Submit" />
+            </form>
+      </center>
+		 </p>
+	  <font class="featureFont">
+	    
+	  </font> 
+	  <!-- First middle table with article information -->
+      <hr width="100%" color="#000066" size="1"/>
+ 	  <!-- End of first middle table with article information -->
+	  <!-- Second middle table with article information -->
+	  <!-- End of second middle table with article information -->
+	  <!-- Third middle table with article information -->
+	  <!-- End of third middle table with article information -->
+    </td>
+	  <td width="9" bgcolor="#ffffff"><img src="../images/smallwhite.gif" alt=" " width="9" height="1" /></td>
+    <td width="131" valign="top" bgcolor="#f5f5f5">
+	 <!-- Beginning of Right side table -->
+	 <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f5f5">
+	   <tr>
+	     <td>
+		   <img src="../images/Motor_group_Photo_small.jpg" width="131" height="79" border="0" alt="Oklahoma County Motorcycle Patrol">
+		 </td>
+	   </tr>
+	   <tr bgcolor="#000000">
+	     <td height="1">
+		   <img src="../images/transparentdot.gif" width="1" height="1" border="0">
+		 </td>
+	   </tr>
+	 </table>
+	 <table width="100%" cellpadding="5" cellspacing="0" border="0">
+	   <tr>
+	     <td>
+		   <font class="featureFont">
+		     <center>
+			   <strong>
+			     O.C.S.O. News
+			   </strong>
+			 </center>
+		   </font>
+		 </td>
+	   </tr>
+	 </table>
+	 	 
+     
+     <table cellpadding="0" cellspacing="0" border="0" width="100%">
+       <tr>
+         <td><hr noshade color="#000066" width="100%" size="1"/>
+         </td>
+       </tr>
+     </table></td>
+	  <table bgcolor="#336699" cellpadding="3" cellspacing="0" border="0" width="760" align="center">
+	   <tr>
+	     <td width="760" align="center" bgcolor="#000066">
+		   <table align="center" cellpadding="0" cellspacing="0">
+		     <tr>
+			   <td><a href="http://www.oklahomacounty.org" class="nav" title="Oklahoma County">Oklahoma County</a></td>
+			   <td><font color="#FFFFFF">&nbsp;|&nbsp;</font></td>
+			   <td><a href="../adminservices" class="nav">Administrative Services</a></td>
+		       <td><font color="#FFFFFF">&nbsp;|&nbsp;</font></td>
+		       <td><a href="../fieldservices" class="nav">Field Services</a></td>
+		       <td><font color="#FFFFFF">&nbsp;|&nbsp;</font></td>
+		       <td><a href="../judicialservices" class="nav">Judicial Services</a></td>
+		       <td><font color="#FFFFFF">&nbsp;|&nbsp;</font></td>
+		       <td><a href="../news" class="nav">News</a></td>
+		       <td><font color="#FFFFFF">&nbsp;|&nbsp;</font></td>
+		       <td><a href="../detentionservices" class="nav">Detention Services</a></td>
+		       <td><font color="#FFFFFF">&nbsp;|&nbsp;</font></td>
+		       <td><a href="../search" class="nav">Search</a></td>
+		       <td><font color="#FFFFFF">&nbsp;|&nbsp;</font></td>
+		       <td><a href="../" class="nav">Home</a></td>
+			 </tr>
+		   </table>
+		 </td>
+	   </tr>
+	 </table>
+	</td>
+  </tr>
+</table>
+
+<!-- End Left sidebar table-->
+<!--Disable Right Click-->
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript" >
+<!-- 
+
+document.oncontextmenu = function(){return false}
+if(document.layers) {
+window.captureEvents(Event.MOUSEDOWN);
+window.onmousedown = function(e){
+if(e.target==document)return false;
+}
+}
+else {
+document.onmousedown = function(){return false}
+}
+//-->
+</SCRIPT>
+<!--End Disable Right Click-->
+
+</body>
+</html>

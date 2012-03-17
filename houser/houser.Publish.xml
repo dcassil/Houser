@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="f:/publishHouser" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="False" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="intranet1" savePWD="False" userPWD="" SelectedForPublish="False">
+    <file relUrl="bin/houser.dll" publishTime="03/15/2012 23:12:14" />
+    <file relUrl="Scripts/jquery-1.7.1.min.js" publishTime="03/14/2012 21:09:44" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="03/06/2012 22:33:33" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="03/06/2012 22:33:33" />
+    <file relUrl="Styles/style.css" publishTime="03/15/2012 18:36:33" />
+    <file relUrl="Web.config" publishTime="03/15/2012 23:12:36" />
+    <file relUrl="bin/houser.pdb" publishTime="03/15/2012 23:12:14" />
+    <file relUrl="Default.aspx" publishTime="03/15/2012 22:41:58" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="03/06/2012 22:33:33" />
+  </publishProfile>
+  <publishProfile publishUrl="f:\publishhouser" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="1intranet.com" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Profile2" publishMethod="FileSystem" replaceMatchingFiles="True" userName="intranet1" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxkkyAmIsfkexSPtH27hwXAAAAAACAAAAAAAQZgAAAAEAACAAAAC21wnRD1wAAzke9X7XHUOiSZufwNpOVk8ZqHGHB2MIvAAAAAAOgAAAAAIAACAAAAD2t0BPBPaC5qLZaUNVXLQ3jZ/x152No9oqN+zLjkJPByAAAAAEPk7OLTacs2VHpQCpAZSWaAIbBAq9t1FujEu3Ox/kU0AAAABvYqAWnP56cSSqUG4JFAkpdl8EUxA7qYZ0C3M9Rip+0sPMGMRSjjPCqo2fiDg/h2TDBnZLADrcGhAUjg96UUU/" SelectedForPublish="True">
+    <file relUrl="bin/houser.dll" publishTime="03/15/2012 23:49:02" />
+    <file relUrl="Scripts/jquery-1.7.1.min.js" publishTime="03/14/2012 21:09:44" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="03/06/2012 22:33:33" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="03/06/2012 22:33:33" />
+    <file relUrl="Styles/style.css" publishTime="03/15/2012 18:36:33" />
+    <file relUrl="Web.config" publishTime="03/15/2012 23:49:03" />
+    <file relUrl="bin/houser.pdb" publishTime="03/15/2012 23:49:02" />
+    <file relUrl="Default.aspx" publishTime="03/15/2012 22:41:58" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="03/06/2012 22:33:33" />
+  </publishProfile>
+</publishData>
