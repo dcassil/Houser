@@ -9,6 +9,7 @@ using houser.utilities;
 using System.Text.RegularExpressions;
 using System.Data;
 using System.Web.UI.HtmlControls;
+using houser.Data;
 
 namespace houser
 {
@@ -88,8 +89,9 @@ namespace houser
             string workPath = @"C:\Users\Daniel\GitProjectsPersonal\Houser\houser\webCache\";
             string homePath = @"F:\houser\houser\webCache\";
             string pathToUse = System.Environment.MachineName == "RYAN-PC"? workPath : homePath;
+            string propertyRecord = WebRequestDB.GetPropertyRecord(fileName);
 
-            if (!File.Exists(pathToUse + fileName + ".txt") || fileName == "xxSheriffSales")
+            if (propertyRecord == "No_DATA_29454" || fileName == "SheriffSales")
             if(!nonLiveDataOnly)
             {
                 string strResults = "";
@@ -105,7 +107,9 @@ namespace houser
                     {
                         strResults = sr.ReadToEnd();
                         sr.Close();
-                        System.IO.File.WriteAllText(pathToUse + fileName + ".txt", strResults);
+                        if (fileName != "SheriffSales" && !fileName.Contains(@"%"))
+                            WebRequestDB.WritePropertyRecord(fileName, strResults);
+                        //System.IO.File.WriteAllText(pathToUse + fileName + ".txt", strResults);
                         return strResults;
                     }
                 }
@@ -113,15 +117,15 @@ namespace houser
             }
             else
             {
-                if (File.Exists(pathToUse + fileName + ".txt"))
-                    return System.IO.File.ReadAllText(pathToUse + fileName + ".txt");
+                if (propertyRecord != "No_DATA_29454")
+                    return propertyRecord;
                 else
                     return "";
 
             }
             else
             {
-                return System.IO.File.ReadAllText(pathToUse + fileName + ".txt");
+                return propertyRecord;
             }
             }
         
