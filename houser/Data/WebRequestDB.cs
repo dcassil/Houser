@@ -9,7 +9,7 @@ namespace houser.Data
     {
         public static void WritePropertyRecord(string accountNumber, string data)
         {
-            WebRequestDBMLDataContext db = new WebRequestDBMLDataContext();
+            PropertyData db = new PropertyData();
             PropertyRecord record = new PropertyRecord();
             record.AccountNumber = accountNumber;
             record.Data = data;
@@ -20,7 +20,7 @@ namespace houser.Data
 
         public static void UpdatePropertyRecord(string accountNumber, string data)
         {
-            WebRequestDBMLDataContext db = new WebRequestDBMLDataContext();
+            PropertyData db = new PropertyData();
             var updateRecord = (from c in db.PropertyRecords where c.AccountNumber == accountNumber select c).First();
             updateRecord.Data = data;
             updateRecord.DateCreated = DateTime.Now;
@@ -29,7 +29,7 @@ namespace houser.Data
 
         public static string GetPropertyRecord(string accountNumber)
         {
-            WebRequestDBMLDataContext db = new WebRequestDBMLDataContext();
+            PropertyData db = new PropertyData();
             PropertyRecord record = db.PropertyRecords.FirstOrDefault(r => r.AccountNumber == accountNumber);
             if (record != null)
             {

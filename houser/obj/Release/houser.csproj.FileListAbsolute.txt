@@ -3,3 +3,8 @@ F:\houser\houser\bin\houser.pdb
 F:\houser\houser\obj\Release\ResolveAssemblyReference.cache
 F:\houser\houser\obj\Release\houser.dll
 F:\houser\houser\obj\Release\houser.pdb
+F:\Houser1\houser\bin\houser.dll
+F:\Houser1\houser\bin\houser.pdb
+F:\Houser1\houser\obj\Release\ResolveAssemblyReference.cache
+F:\Houser1\houser\obj\Release\houser.dll
+F:\Houser1\houser\obj\Release\houser.pdb

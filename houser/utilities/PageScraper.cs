@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Web;
 using System.Text.RegularExpressions;
 using System.Data;
+using houser.Data;
+
 
 namespace houser.utilities
 {
     // look at this http://www.dotnetperls.com/scraping-html for some regex and to see what you were doing.
     public static class PageScraper
     {
-        public static Dictionary<int, Dictionary<string, string>> Find(string file)
+        public static Dictionary<int, Dictionary<string, string>> Find(string file, string saleDate)
         {
             Dictionary<int, Dictionary<string, string>> propertyGroup = new Dictionary<int, Dictionary<string, string>>();
             Dictionary<string, string> field = new Dictionary<string, string>();
@@ -50,6 +52,16 @@ namespace houser.utilities
                     field.Add(fieldTrackerC1[fieldIndex], fieldTrackerC2[fieldIndex]);
                 }
                 propertyGroup.Add(propertyID, new Dictionary<string, string>(field));
+                // field contains the bulk of the data we need.  first time through we have the subject prop, aftert that we have the comps.
+                DateTime? lastUpdate = SheriffSaleProperty.AccountNumberAlreadyInTable(field["8"].Substring(67));
+                if (lastUpdate != null)
+                {
+                    if (lastUpdate != Convert.ToDateTime(Regex.Replace(saleDate, "%2f", "/")))
+                        SheriffSalePropertyDB.InsertProperty(field, saleDate);
+                    else
+                        lastUpdate = DateTime.Now;// delete this
+                    //add update query
+                }
                 propertyID++;
                 field.Clear();
             }
