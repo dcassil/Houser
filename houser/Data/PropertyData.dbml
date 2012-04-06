@@ -7,31 +7,33 @@
       <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.PropertyComps" Member="PropertyComps">
-    <Type Name="PropertyComp">
-      <Column Name="PropertyAccount" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="CompAccount" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Property" Member="Properties">
-    <Type Name="Property">
-      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="SQFT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Beds" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Baths" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="Garage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="SalePrice" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="SaleDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="DateCreated" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.SSaleRecord" Member="SSaleRecords">
     <Type Name="SSaleRecord">
       <Column Name="AccountNumber" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Price" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="Note" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
       <Column Name="SaleDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PropAccounts" Member="PropAccounts">
+    <Type Name="PropAccount">
+      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sqft" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Beds" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Baths" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YearBuilt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Exterior" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastSaleDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastSalePrice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GarageSize" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PropComps" Member="PropComps">
+    <Type Name="PropComp">
+      <Column Name="PropertyAccount" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompAccount" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

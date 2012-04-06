@@ -12,6 +12,10 @@ namespace houser
             Data.SheriffSalePropertyDB.InsertProperty(data, saleDate);
         }
 
+        public static void UpdateProperty(Dictionary<string, string> data, string saleDate)
+        {
+            Data.SheriffSalePropertyDB.UpdateProperty(data, saleDate);
+        }
         /// <summary>
         /// Check to see if this property has already been entered.
         /// </summary>

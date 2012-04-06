@@ -54,12 +54,9 @@ namespace houser
                 string fileName = propertyAccountURL.Substring(67);
                 string propertyAssessorData = propertyAccountURL != "" ? GetWebRequest(propertyAccountURL, fileName, nonLiveDataOnly) : "Error";
                 Dictionary<string, string> scrapedData = new Dictionary<string, string>(PageScraper.GetPropertyData(propertyAssessorData));
-                foreach (var sdItem in scrapedData)
-                {
-                    allFieldDataTMP.Add(sdItem.Key, sdItem.Value);
-                }
+                
                 string similarPropertyData = scrapedData["SimilarPropURL"] != "" ? GetWebRequest(scrapedData["SimilarPropURL"], "C"+fileName, nonLiveDataOnly) : "Error";
-                Dictionary<int, Dictionary<string, string>> scrapedCoreData = new Dictionary<int, Dictionary<string, string>>(PageScraper.GetSimilarData(similarPropertyData));
+                Dictionary<int, Dictionary<string, string>> scrapedCoreData = new Dictionary<int, Dictionary<string, string>>(PageScraper.GetSimilarData(similarPropertyData, fileName, scrapedData));
                 int i = 0;
                 foreach (var scdItem in scrapedCoreData)
                 {

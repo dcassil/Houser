@@ -19,6 +19,10 @@ namespace houser.Data
             db.SubmitChanges();
         }
 
+        public static void UpdateProperty(Dictionary<string, string> data, string saleDate)
+        {
+
+        }
         public static DateTime? AccountNumberAlreadyInTable(string accountNumber)
         {
             PropertyData db = new PropertyData();
