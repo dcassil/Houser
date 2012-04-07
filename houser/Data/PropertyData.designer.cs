@@ -33,15 +33,15 @@ namespace houser.Data
     partial void InsertPropertyRecord(PropertyRecord instance);
     partial void UpdatePropertyRecord(PropertyRecord instance);
     partial void DeletePropertyRecord(PropertyRecord instance);
-    partial void InsertSSaleRecord(SSaleRecord instance);
-    partial void UpdateSSaleRecord(SSaleRecord instance);
-    partial void DeleteSSaleRecord(SSaleRecord instance);
     partial void InsertPropAccount(PropAccount instance);
     partial void UpdatePropAccount(PropAccount instance);
     partial void DeletePropAccount(PropAccount instance);
     partial void InsertPropComp(PropComp instance);
     partial void UpdatePropComp(PropComp instance);
     partial void DeletePropComp(PropComp instance);
+    partial void InsertSSaleRecord(SSaleRecord instance);
+    partial void UpdateSSaleRecord(SSaleRecord instance);
+    partial void DeleteSSaleRecord(SSaleRecord instance);
     #endregion
 		
 		public PropertyData() : 
@@ -82,14 +82,6 @@ namespace houser.Data
 			}
 		}
 		
-		public System.Data.Linq.Table<SSaleRecord> SSaleRecords
-		{
-			get
-			{
-				return this.GetTable<SSaleRecord>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PropAccount> PropAccounts
 		{
 			get
@@ -103,6 +95,14 @@ namespace houser.Data
 			get
 			{
 				return this.GetTable<PropComp>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SSaleRecord> SSaleRecords
+		{
+			get
+			{
+				return this.GetTable<SSaleRecord>();
 			}
 		}
 	}
@@ -192,140 +192,6 @@ namespace houser.Data
 					this._DateCreated = value;
 					this.SendPropertyChanged("DateCreated");
 					this.OnDateCreatedChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SSaleRecord")]
-	public partial class SSaleRecord : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _AccountNumber;
-		
-		private string _Price;
-		
-		private string _Note;
-		
-		private System.Nullable<System.DateTime> _SaleDate;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnAccountNumberChanging(string value);
-    partial void OnAccountNumberChanged();
-    partial void OnPriceChanging(string value);
-    partial void OnPriceChanged();
-    partial void OnNoteChanging(string value);
-    partial void OnNoteChanged();
-    partial void OnSaleDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnSaleDateChanged();
-    #endregion
-		
-		public SSaleRecord()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountNumber", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string AccountNumber
-		{
-			get
-			{
-				return this._AccountNumber;
-			}
-			set
-			{
-				if ((this._AccountNumber != value))
-				{
-					this.OnAccountNumberChanging(value);
-					this.SendPropertyChanging();
-					this._AccountNumber = value;
-					this.SendPropertyChanged("AccountNumber");
-					this.OnAccountNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string Price
-		{
-			get
-			{
-				return this._Price;
-			}
-			set
-			{
-				if ((this._Price != value))
-				{
-					this.OnPriceChanging(value);
-					this.SendPropertyChanging();
-					this._Price = value;
-					this.SendPropertyChanged("Price");
-					this.OnPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="VarChar(1000)")]
-		public string Note
-		{
-			get
-			{
-				return this._Note;
-			}
-			set
-			{
-				if ((this._Note != value))
-				{
-					this.OnNoteChanging(value);
-					this.SendPropertyChanging();
-					this._Note = value;
-					this.SendPropertyChanged("Note");
-					this.OnNoteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SaleDate", DbType="Date")]
-		public System.Nullable<System.DateTime> SaleDate
-		{
-			get
-			{
-				return this._SaleDate;
-			}
-			set
-			{
-				if ((this._SaleDate != value))
-				{
-					this.OnSaleDateChanging(value);
-					this.SendPropertyChanging();
-					this._SaleDate = value;
-					this.SendPropertyChanged("SaleDate");
-					this.OnSaleDateChanged();
 				}
 			}
 		}
@@ -714,6 +580,164 @@ namespace houser.Data
 					this._CompAccount = value;
 					this.SendPropertyChanged("CompAccount");
 					this.OnCompAccountChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SSaleRecord")]
+	public partial class SSaleRecord : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _AccountNumber;
+		
+		private string _Price;
+		
+		private string _Note;
+		
+		private System.Nullable<System.DateTime> _SaleDate;
+		
+		private System.Nullable<System.DateTime> _LastUpdate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAccountNumberChanging(string value);
+    partial void OnAccountNumberChanged();
+    partial void OnPriceChanging(string value);
+    partial void OnPriceChanged();
+    partial void OnNoteChanging(string value);
+    partial void OnNoteChanged();
+    partial void OnSaleDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnSaleDateChanged();
+    partial void OnLastUpdateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastUpdateChanged();
+    #endregion
+		
+		public SSaleRecord()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountNumber", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string AccountNumber
+		{
+			get
+			{
+				return this._AccountNumber;
+			}
+			set
+			{
+				if ((this._AccountNumber != value))
+				{
+					this.OnAccountNumberChanging(value);
+					this.SendPropertyChanging();
+					this._AccountNumber = value;
+					this.SendPropertyChanged("AccountNumber");
+					this.OnAccountNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="VarChar(1000)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this.OnNoteChanging(value);
+					this.SendPropertyChanging();
+					this._Note = value;
+					this.SendPropertyChanged("Note");
+					this.OnNoteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SaleDate", DbType="Date")]
+		public System.Nullable<System.DateTime> SaleDate
+		{
+			get
+			{
+				return this._SaleDate;
+			}
+			set
+			{
+				if ((this._SaleDate != value))
+				{
+					this.OnSaleDateChanging(value);
+					this.SendPropertyChanging();
+					this._SaleDate = value;
+					this.SendPropertyChanged("SaleDate");
+					this.OnSaleDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdate", DbType="Date")]
+		public System.Nullable<System.DateTime> LastUpdate
+		{
+			get
+			{
+				return this._LastUpdate;
+			}
+			set
+			{
+				if ((this._LastUpdate != value))
+				{
+					this.OnLastUpdateChanging(value);
+					this.SendPropertyChanging();
+					this._LastUpdate = value;
+					this.SendPropertyChanged("LastUpdate");
+					this.OnLastUpdateChanged();
 				}
 			}
 		}

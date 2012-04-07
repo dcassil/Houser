@@ -13,6 +13,11 @@ namespace houser
             return PropertyCompsDB.PropertyCompExists(subject, comp);
         }
 
+        public static bool PropertyHasComps(string subject)
+        {
+            return PropertyCompsDB.PropertyHasComps(subject);
+        }
+
         public static void InsertPropertyComp(string subject, string comp)
         {
             PropertyCompsDB.InsertPropertyComp(subject, comp);

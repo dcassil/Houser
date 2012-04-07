@@ -19,6 +19,18 @@ namespace houser.Data
                 return false;
         }
 
+        public static bool PropertyHasComps(string subject)
+        {
+            PropertyData db = new PropertyData();
+            var propComp = from p in db.PropComps
+                           where p.PropertyAccount == subject
+                           select p;
+            if (propComp.Any())
+                return true;
+            else
+                return false;
+        }
+
         public static void InsertPropertyComp(string subject, string comp)
         {
             PropertyData db = new PropertyData();

@@ -57,7 +57,7 @@ namespace houser.utilities
                 if (lastUpdate == null) // new record
                     SheriffSaleProperty.InsertProperty(field, saleDate);
                 else if (lastUpdate != Convert.ToDateTime(Regex.Replace(saleDate, "%2f", "/")))
-                    SheriffSaleProperty.UpdateProperty(field, saleDate);
+                    SheriffSaleProperty.UpdateProperty(field["8"].Substring(67), "", "", saleDate.ToString(), "");
 
                 
 

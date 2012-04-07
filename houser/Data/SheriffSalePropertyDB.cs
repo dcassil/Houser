@@ -19,9 +19,22 @@ namespace houser.Data
             db.SubmitChanges();
         }
 
-        public static void UpdateProperty(Dictionary<string, string> data, string saleDate)
+        /// <summary>
+        /// I think this is my favorite way to do an update method.  this way we can pass in just the data we want to update and ignore the rest.
+        /// </summary>
+        public static void UpdateProperty(string accountNumber, string price, string Note, string saleDate, string lastUpdate)
         {
-
+            PropertyData db = new PropertyData();
+            SSaleRecord record = db.SSaleRecords.First(r => r.AccountNumber == accountNumber);
+            if (price != "")
+                record.Price = price;
+            if (Note != "")
+                record.Note = Note;
+            if (saleDate != "")
+                record.SaleDate = Convert.ToDateTime(Regex.Replace(saleDate, "%2f", "/"));
+            if (lastUpdate != "")
+                record.LastUpdate = Convert.ToDateTime(lastUpdate);
+            db.SubmitChanges();
         }
         public static DateTime? AccountNumberAlreadyInTable(string accountNumber)
         {
