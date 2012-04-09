@@ -58,8 +58,9 @@ namespace houser.utilities
                     SheriffSaleProperty.InsertProperty(field, saleDate);
                 else if (lastUpdate != Convert.ToDateTime(Regex.Replace(saleDate, "%2f", "/")))
                     SheriffSaleProperty.UpdateProperty(field["8"].Substring(67), "", "", saleDate.ToString(), "");
-
-                
+                // need to insert into prop account table address and account number.  insert only.
+                if (!Properties.AccountSeedExist(field["8"].Substring(67)))
+                    Properties.InsertProperty(field["8"].Substring(67), field["Address"], "", "", "", "", "", "", "", "", "", "");
 
                 propertyID++;
                 field.Clear();
@@ -67,7 +68,7 @@ namespace houser.utilities
             return propertyGroup;
         }
 
-        public static Dictionary<string, string> GetPropertyData(string file)
+        public static Dictionary<string, string> GetPropertyData(string file, string accountNumber)
         {
             
             Dictionary<string, string> propertyData = new Dictionary<string, string>();
@@ -102,7 +103,7 @@ namespace houser.utilities
             return dates;
         }
 
-        internal static Dictionary<int, Dictionary<string,string>> GetSimilarData(string file, string fileName, Dictionary<string, string> scrapedData)
+        internal static Dictionary<int, Dictionary<string,string>> GetSimilarData(string file, string accountNumber, Dictionary<string, string> scrapedData)
         {
             Dictionary<int, Dictionary<string, string>> propertyData = new Dictionary<int, Dictionary<string, string>>();
             Dictionary<string, string> subjectPropertyFields = new Dictionary<string, string>();
@@ -111,19 +112,26 @@ namespace houser.utilities
                 string subjectPropertyTableSubSet = Regex.Match(file, "Property Information</font>(.*?)>Sales are pulled", RegexOptions.Singleline).Groups[1].Value.Trim();
                 string subjectPropertyTable = Regex.Match(subjectPropertyTableSubSet, "<tbody>(.*?)</tbody>", RegexOptions.Singleline).Groups[1].Value.Trim();
                 string regexHelpper = Regex.Match(subjectPropertyTable, "Built</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                subjectPropertyFields.Add("YearBuilt", Regex.Match(regexHelpper, "<font size=\\\"2\\\" color=\\\"#0000FF\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
+                string yearBuilt = Regex.Match(regexHelpper, "<font size=\\\"2\\\" color=\\\"#0000FF\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
+                //regexHelpper = Regex.Match(subjectPropertyTable, "bgcolor=\\\"#FFFFCC\\\">(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
+                //string address = Regex.Match(regexHelpper, "<font size=\\\"2\\\" color=\\\"#0000FF\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 regexHelpper = Regex.Match(subjectPropertyTable, "Total SQFT</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                subjectPropertyFields.Add("SQFT", Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
+                string sqft = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 regexHelpper = Regex.Match(subjectPropertyTable, "Built As</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                subjectPropertyFields.Add("BuiltAs", Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
+                string builtAs = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 regexHelpper = Regex.Match(subjectPropertyTable, "Bedrooms</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                subjectPropertyFields.Add("Bedrooms", Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
+                string bedrooms = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 regexHelpper = Regex.Match(subjectPropertyTable, "Baths</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                subjectPropertyFields.Add("Bathrooms", Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
+                string bathrooms = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 regexHelpper = Regex.Match(subjectPropertyTable, "Exterior</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                subjectPropertyFields.Add("Exterior", Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
+                string exterior = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 string comparePropertyGroup = Regex.Match(file, "width=\\\"703\\\" colspan=\\\"5(.*?)</body>", RegexOptions.Singleline).Groups[1].Value.Trim();
                 propertyData.Add(0, subjectPropertyFields);
+                string saleDate = scrapedData["saleDate"];
+                string salePrice = scrapedData["salePrice"];
+                if (!Properties.CompletePropAccountExist(accountNumber) && Properties.AccountSeedExist(accountNumber))
+                    Properties.UpdateProperty(accountNumber, "", sqft, bedrooms, bathrooms, yearBuilt, "", exterior, saleDate, salePrice, "1", "1");
+
                 MatchCollection comparePropertyTable = Regex.Matches(comparePropertyGroup, "nt #</font>(.*?)>Accou", RegexOptions.Singleline);
                 int index = 1;
                 Dictionary<string, string> comparePropertyFields = new Dictionary<string, string>();
@@ -146,25 +154,21 @@ namespace houser.utilities
                     string C_Bedrooms = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                     regexHelpper = Regex.Match(cp.Groups[1].Value.Trim(), "Baths</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
                     string C_Bathrooms = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
+                    // TODO  Fix regex for exterior.  curently targeting baths.
                     regexHelpper = Regex.Match(cp.Groups[1].Value.Trim(), "Baths</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
                     string C_Exterior = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                     regexHelpper = Regex.Match(cp.Groups[1].Value.Trim(), "Garage</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
                     string C_Garage = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                     propertyData.Add(index, new Dictionary<string, string>(comparePropertyFields));
-                    DateTime? lastUpdateOrNull = Properties.AccountNumberAlreadyInTable(C_AccountNumber);
-                    DateTime lastUpdate;
-                    if (lastUpdateOrNull != null)
-                    {
-                        lastUpdate = Convert.ToDateTime(lastUpdateOrNull);
-                        if (DateTime.Now > lastUpdate.AddDays(60))
-                            Properties.UpdateProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice);
-                    }
+                    
+                    if (Properties.AccountSeedExist(C_AccountNumber))
+                        Properties.UpdateProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice, "1", "");
                     else
-                        Properties.InsertProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice);
+                        Properties.InsertProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice, "1", "");
 
-                    bool propCompExist = PropertyComps.PropertyCompExists(fileName, C_AccountNumber);
+                    bool propCompExist = PropertyComps.PropertyCompExists(accountNumber, C_AccountNumber);
                     if (!propCompExist)
-                        PropertyComps.InsertPropertyComp(fileName, C_AccountNumber);
+                        PropertyComps.InsertPropertyComp(accountNumber, C_AccountNumber);
                     index++;
                 }
             }

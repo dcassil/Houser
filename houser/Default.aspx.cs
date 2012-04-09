@@ -58,12 +58,12 @@ namespace houser
                 // If we have a subject property result from this account number already.  then dont scrape the page.
                 //  Find a better way to do this.  maybe add a is subject column to properties.  Otherwise we are now hitting the live data several dozen times per run.
 
-                if (!PropertyComps.PropertyHasComps(accountNumber) || dataHasExpired)
+                if (!Properties.CompletePropAccountExist(accountNumber) || dataHasExpired)
                 {
                     // Get the webrequest data for this property account.
                     string propertyAssessorData = propertyAccountURL != "" ? GetWebRequest(propertyAccountURL, accountNumber, nonLiveDataOnly) : "Error";
                     // Scrape this webrequest data into a list of useable data for this property.
-                    Dictionary<string, string> scrapedData = new Dictionary<string, string>(PageScraper.GetPropertyData(propertyAssessorData));
+                    Dictionary<string, string> scrapedData = new Dictionary<string, string>(PageScraper.GetPropertyData(propertyAssessorData, accountNumber));
                     // Get the webrequest data for the similar properties if they exist.
                     string similarPropertyData = scrapedData["SimilarPropURL"] != "" ? GetWebRequest(scrapedData["SimilarPropURL"], "C"+accountNumber, nonLiveDataOnly) : "Error";
                     // Scrape this webrequest into a list of useable data for the similar properties--- also called comps.  need to stick to one convention.

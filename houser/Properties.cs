@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using houser.Data;
 
 namespace houser
 {
@@ -9,7 +10,17 @@ namespace houser
     {
         public static DateTime? AccountNumberAlreadyInTable(string accountNumber)
         {
-            return Data.PropertiesDB.AccountNumberAlreadyInTable(accountNumber);
+            return PropertiesDB.LastUpdateIfExists(accountNumber);
+        }
+
+        public static bool AccountSeedExist(string accountNumber)
+        {
+            return PropertiesDB.AccountSeedExist(accountNumber);
+        }
+
+        public static bool CompletePropAccountExist(string accountNumber)
+        {
+            return PropertiesDB.CompletePropAccountExist(accountNumber);
         }
 
         public static void InsertProperty(  string accountNumber,
@@ -21,9 +32,11 @@ namespace houser
                                             string garage,
                                             string exterior,
                                             string saleDate,
-                                            string salePrice)
+                                            string salePrice,
+                                            string fullyLoaded,
+                                            string subjectProperty)
         {
-            Data.PropertiesDB.InsertProperty(accountNumber, address, sqft, beds, baths, yearBuilt, garage, exterior, saleDate, salePrice);
+            PropertiesDB.InsertProperty(accountNumber, address, sqft, beds, baths, yearBuilt, garage, exterior, saleDate, salePrice, fullyLoaded, subjectProperty);
         }
 
         public static void UpdateProperty(string accountNumber,
@@ -35,9 +48,11 @@ namespace houser
                                             string garage,
                                             string exterior,
                                             string saleDate,
-                                            string salePrice)
+                                            string salePrice,
+                                            string fullyLoaded,
+                                            string subjectProperty)
         {
-            Data.PropertiesDB.UpdateProperty(accountNumber, address, sqft, beds, baths, yearBuilt, garage, exterior, saleDate, salePrice);
+            PropertiesDB.UpdateProperty(accountNumber, address, sqft, beds, baths, yearBuilt, garage, exterior, saleDate, salePrice, fullyLoaded, subjectProperty);
         }
     }
 }

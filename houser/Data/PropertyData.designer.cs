@@ -33,15 +33,15 @@ namespace houser.Data
     partial void InsertPropertyRecord(PropertyRecord instance);
     partial void UpdatePropertyRecord(PropertyRecord instance);
     partial void DeletePropertyRecord(PropertyRecord instance);
-    partial void InsertPropAccount(PropAccount instance);
-    partial void UpdatePropAccount(PropAccount instance);
-    partial void DeletePropAccount(PropAccount instance);
     partial void InsertPropComp(PropComp instance);
     partial void UpdatePropComp(PropComp instance);
     partial void DeletePropComp(PropComp instance);
     partial void InsertSSaleRecord(SSaleRecord instance);
     partial void UpdateSSaleRecord(SSaleRecord instance);
     partial void DeleteSSaleRecord(SSaleRecord instance);
+    partial void InsertPropAccount(PropAccount instance);
+    partial void UpdatePropAccount(PropAccount instance);
+    partial void DeletePropAccount(PropAccount instance);
     #endregion
 		
 		public PropertyData() : 
@@ -82,14 +82,6 @@ namespace houser.Data
 			}
 		}
 		
-		public System.Data.Linq.Table<PropAccount> PropAccounts
-		{
-			get
-			{
-				return this.GetTable<PropAccount>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PropComp> PropComps
 		{
 			get
@@ -103,6 +95,14 @@ namespace houser.Data
 			get
 			{
 				return this.GetTable<SSaleRecord>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PropAccount> PropAccounts
+		{
+			get
+			{
+				return this.GetTable<PropAccount>();
 			}
 		}
 	}
@@ -192,308 +192,6 @@ namespace houser.Data
 					this._DateCreated = value;
 					this.SendPropertyChanged("DateCreated");
 					this.OnDateCreatedChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PropAccounts")]
-	public partial class PropAccount : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _AccountNumber;
-		
-		private string _Address;
-		
-		private string _Sqft;
-		
-		private string _Beds;
-		
-		private string _Baths;
-		
-		private string _YearBuilt;
-		
-		private string _Exterior;
-		
-		private string _LastSaleDate;
-		
-		private string _LastSalePrice;
-		
-		private System.DateTime _DateModified;
-		
-		private string _GarageSize;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnAccountNumberChanging(string value);
-    partial void OnAccountNumberChanged();
-    partial void OnAddressChanging(string value);
-    partial void OnAddressChanged();
-    partial void OnSqftChanging(string value);
-    partial void OnSqftChanged();
-    partial void OnBedsChanging(string value);
-    partial void OnBedsChanged();
-    partial void OnBathsChanging(string value);
-    partial void OnBathsChanged();
-    partial void OnYearBuiltChanging(string value);
-    partial void OnYearBuiltChanged();
-    partial void OnExteriorChanging(string value);
-    partial void OnExteriorChanged();
-    partial void OnLastSaleDateChanging(string value);
-    partial void OnLastSaleDateChanged();
-    partial void OnLastSalePriceChanging(string value);
-    partial void OnLastSalePriceChanged();
-    partial void OnDateModifiedChanging(System.DateTime value);
-    partial void OnDateModifiedChanged();
-    partial void OnGarageSizeChanging(string value);
-    partial void OnGarageSizeChanged();
-    #endregion
-		
-		public PropAccount()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountNumber", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string AccountNumber
-		{
-			get
-			{
-				return this._AccountNumber;
-			}
-			set
-			{
-				if ((this._AccountNumber != value))
-				{
-					this.OnAccountNumberChanging(value);
-					this.SendPropertyChanging();
-					this._AccountNumber = value;
-					this.SendPropertyChanged("AccountNumber");
-					this.OnAccountNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="VarChar(50)")]
-		public string Address
-		{
-			get
-			{
-				return this._Address;
-			}
-			set
-			{
-				if ((this._Address != value))
-				{
-					this.OnAddressChanging(value);
-					this.SendPropertyChanging();
-					this._Address = value;
-					this.SendPropertyChanged("Address");
-					this.OnAddressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sqft", DbType="VarChar(50)")]
-		public string Sqft
-		{
-			get
-			{
-				return this._Sqft;
-			}
-			set
-			{
-				if ((this._Sqft != value))
-				{
-					this.OnSqftChanging(value);
-					this.SendPropertyChanging();
-					this._Sqft = value;
-					this.SendPropertyChanged("Sqft");
-					this.OnSqftChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Beds", DbType="VarChar(50)")]
-		public string Beds
-		{
-			get
-			{
-				return this._Beds;
-			}
-			set
-			{
-				if ((this._Beds != value))
-				{
-					this.OnBedsChanging(value);
-					this.SendPropertyChanging();
-					this._Beds = value;
-					this.SendPropertyChanged("Beds");
-					this.OnBedsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Baths", DbType="VarChar(50)")]
-		public string Baths
-		{
-			get
-			{
-				return this._Baths;
-			}
-			set
-			{
-				if ((this._Baths != value))
-				{
-					this.OnBathsChanging(value);
-					this.SendPropertyChanging();
-					this._Baths = value;
-					this.SendPropertyChanged("Baths");
-					this.OnBathsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YearBuilt", DbType="VarChar(50)")]
-		public string YearBuilt
-		{
-			get
-			{
-				return this._YearBuilt;
-			}
-			set
-			{
-				if ((this._YearBuilt != value))
-				{
-					this.OnYearBuiltChanging(value);
-					this.SendPropertyChanging();
-					this._YearBuilt = value;
-					this.SendPropertyChanged("YearBuilt");
-					this.OnYearBuiltChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Exterior", DbType="VarChar(50)")]
-		public string Exterior
-		{
-			get
-			{
-				return this._Exterior;
-			}
-			set
-			{
-				if ((this._Exterior != value))
-				{
-					this.OnExteriorChanging(value);
-					this.SendPropertyChanging();
-					this._Exterior = value;
-					this.SendPropertyChanged("Exterior");
-					this.OnExteriorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSaleDate", DbType="VarChar(50)")]
-		public string LastSaleDate
-		{
-			get
-			{
-				return this._LastSaleDate;
-			}
-			set
-			{
-				if ((this._LastSaleDate != value))
-				{
-					this.OnLastSaleDateChanging(value);
-					this.SendPropertyChanging();
-					this._LastSaleDate = value;
-					this.SendPropertyChanged("LastSaleDate");
-					this.OnLastSaleDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSalePrice", DbType="VarChar(50)")]
-		public string LastSalePrice
-		{
-			get
-			{
-				return this._LastSalePrice;
-			}
-			set
-			{
-				if ((this._LastSalePrice != value))
-				{
-					this.OnLastSalePriceChanging(value);
-					this.SendPropertyChanging();
-					this._LastSalePrice = value;
-					this.SendPropertyChanged("LastSalePrice");
-					this.OnLastSalePriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateModified", DbType="Date NOT NULL")]
-		public System.DateTime DateModified
-		{
-			get
-			{
-				return this._DateModified;
-			}
-			set
-			{
-				if ((this._DateModified != value))
-				{
-					this.OnDateModifiedChanging(value);
-					this.SendPropertyChanging();
-					this._DateModified = value;
-					this.SendPropertyChanged("DateModified");
-					this.OnDateModifiedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GarageSize", DbType="VarChar(50)")]
-		public string GarageSize
-		{
-			get
-			{
-				return this._GarageSize;
-			}
-			set
-			{
-				if ((this._GarageSize != value))
-				{
-					this.OnGarageSizeChanging(value);
-					this.SendPropertyChanging();
-					this._GarageSize = value;
-					this.SendPropertyChanged("GarageSize");
-					this.OnGarageSizeChanged();
 				}
 			}
 		}
@@ -738,6 +436,356 @@ namespace houser.Data
 					this._LastUpdate = value;
 					this.SendPropertyChanged("LastUpdate");
 					this.OnLastUpdateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PropAccounts")]
+	public partial class PropAccount : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _AccountNumber;
+		
+		private string _Address;
+		
+		private string _Sqft;
+		
+		private string _Beds;
+		
+		private string _Baths;
+		
+		private string _YearBuilt;
+		
+		private string _Exterior;
+		
+		private string _LastSaleDate;
+		
+		private string _LastSalePrice;
+		
+		private System.DateTime _DateModified;
+		
+		private string _GarageSize;
+		
+		private string _FullyLoaded;
+		
+		private string _SubjectProperty;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAccountNumberChanging(string value);
+    partial void OnAccountNumberChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnSqftChanging(string value);
+    partial void OnSqftChanged();
+    partial void OnBedsChanging(string value);
+    partial void OnBedsChanged();
+    partial void OnBathsChanging(string value);
+    partial void OnBathsChanged();
+    partial void OnYearBuiltChanging(string value);
+    partial void OnYearBuiltChanged();
+    partial void OnExteriorChanging(string value);
+    partial void OnExteriorChanged();
+    partial void OnLastSaleDateChanging(string value);
+    partial void OnLastSaleDateChanged();
+    partial void OnLastSalePriceChanging(string value);
+    partial void OnLastSalePriceChanged();
+    partial void OnDateModifiedChanging(System.DateTime value);
+    partial void OnDateModifiedChanged();
+    partial void OnGarageSizeChanging(string value);
+    partial void OnGarageSizeChanged();
+    partial void OnFullyLoadedChanging(string value);
+    partial void OnFullyLoadedChanged();
+    partial void OnSubjectPropertyChanging(string value);
+    partial void OnSubjectPropertyChanged();
+    #endregion
+		
+		public PropAccount()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountNumber", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string AccountNumber
+		{
+			get
+			{
+				return this._AccountNumber;
+			}
+			set
+			{
+				if ((this._AccountNumber != value))
+				{
+					this.OnAccountNumberChanging(value);
+					this.SendPropertyChanging();
+					this._AccountNumber = value;
+					this.SendPropertyChanged("AccountNumber");
+					this.OnAccountNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="VarChar(50)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sqft", DbType="VarChar(50)")]
+		public string Sqft
+		{
+			get
+			{
+				return this._Sqft;
+			}
+			set
+			{
+				if ((this._Sqft != value))
+				{
+					this.OnSqftChanging(value);
+					this.SendPropertyChanging();
+					this._Sqft = value;
+					this.SendPropertyChanged("Sqft");
+					this.OnSqftChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Beds", DbType="VarChar(50)")]
+		public string Beds
+		{
+			get
+			{
+				return this._Beds;
+			}
+			set
+			{
+				if ((this._Beds != value))
+				{
+					this.OnBedsChanging(value);
+					this.SendPropertyChanging();
+					this._Beds = value;
+					this.SendPropertyChanged("Beds");
+					this.OnBedsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Baths", DbType="VarChar(50)")]
+		public string Baths
+		{
+			get
+			{
+				return this._Baths;
+			}
+			set
+			{
+				if ((this._Baths != value))
+				{
+					this.OnBathsChanging(value);
+					this.SendPropertyChanging();
+					this._Baths = value;
+					this.SendPropertyChanged("Baths");
+					this.OnBathsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YearBuilt", DbType="VarChar(50)")]
+		public string YearBuilt
+		{
+			get
+			{
+				return this._YearBuilt;
+			}
+			set
+			{
+				if ((this._YearBuilt != value))
+				{
+					this.OnYearBuiltChanging(value);
+					this.SendPropertyChanging();
+					this._YearBuilt = value;
+					this.SendPropertyChanged("YearBuilt");
+					this.OnYearBuiltChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Exterior", DbType="VarChar(50)")]
+		public string Exterior
+		{
+			get
+			{
+				return this._Exterior;
+			}
+			set
+			{
+				if ((this._Exterior != value))
+				{
+					this.OnExteriorChanging(value);
+					this.SendPropertyChanging();
+					this._Exterior = value;
+					this.SendPropertyChanged("Exterior");
+					this.OnExteriorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSaleDate", DbType="VarChar(50)")]
+		public string LastSaleDate
+		{
+			get
+			{
+				return this._LastSaleDate;
+			}
+			set
+			{
+				if ((this._LastSaleDate != value))
+				{
+					this.OnLastSaleDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastSaleDate = value;
+					this.SendPropertyChanged("LastSaleDate");
+					this.OnLastSaleDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSalePrice", DbType="VarChar(50)")]
+		public string LastSalePrice
+		{
+			get
+			{
+				return this._LastSalePrice;
+			}
+			set
+			{
+				if ((this._LastSalePrice != value))
+				{
+					this.OnLastSalePriceChanging(value);
+					this.SendPropertyChanging();
+					this._LastSalePrice = value;
+					this.SendPropertyChanged("LastSalePrice");
+					this.OnLastSalePriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateModified", DbType="Date NOT NULL")]
+		public System.DateTime DateModified
+		{
+			get
+			{
+				return this._DateModified;
+			}
+			set
+			{
+				if ((this._DateModified != value))
+				{
+					this.OnDateModifiedChanging(value);
+					this.SendPropertyChanging();
+					this._DateModified = value;
+					this.SendPropertyChanged("DateModified");
+					this.OnDateModifiedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GarageSize", DbType="VarChar(50)")]
+		public string GarageSize
+		{
+			get
+			{
+				return this._GarageSize;
+			}
+			set
+			{
+				if ((this._GarageSize != value))
+				{
+					this.OnGarageSizeChanging(value);
+					this.SendPropertyChanging();
+					this._GarageSize = value;
+					this.SendPropertyChanged("GarageSize");
+					this.OnGarageSizeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullyLoaded", DbType="VarChar(1)")]
+		public string FullyLoaded
+		{
+			get
+			{
+				return this._FullyLoaded;
+			}
+			set
+			{
+				if ((this._FullyLoaded != value))
+				{
+					this.OnFullyLoadedChanging(value);
+					this.SendPropertyChanging();
+					this._FullyLoaded = value;
+					this.SendPropertyChanged("FullyLoaded");
+					this.OnFullyLoadedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubjectProperty", DbType="VarChar(1)")]
+		public string SubjectProperty
+		{
+			get
+			{
+				return this._SubjectProperty;
+			}
+			set
+			{
+				if ((this._SubjectProperty != value))
+				{
+					this.OnSubjectPropertyChanging(value);
+					this.SendPropertyChanging();
+					this._SubjectProperty = value;
+					this.SendPropertyChanged("SubjectProperty");
+					this.OnSubjectPropertyChanged();
 				}
 			}
 		}
