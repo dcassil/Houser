@@ -11,13 +11,33 @@
 </head>
 <body>
     <form id="form1" runat="server" visible="true">
+    <div class="pageWrapper">
+    <div class="displayPanel">
+        <div class="mapWrapper">
+            <div class="map"></div>
+        </div>
+        <div class="compDisplay">
+            <div class="compHeader"></div>
+            <div class="comps"></div>
+        </div>
+        <div class="subjectInfo">
+            <div class="subjectHeader"></div>
+            <div class="subjectInfo"></div>
+        </div>
+    </div>
+    <div class="menu">
+        <asp:DropDownList ID="ddlSaleDate" class="dropDown" runat="server" 
+            onselectedindexchanged="ddlSaleDate_SelectedIndexChanged" />
+        <asp:Button ID="btnPopulateData" class="button" Text="Get Data" runat="server" Visible="true" 
+            onclick="btnPopulateData_Click"/>
+        <asp:CheckBox ID="chkNonLive" class="check" Text="  Get fresh data." runat="server" />
+    </div>
+    <div class="listings"></div>
+    </div>
+
     <div>
         <span>press this button to populate the sales data</span>
-        <asp:Button ID="btnPopulateData" Text="Get Data" runat="server" Visible="true" 
-            onclick="btnPopulateData_Click"/>
-        <asp:DropDownList ID="ddlSaleDate" runat="server" 
-            onselectedindexchanged="ddlSaleDate_SelectedIndexChanged" />
-        <asp:CheckBox ID="chkNonLive" Text="Check to only show cached values" runat="server" />
+        
     </div>
     <div id="displayData">
         <asp:Panel ID="displayPanel" runat="server">

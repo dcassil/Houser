@@ -1,17 +1,7 @@
-﻿body {
-}
-
-.Address {border: 1px solid black; text-align:center; padding:10px;}
-.fieldTitle { border-bottom: 4px solid black;font-weight:bold;}
-tr {padding:10px; background-color: #DCDCDC;}
-td { border: 2px solid white; -webkit-border-radius:5px; border-collapse:collapse;}
-table { width:100%; padding: 15px; border-bottom-width:4px; -webkit-border-radius:12px; background-color:#E5EBDF;}
-.collapsed { display:none;}
-.subjectProperty td {width: 16.6%; padding: 5px;}
-.subjectProperty:hover {cursor: pointer; cursor: hand}
-.red { background-color:#BA3838;}
-.green { background-color:#5DB360;}
-.blue { background-color:#A1ACBF;}
-.yellow { background-color:#E3E152;}
-.orange { background-color:#E8A13C;}
-.black { background-color:Black;}
+﻿.displayPanel { width: 100%; height: 392px; background-color: #353535; }
+.menu { height: 36px; background-color: #202020; }
+.listings {height: auto; background-color: #353535;}
+.button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; }
+.button:hover { color: #717171;}
+.dropDown { margin: 8px 5px 0 20px; }
+.check { color: White; font-size: small; }

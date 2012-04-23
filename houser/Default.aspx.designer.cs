@@ -22,15 +22,6 @@ namespace houser {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// btnPopulateData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPopulateData;
-        
-        /// <summary>
         /// ddlSaleDate control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace houser {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSaleDate;
+        
+        /// <summary>
+        /// btnPopulateData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPopulateData;
         
         /// <summary>
         /// chkNonLive control.

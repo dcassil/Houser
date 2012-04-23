@@ -34,6 +34,12 @@ namespace houser
             }
         }
 
+        public static void BuildDisplay()
+        {
+           
+            
+        }
+
         /// <summary>
         /// Build the entire data structure for all properties.  Includes comparable data, property specs, ect.  03%2f15%2f2012
         /// </summary>
