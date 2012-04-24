@@ -1,7 +1,14 @@
-﻿.displayPanel { width: 100%; height: 392px; background-color: #353535; }
-.menu { height: 36px; background-color: #202020; }
-.listings {height: auto; background-color: #353535;}
+﻿.displayPanel { width: 100%; height: 350px; background-color: #353535; }
+.mapWrapper { position: relative; float: left; top: 25px; left: 25px; height: 300px; width: 500px; background-color: Gray;}
+.compDisplay { position: relative; float: left; top: 25px;  margin: 0 0 0 50px; width: 600px; height: 300px; background-color: Gray; }
+.subjectInfo { position: relative; float: left; top: 25px; margin: 0 0 0 25px; height: 300px; width: 310px; background-color:Gray;}
+.menu { height: 36px; background-image: url(/images/menu/background.png); }
+.listings {height: auto; width: 100%; background-color: #353535;}
 .button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; }
 .button:hover { color: #717171;}
 .dropDown { margin: 8px 5px 0 20px; }
 .check { color: White; font-size: small; }
+.listingWrapper { height: 63px; width: 100%; background-color: transparent;}
+.indicator { float:left; height: 63px; width: 25px; background-image: url(/images/indicators/red.png); }
+.listingPanel { height: 63px; background-image: url(/images/listingPanel/backgroundLightx.png); }
+.listingPanelx { height: 63px; background-image: url(/images/listingPanel/backgroundDarkx.png); }

@@ -22,7 +22,7 @@
         </div>
         <div class="subjectInfo">
             <div class="subjectHeader"></div>
-            <div class="subjectInfo"></div>
+            <div class="subject"></div>
         </div>
     </div>
     <div class="menu">
@@ -32,13 +32,34 @@
             onclick="btnPopulateData_Click"/>
         <asp:CheckBox ID="chkNonLive" class="check" Text="  Get fresh data." runat="server" />
     </div>
-    <div class="listings"></div>
+    <div class="listings">
+        <div class="listingWrapper">
+            <div class="indicator"></div>
+            <div class="listingPanel"></div>
+        </div>
+        <div class="listingWrapper">
+            <div class="indicator"></div>
+            <div class="listingPanelx"></div>
+        </div>
+        <div class="listingWrapper">
+            <div class="indicator"></div>
+            <div class="listingPanel"></div>
+        </div>
+        <div class="listingWrapper">
+            <div class="indicator"></div>
+            <div class="listingPanelx"></div>
+        </div>
+        <div class="listingWrapper">
+            <div class="indicator"></div>
+            <div class="listingPanel"></div>
+        </div>
+        <div class="listingWrapper">
+            <div class="indicator"></div>
+            <div class="listingPanelx"></div>
+        </div>
     </div>
-
-    <div>
-        <span>press this button to populate the sales data</span>
-        
     </div>
+  
     <div id="displayData">
         <asp:Panel ID="displayPanel" runat="server">
         </asp:Panel>
