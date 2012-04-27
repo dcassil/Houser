@@ -44,6 +44,7 @@ namespace houser
             foreach (var prop in subjectProperties)
             {
                 string account = prop.AccountNumber;
+                // time for bed.  go here to see how we will generate the html via javascript.  http://www.dotnetcurry.com/ShowArticle.aspx?ID=200
             }
         }
 
