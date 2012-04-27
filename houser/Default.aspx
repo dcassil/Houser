@@ -35,7 +35,10 @@
     <div class="listings">
         <div class="listingWrapper">
             <div class="indicator"></div>
-            <div class="listingPanel"></div>
+            <div class="listingPanel">
+                <asp:Panel ID="pnlListingPanel" runat="server">
+                </asp:Panel>
+            </div>
         </div>
         <div class="listingWrapper">
             <div class="indicator"></div>

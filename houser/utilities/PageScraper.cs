@@ -59,8 +59,8 @@ namespace houser.utilities
                 else if (lastUpdate != Convert.ToDateTime(Regex.Replace(saleDate, "%2f", "/")))
                     SheriffSaleProperty.UpdateProperty(field["8"].Substring(67), "", "", saleDate.ToString(), "");
                 // need to insert into prop account table address and account number.  insert only.
-                if (!Properties.AccountSeedExist(field["8"].Substring(67)))
-                    Properties.InsertProperty(field["8"].Substring(67), field["Address"], "", "", "", "", "", "", "", "", "", "");
+                if (!PropAccounts.AccountSeedExist(field["8"].Substring(67)))
+                    PropAccounts.InsertProperty(field["8"].Substring(67), field["Address"], "", "", "", "", "", "", "", "", "", "");
 
                 propertyID++;
                 field.Clear();
@@ -92,14 +92,22 @@ namespace houser.utilities
 
         public static List<string> GetSheriffSaleDates(string file)
         {
-            string dataSubSet = Regex.Match(file, "<form name=\"SheriffSale\"(.*?)</form>", RegexOptions.Singleline).Groups[1].Value.Trim();
-            MatchCollection dateMatches = Regex.Matches(dataSubSet, "<option value=\"(.*?)\">", RegexOptions.Singleline);
+            string dataSubSet;
             List<string> dates = new List<string>();
-            foreach (Match dt in dateMatches)
+
+
+            if (!string.IsNullOrWhiteSpace(file))
             {
-                dates.Add(dt.Groups[1].Value);
+                dataSubSet = Regex.Match(file, "<form name=\"SheriffSale\"(.*?)</form>", RegexOptions.Singleline).Groups[1].Value.Trim();
+                MatchCollection dateMatches = Regex.Matches(dataSubSet, "<option value=\"(.*?)\">", RegexOptions.Singleline);
+                foreach (Match dt in dateMatches)
+                {
+                    dates.Add(dt.Groups[1].Value);
+                }
             }
-            
+            else
+                dates.Add("04/26/2012");
+                
             return dates;
         }
 
@@ -129,8 +137,8 @@ namespace houser.utilities
                 propertyData.Add(0, subjectPropertyFields);
                 string saleDate = scrapedData["saleDate"];
                 string salePrice = scrapedData["salePrice"];
-                if (!Properties.CompletePropAccountExist(accountNumber) && Properties.AccountSeedExist(accountNumber))
-                    Properties.UpdateProperty(accountNumber, "", sqft, bedrooms, bathrooms, yearBuilt, "", exterior, saleDate, salePrice, "1", "1");
+                if (!PropAccounts.CompletePropAccountExist(accountNumber) && PropAccounts.AccountSeedExist(accountNumber))
+                    PropAccounts.UpdateProperty(accountNumber, "", sqft, bedrooms, bathrooms, yearBuilt, "", exterior, saleDate, salePrice, "1", "1");
 
                 MatchCollection comparePropertyTable = Regex.Matches(comparePropertyGroup, "nt #</font>(.*?)>Accou", RegexOptions.Singleline);
                 int index = 1;
@@ -161,10 +169,10 @@ namespace houser.utilities
                     string C_Garage = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                     propertyData.Add(index, new Dictionary<string, string>(comparePropertyFields));
                     
-                    if (Properties.AccountSeedExist(C_AccountNumber))
-                        Properties.UpdateProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice, "1", "");
+                    if (PropAccounts.AccountSeedExist(C_AccountNumber))
+                        PropAccounts.UpdateProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice, "1", "");
                     else
-                        Properties.InsertProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice, "1", "");
+                        PropAccounts.InsertProperty(C_AccountNumber, C_Address, C_SQFT, C_Bedrooms, C_Bathrooms, C_YearBuilt, C_Garage, C_Exterior, C_SaleDate, C_SalePrice, "1", "");
 
                     bool propCompExist = PropertyComps.PropertyCompExists(accountNumber, C_AccountNumber);
                     if (!propCompExist)

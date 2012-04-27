@@ -4,10 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Data;
+using houser.Data;
+using System.Web.UI.MobileControls;
 
 namespace houser.Data
 {
-    public class PropertiesDB
+    public class PropAccountsDB
     {
         public static DateTime? LastUpdateIfExists(string accountNumber)
         {
@@ -84,6 +87,18 @@ namespace houser.Data
             property.DateModified = DateTime.Now;
             db.PropAccounts.InsertOnSubmit(property);
             db.SubmitChanges();
+        }
+
+        public static List<PropAccount> GetSubjectPropertiesByDate(DateTime date)
+        {
+            PropertyData db = new PropertyData();
+            List<PropAccount> props = (from p in db.PropAccounts
+                         join s in db.SSaleRecords on p.AccountNumber equals s.AccountNumber
+                         where s.SaleDate == date
+                         where p.SubjectProperty == "1"
+                         select p).ToList();
+            
+            return props;
         }
 
         public static void UpdateProperty(string accountNumber,

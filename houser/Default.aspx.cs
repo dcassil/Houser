@@ -10,6 +10,8 @@ using System.Text.RegularExpressions;
 using System.Data;
 using System.Web.UI.HtmlControls;
 using houser.Data;
+using System.Linq;
+using System.Reflection;
 
 namespace houser
 {
@@ -31,13 +33,18 @@ namespace houser
                     // Add dates to our drop down list.
                     ddlSaleDate.Items.Add(date);
                 }
+                
             }
         }
 
-        public static void BuildDisplay()
+        public static void BuildListingPanels(DateTime date)
         {
-           
-            
+            BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
+            List<PropAccount> subjectProperties = PropAccounts.GetSubjectPropertiesByDate(date);
+            foreach (var prop in subjectProperties)
+            {
+                string account = prop.AccountNumber;
+            }
         }
 
         /// <summary>
@@ -59,12 +66,12 @@ namespace houser
                 string propertyAccountURL = property.Value["8"];
                 // get the account number.
                 string accountNumber = propertyAccountURL.Substring(67);
-                DateTime? lastUpadteOrNull = Properties.AccountNumberAlreadyInTable(accountNumber);
+                DateTime? lastUpadteOrNull = PropAccounts.AccountNumberAlreadyInTable(accountNumber);
                 bool dataHasExpired = (lastUpadteOrNull != null ? Convert.ToDateTime(lastUpadteOrNull) : DateTime.Now).AddDays(60) < DateTime.Now;
                 // If we have a subject property result from this account number already.  then dont scrape the page.
                 //  Find a better way to do this.  maybe add a is subject column to properties.  Otherwise we are now hitting the live data several dozen times per run.
 
-                if (!Properties.CompletePropAccountExist(accountNumber) || dataHasExpired)
+                if (!PropAccounts.CompletePropAccountExist(accountNumber) || dataHasExpired)
                 {
                     // Get the webrequest data for this property account.
                     string propertyAssessorData = propertyAccountURL != "" ? GetWebRequest(propertyAccountURL, accountNumber, nonLiveDataOnly) : "Error";
@@ -152,6 +159,7 @@ namespace houser
         protected void btnPopulateData_Click(object sender, EventArgs e)
         {
             BuildSheriffSalePropertyList();
+            BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value));
         }
 
         protected void ddlSaleDate_SelectedIndexChanged(object sender, EventArgs e)
