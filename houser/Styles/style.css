@@ -10,5 +10,8 @@
 .check { color: White; font-size: small; }
 .listingWrapper { height: 63px; width: 100%; background-color: transparent;}
 .indicator { float:left; height: 63px; width: 25px; background-image: url(/images/indicators/red.png); }
-.listingPanel { height: 63px; background-image: url(/images/listingPanel/backgroundLightx.png); }
+.listingPanel { height: 63px;  background-image: url(/images/listingPanel/backgroundLightx.png); }
 .listingPanelx { height: 63px; background-image: url(/images/listingPanel/backgroundDarkx.png); }
+.propertyData {color: #494949; font-family:Arial; font-size: medium;}
+.address { float: left; height: 14; padding: 20px; width: 350px; text-align: center; left: 25px;   }
+.vLine { position: relative; border-right: thick solid #494949;}

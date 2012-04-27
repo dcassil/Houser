@@ -36,13 +36,14 @@ namespace houser
                 
             }
         }
-
-        public static void BuildListingPanels(DateTime date)
+        
+        public void BuildListingPanels(DateTime date)
         {
             BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
             List<PropAccount> subjectProperties = PropAccounts.GetSubjectPropertiesByDate(date);
             foreach (var prop in subjectProperties)
             {
+                pnlListingPanel.Controls.Add(new LiteralControl("<div class=\"listingWrapper\"><div class=\"indicator\"></div><div class=\"listingPanel\"><span class=\"propertyData\"><span class=\"address\">" + prop.Address + "</span></span></div></div>"));
                 string account = prop.AccountNumber;
                 // time for bed.  go here to see how we will generate the html via javascript.  http://www.dotnetcurry.com/ShowArticle.aspx?ID=200
             }
@@ -149,6 +150,7 @@ namespace houser
             try
             {
                 displayPanel.Controls.Add(new LiteralControl("<p>" + finishedLoading + "</p>"));
+                
             }
             catch {}
             
