@@ -12,6 +12,7 @@
 <body>
     <form id="form1" runat="server" visible="true">
     <div class="pageWrapper">
+    
     <div class="displayPanel">
         <div class="mapWrapper">
             <div class="map"></div>
@@ -25,6 +26,7 @@
             <div class="subject"></div>
         </div>
     </div>
+    <div class="displayPanelSpacer"></div>
     <div class="menu">
         <asp:DropDownList ID="ddlSaleDate" class="dropDown" runat="server" 
             onselectedindexchanged="ddlSaleDate_SelectedIndexChanged" />
@@ -32,6 +34,7 @@
             onclick="btnPopulateData_Click"/>
         <asp:CheckBox ID="chkNonLive" class="check" Text="  Get fresh data." runat="server" />
     </div>
+    <div class="menuSpacer"></div>
     <div class="listings">
         <asp:Panel ID="pnlListingPanel" runat="server">
         </asp:Panel>

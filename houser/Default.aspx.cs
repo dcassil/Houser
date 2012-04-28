@@ -41,10 +41,21 @@ namespace houser
         {
             BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
             List<PropAccount> subjectProperties = PropAccounts.GetSubjectPropertiesByDate(date);
+            int i = 0;
+            string listingPnlClass;
             foreach (var prop in subjectProperties)
             {
-                pnlListingPanel.Controls.Add(new LiteralControl("<div class=\"listingWrapper\"><div class=\"indicator\"></div><div class=\"listingPanel\"><span class=\"propertyData\"><span class=\"address\">" + prop.Address + "</span></span></div></div>"));
-                string account = prop.AccountNumber;
+                if (i == 0)
+                {
+                    listingPnlClass = "listingPanel";
+                    i = 1;
+                }
+                else
+                {
+                    listingPnlClass = "listingPanelx";
+                    i = 0;
+                }
+                pnlListingPanel.Controls.Add(new LiteralControl("<div class=\"listingWrapper\"><div class=\"indicator\"></div><div class=\"" + listingPnlClass + "\"><span class=\"propertyData\"><span class=\"address\">" + prop.Address + "</span><div class=\"vLine\">|</div></span></div></div>"));
                 // time for bed.  go here to see how we will generate the html via javascript.  http://www.dotnetcurry.com/ShowArticle.aspx?ID=200
             }
         }

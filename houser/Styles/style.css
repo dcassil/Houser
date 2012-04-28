@@ -1,8 +1,13 @@
-﻿.displayPanel { width: 100%; height: 350px; background-color: #353535; }
+﻿body { background-color: #353535;}
+.pageWrapper { left: -10px; }
+
+.displayPanel { position:fixed; width: 100%; height: 353px; background-color: #353535; left: 0px; top: 0px; }
+.displayPanelSpacer { position:relative; width: 100%; height: 350px; }
 .mapWrapper { position: relative; float: left; top: 25px; left: 25px; height: 300px; width: 500px; background-color: Gray;}
 .compDisplay { position: relative; float: left; top: 25px;  margin: 0 0 0 50px; width: 600px; height: 300px; background-color: Gray; }
 .subjectInfo { position: relative; float: left; top: 25px; margin: 0 0 0 25px; height: 300px; width: 310px; background-color:Gray;}
-.menu { height: 36px; background-image: url(/images/menu/background.png); }
+.menu { position: fixed; height: 36px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 353px; z-index: 100; }
+.menuSpacer { position:relative; width: 100%; height: 36px; z-index: 0; }
 .listings {height: auto; width: 100%; background-color: #353535;}
 .button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; }
 .button:hover { color: #717171;}
@@ -11,7 +16,10 @@
 .listingWrapper { height: 63px; width: 100%; background-color: transparent;}
 .indicator { float:left; height: 63px; width: 25px; background-image: url(/images/indicators/red.png); }
 .listingPanel { height: 63px;  background-image: url(/images/listingPanel/backgroundLightx.png); }
+.listingPanel:hover {background-image: url(/images/listingPanel/backgroundLightxHov.png);}
 .listingPanelx { height: 63px; background-image: url(/images/listingPanel/backgroundDarkx.png); }
-.propertyData {color: #494949; font-family:Arial; font-size: medium;}
-.address { float: left; height: 14; padding: 20px; width: 350px; text-align: center; left: 25px;   }
-.vLine { position: relative; border-right: thick solid #494949;}
+.listingPanelx:hover { background-image: url(/images/listingPanel/backgroundDarkxHov.png); }
+.propertyData {color: #494949; font-family:Arial; font-size:small;}
+.address { float: left; height: 14; padding: 24px 20px 23px 40px; width: 350px; text-align: center;}
+.vLine { padding: 9px 0 9px 0; font-size: 36px; color: #78827c;}
+
