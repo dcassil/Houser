@@ -45,5 +45,13 @@ namespace houser.Data
             else
                 return null;
         }
+        public static string GetMinimumBidByAccountNumberAndDate(string accountNumber, DateTime date)
+        {
+            PropertyData db = new PropertyData();
+            var result = (from p in db.SSaleRecords
+                              where p.AccountNumber == accountNumber && p.SaleDate == date
+                              select p.Price).FirstOrDefault();
+            return result;
+        }
     }
 }

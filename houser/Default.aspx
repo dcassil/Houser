@@ -36,6 +36,7 @@
     </div>
     <div class="menuSpacer"></div>
     <div class="listings">
+        <div class="listPlaceHolder"></div>
         <asp:Panel ID="pnlListingPanel" runat="server">
         </asp:Panel>
     </div>

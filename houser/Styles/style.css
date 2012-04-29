@@ -3,23 +3,25 @@
 
 .displayPanel { position:fixed; width: 100%; height: 353px; background-color: #353535; left: 0px; top: 0px; }
 .displayPanelSpacer { position:relative; width: 100%; height: 350px; }
-.mapWrapper { position: relative; float: left; top: 25px; left: 25px; height: 300px; width: 500px; background-color: Gray;}
-.compDisplay { position: relative; float: left; top: 25px;  margin: 0 0 0 50px; width: 600px; height: 300px; background-color: Gray; }
-.subjectInfo { position: relative; float: left; top: 25px; margin: 0 0 0 25px; height: 300px; width: 310px; background-color:Gray;}
+.mapWrapper { position: relative; float: left; top: 25px; left: 25px; height: 300px; width: 40%; background-color: Gray;}
+.compDisplay { position: relative; float: left; top: 25px;  margin: 0 0 0 50px; width: 30%; height: 300px; background-color: Gray; }
+.subjectInfo { position: relative; float: left; top: 25px; margin: 0 0 0 25px; height: 300px; width: 20%; background-color:Gray;}
 .menu { position: fixed; height: 36px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 353px; z-index: 100; }
 .menuSpacer { position:relative; width: 100%; height: 36px; z-index: 0; }
 .listings {height: auto; width: 100%; background-color: #353535;}
-.button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; }
+.listPlaceHolder { height: 241px; width: 468px; position: fixed; left: 50%; margin-left: -234px; top: 500px;  background-image: url(/images/listingPanel/placeholder.png); z-index: -100;}
+.button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; cursor:pointer; }
 .button:hover { color: #717171;}
 .dropDown { margin: 8px 5px 0 20px; }
 .check { color: White; font-size: small; }
-.listingWrapper { height: 63px; width: 100%; background-color: transparent;}
-.indicator { float:left; height: 63px; width: 25px; background-image: url(/images/indicators/red.png); }
-.listingPanel { height: 63px;  background-image: url(/images/listingPanel/backgroundLightx.png); }
-.listingPanel:hover {background-image: url(/images/listingPanel/backgroundLightxHov.png);}
+.listingWrapper { height: 63px; width: 100%; background-color: transparent; cursor:pointer; z-index: 1;}
+.indicator { float:left; height: 63px; width: 25px; background-image: url(/images/indicators/red.png); z-index: 1; }
+.listingPanel { height: 63px;  background-image: url(/images/listingPanel/backgroundLightx.png); z-index: 1; }
+.listingPanel:hover {background-image: url(/images/listingPanel/backgroundLightxHov.png); z-index: 1;}
 .listingPanelx { height: 63px; background-image: url(/images/listingPanel/backgroundDarkx.png); }
 .listingPanelx:hover { background-image: url(/images/listingPanel/backgroundDarkxHov.png); }
 .propertyData {color: #494949; font-family:Arial; font-size:small;}
 .address { float: left; height: 14; padding: 24px 20px 23px 40px; width: 350px; text-align: center;}
 .vLine { padding: 9px 0 9px 0; font-size: 36px; color: #78827c;}
+
 

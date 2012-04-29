@@ -12,6 +12,7 @@ using System.Web.UI.HtmlControls;
 using houser.Data;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 
 namespace houser
 {
@@ -43,8 +44,10 @@ namespace houser
             List<PropAccount> subjectProperties = PropAccounts.GetSubjectPropertiesByDate(date);
             int i = 0;
             string listingPnlClass;
+            StringBuilder html = new StringBuilder();
             foreach (var prop in subjectProperties)
             {
+                html.Clear();
                 if (i == 0)
                 {
                     listingPnlClass = "listingPanel";
@@ -55,8 +58,19 @@ namespace houser
                     listingPnlClass = "listingPanelx";
                     i = 0;
                 }
-                pnlListingPanel.Controls.Add(new LiteralControl("<div class=\"listingWrapper\"><div class=\"indicator\"></div><div class=\"" + listingPnlClass + "\"><span class=\"propertyData\"><span class=\"address\">" + prop.Address + "</span><div class=\"vLine\">|</div></span></div></div>"));
-                // time for bed.  go here to see how we will generate the html via javascript.  http://www.dotnetcurry.com/ShowArticle.aspx?ID=200
+                html.Append("<div class=\"listingWrapper\">");
+                    html.Append("<div class=\"indicator\"></div>");
+                    html.Append("<div class=\"" + listingPnlClass + "\">");
+                        html.Append("<span class=\"propertyData\">");
+                            html.Append("<span class=\"address\">" + prop.Address + "</span>");
+                            html.Append("<div class=\"vLine\">|</div>");            
+                            html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(Convert.ToInt32(SheriffSaleProperty.GetMinimumBidByAccountNumberAndDate(prop.AccountNumber, date))*.66) + "</span>");
+                        html.Append("</span>");
+                    html.Append("</div>");
+                html.Append("</div>");
+                
+                pnlListingPanel.Controls.Add(new LiteralControl(html.ToString()));
+                // go here to see how to use scroll up down events http://api.jquery.com/scroll/  we will use it to make sure key down and wheel down move down one listing exactly.
             }
         }
 

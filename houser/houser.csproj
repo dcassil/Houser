@@ -60,6 +60,7 @@
     <Content Include="images\listingPanel\backgroundLight.png" />
     <Content Include="images\listingPanel\backgroundLightX.png" />
     <Content Include="images\listingPanel\backgroundLightXHov.png" />
+    <Content Include="images\listingPanel\placeholder.png" />
     <Content Include="images\menu\background.png" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />

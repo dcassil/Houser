@@ -25,5 +25,9 @@ namespace houser
         {
             return Data.SheriffSalePropertyDB.AccountNumberAlreadyInTable(accountNumber);
         }
+        public static string GetMinimumBidByAccountNumberAndDate(string accountNumber, DateTime date)
+        {
+            return Data.SheriffSalePropertyDB.GetMinimumBidByAccountNumberAndDate(accountNumber, date);
+        }
     }
 }
