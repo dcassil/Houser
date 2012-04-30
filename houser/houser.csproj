@@ -54,6 +54,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="images\indicators\red.png" />
+    <Content Include="images\infoPanel\placeHolder.png" />
     <Content Include="images\listingPanel\background.png" />
     <Content Include="images\listingPanel\backgroundDarkx.png" />
     <Content Include="images\listingPanel\backgroundDarkxHov.png" />
@@ -110,6 +111,7 @@
       <LastGenOutput>PropertyData.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="images\infoPanel\placeHolder.psd" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

@@ -12,19 +12,8 @@
 <body>
     <form id="form1" runat="server" visible="true">
     <div class="pageWrapper">
-    
     <div class="displayPanel">
-        <div class="mapWrapper">
-            <div class="map"></div>
-        </div>
-        <div class="compDisplay">
-            <div class="compHeader"></div>
-            <div class="comps"></div>
-        </div>
-        <div class="subjectInfo">
-            <div class="subjectHeader"></div>
-            <div class="subject"></div>
-        </div>
+    <div class="displayPanelPlaceholder"></div>
     </div>
     <div class="displayPanelSpacer"></div>
     <div class="menu">
@@ -40,6 +29,7 @@
         <asp:Panel ID="pnlListingPanel" runat="server">
         </asp:Panel>
     </div>
+    <div class="listingsSpacer"></div>
     <div id="displayData">
         <asp:Panel ID="displayPanel" runat="server">
         </asp:Panel>
