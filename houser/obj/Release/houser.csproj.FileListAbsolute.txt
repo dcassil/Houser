@@ -8,3 +8,8 @@ F:\Houser\houser\bin\houser.pdb
 F:\Houser\houser\obj\Release\ResolveAssemblyReference.cache
 F:\Houser\houser\obj\Release\houser.dll
 F:\Houser\houser\obj\Release\houser.pdb
+C:\git_project\Houser\houser\obj\Release\ResolveAssemblyReference.cache
+C:\git_project\Houser\houser\bin\houser.dll
+C:\git_project\Houser\houser\bin\houser.pdb
+C:\git_project\Houser\houser\obj\Release\houser.dll
+C:\git_project\Houser\houser\obj\Release\houser.pdb

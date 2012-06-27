@@ -80,13 +80,13 @@
     <Compile Include="Data\Helpper.cs" />
     <Compile Include="Data\PropAccountsDB.cs" />
     <Compile Include="Data\PropertyCompsDB.cs" />
-    <Compile Include="Data\SheriffSalePropertyDB.cs" />
-    <Compile Include="Data\WebRequestDB.cs" />
     <Compile Include="Data\PropertyData.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PropertyData.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Data\SheriffSalePropertyDB.cs" />
+    <Compile Include="Data\WebRequestDB.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="PropAccounts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyAccount.cs" />
     <Compile Include="PropertyComps.cs" />
     <Compile Include="SheriffSaleProperty.cs" />
     <Compile Include="utilities\PageScraper.cs" />

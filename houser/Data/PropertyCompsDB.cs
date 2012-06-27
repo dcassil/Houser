@@ -9,7 +9,7 @@ namespace houser.Data
     {
         public static bool PropertyCompExists(string subject, string comp)
         {
-            PropertyData db = new PropertyData();
+            PropertyDataDataContext db = new PropertyDataDataContext();
             var propComp = from p in db.PropComps
                            where p.PropertyAccount == subject && p.CompAccount == comp
                            select p;
@@ -21,7 +21,7 @@ namespace houser.Data
 
         public static bool PropertyHasComps(string subject)
         {
-            PropertyData db = new PropertyData();
+            PropertyDataDataContext db = new PropertyDataDataContext();
             var propComp = from p in db.PropComps
                            where p.PropertyAccount == subject
                            select p;
@@ -33,7 +33,7 @@ namespace houser.Data
 
         public static void InsertPropertyComp(string subject, string comp)
         {
-            PropertyData db = new PropertyData();
+            PropertyDataDataContext db = new PropertyDataDataContext();
             PropComp propComp = new PropComp();
             propComp.PropertyAccount = subject;
             propComp.CompAccount = comp;

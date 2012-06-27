@@ -1,10 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Houser" Class="PropertyData" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DC-PC;Initial Catalog=Houser;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HouserConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.PropertyRecord" Member="PropertyRecords">
-    <Type Name="PropertyRecord">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Houser" Class="PropertyDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DC-PC\DC_DEV;Initial Catalog=Houser;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HouserConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PropAccounts" Member="PropAccounts">
+    <Type Name="PropAccount">
       <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Data" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sqft" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Beds" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Baths" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YearBuilt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Exterior" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastSaleDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastSalePrice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GarageSize" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FullyLoaded" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="SubjectProperty" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.PropComps" Member="PropComps">
@@ -22,21 +32,21 @@
       <Column Name="LastUpdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.PropAccounts" Member="PropAccounts">
-    <Type Name="PropAccount">
-      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Sqft" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Beds" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Baths" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="YearBuilt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Exterior" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="LastSaleDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="LastSalePrice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+  <Table Name="dbo.PropertyAccount" Member="PropertyAccounts">
+    <Type Name="PropertyAccount">
+      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(260)" CanBeNull="true" />
+      <Column Name="Sqft" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Beds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Baths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearBuilt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Exterior" Type="System.String" DbType="VarChar(260)" CanBeNull="true" />
+      <Column Name="LastSaleDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LastSalePrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DateModified" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="GarageSize" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="FullyLoaded" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="SubjectProperty" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="GarageSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FullyLoaded" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SubjectProperty" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

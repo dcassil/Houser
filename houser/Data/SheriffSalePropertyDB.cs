@@ -10,7 +10,7 @@ namespace houser.Data
     {
         public static void InsertProperty(Dictionary<string, string> data, string saleDate)
         {
-            PropertyData db = new PropertyData();
+            PropertyDataDataContext db = new PropertyDataDataContext();
             SSaleRecord ssp = new SSaleRecord();
             ssp.AccountNumber = data["8"].Substring(67);
             ssp.Price = data["Appraisal Value"];
@@ -24,7 +24,7 @@ namespace houser.Data
         /// </summary>
         public static void UpdateProperty(string accountNumber, string price, string Note, string saleDate, string lastUpdate)
         {
-            PropertyData db = new PropertyData();
+            PropertyDataDataContext db = new PropertyDataDataContext();
             SSaleRecord record = db.SSaleRecords.First(r => r.AccountNumber == accountNumber);
             if (price != "")
                 record.Price = price;
@@ -38,7 +38,7 @@ namespace houser.Data
         }
         public static DateTime? AccountNumberAlreadyInTable(string accountNumber)
         {
-            PropertyData db = new PropertyData();
+            PropertyDataDataContext db = new PropertyDataDataContext();
             SSaleRecord record = db.SSaleRecords.FirstOrDefault(r => r.AccountNumber == accountNumber);
             if (record != null)
                 return record.SaleDate;
@@ -47,7 +47,7 @@ namespace houser.Data
         }
         public static string GetMinimumBidByAccountNumberAndDate(string accountNumber, DateTime date)
         {
-            PropertyData db = new PropertyData();
+            PropertyDataDataContext db = new PropertyDataDataContext();
             var result = (from p in db.SSaleRecords
                               where p.AccountNumber == accountNumber && p.SaleDate == date
                               select p.Price).FirstOrDefault();

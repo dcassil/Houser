@@ -28,7 +28,7 @@ namespace houser
                 // Request the sherifsale page so we can get the available sale dates.
                 string sheriffSaleDatePage = GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/", "SheriffSales", nonLiveData);
                 // Create a list of dates
-                List<string> dates = PageScraper.GetSheriffSaleDates(sheriffSaleDatePage);
+                List<string> dates = PageScraper.GetSheriffSaleDates(sheriffSaleDatePage);                                                                                  
                 foreach (var date in dates)
                 {
                     // Add dates to our drop down list.
