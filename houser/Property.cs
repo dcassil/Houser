@@ -6,14 +6,14 @@ using houser.Data;
 
 namespace houser
 {
-    public class PropertyAccount
+    public class Property
     {
         #region Properties
         protected string _accountNumber;
         protected string _address;
         protected int _sqft;
         protected int _beds;
-        protected int _baths;
+        protected double _baths;
         protected int _yearBuilt;
         protected string _exterior;
         protected DateTime _lastSaleDate;
@@ -21,6 +21,7 @@ namespace houser
         protected int _garageSize;
         protected bool _fullyLoaded;
         protected bool _subjectProperty;
+        bool isNew = true;
 
         #endregion
 
@@ -30,7 +31,7 @@ namespace houser
         public string Address { get; set; }
         public int SQFT { get; set; }
         public int Beds { get; set; }
-        public int Baths { get; set; }
+        public double Baths { get; set; }
         public int YearBuilt { get; set; }
         public string Exterior { get; set; }
         public DateTime LastSaleDate { get; set; }
@@ -42,11 +43,11 @@ namespace houser
         #endregion
 
         #region Constructors
-        public PropertyAccount()
+        public Property()
         {
         }
 
-        public PropertyAccount(string accountID)
+        public Property(string accountID)
         {
         }
 
@@ -58,15 +59,17 @@ namespace houser
 
         #region Persistance
 
-        public void Load()
+        public void Load(string accountNumber)
         {
-            PropAccountsDB.GetProperty(_accountNumber);
+            PropertyAccount prop = PropAccountsDB.GetProperty(accountNumber);
+            if (prop != null)
+                isNew = false;
         }
 
         public void Save()
         {
             // need to check to see if we should update or insert here.
-            if (true)
+            if (isNew)
                 PropAccountsDB.InsertProperty(_accountNumber, _address, _sqft, _beds, _baths, _yearBuilt, _garageSize, _exterior, _lastSaleDate, _lastSalePrice, _fullyLoaded, _subjectProperty);   
             else
                 PropAccountsDB.UpdateProperty(_accountNumber, _address, _sqft, _beds, _baths, _yearBuilt, _garageSize, _exterior, _lastSaleDate, _lastSalePrice, _fullyLoaded, _subjectProperty);

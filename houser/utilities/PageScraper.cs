@@ -19,11 +19,12 @@ namespace houser.utilities
             int propertyID = 0;
             foreach (Match pl in propertyListing)
             {
+
+                //  This is where the data start to get scraped.  First part is sales record.
                 string property = pl.Groups[1].Value;
                 List<string> fieldTrackerC1 = new List<string>();
                 List<string> fieldTrackerC2 = new List<string>();
-                MatchCollection PropertyRow = Regex.Matches(property, "<tr valign=\"top\"*>(.*?)</tr>",
-                RegexOptions.Singleline);
+                MatchCollection PropertyRow = Regex.Matches(property, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
                 int fieldID = 0;
                 foreach (Match m in PropertyRow)
                 {
@@ -113,32 +114,43 @@ namespace houser.utilities
 
         internal static Dictionary<int, Dictionary<string,string>> GetSimilarData(string file, string accountNumber, Dictionary<string, string> scrapedData)
         {
+            Property property = new Property();
+            property.Load(accountNumber);
+            
             Dictionary<int, Dictionary<string, string>> propertyData = new Dictionary<int, Dictionary<string, string>>();
             Dictionary<string, string> subjectPropertyFields = new Dictionary<string, string>();
             if (file != "Error")
             {
+                property.AccountNumber = accountNumber;
                 string subjectPropertyTableSubSet = Regex.Match(file, "Property Information</font>(.*?)>Sales are pulled", RegexOptions.Singleline).Groups[1].Value.Trim();
                 string subjectPropertyTable = Regex.Match(subjectPropertyTableSubSet, "<tbody>(.*?)</tbody>", RegexOptions.Singleline).Groups[1].Value.Trim();
                 string regexHelpper = Regex.Match(subjectPropertyTable, "Built</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                string yearBuilt = Regex.Match(regexHelpper, "<font size=\\\"2\\\" color=\\\"#0000FF\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
+                property.YearBuilt = Convert.ToInt32(Regex.Match(regexHelpper, "<font size=\\\"2\\\" color=\\\"#0000FF\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
                 //regexHelpper = Regex.Match(subjectPropertyTable, "bgcolor=\\\"#FFFFCC\\\">(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
                 //string address = Regex.Match(regexHelpper, "<font size=\\\"2\\\" color=\\\"#0000FF\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 regexHelpper = Regex.Match(subjectPropertyTable, "Total SQFT</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                string sqft = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
+                property.SQFT = Convert.ToInt32(Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim().Replace(",",""));
                 regexHelpper = Regex.Match(subjectPropertyTable, "Built As</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
                 string builtAs = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 regexHelpper = Regex.Match(subjectPropertyTable, "Bedrooms</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                string bedrooms = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
+                property.Beds = Convert.ToInt32(Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
                 regexHelpper = Regex.Match(subjectPropertyTable, "Baths</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                string bathrooms = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
+                property.Baths = Convert.ToDouble(Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim());
                 regexHelpper = Regex.Match(subjectPropertyTable, "Exterior</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
-                string exterior = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
+                property.Exterior = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                 string comparePropertyGroup = Regex.Match(file, "width=\\\"703\\\" colspan=\\\"5(.*?)</body>", RegexOptions.Singleline).Groups[1].Value.Trim();
                 propertyData.Add(0, subjectPropertyFields);
-                string saleDate = scrapedData["saleDate"];
-                string salePrice = scrapedData["salePrice"];
+                //property.LastSaleDate = Convert.ToDateTime(scrapedData["saleDate"]);
+                //property.LastSalePrice = Convert.ToInt32(scrapedData["salePrice"]);
+
+
                 if (!PropAccounts.CompletePropAccountExist(accountNumber) && PropAccounts.AccountSeedExist(accountNumber))
-                    PropAccounts.UpdateProperty(accountNumber, "", sqft, bedrooms, bathrooms, yearBuilt, "", exterior, saleDate, salePrice, "1", "1");
+                {
+                    property.FullyLoaded = true;
+                    property.SubjectProperty = true;
+                    property.Save();
+                }
+                    //PropAccounts.UpdateProperty(accountNumber, "", sqft, bedrooms, bathrooms, yearBuilt, "", exterior, saleDate, salePrice, "1", "1");
 
                 MatchCollection comparePropertyTable = Regex.Matches(comparePropertyGroup, "nt #</font>(.*?)>Accou", RegexOptions.Singleline);
                 int index = 1;

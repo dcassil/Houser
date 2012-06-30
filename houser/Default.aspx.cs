@@ -85,6 +85,9 @@ namespace houser
             string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates="+saleDate;
             string sherifSaleWebRequestData = GetWebRequest(sherifSaleUrl, saleDate, nonLiveDataOnly);
             // Get the list of all properties for this sherif sale dat.
+
+
+
             Dictionary<int, Dictionary<string, string>> SheriffSaleProperties = PageScraper.Find(sherifSaleWebRequestData, saleDate);
             
             foreach (var property in SheriffSaleProperties)

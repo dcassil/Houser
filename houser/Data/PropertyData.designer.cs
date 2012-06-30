@@ -39,6 +39,9 @@ namespace houser.Data
     partial void InsertSSaleRecord(SSaleRecord instance);
     partial void UpdateSSaleRecord(SSaleRecord instance);
     partial void DeleteSSaleRecord(SSaleRecord instance);
+    partial void InsertPropertyAccount(PropertyAccount instance);
+    partial void UpdatePropertyAccount(PropertyAccount instance);
+    partial void DeletePropertyAccount(PropertyAccount instance);
     #endregion
 		
 		public PropertyDataDataContext() : 
@@ -699,8 +702,10 @@ namespace houser.Data
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PropertyAccount")]
-	public partial class PropertyAccount
+	public partial class PropertyAccount : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _AccountNumber;
 		
@@ -710,7 +715,7 @@ namespace houser.Data
 		
 		private System.Nullable<int> _Beds;
 		
-		private System.Nullable<int> _Baths;
+		private System.Nullable<double> _Baths;
 		
 		private System.Nullable<int> _YearBuilt;
 		
@@ -728,11 +733,44 @@ namespace houser.Data
 		
 		private System.Nullable<bool> _SubjectProperty;
 		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAccountNumberChanging(string value);
+    partial void OnAccountNumberChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnSqftChanging(System.Nullable<int> value);
+    partial void OnSqftChanged();
+    partial void OnBedsChanging(System.Nullable<int> value);
+    partial void OnBedsChanged();
+    partial void OnBathsChanging(System.Nullable<double> value);
+    partial void OnBathsChanged();
+    partial void OnYearBuiltChanging(System.Nullable<int> value);
+    partial void OnYearBuiltChanged();
+    partial void OnExteriorChanging(string value);
+    partial void OnExteriorChanged();
+    partial void OnLastSaleDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastSaleDateChanged();
+    partial void OnLastSalePriceChanging(System.Nullable<int> value);
+    partial void OnLastSalePriceChanged();
+    partial void OnDateModifiedChanging(System.DateTime value);
+    partial void OnDateModifiedChanged();
+    partial void OnGarageSizeChanging(System.Nullable<int> value);
+    partial void OnGarageSizeChanged();
+    partial void OnFullyLoadedChanging(System.Nullable<bool> value);
+    partial void OnFullyLoadedChanged();
+    partial void OnSubjectPropertyChanging(System.Nullable<bool> value);
+    partial void OnSubjectPropertyChanged();
+    #endregion
+		
 		public PropertyAccount()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountNumber", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountNumber", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string AccountNumber
 		{
 			get
@@ -743,7 +781,11 @@ namespace houser.Data
 			{
 				if ((this._AccountNumber != value))
 				{
+					this.OnAccountNumberChanging(value);
+					this.SendPropertyChanging();
 					this._AccountNumber = value;
+					this.SendPropertyChanged("AccountNumber");
+					this.OnAccountNumberChanged();
 				}
 			}
 		}
@@ -759,7 +801,11 @@ namespace houser.Data
 			{
 				if ((this._Address != value))
 				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
 					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
 				}
 			}
 		}
@@ -775,7 +821,11 @@ namespace houser.Data
 			{
 				if ((this._Sqft != value))
 				{
+					this.OnSqftChanging(value);
+					this.SendPropertyChanging();
 					this._Sqft = value;
+					this.SendPropertyChanged("Sqft");
+					this.OnSqftChanged();
 				}
 			}
 		}
@@ -791,13 +841,17 @@ namespace houser.Data
 			{
 				if ((this._Beds != value))
 				{
+					this.OnBedsChanging(value);
+					this.SendPropertyChanging();
 					this._Beds = value;
+					this.SendPropertyChanged("Beds");
+					this.OnBedsChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Baths", DbType="Int")]
-		public System.Nullable<int> Baths
+		public System.Nullable<double> Baths
 		{
 			get
 			{
@@ -807,7 +861,11 @@ namespace houser.Data
 			{
 				if ((this._Baths != value))
 				{
+					this.OnBathsChanging(value);
+					this.SendPropertyChanging();
 					this._Baths = value;
+					this.SendPropertyChanged("Baths");
+					this.OnBathsChanged();
 				}
 			}
 		}
@@ -823,7 +881,11 @@ namespace houser.Data
 			{
 				if ((this._YearBuilt != value))
 				{
+					this.OnYearBuiltChanging(value);
+					this.SendPropertyChanging();
 					this._YearBuilt = value;
+					this.SendPropertyChanged("YearBuilt");
+					this.OnYearBuiltChanged();
 				}
 			}
 		}
@@ -839,7 +901,11 @@ namespace houser.Data
 			{
 				if ((this._Exterior != value))
 				{
+					this.OnExteriorChanging(value);
+					this.SendPropertyChanging();
 					this._Exterior = value;
+					this.SendPropertyChanged("Exterior");
+					this.OnExteriorChanged();
 				}
 			}
 		}
@@ -855,7 +921,11 @@ namespace houser.Data
 			{
 				if ((this._LastSaleDate != value))
 				{
+					this.OnLastSaleDateChanging(value);
+					this.SendPropertyChanging();
 					this._LastSaleDate = value;
+					this.SendPropertyChanged("LastSaleDate");
+					this.OnLastSaleDateChanged();
 				}
 			}
 		}
@@ -871,7 +941,11 @@ namespace houser.Data
 			{
 				if ((this._LastSalePrice != value))
 				{
+					this.OnLastSalePriceChanging(value);
+					this.SendPropertyChanging();
 					this._LastSalePrice = value;
+					this.SendPropertyChanged("LastSalePrice");
+					this.OnLastSalePriceChanged();
 				}
 			}
 		}
@@ -887,7 +961,11 @@ namespace houser.Data
 			{
 				if ((this._DateModified != value))
 				{
+					this.OnDateModifiedChanging(value);
+					this.SendPropertyChanging();
 					this._DateModified = value;
+					this.SendPropertyChanged("DateModified");
+					this.OnDateModifiedChanged();
 				}
 			}
 		}
@@ -903,7 +981,11 @@ namespace houser.Data
 			{
 				if ((this._GarageSize != value))
 				{
+					this.OnGarageSizeChanging(value);
+					this.SendPropertyChanging();
 					this._GarageSize = value;
+					this.SendPropertyChanged("GarageSize");
+					this.OnGarageSizeChanged();
 				}
 			}
 		}
@@ -919,7 +1001,11 @@ namespace houser.Data
 			{
 				if ((this._FullyLoaded != value))
 				{
+					this.OnFullyLoadedChanging(value);
+					this.SendPropertyChanging();
 					this._FullyLoaded = value;
+					this.SendPropertyChanged("FullyLoaded");
+					this.OnFullyLoadedChanged();
 				}
 			}
 		}
@@ -935,8 +1021,32 @@ namespace houser.Data
 			{
 				if ((this._SubjectProperty != value))
 				{
+					this.OnSubjectPropertyChanging(value);
+					this.SendPropertyChanging();
 					this._SubjectProperty = value;
+					this.SendPropertyChanged("SubjectProperty");
+					this.OnSubjectPropertyChanged();
 				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

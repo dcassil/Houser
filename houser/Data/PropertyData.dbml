@@ -34,11 +34,11 @@
   </Table>
   <Table Name="dbo.PropertyAccount" Member="PropertyAccounts">
     <Type Name="PropertyAccount">
-      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Address" Type="System.String" DbType="VarChar(260)" CanBeNull="true" />
       <Column Name="Sqft" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Beds" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Baths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Baths" Type="System.Double" DbType="Int" CanBeNull="true" />
       <Column Name="YearBuilt" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Exterior" Type="System.String" DbType="VarChar(260)" CanBeNull="true" />
       <Column Name="LastSaleDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />

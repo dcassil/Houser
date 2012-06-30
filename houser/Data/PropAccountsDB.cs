@@ -93,7 +93,7 @@ namespace houser.Data
                                             string address,
                                             int sqft,
                                             int beds,
-                                            int baths,
+                                            double baths,
                                             int yearBuilt,
                                             int garage,
                                             string exterior,
@@ -147,7 +147,7 @@ namespace houser.Data
         public static PropertyAccount GetProperty(string accountNumber)
         {
             PropertyDataDataContext db = new PropertyDataDataContext();
-            return db.PropertyAccounts.First(r => r.AccountNumber == accountNumber);
+            return db.PropertyAccounts.FirstOrDefault(r => r.AccountNumber == accountNumber);
         }
 
         public static void UpdateProperty(string accountNumber,
@@ -195,7 +195,7 @@ namespace houser.Data
                                             string address,
                                             int sqft,
                                             int beds,
-                                            int baths,
+                                            double baths,
                                             int yearBuilt,
                                             int garage,
                                             string exterior,
