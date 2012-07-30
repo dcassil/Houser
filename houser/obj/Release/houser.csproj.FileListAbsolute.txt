@@ -13,3 +13,4 @@ C:\git_project\Houser\houser\bin\houser.dll
 C:\git_project\Houser\houser\bin\houser.pdb
 C:\git_project\Houser\houser\obj\Release\houser.dll
 C:\git_project\Houser\houser\obj\Release\houser.pdb
+C:\git_project\Houser\houser\bin\Microsoft.ApplicationBlocks.Data.dll
