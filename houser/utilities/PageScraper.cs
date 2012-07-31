@@ -1,52 +1,48 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Web;
-//using System.Text.RegularExpressions;
-//using System.Data;
-//using houser.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Text.RegularExpressions;
+using System.Data;
+using houser.Data;
 
 
-//namespace houser.utilities
-//{
-//    // look at this http://www.dotnetperls.com/scraping-html for some regex and to see what you were doing.
-//    public static class PageScraper
-//    {
-//        public static Dictionary<int, Dictionary<string, string>> Find(string file, string saleDate)
-//        {
-//            Dictionary<int, Dictionary<string, string>> propertyGroup = new Dictionary<int, Dictionary<string, string>>();
-//            Dictionary<string, string> field = new Dictionary<string, string>();
-//            MatchCollection propertyListing = Regex.Matches(file, "<table cellpadding=\"0\" cellspacing=\"1\">\r\n\t(.*?)</table", RegexOptions.Singleline);
-//            int propertyID = 0;
-//            foreach (Match pl in propertyListing)
-//            {
+namespace houser.utilities
+{
+    // look at this http://www.dotnetperls.com/scraping-html for some regex and to see what you were doing.
+    public static class PageScraper
+    {
+        public static void ScrapePropertyDatePiecesIntoDatabase(string file, string saleDate)
+        {
+            MatchCollection propertyListing = Regex.Matches(file, "<table cellpadding=\"0\" cellspacing=\"1\">\r\n\t(.*?)</table", RegexOptions.Singleline);
+            
+            foreach (Match pl in propertyListing)
+            {
+                string accountnuber = Regex.Matches(pl.Groups[1].Value, "ACCOUNTNO=(.*?)\"", RegexOptions.Singleline)[0].Groups[1].Value;
+                SaleRecord saleRecord = new SaleRecord(accountnuber);
+                if (saleRecord.AccountNumber == null)
+                {
+                    MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
+                    string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
 
-//                //  This is where the data start to get scraped.  First part is sales record.
-//                string property = pl.Groups[1].Value;
-//                List<string> fieldTrackerC1 = new List<string>();
-//                List<string> fieldTrackerC2 = new List<string>();
-//                MatchCollection PropertyRow = Regex.Matches(property, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
-//                int fieldID = 0;
-//                foreach (Match m in PropertyRow)
-//                {
-//                    string propertyItem = m.Groups[1].Value.Trim();
-//                    fieldID++;
-//                    MatchCollection propertyItemKey = Regex.Matches(propertyItem, "<td><strong><font class=\"featureFont\">(.*?)</font>", RegexOptions.Singleline);
-//                    MatchCollection propertyItemValue = Regex.Matches(propertyItem, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline);
-//                    MatchCollection propertyRlink = Regex.Matches(propertyItem, "<td colspan=\"2\"><strong><font class=\"featureFont\"><a href=\"(.*?)\" target=\"_blank\">", RegexOptions.Singleline);
-//                    foreach (Match pf in propertyItemKey)
-//                    {
-//                        fieldTrackerC1.Add(pf.Groups[1].Value.Trim());
-//                    }
-//                    foreach (Match pf in propertyItemValue)
-//                    {
-//                        fieldTrackerC2.Add(pf.Groups[1].Value.Trim());
-//                    }
-//                    foreach (Match pf in propertyRlink)
-//                    {
-//                        field.Add(fieldID.ToString(), pf.Groups[1].Value.Trim());
-//                    }
-//                }
+                    saleRecord.AccountNumber = accountnuber;
+                    saleRecord.SalePrice = Convert.ToDouble(Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value);
+                    saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
+                }
+            }
 
+            //  So far we have most of SaleRecord getting populated.  we will want call the account scraper probably for each record as it comes up to keep all the data together.
+                
+                    
+                    //foreach (Match pf in propertyItemValue)
+                    //{
+                    //    fieldTrackerC2.Add(pf.Groups[1].Value.Trim());
+                    //}
+                    //foreach (Match pf in propertyRlink)
+                    //{
+                    //    field.Add(fieldID.ToString(), pf.Groups[1].Value.Trim());
+                    //}
+                
+            
 //                foreach (var ft in fieldTrackerC1)
 //                {
 //                    int fieldIndex = fieldTrackerC1.IndexOf(ft);
@@ -67,7 +63,7 @@
 //                field.Clear();
 //            }
 //            return propertyGroup;
-//        }
+        }
 
 //        public static Dictionary<string, string> GetPropertyData(string file, string accountNumber)
 //        {
@@ -91,26 +87,26 @@
 //            return propertyData;
 //        }
 
-//        public static List<string> GetSheriffSaleDates(string file)
-//        {
-//            string dataSubSet;
-//            List<string> dates = new List<string>();
+        public static List<string> GetSheriffSaleDates(string file)
+        {
+            string dataSubSet;
+            List<string> dates = new List<string>();
 
 
-//            if (!string.IsNullOrWhiteSpace(file))
-//            {
-//                dataSubSet = Regex.Match(file, "<form name=\"SheriffSale\"(.*?)</form>", RegexOptions.Singleline).Groups[1].Value.Trim();
-//                MatchCollection dateMatches = Regex.Matches(dataSubSet, "<option value=\"(.*?)\">", RegexOptions.Singleline);
-//                foreach (Match dt in dateMatches)
-//                {
-//                    dates.Add(dt.Groups[1].Value);
-//                }
-//            }
-//            else
-//                dates.Add("04/26/2012");
+            if (!string.IsNullOrWhiteSpace(file))
+            {
+                dataSubSet = Regex.Match(file, "<form name=\"SheriffSale\"(.*?)</form>", RegexOptions.Singleline).Groups[1].Value.Trim();
+                MatchCollection dateMatches = Regex.Matches(dataSubSet, "<option value=\"(.*?)\">", RegexOptions.Singleline);
+                foreach (Match dt in dateMatches)
+                {
+                    dates.Add(dt.Groups[1].Value);
+                }
+            }
+            else
+                dates.Add("04/26/2012");
                 
-//            return dates;
-//        }
+            return dates;
+        }
 
 //        internal static Dictionary<int, Dictionary<string,string>> GetSimilarData(string file, string accountNumber, Dictionary<string, string> scrapedData)
 //        {
@@ -202,5 +198,5 @@
             
 //            return propertyData;
 //        }
-//    }
-//}
+    }
+}

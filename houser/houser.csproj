@@ -96,7 +96,7 @@
     <Compile Include="Property.cs" />
     <Compile Include="PropertyCompareProperties.cs" />
     <Compile Include="PropertyComps.cs" />
-    <Compile Include="SaleRecord.cs" />
+    <Compile Include="Business\SaleRecord.cs" />
     <Compile Include="SheriffSaleProperty.cs" />
     <Compile Include="utilities\PageScraper.cs" />
     <Compile Include="utilities\RateProps.cs" />

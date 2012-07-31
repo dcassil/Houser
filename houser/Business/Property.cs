@@ -23,11 +23,25 @@ namespace houser.Business
         #endregion
 
         #region Propertiese
-        
+        public string AccountNumber { get { return _accountNumber; } set { _accountNumber = value; } }
+        public string Address { get { return _Address; } set { _Address = value; } }
+        public int Sqft { get { return _sqft; } set { _sqft = value; } }
+        public double Baths { get { return _baths; } set { _baths = value; } }
+        public int Beds { get { return _beds; } set { _beds = value; } }
+        public string Exterior { get { return _exterior; } set { _exterior = value; } }
+        public DateTime LastSaleDate { get { return _lastSaleDate; } set { _lastSaleDate = value; } }
+        public int LastSalePrice { get { return _lastSalePrice; } set { _lastSalePrice = value; } }
+        public DateTime DateModified { get { return _dateModified; } set { _dateModified = value; } }
+        public int GarageSize { get { return _garageSize; } set { _garageSize = value; } }
         #endregion
-
         #region Static Methods
 
+        #region Constructors
+
+        public Property()
+        { }
+
+        #endregion
         public static DataSet GetPropertyByAccount(string accountNumber)
         {
             return PropertyDB.GetPropertyByAccount(accountNumber);

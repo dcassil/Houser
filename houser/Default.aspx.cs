@@ -21,23 +21,23 @@ namespace houser
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            DataSet blaw = houser.Business.Property.GetPropertyByAccount("1");
-            // If this is not a post back (first page load)
-        //    if (!IsPostBack)
-        //    {
-        //        // See if we have checked to only get cached data...........This will probably go away.
-        //        bool nonLiveData = chkNonLive.Checked;
-        //        // Request the sherifsale page so we can get the available sale dates.
-        //        string sheriffSaleDatePage = GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/", "SheriffSales", nonLiveData);
-        //        // Create a list of dates
-        //        List<string> dates = PageScraper.GetSheriffSaleDates(sheriffSaleDatePage);
-        //        foreach (var date in dates)
-        //        {
-        //            // Add dates to our drop down list.
-        //            ddlSaleDate.Items.Add(date);
-        //        }
+            
+           //If this is not a post back (first page load)
+            if (!IsPostBack)
+            {
+                // See if we have checked to only get cached data...........This will probably go away.
+                bool nonLiveData = chkNonLive.Checked;
+                // Request the sherifsale page so we can get the available sale dates.
+                string sheriffSaleDatePage = GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/", "SheriffSales", nonLiveData);
+                // Create a list of dates
+                List<string> dates = PageScraper.GetSheriffSaleDates(sheriffSaleDatePage);
+                foreach (var date in dates)
+                {
+                    // Add dates to our drop down list.
+                    ddlSaleDate.Items.Add(date);
+                }
 
-        //    }
+            }
         }
 
         //public void BuildListingPanels(DateTime date)
@@ -79,18 +79,17 @@ namespace houser
         /// <summary>
         /// Build the entire data structure for all properties.  Includes comparable data, property specs, ect.  03%2f15%2f2012
         /// </summary>
-        //private static string GetCompletePropertyList(string saleDate, bool nonLiveDataOnly)
-        //{
+        private static string GetCompletePropertyList(string saleDate, bool nonLiveDataOnly)
+        {
+            
+        
         //    //Dictionary<string, Dictionary<int, Dictionary<string,string>>> allPropertyData = new Dictionary<string, Dictionary<int, Dictionary<string,string>>>();
         //    //Dictionary<int, Dictionary<string, string>> allCoreDataTMP = new Dictionary<int, Dictionary<string, string>>();
         //    //Dictionary<string, string> allFieldDataTMP = new Dictionary<string, string>();
-        //    string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
-        //    string sherifSaleWebRequestData = GetWebRequest(sherifSaleUrl, saleDate, nonLiveDataOnly);
-        //    // Get the list of all properties for this sherif sale dat.
-
-
-
-        //    Dictionary<int, Dictionary<string, string>> SheriffSaleProperties = PageScraper.Find(sherifSaleWebRequestData, saleDate);
+            string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
+            string sherifSaleWebRequestData = GetWebRequest(sherifSaleUrl, saleDate, nonLiveDataOnly);
+        
+            PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
 
         //    foreach (var property in SheriffSaleProperties)
         //    {
@@ -115,83 +114,59 @@ namespace houser
         //            Dictionary<int, Dictionary<string, string>> scrapedCoreData = new Dictionary<int, Dictionary<string, string>>(PageScraper.GetSimilarData(similarPropertyData, accountNumber, scrapedData));
         //        }
         //    }
-        //    return "Finished Loading";
-        //}
+            return "Finished Loading";
+        }
 
 
         /// <summary>
         /// Request the webpage as a string.
         /// </summary>
-        //public static string GetWebRequest(string url, string accountNumber, bool nonLiveDataOnly)
-        //{
-        //    // Try to get a property record by account number.  or return No_DATA_29454.  this needs to be replaced by soemthing not dumb.
-        //    //string propertyRecord = WebRequestDB.GetPropertyRecord(accountNumber);
+        public static string GetWebRequest(string url, string accountNumber, bool nonLiveDataOnly)
+        {
+            string strResults = "";
+            WebResponse objResponse;
+            // request a url.
+            WebRequest objRequest = System.Net.HttpWebRequest.Create(url);
 
-        //    //if (propertyRecord == "No_DATA_29454" || accountNumber == "SheriffSales")
-        //    //if(!nonLiveDataOnly)
-        //    //{
-        //    string strResults = "";
-        //    WebResponse objResponse;
-        //    // request a url.
-        //    WebRequest objRequest = System.Net.HttpWebRequest.Create(url);
-
-        //    try
-        //    {
-        //        // get the data from our url
-        //        objResponse = objRequest.GetResponse();
+            try
+            {
+                // get the data from our url
+                objResponse = objRequest.GetResponse();
 
 
-        //        using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
-        //        {
-        //            // create a string of the entire page we just requested.
-        //            strResults = sr.ReadToEnd();
-        //            sr.Close();
-        //            // if this is not a sherifsale request and not a date request then its a account number request.  this is gay too.  should be less cryptic.
-        //            //if (accountNumber != "SheriffSales" && !accountNumber.Contains(@"%"))
-        //            //    // write the entire request string to the db.  this is also dumb and needs to go away.
-        //            //    WebRequestDB.WritePropertyRecord(accountNumber, strResults);
-
-        //            return strResults;
-        //        }
-        //    }
-        //    catch { return ""; }
-        //}
-        //}
-        //else
-        //{
-        //    return propertyRecord;
-        //    else
-        //        return "";
-
-        //}
-        //else
-        //{
-        //    return propertyRecord;
-        //}
-        //}
+                using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
+                {
+                    // create a string of the entire page we just requested.
+                    strResults = sr.ReadToEnd();
+                    sr.Close();
+                    return strResults;
+                }
+            }
+            catch { return ""; }
+        }
 
         /// <summary>
         /// Builds the view of properties.
         /// </summary>
-        //private void BuildSheriffSalePropertyList()
-        //{
-        //    string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
-        //    string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
-        //    try
-        //    {
-        //        displayPanel.Controls.Add(new LiteralControl("<p>" + finishedLoading + "</p>"));
+        private void BuildSheriffSalePropertyList()
+        {
+            string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
+            string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
+            try
+            {
+                displayPanel.Controls.Add(new LiteralControl("<p>" + finishedLoading + "</p>"));
 
-        //    }
-        //    catch { }
+            }
+            catch { }
 
-        //}
+        }
 
 
         #region UI events
 
         protected void btnPopulateData_Click(object sender, EventArgs e)
         {
-            //BuildSheriffSalePropertyList();
+            BuildSheriffSalePropertyList();
             //BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value));
         }
 

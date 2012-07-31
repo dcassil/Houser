@@ -30,6 +30,7 @@ namespace houser
 
         public SaleRecord(string _accountNumber)
         {
+            isNew = false;
         }
         #endregion
 
