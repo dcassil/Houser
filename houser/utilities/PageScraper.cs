@@ -4,6 +4,7 @@ using System.Web;
 using System.Text.RegularExpressions;
 using System.Data;
 using houser.Data;
+using houser.Business;
 
 
 namespace houser.utilities
@@ -11,6 +12,12 @@ namespace houser.utilities
     // look at this http://www.dotnetperls.com/scraping-html for some regex and to see what you were doing.
     public static class PageScraper
     {
+
+        #region Fields
+        
+        #endregion
+
+        // Scrapes the salerecord data and passes it to the property account scraper.
         public static void ScrapePropertyDatePiecesIntoDatabase(string file, string saleDate)
         {
             MatchCollection propertyListing = Regex.Matches(file, "<table cellpadding=\"0\" cellspacing=\"1\">\r\n\t(.*?)</table", RegexOptions.Singleline);
@@ -23,49 +30,24 @@ namespace houser.utilities
                 
                 MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
                 string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
-
-                saleRecord.AccountNumber = accountnuber;
+                
+                saleRecord.AccountNumber =  accountnuber;
                 saleRecord.SalePrice = Convert.ToDouble(Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value);
                 saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
                 saleRecord.Save();
-               
+
+                Property property = new Property(accountnuber);
+                
+                if (property.IsNew)
+                    GetPropertyDataFromWeb(accountnuber);
             }
-
-            //  So far we have most of SaleRecord getting populated.  we will want call the account scraper probably for each record as it comes up to keep all the data together.
-                
-                    
-                    //foreach (Match pf in propertyItemValue)
-                    //{
-                    //    fieldTrackerC2.Add(pf.Groups[1].Value.Trim());
-                    //}
-                    //foreach (Match pf in propertyRlink)
-                    //{
-                    //    field.Add(fieldID.ToString(), pf.Groups[1].Value.Trim());
-                    //}
-                
-            
-//                foreach (var ft in fieldTrackerC1)
-//                {
-//                    int fieldIndex = fieldTrackerC1.IndexOf(ft);
-//                    field.Add(fieldTrackerC1[fieldIndex], fieldTrackerC2[fieldIndex]);
-//                }
-//                propertyGroup.Add(propertyID, new Dictionary<string, string>(field));
-//                // field contains the bulk of the data we need.  first time through we have the subject prop, aftert that we have the comps.
-//                DateTime? lastUpdate = SheriffSaleProperty.AccountNumberAlreadyInTable(field["8"].Substring(67));
-//                if (lastUpdate == null) // new record
-//                    SheriffSaleProperty.InsertProperty(field, saleDate);
-//                else if (lastUpdate != Convert.ToDateTime(Regex.Replace(saleDate, "%2f", "/")))
-//                    SheriffSaleProperty.UpdateProperty(field["8"].Substring(67), "", "", saleDate.ToString(), "");
-//                // need to insert into prop account table address and account number.  insert only.
-//                if (!PropAccounts.AccountSeedExist(field["8"].Substring(67)))
-//                    PropAccounts.InsertProperty(field["8"].Substring(67), field["Address"], "", "", "", "", "", "", "", "", "", "");
-
-//                propertyID++;
-//                field.Clear();
-//            }
-//            return propertyGroup;
         }
 
+        private static void GetPropertyDataFromWeb(string accountNumber)
+        {
+            string url = "http://www.oklahomacounty.org/assessor/Searches/AN-R.asp?ACCOUNTNO=" + accountNumber;
+            string file = PageRequester.GetWebRequest(url, accountNumber);
+        }
 //        public static Dictionary<string, string> GetPropertyData(string file, string accountNumber)
 //        {
             

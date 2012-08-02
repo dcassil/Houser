@@ -21,11 +21,12 @@ namespace houser.Data
         /// </summary>
         /// <param name="accountNumber"></param>
         /// <returns></returns>
-        public static DataSet GetPropertyByAccount(string accountNumber)
+        public static DataRow GetPropertyByAccount(string accountNumber)
         {
-            return SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
+            DataSet results =  SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
                 @"SELECT TOP (1) * FROM Property WHERE AccountNumber = @AccountNumber",
                 new SqlParameter("@AccountNumber", accountNumber));
+            return results.Tables[0].Rows.Count > 0 ? results.Tables[0].Rows[0] : null;
         }
 
 

@@ -94,11 +94,11 @@
     </Compile>
     <Compile Include="PropAccounts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Property.cs" />
     <Compile Include="PropertyCompareProperties.cs" />
     <Compile Include="PropertyComps.cs" />
     <Compile Include="Business\SaleRecord.cs" />
     <Compile Include="SheriffSaleProperty.cs" />
+    <Compile Include="utilities\PageRequester.cs" />
     <Compile Include="utilities\PageScraper.cs" />
     <Compile Include="utilities\RateProps.cs" />
   </ItemGroup>
