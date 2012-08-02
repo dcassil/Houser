@@ -18,16 +18,17 @@ namespace houser.utilities
             foreach (Match pl in propertyListing)
             {
                 string accountnuber = Regex.Matches(pl.Groups[1].Value, "ACCOUNTNO=(.*?)\"", RegexOptions.Singleline)[0].Groups[1].Value;
-                SaleRecord saleRecord = new SaleRecord(accountnuber);
-                if (saleRecord.AccountNumber == null)
-                {
-                    MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
-                    string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
+                DateTime _saleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
+                SaleRecord saleRecord = new SaleRecord(accountnuber, _saleDate);
+                
+                MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
+                string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
 
-                    saleRecord.AccountNumber = accountnuber;
-                    saleRecord.SalePrice = Convert.ToDouble(Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value);
-                    saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
-                }
+                saleRecord.AccountNumber = accountnuber;
+                saleRecord.SalePrice = Convert.ToDouble(Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value);
+                saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
+                saleRecord.Save();
+               
             }
 
             //  So far we have most of SaleRecord getting populated.  we will want call the account scraper probably for each record as it comes up to keep all the data together.

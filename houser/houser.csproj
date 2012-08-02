@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Business\Property.cs" />
     <Compile Include="Data\PropertyDB.cs" />
+    <Compile Include="Data\SaleRecordDB.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
