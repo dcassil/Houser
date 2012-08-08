@@ -28,7 +28,7 @@ namespace houser
                 // See if we have checked to only get cached data...........This will probably go away.
                 bool nonLiveData = chkNonLive.Checked;
                 // Request the sherifsale page so we can get the available sale dates.
-                string sheriffSaleDatePage = PageRequester.GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/", "SheriffSales");
+                string sheriffSaleDatePage = PageRequester.GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/");
                 // Create a list of dates
                 List<string> dates = PageScraper.GetSheriffSaleDates(sheriffSaleDatePage);
                 foreach (var date in dates)
@@ -87,7 +87,7 @@ namespace houser
         //    //Dictionary<int, Dictionary<string, string>> allCoreDataTMP = new Dictionary<int, Dictionary<string, string>>();
         //    //Dictionary<string, string> allFieldDataTMP = new Dictionary<string, string>();
             string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
-            string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl, saleDate);
+            string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
         
             PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
 

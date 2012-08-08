@@ -12,7 +12,7 @@ namespace houser.utilities
         /// <summary>
         /// Request the webpage as a string.
         /// </summary>
-        public static string GetWebRequest(string url, string accountNumber)
+        public static string GetWebRequest(string url)
         {
             string strResults = "";
             WebResponse objResponse;

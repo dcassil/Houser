@@ -17,10 +17,13 @@ namespace houser.Business
         protected int _beds;
         protected string _exterior;
         protected DateTime _lastSaleDate;
-        protected int _lastSalePrice;
+        protected decimal _lastSalePrice;
         protected DateTime _dateModified;
         protected int _garageSize;
         protected bool _isNew;
+        protected int _yearBuilt;
+        protected string _type;
+        protected string _builtAs;
         #endregion
 
         #region Propertiese
@@ -31,12 +34,15 @@ namespace houser.Business
         public int Beds { get { return _beds; } set { _beds = value; } }
         public string Exterior { get { return _exterior; } set { _exterior = value; } }
         public DateTime LastSaleDate { get { return _lastSaleDate; } set { _lastSaleDate = value; } }
-        public int LastSalePrice { get { return _lastSalePrice; } set { _lastSalePrice = value; } }
+        public decimal LastSalePrice { get { return _lastSalePrice; } set { _lastSalePrice = value; } }
         public DateTime DateModified { get { return _dateModified; } set { _dateModified = value; } }
         public int GarageSize { get { return _garageSize; } set { _garageSize = value; } }
         public bool IsNew { get { return _isNew; } }
+        public int YearBuilt { get { return _yearBuilt; } set { _yearBuilt = value; } }
+        public string Type { get { return _type; } set { _type = value; } }
+        public string BuiltAs { get { return _builtAs; } set { _builtAs = value; } }
         #endregion
-        #region Static Methods
+        
 
         #region Constructors
         public Property()
@@ -47,24 +53,23 @@ namespace houser.Business
         public Property(string accountNumber)
         {
             DataRow property = Property.GetPropertyByAccount(accountNumber);
-            if (saleRecord == null)
-                isNew = true;
+            if (property == null)
+                _isNew = true;
             else
             {
-                isNew = false;
+                _isNew = false;
                 _accountNumber = accountNumber;
-                _saleDate = saleDate;
-                _salePrice = Convert.ToDouble(saleRecord["SalePrice"]);
-                _saleRecordID = Convert.ToInt32(saleRecord["SaleRecordID"]);
+                _Address = property["Address"].ToString();
+                // finish populating the entire propert object form the db.
             }
         }
         #endregion
 
-        #endregion
-        public static DataSet GetPropertyByAccount(string accountNumber)
+        
+        public static DataRow GetPropertyByAccount(string accountNumber)
         {
             return PropertyDB.GetPropertyByAccount(accountNumber);
         }
-        #endregion
+        
     }
 }
