@@ -17,10 +17,9 @@ namespace houser.utilities
             string strResults = "";
             WebResponse objResponse;
             // request a url.
-            WebRequest objRequest = System.Net.HttpWebRequest.Create(url);
-
             try
             {
+                WebRequest objRequest = System.Net.HttpWebRequest.Create(url);
                 // get the data from our url
                 objResponse = objRequest.GetResponse();
 

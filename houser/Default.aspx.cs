@@ -88,8 +88,8 @@ namespace houser
         //    //Dictionary<string, string> allFieldDataTMP = new Dictionary<string, string>();
             string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
             string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
-        
-            PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
+            if (!string.IsNullOrWhiteSpace(sherifSaleWebRequestData))
+                PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
 
         //    foreach (var property in SheriffSaleProperties)
         //    {

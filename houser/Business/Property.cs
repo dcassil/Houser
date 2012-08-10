@@ -65,7 +65,15 @@ namespace houser.Business
         }
         #endregion
 
-        
+        #region Persistance
+        public void Save()
+        {
+            if (IsNew)
+                PropertyDB.InsertProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs);
+            else
+                PropertyDB.UpdateProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs);
+        }
+        #endregion
         public static DataRow GetPropertyByAccount(string accountNumber)
         {
             return PropertyDB.GetPropertyByAccount(accountNumber);
