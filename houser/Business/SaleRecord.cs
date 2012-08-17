@@ -60,8 +60,14 @@ namespace houser
             else
                 SaleRecordDB.UpdateSaleRecord(_accountNumber, _saleDate, _salePrice, _saleRecordID, DateTime.Now);
         }
+        #endregion
 
-        
+        #region Static Methods
+
+        public static DataTable GetSaleProperitesByDate(DateTime saleDate)
+        {
+            return SaleRecordDB.GetSaleProperitesByDate(saleDate);
+        }
         #endregion
     }
 }

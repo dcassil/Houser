@@ -46,5 +46,16 @@ namespace houser.Data
                 new SqlParameter("@SaleDate", saleDate));
             return results.Tables[0].Rows.Count > 0 ? results.Tables[0].Rows[0] : null;
         }
+
+        // Get records by date.
+        public static DataTable GetSaleProperitesByDate(DateTime saleDate)
+        {
+            DataSet results = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
+                @"SELECT * FROM SaleRecord s
+                INNER JOIN Property p ON s.AccountNumber = p.AccountNumber
+                WHERE s.SaleDate = @SaleDate ORDER BY p.Address",
+                new SqlParameter("@SaleDate", saleDate));
+            return results.Tables[0];
+        }
     }
 }
