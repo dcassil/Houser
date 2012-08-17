@@ -16,7 +16,7 @@ namespace houser.Business
         protected double _baths;
         protected int _beds;
         protected string _exterior;
-        protected DateTime _lastSaleDate;
+        protected string _lastSaleDate;
         protected decimal _lastSalePrice;
         protected DateTime _dateModified;
         protected int _garageSize;
@@ -33,7 +33,7 @@ namespace houser.Business
         public double Baths { get { return _baths; } set { _baths = value; } }
         public int Beds { get { return _beds; } set { _beds = value; } }
         public string Exterior { get { return _exterior; } set { _exterior = value; } }
-        public DateTime LastSaleDate { get { return _lastSaleDate; } set { _lastSaleDate = value; } }
+        public string LastSaleDate { get { return _lastSaleDate; } set { _lastSaleDate = value; } }
         public decimal LastSalePrice { get { return _lastSalePrice; } set { _lastSalePrice = value; } }
         public DateTime DateModified { get { return _dateModified; } set { _dateModified = value; } }
         public int GarageSize { get { return _garageSize; } set { _garageSize = value; } }
@@ -54,13 +54,25 @@ namespace houser.Business
         {
             DataRow property = Property.GetPropertyByAccount(accountNumber);
             if (property == null)
+            {
+                _accountNumber = accountNumber;
                 _isNew = true;
+            }
             else
             {
                 _isNew = false;
                 _accountNumber = accountNumber;
                 _Address = property["Address"].ToString();
-                // finish populating the entire propert object form the db.
+                _baths = Convert.ToDouble(!string.IsNullOrEmpty(property["Baths"].ToString()) ? property["Baths"] : 0 );
+                _beds = Convert.ToInt32(!string.IsNullOrEmpty(property["Beds"].ToString()) ? property["Beds"] : 0);
+                _exterior = property["Exterior"].ToString();
+                _lastSaleDate = property["LastSaleDate"].ToString();
+                _lastSalePrice = Convert.ToDecimal(!string.IsNullOrEmpty(property["LastSalePrice"].ToString()) ? property["LastSalePrice"] : 0);
+                _dateModified = Convert.ToDateTime(!string.IsNullOrEmpty(property["DateModified"].ToString()) ? property["DateModified"] : 01/01/2012);
+                _garageSize = Convert.ToInt32(!string.IsNullOrEmpty(property["GarageSize"].ToString()) ? property["GarageSize"] : 0);
+                _yearBuilt = Convert.ToInt32(!string.IsNullOrEmpty(property["YearBuilt"].ToString()) ? property["YearBuilt"] : 0);
+                _type = property["Type"].ToString();
+                _builtAs = property["BuiltAs"].ToString();
             }
         }
         #endregion

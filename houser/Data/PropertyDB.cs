@@ -28,7 +28,7 @@ namespace houser.Data
         }
 
         public static void InsertProperty(string accountNumber, string address, int sqft, double baths, int beds,
-             string exterior, DateTime lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs)
+             string exterior, string lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs)
         {
             SqlHelper.ExecuteNonQuery(CONNECTIONSTRING, CommandType.Text,
                 @"INSERT INTO [Property]
@@ -50,12 +50,12 @@ namespace houser.Data
         }
 
         public static void UpdateProperty(string accountNumber, string address, int sqft, double baths, int beds,
-             string exterior, DateTime lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs)
+             string exterior, string lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs)
         {
             var result = SqlHelper.ExecuteScalar(CONNECTIONSTRING, CommandType.Text,
                 @"UPDATE [Property] SET [Address] = @Address ,[Sqft] = @Sqft ,[Baths] = @Baths ,[Beds] = @Beds 
                     ,[Exterior] = @Exterior ,[LastSaleDate] = @LastSaleDate ,[LastSalePrice] = @LastSalePrice ,[GarageSize] = @GarageSize
-                    ,[YearBuilt] = @YearBuilt ,[Type] = @Type ,[BuiltAs] = @BuiltAS) WHERE AccountNumber = @AccountNumber",
+                    ,[YearBuilt] = @YearBuilt ,[Type] = @Type ,[BuiltAs] = @BuiltAS WHERE AccountNumber = @AccountNumber",
                 new SqlParameter("@AccountNumber", accountNumber),
                 new SqlParameter("@Address", address),
                 new SqlParameter("@Sqft", sqft),

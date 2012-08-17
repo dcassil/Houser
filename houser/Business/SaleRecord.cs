@@ -14,6 +14,7 @@ namespace houser
         protected string _accountNumber;
         protected DateTime _saleDate;
         protected double _salePrice;
+        protected DateTime _dateModified;
         bool isNew = true;
         #endregion
 
@@ -22,7 +23,9 @@ namespace houser
         public string AccountNumber { get { return _accountNumber; } set { _accountNumber = value; } }
         public DateTime SaleDate { get { return _saleDate; } set { _saleDate = value; } }
         public double SalePrice { get { return _salePrice; } set { _salePrice = value; } }
+        public DateTime DateModified { get { return _dateModified; } set { _dateModified = value; } }
         public bool IsNew { get { return isNew; } private set { isNew = value; } }
+
         #endregion
 
         #region Constructors
@@ -43,6 +46,7 @@ namespace houser
                 _saleDate = saleDate;
                 _salePrice = Convert.ToDouble(saleRecord["SalePrice"]);
                 _saleRecordID = Convert.ToInt32(saleRecord["SaleRecordID"]);
+                _dateModified = Convert.ToDateTime(saleRecord["DateModified"]);
             }
         }
         #endregion
