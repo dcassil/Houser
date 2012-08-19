@@ -62,11 +62,13 @@ namespace houser
                 }
                 html.Append("<div class=\"listingWrapper\">");
                 html.Append("<div class=\"indicator\"></div>");
-                html.Append("<div class=\"" + listingPnlClass + "\">");
+                html.Append("<div id=\"" + property["AccountNumber"].ToString() + "\" class=\"" + listingPnlClass + "\">");
                 html.Append("<span class=\"propertyData\">");
                 html.Append("<span class=\"address\">" + property["Address"].ToString() + "</span>");
-                html.Append("<div class=\"vLine\">|</div>");
                 html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(Convert.ToInt32(property["SalePrice"]) * .66) + "</span>");
+                html.Append("<span class=\"sqft\">" + property["Sqft"].ToString() + "</span>");
+                html.Append("<span class=\"beds\">" + property["Beds"].ToString() + "</span>");
+                html.Append("<span class=\"baths\">" + property["baths"].ToString() + "</span>");
                 html.Append("</span>");
                 html.Append("</div>");
                 html.Append("</div>");
@@ -93,16 +95,16 @@ namespace houser
         /// </summary>
         private void BuildSheriffSalePropertyList()
         {
-            string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
-            string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
+            if (!chkNonLive.Checked)
+            {
+                string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
+                string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
+            }
             try
             {
                 BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value));
-                displayPanel.Controls.Add(new LiteralControl("<p>" + finishedLoading + "</p>"));
-
             }
             catch { }
-
         }
 
 
@@ -110,8 +112,17 @@ namespace houser
 
         protected void btnPopulateData_Click(object sender, EventArgs e)
         {
-            BuildSheriffSalePropertyList();
-            //BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value));
+            if (!chkTestMode.Checked)
+                BuildSheriffSalePropertyList();
+            else
+                BuildTestProperties();
+        }
+
+        private void BuildTestProperties()
+        {
+
+            BuildListingPanels(Convert.ToDateTime("2001/01/01"));
+            displayPanel.Controls.Add(new LiteralControl("<p>" + "Test Data" + "</p>"));
         }
 
         protected void ddlSaleDate_SelectedIndexChanged(object sender, EventArgs e)

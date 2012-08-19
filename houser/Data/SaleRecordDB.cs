@@ -47,7 +47,7 @@ namespace houser.Data
             return results.Tables[0].Rows.Count > 0 ? results.Tables[0].Rows[0] : null;
         }
 
-        // Get records by date.
+        // Get records by date.  // limited to top 8 while testing.
         public static DataTable GetSaleProperitesByDate(DateTime saleDate)
         {
             DataSet results = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,

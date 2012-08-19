@@ -22,6 +22,10 @@
     .menu { position: fixed; height: 36px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 353px; z-index: 100; }
     .menuSpacer { position:relative; width: 100%; height: 36px; z-index: 0; }
     
+    /* Header */
+    .header { position: fixed; height: 24px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 389px; z-index: 100; }
+    .headerSpacer { position:relative; width: 100%; height: 24px; z-index: 0; }
+    
     /* Bottom listings display plane */
     .listings {height: auto; width: 100%; }
     .listPlaceHolder { height: 353px; width: 800px; position: fixed; left: 50%; margin-left: -400px; top: 450px; background-image: url(/images/listingPanel/placeholder.png); z-index: -300; }
@@ -34,16 +38,19 @@
         background: -ms-linear-gradient(left,  #0c0c0c 0%,#353535 18%,#353535 83%,#0c0606 100%); /* IE10+ */
         background: linear-gradient(left,  #0c0c0c 0%,#353535 18%,#353535 83%,#0c0606 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0c0c', endColorstr='#0c0606',GradientType=1 ); /* IE6-9 */}
-    .listingWrapper { height: 63px; width: 100%; background-color: transparent; cursor:pointer; z-index: 1;}
-        .indicator { float:left; height: 63px; width: 25px; background-image: url(/images/indicators/red.png); z-index:inherit; }
-        .listingPanel { height: 63px;  background-image: url(/images/listingPanel/backgroundLightx.png); z-index: 1; }
-        .listingPanel:hover {background-image: url(/images/listingPanel/backgroundLightxHov.png); z-index: 1;}
-        .listingPanelx { height: 63px; background-image: url(/images/listingPanel/backgroundDarkx.png); }
-        .listingPanelx:hover { background-image: url(/images/listingPanel/backgroundDarkxHov.png); }
-        .propertyData {color: #494949; font-family:Arial; font-size:small;}
-            .address { float: left; height: 14; padding: 24px 20px 23px 40px; width: 350px; text-align: center;}
-            .vLine { position: relative; float: left; width: 10px; padding: 9px 0 9px 0; font-size: 36px; color: #78827c;}
-            .minBidWrapper { float: left; height: 14; padding: 24px 20px 23px 40px; width: 100px; text-align: center; }
+    .listingWrapper { height: 24px; width: 100%; background-color: transparent; cursor:pointer; z-index: 1;}
+        .indicator { float:left; height: 24px; width: 25px; background-image: url(/images/indicators/red.png); z-index:inherit; }
+        .indicatorSpacer { float:left; height: 24px; width: 25px; z-index:inherit; }
+        .listingPanel { height: 24px; background-color: #424242;  z-index: 1; }
+        .listingPanel:hover { z-index: 1; background-color: #242424;}
+        .listingPanelx { height: 24px; background-color: #383838; }
+        .listingPanelx:hover { background-color: #242424;  }
+        .propertyData {color: #EDEDED; font-family:Arial; font-size:small;}
+            .address { float: left; height: 14; padding: 4px 20px 4px 20px; width: 250px; text-align: right;}
+            .minBidWrapper { float: left; height: 14; padding: 4px 20px 4px 40px; width: 75px; text-align: left; }
+            .sqft { float: left; height: 14; padding: 4px 20px 4px 20px; width: 33px; text-align: left; }
+            .beds { float: left; height: 14; padding: 4px 20px 4px 20px; width: 14px; text-align: left; }
+            .baths { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
 
     /* Generic ui elements */
     .button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; cursor:pointer; }

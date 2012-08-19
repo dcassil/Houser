@@ -23,25 +23,32 @@ namespace houser.utilities
         {
             MatchCollection propertyListing = Regex.Matches(file, "<table cellpadding=\"0\" cellspacing=\"1\">\r\n\t(.*?)</table", RegexOptions.Singleline);
             
+            // for use while testing to limit results.
+            int testingI = 0;
+
             foreach (Match pl in propertyListing)
             {
-                string accountnuber = Regex.Matches(pl.Groups[1].Value, "ACCOUNTNO=(.*?)\"", RegexOptions.Singleline)[0].Groups[1].Value;
-                DateTime _saleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
-                //Try to get an existing record or make a new one.
-                SaleRecord saleRecord = new SaleRecord(accountnuber, _saleDate);
+                //while (testingI < 8)
+                //{
+                    string accountnuber = Regex.Matches(pl.Groups[1].Value, "ACCOUNTNO=(.*?)\"", RegexOptions.Singleline)[0].Groups[1].Value;
+                    DateTime _saleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
+                    //Try to get an existing record or make a new one.
+                    SaleRecord saleRecord = new SaleRecord(accountnuber, _saleDate);
 
-                if (saleRecord.DateModified.AddDays(1) < DateTime.Now)
-                {
-                    MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
-                    string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
+                    if (saleRecord.DateModified.AddDays(1) < DateTime.Now)
+                    {
+                        MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
+                        string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
 
-                    saleRecord.AccountNumber = accountnuber;
-                    saleRecord.SalePrice = Convert.ToDouble(Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value);
-                    saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
-                    saleRecord.Save();
-                }
+                        saleRecord.AccountNumber = accountnuber;
+                        saleRecord.SalePrice = Convert.ToDouble(Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value);
+                        saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
+                        saleRecord.Save();
+                    }
 
-                GetPropertyDataFromWeb(accountnuber);
+                    GetPropertyDataFromWeb(accountnuber);
+                    testingI++;
+                //}
             }
         }
 
