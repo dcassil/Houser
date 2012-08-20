@@ -48,13 +48,22 @@ namespace houser.Data
         }
 
         // Get records by date.  // limited to top 8 while testing.
-        public static DataTable GetSaleProperitesByDate(DateTime saleDate)
+        public static DataTable GetSaleProperitesByDate(DateTime saleDate, string orderBy)
         {
             DataSet results = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
                 @"SELECT * FROM SaleRecord s
                 INNER JOIN Property p ON s.AccountNumber = p.AccountNumber
-                WHERE s.SaleDate = @SaleDate ORDER BY p.Address",
-                new SqlParameter("@SaleDate", saleDate));
+                WHERE s.SaleDate = @SaleDate ORDER BY
+                    CASE @OrderBy 
+                        WHEN 'Address' THEN p.Address
+                        END,
+                    CASE @OrderBy
+                        WHEN 'SalePrice' THEN s.SalePrice   
+                        WHEN 'Beds' THEN p.Beds 
+                        WHEN 'Baths' THEN p.Baths
+                        WHEN 'Sqft' THEN p.Sqft END",
+                new SqlParameter("@SaleDate", saleDate),
+                new SqlParameter("@OrderBy", orderBy));
             return results.Tables[0];
         }
     }

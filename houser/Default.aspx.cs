@@ -21,7 +21,7 @@ namespace houser
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            
+            chkNonLive.Checked = true;
            //If this is not a post back (first page load)
             if (!IsPostBack)
             {
@@ -40,10 +40,10 @@ namespace houser
             }
         }
 
-        public void BuildListingPanels(DateTime date)
+        public void BuildListingPanels(DateTime date, string orderBy)
         {
             //BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
-            DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date);
+            DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy);
             int i = 0;
             string listingPnlClass;
             StringBuilder html = new StringBuilder();
@@ -64,6 +64,7 @@ namespace houser
                 html.Append("<div class=\"indicator\"></div>");
                 html.Append("<div id=\"" + property["AccountNumber"].ToString() + "\" class=\"" + listingPnlClass + "\">");
                 html.Append("<span class=\"propertyData\">");
+                html.Append("<span class=\"notes\" id=\"" + property["AccountNumber"].ToString() + "\" >Notes</span>");
                 html.Append("<span class=\"address\">" + property["Address"].ToString() + "</span>");
                 html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(Convert.ToInt32(property["SalePrice"]) * .66) + "</span>");
                 html.Append("<span class=\"sqft\">" + property["Sqft"].ToString() + "</span>");
@@ -93,18 +94,16 @@ namespace houser
         /// <summary>
         /// Builds the view of properties.
         /// </summary>
-        private void BuildSheriffSalePropertyList()
+        private void BuildSheriffSalePropertyList(string orderBy)
         {
             if (!chkNonLive.Checked)
             {
                 string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
                 string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
             }
-            try
-            {
-                BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value));
-            }
-            catch { }
+            
+            BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value), orderBy);
+            
         }
 
 
@@ -113,15 +112,40 @@ namespace houser
         protected void btnPopulateData_Click(object sender, EventArgs e)
         {
             if (!chkTestMode.Checked)
-                BuildSheriffSalePropertyList();
+                BuildSheriffSalePropertyList("[Address]");
             else
                 BuildTestProperties();
+        }
+
+        protected void btnSortAddress_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Address");
+        }
+
+        protected void btnSortMinBid_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("SalePrice");
+        }
+
+        protected void btnSortSQFT_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Sqft");
+        }
+
+        protected void btnSortBeds_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Beds");
+        }
+
+        protected void btnSortBaths_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Baths");
         }
 
         private void BuildTestProperties()
         {
 
-            BuildListingPanels(Convert.ToDateTime("2001/01/01"));
+            BuildListingPanels(Convert.ToDateTime("2001/01/01"), "DateModified");
             displayPanel.Controls.Add(new LiteralControl("<p>" + "Test Data" + "</p>"));
         }
 

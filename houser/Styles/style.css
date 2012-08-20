@@ -25,6 +25,7 @@
     /* Header */
     .header { position: fixed; height: 24px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 389px; z-index: 100; }
     .headerSpacer { position:relative; width: 100%; height: 24px; z-index: 0; }
+    .headerSortable {background-color: transparent; border: none; color: #EDEDED; cursor:pointer;}
     
     /* Bottom listings display plane */
     .listings {height: auto; width: 100%; }
@@ -45,8 +46,9 @@
         .listingPanel:hover { z-index: 1; background-color: #242424;}
         .listingPanelx { height: 24px; background-color: #383838; }
         .listingPanelx:hover { background-color: #242424;  }
-        .propertyData {color: #EDEDED; font-family:Arial; font-size:small;}
-            .address { float: left; height: 14; padding: 4px 20px 4px 20px; width: 250px; text-align: right;}
+        .propertyData {color: #EDEDED; font-family:Arial; font-size:small; border: none;}
+            .notes { float: left; height: 14; padding: 4px 20px 4px 20px; width: 70px; text-align: right; }
+            .address { float: left; height: 14; padding: 4px 20px 4px 20px; width: 250px; text-align: right; }
             .minBidWrapper { float: left; height: 14; padding: 4px 20px 4px 40px; width: 75px; text-align: left; }
             .sqft { float: left; height: 14; padding: 4px 20px 4px 20px; width: 33px; text-align: left; }
             .beds { float: left; height: 14; padding: 4px 20px 4px 20px; width: 14px; text-align: left; }
@@ -57,3 +59,19 @@
     .button:hover { color: #717171;}
     .dropDown { margin: 8px 5px 0 20px; }
     .check { color: White; font-size: small; }
+    
+/* Simple Modal */
+#basic-modal-content {display:none;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#555; opacity:0.5;}
+
+/* Container */
+#simplemodal-container {height:360px; width:600px; color:#bbb; background-color:#232323; padding: 15px; border-radius:8px; opacity:0.95;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container h3 {color:#84b8d9;}
+
+/* Note Text Box */
+.note_text_box { width: 592px; height: 290px; color: #EDEDED;}
+.center_title { text-align:center; display:block; color:White; padding-bottom:10px;}

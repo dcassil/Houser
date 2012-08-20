@@ -8,6 +8,7 @@
     <link href="Styles/style.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="Scripts/jquery.simplemodal-1.4.2.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server" visible="true">
@@ -30,11 +31,12 @@
     <div class="indicatorSpacer"></div>
     <div class="listingPnlClass">
     <span class="propertyData">
-    <span class="address">Address</span>
-    <span class="minBidWrapper">Min Bid</span>"
-    <span class="sqft">SQFT</span>
-    <span class="beds">Bes</span>
-    <span class="baths">Baths</span>
+    <span class="notes">Notes</span>
+    <span class="address"><asp:Button ID="btnAddress" class="headerSortable" runat="server" Text="Address ▼" onclick="btnSortAddress_Click"/></span>
+    <span class="minBidWrapper"><asp:Button ID="btnMinBid" class="headerSortable" runat="server" Text="Min Bid ▼" onclick="btnSortMinBid_Click"/></span>
+    <span class="sqft"><asp:Button ID="btnSqft" class="headerSortable" runat="server" Text="SQFT ▼" onclick="btnSortSQFT_Click"/></span>
+    <span class="beds"><asp:Button ID="btnBeds" class="headerSortable" runat="server" Text="Beds ▼" onclick="btnSortBeds_Click"/></span>
+    <span class="baths"><asp:Button ID="btnBaths" class="headerSortable" runat="server" Text="Baths ▼" onclick="btnSortBaths_Click"/></span>
     </span>
     </div>
     </div>
@@ -62,6 +64,39 @@
                 self.children().toggleClass("collapsed");
                 self.children('.subjectProperty').toggleClass("collapsed");
             });
+        });
+    </script>
+
+    <script>
+        jQuery(function ($) {
+            var account_number;
+            var isSaved;
+            var note;
+            // Load dialog on page load
+            //$('#basic-modal-content').modal();
+
+            // Load dialog on click
+            $('.notes').click(function (e) {
+                account_number = $(this).attr('id');
+                var notePad = "<div id=\"basic-modal-content\"><div class=\"center_title\">Notes</div><textArea id=\"note_text\" class=\"note_text_box\" name=\"" + account_number + "\" type=\"text\" rows=\"20\" cols=\"70\"></textarea><button class=\"button\" id=\"save_note\">save</button></div>"
+                $('#basic-modal-content').remove();
+                $('body').append(notePad);
+                $('#basic-modal-content').modal();
+                $("#save_note").click(function () {
+                    note = $("#note_text").val();
+                    $(".simplemodal-close").click();
+                });
+                $("#modalCloseImg").click(function () {
+                    if ($("#note_text").val() != note) {
+                        alert("You must save your changes");
+                    }
+                    return false;
+
+                });
+                return false;
+            });
+
+
         });
     </script>
     
