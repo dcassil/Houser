@@ -79,20 +79,42 @@
             $('.notes').click(function (e) {
                 account_number = $(this).attr('id');
                 var notePad = "<div id=\"basic-modal-content\"><div class=\"center_title\">Notes</div><textArea id=\"note_text\" class=\"note_text_box\" name=\"" + account_number + "\" type=\"text\" rows=\"20\" cols=\"70\"></textarea><button class=\"button\" id=\"save_note\">save</button></div>"
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    url: '/WebUtilities/NoteWebService.asmx/GetAccountNotes',
+                    data: "{accountNumber: '" + account_number + "'}",
+                    dataType: "json",
+                    async: false,
+                    success: function (responce) {
+                        note = responce;
+                    },
+                    error: function (error) {
+                        note = error;
+                    }
+                });
+                
                 $('#basic-modal-content').remove();
                 $('body').append(notePad);
+                $("#note_text").val(note.d);
                 $('#basic-modal-content').modal();
                 $("#save_note").click(function () {
                     note = $("#note_text").val();
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        url: '/WebUtilities/NoteWebService.asmx/SaveAccountNote',
+                        data: "{accountNumber: '" + account_number + "', note: '" + note + "'}",
+                        dataType: "json",
+                        async: false,
+                        success: "",
+                        error: ""
+                    });
+
                     $(".simplemodal-close").click();
-                });
-                $("#modalCloseImg").click(function () {
-                    if ($("#note_text").val() != note) {
-                        alert("You must save your changes");
-                    }
-                    return false;
 
                 });
+
                 return false;
             });
 

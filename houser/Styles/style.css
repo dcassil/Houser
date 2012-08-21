@@ -64,14 +64,17 @@
 #basic-modal-content {display:none;}
 
 /* Overlay */
-#simplemodal-overlay {background-color:#555; opacity:0.5;}
+#simplemodal-overlay {background-color:#FFFFFF; opacity: .5 !important;}
 
 /* Container */
-#simplemodal-container {height:360px; width:600px; color:#bbb; background-color:#232323; padding: 15px; border-radius:8px; opacity:0.95;}
+#simplemodal-container {height:380px; width:600px; color:#bbb; background-color:#3D3D3D; padding: 20px 36px 10px 36px; border-radius:8px; opacity:0.95;}
 #simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
 #simplemodal-container a {color:#ddd;}
 #simplemodal-container h3 {color:#84b8d9;}
 
 /* Note Text Box */
-.note_text_box { width: 592px; height: 290px; color: #EDEDED;}
-.center_title { text-align:center; display:block; color:White; padding-bottom:10px;}
+.note_text_box { width: 594px; height: 280px; color:Black;}
+.center_title { text-align:center; display:block; color: #171717; padding-bottom:20px; font-size:x-large;}
+#save_note { padding-top: 10px; color: #171717; }
+#save_note:hover { color: Black; }
+

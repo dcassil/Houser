@@ -81,10 +81,13 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WebUtilities\NoteWebService.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Note.cs" />
     <Compile Include="Business\Property.cs" />
     <Compile Include="Business\PropertyComp.cs" />
+    <Compile Include="Data\NoteDB.cs" />
     <Compile Include="Data\PropertyCompDB.cs" />
     <Compile Include="Data\PropertyDB.cs" />
     <Compile Include="Data\SaleRecordDB.cs" />
@@ -100,6 +103,11 @@
     <Compile Include="utilities\PageRequester.cs" />
     <Compile Include="utilities\PageScraper.cs" />
     <Compile Include="utilities\RateProps.cs" />
+    <Compile Include="WebUtilities\NoteWebMethods.cs" />
+    <Compile Include="WebUtilities\NoteWebService.asmx.cs">
+      <DependentUpon>NoteWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
