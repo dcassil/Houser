@@ -42,10 +42,11 @@
     .listingWrapper { height: 24px; width: 100%; background-color: transparent; cursor:pointer; z-index: 1;}
         .indicator { float:left; height: 24px; width: 25px; background-image: url(/images/indicators/red.png); z-index:inherit; }
         .indicatorSpacer { float:left; height: 24px; width: 25px; z-index:inherit; }
+        /*Listing panels including zebra striping*/
         .listingPanel { height: 24px; background-color: #424242;  z-index: 1; }
         .listingPanel:hover { z-index: 1; background-color: #242424;}
-        .listingPanelx { height: 24px; background-color: #383838; }
-        .listingPanelx:hover { background-color: #242424;  }
+        .listingWrapper:nth-child(2n) .listingPanel { height: 24px; background-color: #383838; }
+        
         .propertyData {color: #EDEDED; font-family:Arial; font-size:small; border: none;}
             .notes { float: left; height: 14; padding: 4px 20px 4px 20px; width: 70px; text-align: right; }
             .address { float: left; height: 14; padding: 4px 20px 4px 20px; width: 250px; text-align: right; }

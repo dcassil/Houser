@@ -64,9 +64,9 @@ namespace houser
 
         #region Static Methods
 
-        public static DataTable GetSaleProperitesByDate(DateTime saleDate, string orderBy)
+        public static DataTable GetSaleProperitesByDate(DateTime saleDate, string orderBy, string listID)
         {
-            return SaleRecordDB.GetSaleProperitesByDate(saleDate, orderBy);
+            return SaleRecordDB.GetSaleProperitesByDate(saleDate, orderBy, listID);
         }
         #endregion
     }

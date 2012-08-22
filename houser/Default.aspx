@@ -24,6 +24,8 @@
             onclick="btnPopulateData_Click" ToolTip="Click to get properties for this sale date"/>
         <asp:CheckBox ID="chkNonLive" class="check" Text="Local Data Only" runat="server" ToolTip="Check this to show only local data" />
         <asp:CheckBox ID="chkTestMode" class="check" Text="  Test Mode" runat="server" ToolTip="Fetch only a few test listings" />
+        <asp:DropDownList ID="ddlList" class="dropDown" runat="server"
+            ToolTip="Select List" />
     </div>
     <div class="menuSpacer"></div>
     <div class="header">
@@ -70,12 +72,11 @@
     <script>
         jQuery(function ($) {
             var account_number;
+            var address;
             var isSaved;
             var note;
-            // Load dialog on page load
-            //$('#basic-modal-content').modal();
-
-            // Load dialog on click
+            // ------- NOTES MODAL ---------
+            // Load modal and get note on click
             $('.notes').click(function (e) {
                 account_number = $(this).attr('id');
                 var notePad = "<div id=\"basic-modal-content\"><div class=\"center_title\">Notes</div><textArea id=\"note_text\" class=\"note_text_box\" name=\"" + account_number + "\" type=\"text\" rows=\"20\" cols=\"70\"></textarea><button class=\"button\" id=\"save_note\">save</button></div>"
@@ -93,7 +94,8 @@
                         note = error;
                     }
                 });
-                
+
+                // close modal and save note on click
                 $('#basic-modal-content').remove();
                 $('body').append(notePad);
                 $("#note_text").val(note.d);
@@ -117,7 +119,17 @@
 
                 return false;
             });
+            // ----- END NOTES MODAL ------
 
+            // ----- DETAIL PANEL -------
+            $(".listingWrapper").click(function () {
+                $(".displayPanelPlaceholder").hide(40);
+                // set account number.
+                account_number = $(this).children(".listingPanel").attr("ID");
+                // set address.
+                //need to url encode address for query string.
+                address = $(this).children(".listingPanel").children(".propertyData").children(".address").html();
+            });
 
         });
     </script>

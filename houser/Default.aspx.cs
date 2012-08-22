@@ -37,29 +37,43 @@ namespace houser
                     ddlSaleDate.Items.Add(date);
                 }
 
+                // will need to be database call when list are dynamic.
+                ListItem listItem = new ListItem();
+                listItem.Text = "All";
+                listItem.Value = "2";
+                listItem.Selected = true;
+                ddlList.Items.Add(listItem);
+                ListItem listItem2 = new ListItem();
+                listItem2.Text = "Review";
+                listItem2.Value = "1";
+                ddlList.Items.Add(listItem2);
+                
+                
+                
+
             }
         }
 
         public void BuildListingPanels(DateTime date, string orderBy)
         {
             //BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
-            DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy);
+            DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy, ddlList.SelectedValue);
             int i = 0;
             string listingPnlClass;
             StringBuilder html = new StringBuilder();
             foreach (DataRow property in subjectProperties.Rows)
             {
-                html.Clear();
-                if (i == 0)
-                {
+                //html.Clear();
+                //if (i == 0)
+                //{
                     listingPnlClass = "listingPanel";
                     i = 1;
-                }
-                else
-                {
-                    listingPnlClass = "listingPanelx";
-                    i = 0;
-                }
+                //}
+                //else
+                //{
+                //    listingPnlClass = "listingPanelx";
+                //    i = 0;
+                //}
                 html.Append("<div class=\"listingWrapper\">");
                 html.Append("<div class=\"indicator\"></div>");
                 html.Append("<div id=\"" + property["AccountNumber"].ToString() + "\" class=\"" + listingPnlClass + "\">");
