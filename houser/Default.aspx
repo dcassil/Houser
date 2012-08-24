@@ -75,6 +75,7 @@
             var address;
             var isSaved;
             var note;
+            var compData;
             // ------- NOTES MODAL ---------
             // Load modal and get note on click
             $('.notes').click(function (e) {
@@ -122,15 +123,46 @@
             // ----- END NOTES MODAL ------
 
             // ----- DETAIL PANEL -------
-            $(".listingWrapper").click(function () {
+            $(".listingPanel").click(function () {
                 $(".displayPanelPlaceholder").hide(40);
                 // set account number.
-                account_number = $(this).children(".listingPanel").attr("ID");
+                account_number = $(this).attr("ID");
                 // set address.
                 //need to url encode address for query string.
-                address = $(this).children(".listingPanel").children(".propertyData").children(".address").html();
-            });
+                address = encodeURI($(this).children(".propertyData").children(".address").html());
 
+                // Create google map url
+                var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "&zoom=14&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+
+                // remove details item containers
+                $(".mapBox").remove();
+                $(".compBox").remove();
+
+                // Add the new details item containers
+                $(".displayPanel").append('<div class="mapBox"></div>');
+                $(".displayPanel").append('<div class="compBox"></div>');
+
+                // Add details items
+                // Map Image.
+                $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    url: '/WebUtilities/DetailsWebService.asmx/GetPropertyCompsByAccountNumber',
+                    data: "{accountNumber: '" + account_number + "'}",
+                    dataType: "json",
+                    async: false,
+                    success: function (responce) {
+                        compData = responce.d;
+                    },
+                    error: function (error) {
+                        compData = error;
+                    }
+                });
+                // we are now returning a json string of comp properties when a property is clicked.  we will need to
+                // assign these values to a list in the details panel.
+            });
         });
     </script>
     

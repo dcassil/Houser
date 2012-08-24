@@ -30,6 +30,17 @@ namespace houser.Data
                 new SqlParameter("@AccountNumber", accountNumber),
                 new SqlParameter("@CAccountNumber", cAccountNumber));
         }
+
+        public static DataTable GetCompsForPropertyByAccountNumber(string accountNumber)
+        {
+            return SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
+                @"SELECT p.[AccountNumber],[Address],[Sqft],[Baths],[Beds],[Exterior],[LastSaleDate],[LastSalePrice],[DateModified]
+                    ,[GarageSize],[YearBuilt],[Type],[BuiltAs]
+                    FROM [Houser].[dbo].[Property] p 
+                    INNER JOIN Houser.dbo.PropertyComp pc ON p.AccountNumber = pc.CAccountNumber 
+                    WHERE pc.AccountNumber = @AccountNumber",
+                new SqlParameter("@AccountNumber", accountNumber)).Tables[0];
+        }
         #endregion
     }
 }

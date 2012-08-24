@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using houser.Data;
+using System.Data;
 
 namespace houser.Business
 {
@@ -18,6 +19,11 @@ namespace houser.Business
         public static void InsertPropertyComp(string accountNumber, string cAccountNumber)
         {
             PropertyCompDB.InsertPropertyComp(accountNumber, cAccountNumber);
+        }
+
+        public static DataTable GetCompsForPropertyByAccountNumber(string accountNumber)
+        {
+            return PropertyCompDB.GetCompsForPropertyByAccountNumber(accountNumber);
         }
         #endregion
     }

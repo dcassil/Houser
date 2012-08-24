@@ -63,7 +63,7 @@ namespace houser
             StringBuilder html = new StringBuilder();
             foreach (DataRow property in subjectProperties.Rows)
             {
-                //html.Clear();
+                html.Clear();
                 //if (i == 0)
                 //{
                     listingPnlClass = "listingPanel";
