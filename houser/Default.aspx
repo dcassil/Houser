@@ -77,6 +77,7 @@
             var note;
             var compData;
             var zoomLevel = 15;
+            var mapMode = "roadmap";
             // ------- NOTES MODAL ---------
             // Load modal and get note on click
             $('.notes').click(function (e) {
@@ -135,7 +136,7 @@
                 address = encodeURI($(this).children(".propertyData").children(".address").html());
 
                 // Create google map url
-                var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=16&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
 
                 // remove details item containers
                 $(".mapBox").remove();
@@ -150,20 +151,33 @@
                 $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
                 $(".mapBox").append('<div class="mapZoomIn">+</div>');
                 $(".mapBox").append('<div class="mapZoomOut">-</div>');
+                $(".mapBox").append('<div class="mapMode">mode</div>');
 
                 $(".mapZoomIn").click(function () {
                     zoomLevel += 1;
                     $(".mapImg").remove();
-                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
                 });
 
                 $(".mapZoomOut").click(function () {
                     zoomLevel -= 1;
                     $(".mapImg").remove();
-                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
                 });
+
+                $(".mapMode").click(function () {
+                    if (mapMode == "roadmap") {
+                        mapMode = "satellite";
+                    } else {
+                        mapMode = "roadmap";
+                    }
+                    $(".mapImg").remove();
+                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                    $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+                });
+
 
 
                 $.ajax({

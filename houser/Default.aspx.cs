@@ -60,16 +60,9 @@ namespace houser
             foreach (DataRow property in subjectProperties.Rows)
             {
                 html.Clear();
-                //if (i == 0)
-                //{
-                    listingPnlClass = "listingPanel";
-                    i = 1;
-                //}
-                //else
-                //{
-                //    listingPnlClass = "listingPanelx";
-                //    i = 0;
-                //}
+                
+                listingPnlClass = "listingPanel";
+                
                 html.Append("<div class=\"listingWrapper\">");
                 html.Append("<div class=\"indicator\"></div>");
                 html.Append("<div id=\"" + property["AccountNumber"].ToString() + "\" class=\"" + listingPnlClass + "\">");
@@ -80,6 +73,7 @@ namespace houser
                 html.Append("<span class=\"sqft\">" + property["Sqft"].ToString() + "</span>");
                 html.Append("<span class=\"beds\">" + property["Beds"].ToString() + "</span>");
                 html.Append("<span class=\"baths\">" + property["baths"].ToString() + "</span>");
+                html.Append("<span class=\"addToReview\">Add to review list</span>");
                 html.Append("</span>");
                 html.Append("</div>");
                 html.Append("</div>");
