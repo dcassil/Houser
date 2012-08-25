@@ -39,6 +39,7 @@
         .listingWrapper:nth-child(2n) .listingPanel { height: 24px; background-color: #383838; }
         .listingPanel:hover { z-index: 1; background-color: #242424;}
         .listingWrapper:nth-child(2n) .listingPanel:hover { z-index: 1; background-color: #242424;}
+        .selectedProperty { z-index: 1; background-color: #242424 !important;}
         
         .propertyData {color: #EDEDED; font-family:Arial; font-size:small; border: none;}
             .notes { float: left; height: 14; padding: 4px 0 4px 0; width: 70px; text-align: center; }
@@ -75,4 +76,17 @@
 
 /*Map Box*/
 .mapBox { width: 500px; height: 353px; padding: 15px; background-color: #171717; }
+.mapZoomIn { width: 25px; height: 25px; padding: 5px; position: fixed; top: 150px; left: 480px; font-size: x-large; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75; }
+.mapZoomOut { width: 25px; height: 25px; padding: 5px; position: fixed; top: 203px; left: 480px; font-size: x-large; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75;}
+
+/*Comp Box*/
+.compBox { position: fixed; top:0px; left: 530px; width: 700px; height: 353px; padding: 15px; color: #b6b6b6;}
+.compBox td { width: 50px; padding-left: 25px; text-align:right;  }
+.compBox tr { width: 50px; padding-left: 25px; text-align:right; background-color: #202020;  }
+.compBox tr:nth-child(2n) { width: 50px; padding-left: 25px; text-align:right; background-color: #242424;  }
+.compBox th { width: 50px; padding-left: 25px; text-align:right; background-color: #202020; }
+.compBox .tAddress { width: 250px;  font-size: smaller; white-space:nowrap;  }
+.compBox .tLastSalePrice { width: 100px; font-size: smaller; }
+.compBox .tLastSaleDate { width: 100px; font-size: smaller; }
+.compBoxTitle { width: 700px; height: 35px; padding: 15px; font-size:x-large; text-align: center; color: #121212; font-weight:bolder;}
 

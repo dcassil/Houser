@@ -23,7 +23,10 @@ namespace houser.WebUtilities
         public string GetPropertyCompsByAccountNumber(string accountNumber)
         {
             DataTable results =  PropertyComp.GetCompsForPropertyByAccountNumber(accountNumber);
-            return jsonHelper.GetJSONString(results);
+            if (results.Rows.Count > 0)
+                return jsonHelper.GetJSONString(results);
+            else
+                return "";
         }
     }
 }

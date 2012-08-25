@@ -21,7 +21,6 @@ namespace houser
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            chkNonLive.Checked = true;
            //If this is not a post back (first page load)
             if (!IsPostBack)
             {
@@ -47,10 +46,7 @@ namespace houser
                 listItem2.Text = "Review";
                 listItem2.Value = "1";
                 ddlList.Items.Add(listItem2);
-                
-                
-                
-
+                chkNonLive.Checked = true;
             }
         }
 

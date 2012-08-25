@@ -76,6 +76,7 @@
             var isSaved;
             var note;
             var compData;
+            var zoomLevel = 15;
             // ------- NOTES MODAL ---------
             // Load modal and get note on click
             $('.notes').click(function (e) {
@@ -124,6 +125,8 @@
 
             // ----- DETAIL PANEL -------
             $(".listingPanel").click(function () {
+                $("body *").removeClass("selectedProperty");
+                $(this).addClass("selectedProperty");
                 $(".displayPanelPlaceholder").hide(40);
                 // set account number.
                 account_number = $(this).attr("ID");
@@ -132,7 +135,7 @@
                 address = encodeURI($(this).children(".propertyData").children(".address").html());
 
                 // Create google map url
-                var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "&zoom=14&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=16&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
 
                 // remove details item containers
                 $(".mapBox").remove();
@@ -145,6 +148,23 @@
                 // Add details items
                 // Map Image.
                 $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+                $(".mapBox").append('<div class="mapZoomIn">+</div>');
+                $(".mapBox").append('<div class="mapZoomOut">-</div>');
+
+                $(".mapZoomIn").click(function () {
+                    zoomLevel += 1;
+                    $(".mapImg").remove();
+                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                    $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+                });
+
+                $(".mapZoomOut").click(function () {
+                    zoomLevel -= 1;
+                    $(".mapImg").remove();
+                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=roadmap&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                    $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+                });
+
 
                 $.ajax({
                     type: "POST",
@@ -154,7 +174,11 @@
                     dataType: "json",
                     async: false,
                     success: function (responce) {
-                        compData = responce.d;
+                        if (responce.d != "") {
+                            compData = eval('(' + responce.d + ');');
+                        } else {
+                            compData = null;
+                        }
                     },
                     error: function (error) {
                         compData = error;
@@ -162,6 +186,33 @@
                 });
                 // we are now returning a json string of comp properties when a property is clicked.  we will need to
                 // assign these values to a list in the details panel.
+
+                if (compData != null) {
+                    var compTable = '<table class="compTable">';
+                    compTable += '<th>Addrress</th>';
+                    compTable += '<th>Sqft</th>';
+                    compTable += '<th>Beds</th>';
+                    compTable += '<th>Baths</th>';
+                    compTable += '<th>LastSaleDate</th>';
+                    compTable += '<th>LastSalePrice</th>';
+                    compTable += '<th>YearBuilt</th>';
+                    for (var i = 0; i < compData.Table.length; i++) {
+                        if (i < 10) {
+                            compTable += '<tr>';
+                            compTable += '<td class="tAddress">' + compData.Table[i].Address + '</td>';
+                            compTable += '<td class="tSqft">' + compData.Table[i].Sqft + '</td>';
+                            compTable += '<td class="tBeds">' + compData.Table[i].Beds + '</td>';
+                            compTable += '<td class="tBaths">' + compData.Table[i].Baths + '</td>';
+                            compTable += '<td class="tLastSalePrice">' + compData.Table[i].LastSaleDate + '</td>';
+                            compTable += '<td class="tLastSalePrice">' + compData.Table[i].LastSalePrice + '</td>';
+                            compTable += '<td class="tYearBuilt">' + compData.Table[i].YearBuilt + '</td>';
+                            compTable += '</tr>';
+                        }
+                    }
+                    compTable += '</table>';
+                    $(".compBox").append('<div class="compBoxTitle">Property Comps</div>');
+                    $(".compBox").append(compTable);
+                }
             });
         });
     </script>
