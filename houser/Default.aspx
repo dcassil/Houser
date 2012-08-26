@@ -98,6 +98,7 @@
                     }
                 });
 
+
                 // close modal and save note on click
                 $('#basic-modal-content').remove();
                 $('body').append(notePad);
@@ -115,6 +116,11 @@
                         success: "",
                         error: ""
                     });
+                    if (note == "") {
+                        var id = "#" + $("#note_text")[0].name;
+                        // need to remove class from note
+                        
+                    }
 
                     $(".simplemodal-close").click();
 

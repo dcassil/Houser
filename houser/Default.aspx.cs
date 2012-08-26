@@ -54,11 +54,16 @@ namespace houser
         {
             //BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
             DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy, ddlList.SelectedValue);
-            int i = 0;
             string listingPnlClass;
+            string hasNoteClass = "";
             StringBuilder html = new StringBuilder();
             foreach (DataRow property in subjectProperties.Rows)
             {
+                if (!string.IsNullOrEmpty(property["Note"].ToString()))
+                    hasNoteClass = "hasNote";
+                else
+                    hasNoteClass = "";
+
                 html.Clear();
                 
                 listingPnlClass = "listingPanel";
@@ -67,7 +72,7 @@ namespace houser
                 html.Append("<div class=\"indicator\"></div>");
                 html.Append("<div id=\"" + property["AccountNumber"].ToString() + "\" class=\"" + listingPnlClass + "\">");
                 html.Append("<span class=\"propertyData\">");
-                html.Append("<span class=\"notes\" id=\"" + property["AccountNumber"].ToString() + "\" >Notes</span>");
+                html.Append("<span class=\"notes " + hasNoteClass + " \" id=\"" + property["AccountNumber"].ToString() + "\" >Notes</span>");
                 html.Append("<span class=\"address\">" + property["Address"].ToString() + "</span>");
                 html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(Convert.ToInt32(property["SalePrice"]) * .66) + "</span>");
                 html.Append("<span class=\"sqft\">" + property["Sqft"].ToString() + "</span>");

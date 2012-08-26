@@ -54,6 +54,7 @@ namespace houser.Data
                 @"SELECT * FROM SaleRecord s
                 INNER JOIN Property p ON s.AccountNumber = p.AccountNumber
                 INNER JOIN AccountNumberList anl ON s.AccountNumber = anl.AccountNumber
+                LEFT OUTER JOIN Note n ON p.AccountNumber = n.AccountNumber
                 WHERE s.SaleDate = @SaleDate AND anl.ListID = @ListID ORDER BY
                     CASE @OrderBy 
                         WHEN 'Address' THEN p.Address
