@@ -56,9 +56,12 @@ namespace houser
             DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy, ddlList.SelectedValue);
             string listingPnlClass;
             string hasNoteClass = "";
+            string addRemoveList = ddlList.SelectedValue == "2" ? "Add to review list" : "Remove from list";
+            string inReviewList;
             StringBuilder html = new StringBuilder();
             foreach (DataRow property in subjectProperties.Rows)
             {
+                inReviewList = (int)property["ListID"] == 1 ? "inReviewList" : ""; 
                 if (!string.IsNullOrEmpty(property["Note"].ToString()))
                     hasNoteClass = "hasNote";
                 else
@@ -78,7 +81,7 @@ namespace houser
                 html.Append("<span class=\"sqft\">" + property["Sqft"].ToString() + "</span>");
                 html.Append("<span class=\"beds\">" + property["Beds"].ToString() + "</span>");
                 html.Append("<span class=\"baths\">" + property["baths"].ToString() + "</span>");
-                html.Append("<span class=\"addToReview\">Add to review list</span>");
+                html.Append("<span class=\"addToReview " + inReviewList + "\">" + addRemoveList + "</span>");
                 html.Append("</span>");
                 html.Append("</div>");
                 html.Append("</div>");

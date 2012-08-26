@@ -89,10 +89,12 @@
     <Compile Include="Business\Note.cs" />
     <Compile Include="Business\Property.cs" />
     <Compile Include="Business\PropertyComp.cs" />
+    <Compile Include="Business\PropertyList.cs" />
     <Compile Include="Data\ListDB.cs" />
     <Compile Include="Data\NoteDB.cs" />
     <Compile Include="Data\PropertyCompDB.cs" />
     <Compile Include="Data\PropertyDB.cs" />
+    <Compile Include="Data\PropertyListDB.cs" />
     <Compile Include="Data\SaleRecordDB.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>

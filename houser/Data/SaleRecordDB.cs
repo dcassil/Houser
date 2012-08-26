@@ -53,9 +53,9 @@ namespace houser.Data
             DataSet results = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
                 @"SELECT * FROM SaleRecord s
                 INNER JOIN Property p ON s.AccountNumber = p.AccountNumber
-                INNER JOIN AccountNumberList anl ON s.AccountNumber = anl.AccountNumber
+                INNER JOIN PropertyList pl ON s.AccountNumber = pl.AccountNumber
                 LEFT OUTER JOIN Note n ON p.AccountNumber = n.AccountNumber
-                WHERE s.SaleDate = @SaleDate AND anl.ListID = @ListID ORDER BY
+                WHERE s.SaleDate = @SaleDate AND pl.ListID = @ListID ORDER BY
                     CASE @OrderBy 
                         WHEN 'Address' THEN p.Address
                         END,

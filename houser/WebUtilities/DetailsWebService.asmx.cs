@@ -28,5 +28,11 @@ namespace houser.WebUtilities
             else
                 return "";
         }
+
+        [WebMethod]
+        public void MovePropertyToList(string accountNumber, int list)
+        {
+            PropertyList.UpdatePropertyList(accountNumber, list);
+        }
     }
 }

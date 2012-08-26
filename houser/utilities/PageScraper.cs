@@ -41,7 +41,11 @@ namespace houser.utilities
                         string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
 
                         saleRecord.AccountNumber = accountnuber;
-                        saleRecord.SalePrice = Convert.ToDouble(Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value);
+                        
+                        string salePriceS = Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
+                        double salePrice = 0;
+                        double.TryParse(salePriceS, out salePrice);
+                        saleRecord.SalePrice = salePrice;
                         saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
                         saleRecord.Save();
                     }
@@ -91,6 +95,9 @@ namespace houser.utilities
                         regexHelpper = Regex.Match(subjectPropertyTable, "Exterior</font>(.*?)t></td>", RegexOptions.Singleline).Groups[1].Value.Trim();
                         property.Exterior = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                         property.Save();
+                        if (!PropertyList.PropertyListExists(property.AccountNumber, 2))
+                            PropertyList.InsertPropertyList(property.AccountNumber, 2);
+                        
 
                         // Get comp property chunk of page.
                         string comparePropertyGroup = Regex.Match(file, "width=\\\"703\\\" colspan=\\\"5(.*?)</body>", RegexOptions.Singleline).Groups[1].Value.Trim();

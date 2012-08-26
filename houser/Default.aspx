@@ -119,7 +119,7 @@
                     if (note == "") {
                         var id = "#" + $("#note_text")[0].name;
                         // need to remove class from note
-                        
+
                     }
 
                     $(".simplemodal-close").click();
@@ -234,6 +234,29 @@
                     $(".compBox").append(compTable);
                 }
             });
+            //--------end details panel
+
+            //-------- Move property to new list
+            $(".addToReview").click(function () {
+                account_number = $(this).closest("div").attr("id");
+                var list = 1;
+                if (!($("#ddlList").val() == 2)) {
+                    list = 2;
+                }
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    url: '/WebUtilities/DetailsWebService.asmx/MovePropertyToList',
+                    data: "{accountNumber: '" + account_number + "', list: '" + list + "'}",
+                    dataType: "json",
+                    async: false,
+                    success: "",
+                    error: ""
+                });
+                $("#btnPopulateData").click();
+            });
+
+
         });
     </script>
     
