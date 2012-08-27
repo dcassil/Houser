@@ -142,7 +142,7 @@
                 address = encodeURI($(this).children(".propertyData").children(".address").html());
 
                 // Create google map url
-                var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "%20Oklahoma%20City%20Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
 
                 // remove details item containers
                 $(".mapBox").remove();
@@ -162,14 +162,14 @@
                 $(".mapZoomIn").click(function () {
                     zoomLevel += 1;
                     $(".mapImg").remove();
-                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "%20Oklahoma%20City%20Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
                 });
 
                 $(".mapZoomOut").click(function () {
                     zoomLevel -= 1;
                     $(".mapImg").remove();
-                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
+                    mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "%20Oklahoma%20City%20Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
                 });
 
