@@ -11,7 +11,7 @@ namespace houser.Data
 {
     public class SaleRecordDB
     {
-        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["HouserConnectionString1"].ConnectionString;
+        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["SQLSERVER_CONNECTION_STRING"].ConnectionString;
 
         // Insert new entry.
         public static int InsertSaleRecord(string accountNumber, DateTime saleDate, double salePrice)

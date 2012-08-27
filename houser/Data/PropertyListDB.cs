@@ -12,7 +12,7 @@ namespace houser.Data
     public class PropertyListDB
     {
         #region Static MEthods
-        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["HouserConnectionString1"].ConnectionString;
+        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["SQLSERVER_CONNECTION_STRING"].ConnectionString;
 
         public static void UpdatePropertyList(string accountNumber, int list)
         {

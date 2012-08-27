@@ -11,7 +11,7 @@ namespace houser.Data
 {
     public class NoteDB
     {
-        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["HouserConnectionString1"].ConnectionString;
+        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["SQLSERVER_CONNECTION_STRING"].ConnectionString;
 
         #region Static Methods
         public static DataRow GetNotesByAccountNumber(string accountNumber)

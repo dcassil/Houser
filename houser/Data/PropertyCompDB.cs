@@ -11,7 +11,7 @@ namespace houser.Data
 {
     public class PropertyCompDB
     {
-        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["HouserConnectionString1"].ConnectionString;
+        private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["SQLSERVER_CONNECTION_STRING"].ConnectionString;
         #region Static Methods
 
         public static bool PropertyCompExists(string accountNumber, string cAccountNumber)
