@@ -25,7 +25,8 @@
         <asp:CheckBox ID="chkNonLive" class="check" Text="Local Data Only" runat="server" ToolTip="Check this to show only local data" />
         <asp:CheckBox ID="chkTestMode" class="check" Text="  Test Mode" runat="server" ToolTip="Fetch only a few test listings" />
         <asp:DropDownList ID="ddlList" class="dropDown" runat="server"
-            ToolTip="Select List" />
+            ToolTip="Select List" 
+            OnSelectedIndexChanged="ddlList_SelectedIndexChanged" AutoPostBack="True" />
     </div>
     <div class="menuSpacer"></div>
     <div class="header">

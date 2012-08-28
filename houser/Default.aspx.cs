@@ -136,6 +136,11 @@ namespace houser
 
         protected void btnPopulateData_Click(object sender, EventArgs e)
         {
+            PopulateData();
+        }
+
+        private void PopulateData()
+        {
             if (!chkTestMode.Checked)
                 BuildSheriffSalePropertyList("[Address]");
             else
@@ -180,6 +185,11 @@ namespace houser
         }
 
         #endregion
+
+        protected void ddlList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PopulateData();
+        }
 
 
 
