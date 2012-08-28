@@ -61,7 +61,9 @@ namespace houser
             StringBuilder html = new StringBuilder();
             foreach (DataRow property in subjectProperties.Rows)
             {
-                bool isInReviewList = PropertyList.PropertyListExistByAccountAndList(property["AccountNumber"].ToString(), 1);
+
+                bool isInReviewList = false;
+                bool.TryParse(property["InReviewList"].ToString(), out isInReviewList);
                 // if the property is in the review list then add the class.
                 if (isInReviewList)
                 {
@@ -71,7 +73,7 @@ namespace houser
                 else
                 {
                     inReviewList = "";
-                    addRemoveList = "Add to list";
+                    addRemoveList = "Add to review list";
                 }
                 if (!string.IsNullOrEmpty(property["Note"].ToString()))
                     hasNoteClass = "hasNote";

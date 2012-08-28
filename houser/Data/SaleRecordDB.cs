@@ -51,7 +51,10 @@ namespace houser.Data
         public static DataTable GetSaleProperitesByDate(DateTime saleDate, string orderBy, string listID)
         {
             DataSet results = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
-                @"SELECT * FROM SaleRecord s
+                @"SELECT *, (SELECT CASE (SELECT COUNT (*) FROM PropertyList 
+                                WHERE ListID = 1 AND AccountNumber = s.AccountNumber) 
+                                WHEN 0 THEN 'false' WHEN 1 THEN 'true' END) AS 'InReviewList'
+                FROM SaleRecord s
                 INNER JOIN Property p ON s.AccountNumber = p.AccountNumber
                 INNER JOIN PropertyList pl ON s.AccountNumber = pl.AccountNumber
                 LEFT OUTER JOIN Note n ON p.AccountNumber = n.AccountNumber
