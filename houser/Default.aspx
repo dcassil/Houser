@@ -117,15 +117,17 @@
                         error: ""
                     });
                     if (note == "") {
-                        var id = "#" + $("#note_text")[0].name;
-                        // need to remove class from note
-
+                        // var id = "#" + $("#note_text")[0].name;
+                        // remove note exist class
+                        $("#" + account_number).find("#" + account_number).removeClass("hasNote")
+                    } else {
+                        // add note exist class
+                        $("#" + account_number).find("#" + account_number).addClass("hasNote")
                     }
 
+                    // Close modal
                     $(".simplemodal-close").click();
-                    $("#btnPopulateData").click();
                 });
-
                 return false;
             });
             // ----- END NOTES MODAL ------
@@ -185,7 +187,7 @@
                 });
 
 
-
+                // get comp properties.
                 $.ajax({
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
@@ -240,6 +242,7 @@
             $(".addToReview").click(function () {
                 account_number = $(this).closest("div").attr("id");
                 var list = 1;
+                // add remove class to indicate if prop is in the review list.
                 if ($(this).hasClass("inReviewList")) {
                     $(this).removeClass("inReviewList");
                     $(this).text("Add to review list");
