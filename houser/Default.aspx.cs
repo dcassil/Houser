@@ -56,12 +56,23 @@ namespace houser
             DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy, ddlList.SelectedValue);
             string listingPnlClass;
             string hasNoteClass = "";
-            string addRemoveList = ddlList.SelectedValue == "2" ? "Add to review list" : "Remove from list";
             string inReviewList;
+            string addRemoveList;
             StringBuilder html = new StringBuilder();
             foreach (DataRow property in subjectProperties.Rows)
             {
-                inReviewList = (int)property["ListID"] == 1 ? "inReviewList" : ""; 
+                bool isInReviewList = PropertyList.PropertyListExistByAccountAndList(property["AccountNumber"].ToString(), 1);
+                // if the property is in the review list then add the class.
+                if (isInReviewList)
+                {
+                    inReviewList = "inReviewList";
+                    addRemoveList = "Remove from list";
+                }
+                else
+                {
+                    inReviewList = "";
+                    addRemoveList = "Add to list";
+                }
                 if (!string.IsNullOrEmpty(property["Note"].ToString()))
                     hasNoteClass = "hasNote";
                 else

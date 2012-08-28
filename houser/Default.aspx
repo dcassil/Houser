@@ -236,24 +236,42 @@
             });
             //--------end details panel
 
-            //-------- Move property to new list
+            //-------- Add property to new list
             $(".addToReview").click(function () {
                 account_number = $(this).closest("div").attr("id");
                 var list = 1;
-                if (!($("#ddlList").val() == 2)) {
-                    list = 2;
+                if ($(this).hasClass("inReviewList")) {
+                    $(this).removeClass("inReviewList");
+                    $(this).text("Add to review list");
+                    if ($("#ddlList").val() != "2") {
+                        $(this).parent().parent().parent().remove();
+                    }
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        url: '/WebUtilities/DetailsWebService.asmx/RemovePropertyFromList',
+                        data: "{accountNumber: '" + account_number + "', listID: '" + list + "'}",
+                        dataType: "json",
+                        async: false,
+                        success: "",
+                        error: ""
+                    });
+                } else {
+                    $(this).addClass("inReviewList");
+                    $(this).text("Remove from list");
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        url: '/WebUtilities/DetailsWebService.asmx/AddToReviewList',
+                        data: "{accountNumber: '" + account_number + "', listID: '" + list + "'}",
+                        dataType: "json",
+                        async: false,
+                        success: "",
+                        error: ""
+                    });
                 }
-                $.ajax({
-                    type: "POST",
-                    contentType: "application/json; charset=utf-8",
-                    url: '/WebUtilities/DetailsWebService.asmx/MovePropertyToList',
-                    data: "{accountNumber: '" + account_number + "', list: '" + list + "'}",
-                    dataType: "json",
-                    async: false,
-                    success: "",
-                    error: ""
-                });
-                $("#btnPopulateData").click();
+
+
             });
 
 
