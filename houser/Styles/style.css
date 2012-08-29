@@ -19,12 +19,21 @@
         .subjectInfo { position: relative; float: left; top: 25px; margin: 0 0 0 25px; height: 300px; width: 20%; background-color:Gray;}
     
     /* Menu */
-    .menu { position: fixed; height: 36px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 353px; z-index: 100; }
+    .menu { position: fixed; height: 36px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 353px; z-index: 100; padding: 0 20px 0 20px; }
     .menuSpacer { position:relative; width: 100%; height: 36px; z-index: 0; }
-    
+    .menuLable {  color:#585858; font-size: smaller; }
+        .menuTextBox { width: 100px; margin: 0 20px 0 20px;}
+        .check { padding: 0 15px 0 0; }
+            input[type="checkbox"] { margin: 0 10px 0 10px !important;}
+        .button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; cursor:pointer; }
+            .button:hover { color: #717171;}
+        .dropDown { margin: 8px 5px 0 20px; }
+        /*Login Controls*/
+        .loginControls { float: right; padding: 0 20px 0 0; }
+        
     /* Header */
     .header { position: fixed; height: 24px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 389px; z-index: 100; }
-    .headerSpacer { position:relative; width: 100%; height: 24px; z-index: 0; }
+    .headerSpacer { position:relative; width: 100%; z-index: 0; }
     .headerSortable {background-color: transparent; border: none; color: #EDEDED; cursor:pointer;}
     
     /* Bottom listings display plane */
@@ -52,11 +61,7 @@
             .addToReview { float: right; height: 14; padding: 4px 20px 4px 20px; width: 120px; text-align: left; }
             .inReviewList { color: #C46F04; font-weight: bold;}
 
-    /* Generic ui elements */
-    .button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; cursor:pointer; }
-    .button:hover { color: #717171;}
-    .dropDown { margin: 8px 5px 0 20px; }
-    .check { color: White; font-size: small; }
+    
     
 /* Simple Modal */
 #basic-modal-content {display:none;}

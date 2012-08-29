@@ -18,15 +18,26 @@
     </div>
     <div class="displayPanelSpacer"></div>
     <div class="menu">
-        <asp:DropDownList ID="ddlSaleDate" class="dropDown" runat="server" 
+        <span class="menuLable">Sale Date
+            <asp:DropDownList ID="ddlSaleDate" class="dropDown" runat="server" 
             onselectedindexchanged="ddlSaleDate_SelectedIndexChanged" ToolTip="Select Sale Date" />
+        </span>
         <asp:Button ID="btnPopulateData" class="button" Text="Get Data" runat="server" Visible="true" 
-            onclick="btnPopulateData_Click" ToolTip="Click to get properties for this sale date"/>
-        <asp:CheckBox ID="chkNonLive" class="check" Text="Local Data Only" runat="server" ToolTip="Check this to show only local data" />
-        <asp:CheckBox ID="chkTestMode" class="check" Text="  Test Mode" runat="server" ToolTip="Fetch only a few test listings" />
-        <asp:DropDownList ID="ddlList" class="dropDown" runat="server"
-            ToolTip="Select List" 
-            OnSelectedIndexChanged="ddlList_SelectedIndexChanged" AutoPostBack="True" />
+        onclick="btnPopulateData_Click" ToolTip="Click to get properties for this sale date"/>
+        <span class="menuLable">Select List
+            <asp:DropDownList ID="ddlList" class="dropDown" runat="server"
+            ToolTip="Select List" OnSelectedIndexChanged="ddlList_SelectedIndexChanged" AutoPostBack="True" />
+        </span>
+        <asp:CheckBox ID="chkNonLive" class="menuLable check" Text="Local Data Only" runat="server" ToolTip="Check this to show only local data" />
+        <div class="loginControls">
+            <asp:Button ID="btnSubmitLogin" CssClass="button" runat="server" Text="Login" onclick="btnSubmitLogin_Click" />
+            <span class="menuLable">User Name
+                <asp:TextBox ID="txtUserName" CssClass="menuTextBox" runat="server" PlaceHolderText="your suername" />
+            </span>
+            <span class="menuLable">Password
+                <asp:TextBox ID="txtPassword" CssClass="menuTextBox" runat="server" TextMode="Password" />
+            </span>
+        </div>
     </div>
     <div class="menuSpacer"></div>
     <div class="header">

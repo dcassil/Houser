@@ -19,6 +19,9 @@ namespace houser
 {
     public partial class _Default : System.Web.UI.Page
     {
+        public string userName;
+        public string password;
+
         public void Page_Load(object sender, EventArgs e)
         {
            //If this is not a post back (first page load)
@@ -47,6 +50,11 @@ namespace houser
                 listItem2.Value = "1";
                 ddlList.Items.Add(listItem2);
                 chkNonLive.Checked = true;
+            }
+            else
+            {
+                userName = txtUserName.Text;
+                password = txtPassword.Text;
             }
         }
 
@@ -136,15 +144,39 @@ namespace houser
 
         protected void btnPopulateData_Click(object sender, EventArgs e)
         {
+            userName = txtUserName.Text.Trim();
+            password = txtPassword.Text.Trim();
             PopulateData();
+        }
+
+        protected void btnSubmitLogin_Click(object sender, EventArgs e)
+        {
+            if (Request.Cookies["HouserLogin"] == null)
+            {
+                if (houser.Business.User.ThisIsAUser(userName, password))
+                {
+                    CreateLoginCookie();
+                }
+            }
+        }
+
+        private void CreateLoginCookie()
+        {
+            HttpCookie loginCookie = new HttpCookie("HouserLogin");
+            loginCookie.Values.Add("UserName", txtUserName.Text.Trim());
+            loginCookie.Values.Add("Password", txtPassword.Text.Trim());
+            loginCookie.Expires = DateTime.Now.AddYears(2);
+            Response.Cookies.Add(loginCookie);
+        }
+
+        private string EncryptPassword(string p)
+        {
+            return "";// todo
         }
 
         private void PopulateData()
         {
-            if (!chkTestMode.Checked)
-                BuildSheriffSalePropertyList("[Address]");
-            else
-                BuildTestProperties();
+            BuildSheriffSalePropertyList("[Address]");
         }
 
         protected void btnSortAddress_Click(object sender, EventArgs e)
@@ -191,7 +223,7 @@ namespace houser
             PopulateData();
         }
 
-
+        
 
     }
 }

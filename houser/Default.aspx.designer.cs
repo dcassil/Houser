@@ -40,6 +40,15 @@ namespace houser {
         protected global::System.Web.UI.WebControls.Button btnPopulateData;
         
         /// <summary>
+        /// ddlList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlList;
+        
+        /// <summary>
         /// chkNonLive control.
         /// </summary>
         /// <remarks>
@@ -49,22 +58,31 @@ namespace houser {
         protected global::System.Web.UI.WebControls.CheckBox chkNonLive;
         
         /// <summary>
-        /// chkTestMode control.
+        /// btnSubmitLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkTestMode;
+        protected global::System.Web.UI.WebControls.Button btnSubmitLogin;
         
         /// <summary>
-        /// ddlList control.
+        /// txtUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlList;
+        protected global::System.Web.UI.WebControls.TextBox txtUserName;
+        
+        /// <summary>
+        /// txtPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
         
         /// <summary>
         /// btnAddress control.
