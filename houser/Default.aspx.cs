@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Net;
-using System.IO;
-using houser.utilities;
-using System.Text.RegularExpressions;
-using System.Data;
-using System.Web.UI.HtmlControls;
-using houser.Data;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 using houser.Business;
+using houser.utilities;
 
 namespace houser
 {
     public partial class _Default : System.Web.UI.Page
     {
-        public string userName;
-        public string password;
+        #region Private Variables.
+        private string userName;
+        private string password;
+        #endregion
 
+        #region UI events
         public void Page_Load(object sender, EventArgs e)
         {
            //If this is not a post back (first page load)
@@ -57,8 +53,66 @@ namespace houser
                 password = txtPassword.Text;
             }
         }
+        // populate properties.
+        protected void btnPopulateData_Click(object sender, EventArgs e)
+        {
+            userName = txtUserName.Text.Trim();
+            password = txtPassword.Text.Trim();
+            PopulateData();
+        }
+        
+        // If login cookie does not exist and the user and password are verified then create the login cookie.
+        protected void btnSubmitLogin_Click(object sender, EventArgs e)
+        {
+            if (Request.Cookies["HouserLogin"] == null)
+            {
+                if (houser.Business.User.ThisIsAUser(userName, password))
+                {
+                    CreateLoginCookie();
+                }
+            }
+        }
+        
+        // needs to be replaced with jquery sort.
+        protected void btnSortAddress_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Address");
+        }
+        // needs to be replaced with jquery sort.
+        protected void btnSortMinBid_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("SalePrice");
+        }
+        // needs to be replaced with jquery sort.
+        protected void btnSortSQFT_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Sqft");
+        }
+        // needs to be replaced with jquery sort.
+        protected void btnSortBeds_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Beds");
+        }
+        // needs to be replaced with jquery sort.
+        protected void btnSortBaths_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("Baths");
+        }
 
-        public void BuildListingPanels(DateTime date, string orderBy)
+        // gets properties by list when selected list cahnges.
+        protected void ddlList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PopulateData();
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Creates the actual markup for the properties.
+        /// </summary>
+        private void BuildListingPanels(DateTime date, string orderBy)
         {
             //BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
             DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy, ddlList.SelectedValue);
@@ -111,19 +165,7 @@ namespace houser
                 // go here to see how to use scroll up down events http://api.jquery.com/scroll/  we will use it to make sure key down and wheel down move down one listing exactly.
             }
         }
-
-        /// <summary>
-        /// Build the entire data structure for all properties.  Includes comparable data, property specs, ect.  03%2f15%2f2012
-        /// </summary>
-        private static string GetCompletePropertyList(string saleDate, bool nonLiveDataOnly)
-        {
-            string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
-            string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
-            if (!string.IsNullOrWhiteSpace(sherifSaleWebRequestData))
-                PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
-            return "Finished Loading";
-        }
-
+        
         /// <summary>
         /// Builds the view of properties.
         /// </summary>
@@ -141,41 +183,9 @@ namespace houser
             }
         }
 
-
-        #region UI events
-
-        protected void btnPopulateData_Click(object sender, EventArgs e)
-        {
-            userName = txtUserName.Text.Trim();
-            password = txtPassword.Text.Trim();
-            PopulateData();
-        }
-
-        private bool IsLogedIn()
-        {
-            if (Request.Cookies["HouserLogin"] != null && Request.Cookies["HouserLogin"]["UserName"] != null && Request.Cookies["HouserLogin"]["Password"] != null)
-            {
-                userName = Request.Cookies["HouserLogin"]["UserName"];
-                password = Request.Cookies["HouserLogin"]["Password"];
-                if (houser.Business.User.ThisIsAUser(userName, password))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        protected void btnSubmitLogin_Click(object sender, EventArgs e)
-        {
-            if (Request.Cookies["HouserLogin"] == null)
-            {
-                if (houser.Business.User.ThisIsAUser(userName, password))
-                {
-                    CreateLoginCookie();
-                }
-            }
-        }
-
+        /// <summary>
+        /// Create the session cookie.
+        /// </summary>
         private void CreateLoginCookie()
         {
             HttpCookie loginCookie = new HttpCookie("HouserLogin");
@@ -184,50 +194,48 @@ namespace houser
             loginCookie.Expires = DateTime.Now.AddYears(2);
             Response.Cookies.Add(loginCookie);
         }
-
-        private string EncryptPassword(string p)
+        
+        /// <summary>
+        /// Build the entire data structure for all properties.  Includes comparable data, property specs, ect.  03%2f15%2f2012
+        /// </summary>
+        private static string GetCompletePropertyList(string saleDate, bool nonLiveDataOnly)
         {
-            return "";// todo
+            string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
+            string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
+            if (!string.IsNullOrWhiteSpace(sherifSaleWebRequestData))
+                PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
+            return "Finished Loading";
         }
-
+        
+        /// <summary>
+        /// Checks to see if the user is loged in.
+        /// </summary>
+        private bool IsLogedIn()
+                {
+                    if (Request.Cookies["HouserLogin"] != null && Request.Cookies["HouserLogin"]["UserName"] != null && Request.Cookies["HouserLogin"]["Password"] != null)
+                    {
+                        userName = Request.Cookies["HouserLogin"]["UserName"];
+                        password = Request.Cookies["HouserLogin"]["Password"];
+                        if (houser.Business.User.ThisIsAUser(userName, password))
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+        
+        //----The use of multiple strings to fill in for the order by on the query needs to go.
+        //  Switch this to jquery sorts... there is no reason to get the data more than once.
+        // which will make this method pointless.  it may already be pointless.
         private void PopulateData()
         {
             BuildSheriffSalePropertyList("[Address]");
         }
-
-        protected void btnSortAddress_Click(object sender, EventArgs e)
-        {
-            BuildSheriffSalePropertyList("Address");
-        }
-
-        protected void btnSortMinBid_Click(object sender, EventArgs e)
-        {
-            BuildSheriffSalePropertyList("SalePrice");
-        }
-
-        protected void btnSortSQFT_Click(object sender, EventArgs e)
-        {
-            BuildSheriffSalePropertyList("Sqft");
-        }
-
-        protected void btnSortBeds_Click(object sender, EventArgs e)
-        {
-            BuildSheriffSalePropertyList("Beds");
-        }
-
-        protected void btnSortBaths_Click(object sender, EventArgs e)
-        {
-            BuildSheriffSalePropertyList("Baths");
-        }
-
         #endregion
 
-        protected void ddlList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PopulateData();
-        }
 
-        
+
+
 
     }
 }

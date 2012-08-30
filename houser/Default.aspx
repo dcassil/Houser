@@ -228,7 +228,7 @@
                     compTable += '<th>Baths</th>';
                     compTable += '<th>LastSaleDate</th>';
                     compTable += '<th>LastSalePrice</th>';
-                    compTable += '<th>YearBuilt</th>';
+                    compTable += '<th>$/Sqft</th>';
                     for (var i = 0; i < compData.Table.length; i++) {
                         if (i < 10) {
                             compTable += '<tr>';
@@ -237,8 +237,8 @@
                             compTable += '<td class="tBeds">' + compData.Table[i].Beds + '</td>';
                             compTable += '<td class="tBaths">' + compData.Table[i].Baths + '</td>';
                             compTable += '<td class="tLastSalePrice">' + compData.Table[i].LastSaleDate + '</td>';
-                            compTable += '<td class="tLastSalePrice">' + compData.Table[i].LastSalePrice + '</td>';
-                            compTable += '<td class="tYearBuilt">' + compData.Table[i].YearBuilt + '</td>';
+                            compTable += '<td class="tLastSalePrice">$' + Number(compData.Table[i].LastSalePrice).toFixed(2) + '</td>';
+                            compTable += '<td class="tPPSqftt">$' + Number(compData.Table[i].PricePerSqft).toFixed(2) + '</td>';
                             compTable += '</tr>';
                         }
                     }

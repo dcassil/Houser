@@ -22,10 +22,11 @@
     .menu { position: fixed; height: 36px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 353px; z-index: 100; padding: 0 20px 0 20px; }
     .menuSpacer { position:relative; width: 100%; height: 36px; z-index: 0; }
     .menuLable {  color:#585858; font-size: smaller; }
-        .menuTextBox { width: 100px; margin: 0 20px 0 20px;}
+        .menuTextBox { width: 60px; height: 13px; margin: 0 20px 0 20px;}
         .check { padding: 0 15px 0 0; }
             input[type="checkbox"] { margin: 0 10px 0 10px !important;}
         .button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; cursor:pointer; }
+            
             .button:hover { color: #717171;}
         .dropDown { margin: 8px 5px 0 20px; }
         /*Login Controls*/
@@ -89,13 +90,16 @@
 .mapMode { width: 40px; height: 15px; padding: 5px; position: fixed; top: 25px; left: 450px; font-size:medium; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75;}
 
 /*Comp Box*/
-.compBox { position: fixed; top:0px; left: 530px; width: 700px; height: 353px; padding: 15px; color: #b6b6b6;}
+.compBox { position: fixed; top:0px; left: 530px; width: 625px; height: 353px; padding: 15px; color: #838383;}
 .compBox td { width: 50px; padding-left: 25px; text-align:right;  }
-.compBox tr { width: 50px; padding-left: 25px; text-align:right; background-color: #202020;  }
-.compBox tr:nth-child(2n) { width: 50px; padding-left: 25px; text-align:right; background-color: #242424;  }
-.compBox th { width: 50px; padding-left: 25px; text-align:right; background-color: #202020; }
+.compBox tr { width: 50px; padding-left: 25px; text-align:right;   }
+.compBox th { width: 50px; padding-left: 25px; text-align:right; }
 .compBox .tAddress { width: 250px;  font-size: smaller; white-space:nowrap;  }
 .compBox .tLastSalePrice { width: 100px; font-size: smaller; }
 .compBox .tLastSaleDate { width: 100px; font-size: smaller; }
 .compBoxTitle { width: 700px; height: 35px; padding: 15px; font-size:x-large; text-align: center; color: #121212; font-weight:bolder;}
 
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px)
+{
+    .compBox { position: fixed; top:0px; left: 530px; width: 500px; height: 353px; padding: 15px; color: #838383; overflow-x: scroll;}
+}

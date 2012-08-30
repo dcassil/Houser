@@ -35,7 +35,7 @@ namespace houser.Data
         {
             return SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
                 @"SELECT p.[AccountNumber],[Address],[Sqft],[Baths],[Beds],[Exterior],[LastSaleDate],[LastSalePrice],[DateModified]
-                    ,[GarageSize],[YearBuilt],[Type],[BuiltAs]
+                    ,[GarageSize],[YearBuilt],[Type],[BuiltAs], ([LastSalePrice]/[Sqft]) AS 'PricePerSqft'
                     FROM [Property] p 
                     INNER JOIN PropertyComp pc ON p.AccountNumber = pc.CAccountNumber 
                     WHERE pc.AccountNumber = @AccountNumber",
