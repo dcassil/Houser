@@ -129,14 +129,16 @@ namespace houser
         /// </summary>
         private void BuildSheriffSalePropertyList(string orderBy)
         {
-            if (!chkNonLive.Checked)
+            if (IsLogedIn())
             {
-                string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
-                string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
+                if (!chkNonLive.Checked)
+                {
+                    string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
+                    string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
+                }
+
+                BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value), orderBy);
             }
-            
-            BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value), orderBy);
-            
         }
 
 
@@ -147,6 +149,20 @@ namespace houser
             userName = txtUserName.Text.Trim();
             password = txtPassword.Text.Trim();
             PopulateData();
+        }
+
+        private bool IsLogedIn()
+        {
+            if (Request.Cookies["HouserLogin"] != null && Request.Cookies["HouserLogin"]["UserName"] != null && Request.Cookies["HouserLogin"]["Password"] != null)
+            {
+                userName = Request.Cookies["HouserLogin"]["UserName"];
+                password = Request.Cookies["HouserLogin"]["Password"];
+                if (houser.Business.User.ThisIsAUser(userName, password))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         protected void btnSubmitLogin_Click(object sender, EventArgs e)
@@ -202,18 +218,6 @@ namespace houser
         protected void btnSortBaths_Click(object sender, EventArgs e)
         {
             BuildSheriffSalePropertyList("Baths");
-        }
-
-        private void BuildTestProperties()
-        {
-
-            BuildListingPanels(Convert.ToDateTime("2001/01/01"), "DateModified");
-            displayPanel.Controls.Add(new LiteralControl("<p>" + "Test Data" + "</p>"));
-        }
-
-        protected void ddlSaleDate_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         #endregion

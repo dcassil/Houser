@@ -19,8 +19,7 @@
     <div class="displayPanelSpacer"></div>
     <div class="menu">
         <span class="menuLable">Sale Date
-            <asp:DropDownList ID="ddlSaleDate" class="dropDown" runat="server" 
-            onselectedindexchanged="ddlSaleDate_SelectedIndexChanged" ToolTip="Select Sale Date" />
+            <asp:DropDownList ID="ddlSaleDate" class="dropDown" runat="server" ToolTip="Select Sale Date" />
         </span>
         <asp:Button ID="btnPopulateData" class="button" Text="Get Data" runat="server" Visible="true" 
         onclick="btnPopulateData_Click" ToolTip="Click to get properties for this sale date"/>
