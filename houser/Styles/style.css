@@ -22,10 +22,10 @@
     .menu { position: fixed; height: 36px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 353px; z-index: 100; padding: 0 20px 0 20px; }
     .menuSpacer { position:relative; width: 100%; height: 36px; z-index: 0; }
     .menuLable {  color:#585858; font-size: smaller; }
-        .menuTextBox { width: 60px; height: 13px; margin: 0 20px 0 20px;}
+        .menuTextBox { width: 60px; height: 13px; margin: 0 10px 0 10px;}
         .check { padding: 0 15px 0 0; }
             input[type="checkbox"] { margin: 0 10px 0 10px !important;}
-        .button { border: 0px; background-color: transparent; color: White; margin: 8px 10px 0 10px; font-size:medium; cursor:pointer; }
+        .button { border: 0px; background-color: transparent; color: White; margin: 8px; font-size:medium; cursor:pointer; }
             
             .button:hover { color: #717171;}
         .dropDown { margin: 8px 5px 0 20px; }

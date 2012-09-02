@@ -27,7 +27,7 @@
             <asp:DropDownList ID="ddlList" class="dropDown" runat="server"
             ToolTip="Select List" OnSelectedIndexChanged="ddlList_SelectedIndexChanged" AutoPostBack="True" />
         </span>
-        <asp:CheckBox ID="chkNonLive" class="menuLable check" Text="Local Data Only" runat="server" ToolTip="Check this to show only local data" />
+        <asp:CheckBox ID="chkNonLive" class="menuLable check" Text="Cached only" runat="server" ToolTip="Check this to show only local data" />
         <div class="loginControls">
             <asp:Button ID="btnSubmitLogin" CssClass="button" runat="server" Text="Login" onclick="btnSubmitLogin_Click" />
             <span class="menuLable">User Name

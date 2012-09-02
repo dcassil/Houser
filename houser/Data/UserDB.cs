@@ -23,6 +23,24 @@ namespace houser.Data
                 new SqlParameter("@Password", password));
             return result != null;
         }
+
+        public static DataRow GetUserByUserNameAndPassword(string userName, string password)
+        {
+            DataSet result = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
+                "SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password",
+                new SqlParameter("@UserName", userName),
+                new SqlParameter("@Password", password));
+            return result.Tables[0].Rows[0] != null ? result.Tables[0].Rows[0] : null;
+        }
+
+        public static int InsertUser(string accountNumber, string password)
+        {
+            return Convert.ToInt32(SqlHelper.ExecuteScalar(CONNECTIONSTRING, CommandType.Text,
+                "INSERT INTO [User] (AccountNumber, Password) VALUSE (@AccountNumber, @Password); SELECT @id = SCOPE_IDENTITY()",
+                new SqlParameter("@accountNumber", accountNumber),
+                new SqlParameter("@Password", password)));
+        }
+        
         #endregion
     }
 }

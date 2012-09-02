@@ -15,6 +15,8 @@ namespace houser
         #region Private Variables.
         private string userName;
         private string password;
+        private bool logedIn;
+        private User user;
         #endregion
 
         #region UI events
@@ -46,6 +48,14 @@ namespace houser
                 listItem2.Value = "1";
                 ddlList.Items.Add(listItem2);
                 chkNonLive.Checked = true;
+                if (Request.Cookies["HouserLogin"] != null)
+                {
+                    userName = Request.Cookies["HouserLogin"]["UserName"];
+                    password = Request.Cookies["HouserLogin"]["Password"];
+                    user = new User(userName, password);
+                    if (user.UserID != null)
+                        logedIn = true;
+                }
             }
             else
             {
@@ -64,9 +74,10 @@ namespace houser
         // If login cookie does not exist and the user and password are verified then create the login cookie.
         protected void btnSubmitLogin_Click(object sender, EventArgs e)
         {
+            user = new User(userName, password);
             if (Request.Cookies["HouserLogin"] == null)
             {
-                if (houser.Business.User.ThisIsAUser(userName, password))
+                if (user.UserID != null)
                 {
                     CreateLoginCookie();
                 }
