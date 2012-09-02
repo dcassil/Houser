@@ -48,17 +48,17 @@ namespace houser.Data
         }
 
         // Get records by date.  // limited to top 8 while testing.
-        public static DataTable GetSaleProperitesByDate(DateTime saleDate, string orderBy, string listID)
+        public static DataTable GetSaleProperitesByDate(DateTime saleDate, string orderBy, string listID, int userID)
         {
             DataSet results = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
                 @"SELECT *, (SELECT CASE (SELECT COUNT (*) FROM PropertyList 
-                                WHERE ListID = 1 AND AccountNumber = s.AccountNumber) 
+                                WHERE ListID = 1 AND AccountNumber = s.AccountNumber AND UserID = @UserID) 
                                 WHEN 0 THEN 'false' WHEN 1 THEN 'true' END) AS 'InReviewList'
                 FROM SaleRecord s
                 INNER JOIN Property p ON s.AccountNumber = p.AccountNumber
                 INNER JOIN PropertyList pl ON s.AccountNumber = pl.AccountNumber
-                LEFT OUTER JOIN Note n ON p.AccountNumber = n.AccountNumber
-                WHERE s.SaleDate = @SaleDate AND pl.ListID = @ListID ORDER BY
+                LEFT OUTER JOIN Note n ON p.AccountNumber = n.AccountNumber AND n.UserID = @UserID
+                WHERE s.SaleDate = @SaleDate AND pl.ListID = @ListID AND pl.UserID = @UserID OR (pl.UserID = 0 AND @ListID = 2) ORDER BY
                     CASE @OrderBy 
                         WHEN 'Address' THEN p.Address
                         END,
@@ -69,7 +69,8 @@ namespace houser.Data
                         WHEN 'Sqft' THEN p.Sqft END",
                 new SqlParameter("@SaleDate", saleDate),
                 new SqlParameter("@ListID", listID),
-                new SqlParameter("@OrderBy", orderBy));
+                new SqlParameter("@OrderBy", orderBy),
+                new SqlParameter("@UserID", userID));
             return results.Tables[0];
         }
     }

@@ -10,19 +10,14 @@ namespace houser.Business
     {
         #region Static MEthods
 
-        public static void RemoveFromFromList(string accountNumber, int list)
+        public static void RemoveFromFromList(string accountNumber, int list, int userID)
         {
-            PropertyListDB.RemoveFromFromList(accountNumber, list);
+            PropertyListDB.RemoveFromFromList(accountNumber, list, userID);
         }
 
-        public static void UpdatePropertyList(string accountNumber, int list)
+        public static void AddPropertyToList(string accountNumber, int list, int userID)
         {
-            PropertyListDB.UpdatePropertyList(accountNumber, list);
-        }
-
-        public static void AddPropertyToList(string accountNumber, int list)
-        {
-            PropertyListDB.AddPropertyToList(accountNumber, list);
+            PropertyListDB.AddPropertyToList(accountNumber, list, userID);
         }
 
         public static bool PropertyListExists(string accountNumber, int list)
@@ -30,10 +25,6 @@ namespace houser.Business
             return PropertyListDB.PropertyListExist(accountNumber, list);
         }
 
-        public static bool PropertyListExistByAccountAndList(string accountNumber, int list)
-        {
-            return PropertyListDB.PropertyListExistByAccountAndList(accountNumber, list);
-        }
         #endregion
     }
 }

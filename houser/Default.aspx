@@ -50,6 +50,7 @@
     <span class="sqft"><asp:Button ID="btnSqft" class="headerSortable" runat="server" Text="SQFT ▼" onclick="btnSortSQFT_Click"/></span>
     <span class="beds"><asp:Button ID="btnBeds" class="headerSortable" runat="server" Text="Beds ▼" onclick="btnSortBeds_Click"/></span>
     <span class="baths"><asp:Button ID="btnBaths" class="headerSortable" runat="server" Text="Baths ▼" onclick="btnSortBaths_Click"/></span>
+    <span class="baths"><asp:Button ID="btnPpSqft" class="headerSortable" runat="server" Text="PpSqft ▼"/></span>
     </span>
     </div>
     </div>
@@ -99,7 +100,7 @@
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
                     url: '/WebUtilities/NoteWebService.asmx/GetAccountNotes',
-                    data: "{accountNumber: '" + account_number + "'}",
+                    data: "{accountNumber: '" + account_number + "', userID: '" + userID + "'}",
                     dataType: "json",
                     async: false,
                     success: function (responce) {
@@ -122,7 +123,7 @@
                         type: "POST",
                         contentType: "application/json; charset=utf-8",
                         url: '/WebUtilities/NoteWebService.asmx/SaveAccountNote',
-                        data: "{accountNumber: '" + account_number + "', note: '" + note + "'}",
+                        data: "{accountNumber: '" + account_number + "', userID: '" + userID + "', note: '" + note + "'}",
                         dataType: "json",
                         async: false,
                         success: "",
@@ -265,7 +266,7 @@
                         type: "POST",
                         contentType: "application/json; charset=utf-8",
                         url: '/WebUtilities/DetailsWebService.asmx/RemovePropertyFromList',
-                        data: "{accountNumber: '" + account_number + "', listID: '" + list + "'}",
+                        data: "{accountNumber: '" + account_number + "', listID: '" + list + "', userID: '" + userID + "'}",
                         dataType: "json",
                         async: false,
                         success: "",
@@ -278,7 +279,7 @@
                         type: "POST",
                         contentType: "application/json; charset=utf-8",
                         url: '/WebUtilities/DetailsWebService.asmx/AddToReviewList',
-                        data: "{accountNumber: '" + account_number + "', listID: '" + list + "'}",
+                        data: "{accountNumber: '" + account_number + "', listID: '" + list + "', userID: '" + userID + "'}",
                         dataType: "json",
                         async: false,
                         success: "",

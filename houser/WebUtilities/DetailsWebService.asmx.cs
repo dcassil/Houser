@@ -30,15 +30,15 @@ namespace houser.WebUtilities
         }
 
         [WebMethod]
-        public void AddToReviewList(string accountNumber, int listID)
+        public void AddToReviewList(string accountNumber, int listID, int userID)
         {
-            PropertyList.AddPropertyToList(accountNumber, listID);
+            PropertyList.AddPropertyToList(accountNumber, listID, userID);
         }
 
         [WebMethod]
-        public void RemovePropertyFromList(string accountNumber, int listID)
+        public void RemovePropertyFromList(string accountNumber, int listID, int userID)
         {
-            PropertyList.RemoveFromFromList(accountNumber, listID);
+            PropertyList.RemoveFromFromList(accountNumber, listID, userID);
         }
     }
 }

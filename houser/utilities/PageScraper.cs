@@ -96,7 +96,7 @@ namespace houser.utilities
                         property.Exterior = Regex.Match(regexHelpper, "<font size=\\\"2\\\">(.*?)</fon", RegexOptions.Singleline).Groups[1].Value.Trim();
                         property.Save();
                         if (!PropertyList.PropertyListExists(property.AccountNumber, 2))
-                            PropertyList.AddPropertyToList(property.AccountNumber, 2);
+                            PropertyList.AddPropertyToList(property.AccountNumber, 2, 0);
                         
 
                         // Get comp property chunk of page.

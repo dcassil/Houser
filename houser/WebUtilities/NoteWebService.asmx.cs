@@ -15,18 +15,18 @@ namespace houser.WebUtilities
     {
 
         [WebMethod]
-        public void SaveAccountNote(string accountNumber, string note)
+        public void SaveAccountNote(string accountNumber, int userID, string note)
         {
-            Note notes = new Note(accountNumber);
+            Note notes = new Note(accountNumber, userID);
             notes.Notes = note;
             notes.Save();
 
         }
 
         [WebMethod]
-        public string GetAccountNotes(string accountNumber)
+        public string GetAccountNotes(string accountNumber, int userID)
         {
-            Note notes = new Note(accountNumber);
+            Note notes = new Note(accountNumber, userID);
             return notes.Notes;
         }
     }

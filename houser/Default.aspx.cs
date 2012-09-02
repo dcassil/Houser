@@ -28,6 +28,7 @@ namespace houser
             {
                 // See if we have checked to only get cached data...........This will probably go away.
                 bool nonLiveData = chkNonLive.Checked;
+                
                 // Request the sherifsale page so we can get the available sale dates.
                 string sheriffSaleDatePage = PageRequester.GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/");
                 // Create a list of dates
@@ -62,15 +63,31 @@ namespace houser
         // If login cookie does not exist and the user and password are verified then create the login cookie.
         protected void btnSubmitLogin_Click(object sender, EventArgs e)
         {
-            user = new User(txtUserName.Text.Trim(), txtPassword.Text.Trim());
-            if (user.UserID != null)
+            if (btnSubmitLogin.Text.Trim() == "Login")
             {
-                userID = user.UserID;
-                logedIn = true;
-                if (Request.Cookies["HouserLogin"] == null)
+                user = new User(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+                if (user.UserID != null)
                 {
-                    CreateLoginCookie();
+                    userID = user.UserID;
+                    logedIn = true;
+                    if (Request.Cookies["HouserLogin"] == null)
+                    {
+                        CreateLoginCookie();
+                    }
+                    btnSubmitLogin.Text = "Log out";
+                    txtUserName.Enabled = false;
+                    txtPassword.Enabled = false;
                 }
+            }
+            else
+            {
+                logedIn = false;
+                HttpCookie loginCookie = new HttpCookie("HouserLogin");
+                loginCookie.Expires = DateTime.UtcNow.AddDays(-1);
+                HttpContext.Current.Response.Cookies.Set(loginCookie);
+                btnSubmitLogin.Text = "Login";
+                txtUserName.Enabled = true;
+                txtPassword.Enabled = true;
             }
         }
         
@@ -116,7 +133,7 @@ namespace houser
         private void BuildListingPanels(DateTime date, string orderBy)
         {
             //BindingFlags b = BindingFlags.Instance | BindingFlags.Public;
-            DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy, ddlList.SelectedValue);
+            DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(date, orderBy, ddlList.SelectedValue, user.UserID);
             string listingPnlClass;
             string hasNoteClass = "";
             string inReviewList;
@@ -146,18 +163,30 @@ namespace houser
                 html.Clear();
                 
                 listingPnlClass = "listingPanel";
-                
+
+                string _accountNumber = property["AccountNumber"].ToString();
+                string _address = property["Address"].ToString();
+                int _salePrice = -1;
+                Int32.TryParse(property["SalePrice"].ToString(), out _salePrice);
+                int _sqft = -1;
+                Int32.TryParse(property["Sqft"].ToString(), out _sqft);
+                int _beds = -1;
+                Int32.TryParse(property["Beds"].ToString(), out _beds);
+                double _baths = -1;
+                double.TryParse(property["baths"].ToString(), out _baths);
+
                 html.Append("<div class=\"listingWrapper\">");
                 html.Append("<div class=\"indicator\"></div>");
-                html.Append("<div id=\"" + property["AccountNumber"].ToString() + "\" class=\"" + listingPnlClass + "\">");
+                html.Append("<div id=\"" + _accountNumber + "\" class=\"" + listingPnlClass + "\">");
                 html.Append("<span class=\"propertyData\">");
-                html.Append("<span class=\"notes " + hasNoteClass + " \" id=\"" + property["AccountNumber"].ToString() + "\" >Notes</span>");
-                html.Append("<span class=\"address\">" + property["Address"].ToString() + "</span>");
-                html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(Convert.ToInt32(property["SalePrice"]) * .66) + "</span>");
-                html.Append("<span class=\"sqft\">" + property["Sqft"].ToString() + "</span>");
-                html.Append("<span class=\"beds\">" + property["Beds"].ToString() + "</span>");
-                html.Append("<span class=\"baths\">" + property["baths"].ToString() + "</span>");
+                html.Append("<span class=\"notes " + hasNoteClass + " \" id=\"" + _accountNumber + "\" >Notes</span>");
+                html.Append("<span class=\"address\">" + _address + "</span>");
+                html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(_salePrice * .66) + "</span>");
+                html.Append("<span class=\"sqft\">" + Convert.ToString(_sqft) + "</span>");
+                html.Append("<span class=\"beds\">" + Convert.ToString(_beds) + "</span>");
+                html.Append("<span class=\"baths\">" + Convert.ToString(_baths) + "</span>");
                 html.Append("<span class=\"addToReview " + inReviewList + "\">" + addRemoveList + "</span>");
+                html.Append("<span class=\"pricePerSqft\">$" + Convert.ToString(_salePrice / _sqft) + "</span>");
                 html.Append("</span>");
                 html.Append("</div>");
                 html.Append("</div>");
@@ -198,6 +227,9 @@ namespace houser
                 {
                     userID = user.UserID;
                     logedIn = true;
+                    txtUserName.Enabled = false;
+                    txtPassword.Enabled = false;
+                    btnSubmitLogin.Text = "Log out";
                 }
             }
         }
