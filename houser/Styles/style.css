@@ -34,7 +34,7 @@
         
     /* Header */
     .header { position: fixed; height: 24px; width: 100%; background-image: url(/images/menu/background.png); left: 0px; top: 389px; z-index: 100; }
-    .headerSpacer { position:relative; width: 100%; z-index: 0; }
+    .headerSpacer { position:relative; width: 100%; height:24px; z-index: 0; }
     .headerSortable {background-color: transparent; border: none; color: #EDEDED; cursor:pointer;}
     
     /* Bottom listings display plane */

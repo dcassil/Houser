@@ -14,7 +14,6 @@ namespace houser.Business
         protected string _userName;
         protected string _firstName;
         protected string _lasteName;
-        private bool isNew;
         #endregion
 
         #region Properties

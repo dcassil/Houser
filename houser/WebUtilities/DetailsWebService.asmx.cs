@@ -19,6 +19,9 @@ namespace houser.WebUtilities
     [System.Web.Script.Services.ScriptService]
     public class DetailsWebService : System.Web.Services.WebService
     {
+        /// <summary>
+        /// Get property comps by subject property account number and return as json.
+        /// </summary>
         [WebMethod]
         public string GetPropertyCompsByAccountNumber(string accountNumber)
         {
@@ -29,12 +32,20 @@ namespace houser.WebUtilities
                 return "";
         }
 
+        /// <summary>
+        /// Add property to property list.
+        /// </summary>
+        /// <param name="accountNumber"></param>
         [WebMethod]
         public void AddToReviewList(string accountNumber, int listID, int userID)
         {
             PropertyList.AddPropertyToList(accountNumber, listID, userID);
         }
 
+        /// <summary>
+        /// Remove property from review list.
+        /// </summary>
+        /// <param name="accountNumber"></param>
         [WebMethod]
         public void RemovePropertyFromList(string accountNumber, int listID, int userID)
         {

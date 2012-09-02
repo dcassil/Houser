@@ -66,7 +66,7 @@ namespace houser
             if (btnSubmitLogin.Text.Trim() == "Login")
             {
                 user = new User(txtUserName.Text.Trim(), txtPassword.Text.Trim());
-                if (user.UserID != null)
+                if (user.UserID > 0)
                 {
                     userID = user.UserID;
                     logedIn = true;

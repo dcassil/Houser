@@ -10,7 +10,6 @@ namespace houser.Business
         #region Fields
         protected int _listID;
         protected string _name;
-        private bool _isNew;
         #endregion
 
         #region Properties
