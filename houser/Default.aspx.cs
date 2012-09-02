@@ -13,6 +13,7 @@ namespace houser
     public partial class _Default : System.Web.UI.Page
     {
         #region Private Variables.
+        public int userID = 0;
         private string userName;
         private string password;
         private bool logedIn;
@@ -48,36 +49,25 @@ namespace houser
                 listItem2.Value = "1";
                 ddlList.Items.Add(listItem2);
                 chkNonLive.Checked = true;
-                if (Request.Cookies["HouserLogin"] != null)
-                {
-                    userName = Request.Cookies["HouserLogin"]["UserName"];
-                    password = Request.Cookies["HouserLogin"]["Password"];
-                    user = new User(userName, password);
-                    if (user.UserID != null)
-                        logedIn = true;
-                }
             }
-            else
-            {
-                userName = txtUserName.Text;
-                password = txtPassword.Text;
-            }
+            CheckLoginCookie();
         }
+
         // populate properties.
         protected void btnPopulateData_Click(object sender, EventArgs e)
         {
-            userName = txtUserName.Text.Trim();
-            password = txtPassword.Text.Trim();
             PopulateData();
         }
         
         // If login cookie does not exist and the user and password are verified then create the login cookie.
         protected void btnSubmitLogin_Click(object sender, EventArgs e)
         {
-            user = new User(userName, password);
-            if (Request.Cookies["HouserLogin"] == null)
+            user = new User(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+            if (user.UserID != null)
             {
-                if (user.UserID != null)
+                userID = user.UserID;
+                logedIn = true;
+                if (Request.Cookies["HouserLogin"] == null)
                 {
                     CreateLoginCookie();
                 }
@@ -182,7 +172,7 @@ namespace houser
         /// </summary>
         private void BuildSheriffSalePropertyList(string orderBy)
         {
-            if (IsLogedIn())
+            if (logedIn)
             {
                 if (!chkNonLive.Checked)
                 {
@@ -191,6 +181,24 @@ namespace houser
                 }
 
                 BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value), orderBy);
+            }
+        }
+
+        /// <summary>
+        /// Check to see if there is a login cookie and if it is valid.
+        /// </summary>
+        private void CheckLoginCookie()
+        {
+            if (Request.Cookies["HouserLogin"] != null)
+            {
+                userName = Request.Cookies["HouserLogin"]["UserName"];
+                password = Request.Cookies["HouserLogin"]["Password"];
+                user = new User(userName, password);
+                if (user.UserID != 0)
+                {
+                    userID = user.UserID;
+                    logedIn = true;
+                }
             }
         }
 
@@ -217,23 +225,6 @@ namespace houser
                 PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
             return "Finished Loading";
         }
-        
-        /// <summary>
-        /// Checks to see if the user is loged in.
-        /// </summary>
-        private bool IsLogedIn()
-                {
-                    if (Request.Cookies["HouserLogin"] != null && Request.Cookies["HouserLogin"]["UserName"] != null && Request.Cookies["HouserLogin"]["Password"] != null)
-                    {
-                        userName = Request.Cookies["HouserLogin"]["UserName"];
-                        password = Request.Cookies["HouserLogin"]["Password"];
-                        if (houser.Business.User.ThisIsAUser(userName, password))
-                        {
-                            return true;
-                        }
-                    }
-                    return false;
-                }
         
         //----The use of multiple strings to fill in for the order by on the query needs to go.
         //  Switch this to jquery sorts... there is no reason to get the data more than once.

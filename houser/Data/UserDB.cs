@@ -30,7 +30,7 @@ namespace houser.Data
                 "SELECT * FROM [User] WHERE UserName = @UserName AND Password = @Password",
                 new SqlParameter("@UserName", userName),
                 new SqlParameter("@Password", password));
-            return result.Tables[0].Rows[0] != null ? result.Tables[0].Rows[0] : null;
+            return result.Tables[0].Rows.Count > 0 ? result.Tables[0].Rows[0] : null;
         }
 
         public static int InsertUser(string accountNumber, string password)

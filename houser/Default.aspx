@@ -82,6 +82,7 @@
 
     <script>
         jQuery(function ($) {
+            var userID = <%=userID%>
             var account_number;
             var address;
             var isSaved;
