@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using houser.Business;
 using houser.utilities;
+using System.Text.RegularExpressions;
 
 namespace houser
 {
@@ -164,8 +165,12 @@ namespace houser
                 
                 listingPnlClass = "listingPanel";
 
+                
                 string _accountNumber = property["AccountNumber"].ToString();
                 string _address = property["Address"].ToString();
+                string indicatorClass = Regex.IsMatch(_address, "RECALLED") ? "indicatorRed" : "indicatorGreen";
+                string caseNumber = property["CaseNumber"].ToString();
+                string caseURL = "http://www.oscn.net/applications/oscn/getcaseinformation.asp?query=true&srch=0&web=true&db=Oklahoma&number=" + caseNumber + "&iLAST=&iFIRST=&iMIDDLE=&iID=&iDOBL=&iDOBH=&SearchType=0&iDCPT=&iapcasetype=All&idccasetype=All&iDATEL=&iDATEH=&iCLOSEDL=&iCLOSEDH=&iDCType=0&iYear=&iNumber=&icitation=&submitted=true";
                 int _salePrice = -1;
                 Int32.TryParse(property["SalePrice"].ToString(), out _salePrice);
                 int _sqft = -1;
@@ -175,22 +180,24 @@ namespace houser
                 double _baths = -1;
                 double.TryParse(property["baths"].ToString(), out _baths);
 
+
                 html.Append("<div class=\"listingWrapper\">");
-                html.Append("<div class=\"indicator\"></div>");
+                html.Append("<div class=\"" + indicatorClass + "\"></div>");
                 html.Append("<div id=\"" + _accountNumber + "\" class=\"" + listingPnlClass + "\">");
                 html.Append("<span class=\"propertyData\">");
                 html.Append("<span class=\"notes " + hasNoteClass + " \" id=\"" + _accountNumber + "\" >Notes</span>");
-                html.Append("<span class=\"address\">" + _address + "</span>");
+                html.Append("<span class=\"address\">" + _address.Substring(0, _address.Length > 40 ? 40 : _address.Length) + "</span>");
                 html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(_salePrice * .66) + "</span>");
                 html.Append("<span class=\"sqft\">" + Convert.ToString(_sqft) + "</span>");
                 html.Append("<span class=\"beds\">" + Convert.ToString(_beds) + "</span>");
                 html.Append("<span class=\"baths\">" + Convert.ToString(_baths) + "</span>");
                 html.Append("<span class=\"addToReview " + inReviewList + "\">" + addRemoveList + "</span>");
                 html.Append("<span class=\"pricePerSqft\">$" + Convert.ToString(_salePrice / _sqft) + "</span>");
+                html.Append("<span class=\"caseDocs\"><a href=\"" + caseURL + "\" target=\"case\">"  + caseNumber + "</a>");
                 html.Append("</span>");
                 html.Append("</div>");
                 html.Append("</div>");
-
+            
                 pnlListingPanel.Controls.Add(new LiteralControl(html.ToString()));
                 // go here to see how to use scroll up down events http://api.jquery.com/scroll/  we will use it to make sure key down and wheel down move down one listing exactly.
             }
@@ -228,6 +235,7 @@ namespace houser
                     userID = user.UserID;
                     logedIn = true;
                     txtUserName.Enabled = false;
+                    txtUserName.Text = user.UserName;
                     txtPassword.Enabled = false;
                     btnSubmitLogin.Text = "Log out";
                 }

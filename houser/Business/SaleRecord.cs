@@ -12,6 +12,8 @@ namespace houser
         #region Properties
         protected int _saleRecordID;
         protected string _accountNumber;
+        protected string _address;
+        protected string _caseNumber;
         protected DateTime _saleDate;
         protected double _salePrice;
         protected DateTime _dateModified;
@@ -21,6 +23,8 @@ namespace houser
         #region Fields
         public int SaleRecordID { get { return _saleRecordID; } set { _saleRecordID = value; } }
         public string AccountNumber { get { return _accountNumber; } set { _accountNumber = value; } }
+        public string Address { get { return _address; } set { _address = value; } }
+        public string CaseNumber { get { return _caseNumber; } set { _caseNumber = value; } }
         public DateTime SaleDate { get { return _saleDate; } set { _saleDate = value; } }
         public double SalePrice { get { return _salePrice; } set { _salePrice = value; } }
         public DateTime DateModified { get { return _dateModified; } set { _dateModified = value; } }
@@ -43,6 +47,8 @@ namespace houser
             {
                 isNew = false;
                 _accountNumber = accountNumber;
+                _address = saleRecord["Address"] != null ? saleRecord["Address"].ToString() : "";
+                _caseNumber = saleRecord["CaseNumber"] != null ? saleRecord["CaseNumber"].ToString() : "";
                 _saleDate = saleDate;
                 _salePrice = Convert.ToDouble(saleRecord["SalePrice"]);
                 _saleRecordID = Convert.ToInt32(saleRecord["SaleRecordID"]);
@@ -56,9 +62,9 @@ namespace houser
         public void Save()
         {
             if (IsNew)
-                SaleRecordDB.InsertSaleRecord(_accountNumber, _saleDate, _salePrice);
+                SaleRecordDB.InsertSaleRecord(_accountNumber, _address, _caseNumber, _saleDate, _salePrice);
             else
-                SaleRecordDB.UpdateSaleRecord(_accountNumber, _saleDate, _salePrice, _saleRecordID, DateTime.Now);
+                SaleRecordDB.UpdateSaleRecord(_accountNumber, _address, _caseNumber, _saleDate, _salePrice, _saleRecordID, DateTime.Now);
         }
         #endregion
 

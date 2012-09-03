@@ -14,23 +14,27 @@ namespace houser.Data
         private static string CONNECTIONSTRING = ConfigurationManager.ConnectionStrings["SQLSERVER_CONNECTION_STRING"].ConnectionString;
 
         // Insert new entry.
-        public static int InsertSaleRecord(string accountNumber, DateTime saleDate, double salePrice)
+        public static int InsertSaleRecord(string accountNumber, string address, string caseNumber, DateTime saleDate, double salePrice)
         {
             var result = SqlHelper.ExecuteScalar(CONNECTIONSTRING, CommandType.Text,
-                @"INSERT INTO SaleRecord (AccountNumber, SaleDate, SalePrice) VALUES (@AccountNumber, @SaleDate, @SalePrice) SELECT @@IDENTITY",
+                @"INSERT INTO SaleRecord (AccountNumber, Address, CaseNumber, SaleDate, SalePrice) VALUES (@AccountNumber, @Address, @CaseNumber, @SaleDate, @SalePrice) SELECT @@IDENTITY",
                 new SqlParameter("@AccountNumber", accountNumber),
                 new SqlParameter("@SaleDate", saleDate),
-                new SqlParameter("@SalePrice", salePrice));
+                new SqlParameter("@SalePrice", salePrice),
+                new SqlParameter("@Address", address),
+                new SqlParameter("@CaseNumber", caseNumber));
             return Convert.ToInt32(result);
         }
 
         //Update entry 
-        public static void UpdateSaleRecord(string accountNumber, DateTime saleDate, double salePrice, int saleRecordID, DateTime dateModified)
+        public static void UpdateSaleRecord(string accountNumber, string address, string caseNumber, DateTime saleDate, double salePrice, int saleRecordID, DateTime dateModified)
         {
             SqlHelper.ExecuteNonQuery(CONNECTIONSTRING, CommandType.Text,
-                @"UPDATE SaleRecord SET AccountNumber =@AccountNumber, SaleDate = @SaleDate, SalePrice = @SalePrice, DateModified = @DateModified 
+                @"UPDATE SaleRecord SET AccountNumber = @AccountNumber, Address = @Address, CaseNumber = @CaseNumber, SaleDate = @SaleDate, SalePrice = @SalePrice, DateModified = @DateModified 
                 WHERE SaleRecordID = @SaleRecordID",
                 new SqlParameter("@AccountNumber", accountNumber),
+                new SqlParameter("@Address", address),
+                new SqlParameter("@CaseNumber", caseNumber),
                 new SqlParameter("@SaleDate", saleDate),
                 new SqlParameter("@SalePrice", salePrice),
                 new SqlParameter("@SaleRecordID", saleRecordID),
@@ -58,7 +62,7 @@ namespace houser.Data
                 INNER JOIN Property p ON s.AccountNumber = p.AccountNumber
                 INNER JOIN PropertyList pl ON s.AccountNumber = pl.AccountNumber
                 LEFT OUTER JOIN Note n ON p.AccountNumber = n.AccountNumber AND n.UserID = @UserID
-                WHERE s.SaleDate = @SaleDate AND pl.ListID = @ListID AND pl.UserID = @UserID OR (pl.UserID = 0 AND @ListID = 2) ORDER BY
+                WHERE s.SaleDate = @SaleDate AND pl.ListID = @ListID AND (pl.UserID = @UserID OR (pl.UserID = 0 AND @ListID = 2)) ORDER BY
                     CASE @OrderBy 
                         WHEN 'Address' THEN p.Address
                         END,

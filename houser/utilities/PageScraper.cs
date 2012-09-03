@@ -35,11 +35,12 @@ namespace houser.utilities
                     //Try to get an existing record or make a new one.
                     SaleRecord saleRecord = new SaleRecord(accountnuber, _saleDate);
 
-                    if (saleRecord.DateModified.AddDays(1) < DateTime.Now)
+                    if (true)//saleRecord.DateModified.AddDays(1) < DateTime.Now)
                     {
+                        string regexhelper = Regex.Matches(pl.Groups[1].Value, "Case Number(.*?)</font>\r\n\t\t", RegexOptions.Singleline)[0].Groups[1].Value;
+                        saleRecord.CaseNumber = Regex.Matches(regexhelper, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value.Trim();
                         MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
-                        string address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
-
+                        saleRecord.Address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value.Trim();
                         saleRecord.AccountNumber = accountnuber;
                         
                         string salePriceS = Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
@@ -59,15 +60,16 @@ namespace houser.utilities
 
         private static void GetPropertyDataFromWeb(string accountNumber)
         {
-            string url = "http://www.oklahomacounty.org/assessor/Searches/AN-R.asp?ACCOUNTNO=" + accountNumber;
-            string file = PageRequester.GetWebRequest(url);
+            Property property = new Property(accountNumber);
 
-            if (!string.IsNullOrEmpty(file))
+            if (property.DateModified.AddDays(30) < DateTime.Now)
             {
-                Property property = new Property(accountNumber);
+                string url = "http://www.oklahomacounty.org/assessor/Searches/AN-R.asp?ACCOUNTNO=" + accountNumber;
+                string file = PageRequester.GetWebRequest(url);
 
-                if (property.DateModified.AddDays(30) < DateTime.Now)
+                if (!string.IsNullOrEmpty(file))
                 {
+                
                     // populate the property and return the url for the comps.
                     string urlSimilarPropertiesSubSet = PopulatePropertySalesInfoAndGetCompsURL(property, file);
 
