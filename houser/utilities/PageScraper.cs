@@ -23,37 +23,28 @@ namespace houser.utilities
         {
             MatchCollection propertyListing = Regex.Matches(file, "<table cellpadding=\"0\" cellspacing=\"1\">\r\n\t(.*?)</table", RegexOptions.Singleline);
             
-            // for use while testing to limit results.
-            int testingI = 0;
-
             foreach (Match pl in propertyListing)
             {
-                //while (testingI < 8)
-                //{
-                    string accountnuber = Regex.Matches(pl.Groups[1].Value, "ACCOUNTNO=(.*?)\"", RegexOptions.Singleline)[0].Groups[1].Value;
-                    DateTime _saleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
-                    //Try to get an existing record or make a new one.
-                    SaleRecord saleRecord = new SaleRecord(accountnuber, _saleDate);
+                string accountnuber = Regex.Matches(pl.Groups[1].Value, "ACCOUNTNO=(.*?)\"", RegexOptions.Singleline)[0].Groups[1].Value;
+                DateTime _saleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
+                //Try to get an existing record or make a new one.
+                SaleRecord saleRecord = new SaleRecord(accountnuber, _saleDate);
 
-                    if (true)//saleRecord.DateModified.AddDays(1) < DateTime.Now)
-                    {
-                        string regexhelper = Regex.Matches(pl.Groups[1].Value, "Case Number(.*?)</font>\r\n\t\t", RegexOptions.Singleline)[0].Groups[1].Value;
-                        saleRecord.CaseNumber = Regex.Matches(regexhelper, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value.Trim();
-                        MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
-                        saleRecord.Address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value.Trim();
-                        saleRecord.AccountNumber = accountnuber;
-                        
-                        string salePriceS = Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
-                        double salePrice = 0;
-                        double.TryParse(salePriceS, out salePrice);
-                        saleRecord.SalePrice = salePrice;
-                        saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
-                        saleRecord.Save();
-                    }
-
-                    GetPropertyDataFromWeb(accountnuber);
-                    testingI++;
-                //}
+                if (saleRecord.DateModified.AddDays(1) < DateTime.Now)
+                {
+                    string regexhelper = Regex.Matches(pl.Groups[1].Value, "Case Number(.*?)</font>\r\n\t\t", RegexOptions.Singleline)[0].Groups[1].Value;
+                    saleRecord.CaseNumber = Regex.Matches(regexhelper, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value.Trim();
+                    MatchCollection PropertyRow = Regex.Matches(pl.Groups[1].Value, "<tr valign=\"top\"*>(.*?)</tr>", RegexOptions.Singleline);
+                    saleRecord.Address = Regex.Matches(PropertyRow[2].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value.Trim();
+                    saleRecord.AccountNumber = accountnuber;
+                    string salePriceS = Regex.Matches(PropertyRow[5].Groups[1].Value, "<td><font class=\"featureFont\">\r\n(.*?)\r\n", RegexOptions.Singleline)[0].Groups[1].Value;
+                    double salePrice = 0;
+                    double.TryParse(salePriceS, out salePrice);
+                    saleRecord.SalePrice = salePrice;
+                    saleRecord.SaleDate = Convert.ToDateTime(saleDate.Replace("%2f", " "));
+                    saleRecord.Save();
+                }
+                GetPropertyDataFromWeb(accountnuber);
             }
         }
 
@@ -100,7 +91,6 @@ namespace houser.utilities
                         if (!PropertyList.PropertyListExists(property.AccountNumber, 2))
                             PropertyList.AddPropertyToList(property.AccountNumber, 2, 0);
                         
-
                         // Get comp property chunk of page.
                         string comparePropertyGroup = Regex.Match(file, "width=\\\"703\\\" colspan=\\\"5(.*?)</body>", RegexOptions.Singleline).Groups[1].Value.Trim();
                         // scrape comparable properties.
