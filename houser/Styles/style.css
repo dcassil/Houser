@@ -53,8 +53,8 @@
         .selectedProperty { z-index: 1; background-color: #242424 !important;}
         
         .propertyData {color: #EDEDED; font-family:Arial; font-size:small; border: none;}
-            .notes { float: left; height: 14; padding: 4px 0 4px 0; width: 70px; text-align: center; }
-                .hasNote { color: #C46F04; font-weight: bold; }
+            .notes { float: left; height: 16px; margin: 4px; width: 16px; text-align: center; background-image: url(/images/listingPanel/note.png); }
+                .hasNote { background-image: url(/images/listingPanel/hasNote.png); }
             .address { float: left; height: 14; padding: 4px 20px 4px 20px; width: 250px; text-align: right; font-size: smaller; }
             .minBidWrapper { float: left; height: 14; padding: 4px 20px 4px 40px; width: 75px; text-align: left; }
             .sqft { float: left; height: 14; padding: 4px 20px 4px 20px; width: 33px; text-align: left; }

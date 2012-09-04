@@ -185,7 +185,7 @@ namespace houser
                 html.Append("<div class=\"" + indicatorClass + "\"></div>");
                 html.Append("<div id=\"" + _accountNumber + "\" class=\"" + listingPnlClass + "\">");
                 html.Append("<span class=\"propertyData\">");
-                html.Append("<span class=\"notes " + hasNoteClass + " \" id=\"" + _accountNumber + "\" >Notes</span>");
+                html.Append("<div class=\"notes " + hasNoteClass + " \" id=\"" + _accountNumber + "\" > </div>");
                 html.Append("<span class=\"address\">" + _address.Substring(0, _address.Length > 40 ? 40 : _address.Length) + "</span>");
                 html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(_salePrice * .66) + "</span>");
                 html.Append("<span class=\"sqft\">" + Convert.ToString(_sqft) + "</span>");
