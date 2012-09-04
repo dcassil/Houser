@@ -193,7 +193,7 @@ namespace houser
                 html.Append("<span class=\"baths\">" + Convert.ToString(_baths) + "</span>");
                 html.Append("<span class=\"addToReview " + inReviewList + "\"></span>");
                 html.Append("<span class=\"pricePerSqft\">$" + Convert.ToString(_salePrice / _sqft) + "</span>");
-                html.Append("<span class=\"caseDocs\"><a href=\"" + caseURL + "\" target=\"case\"></a>");
+                html.Append("<span class=\"caseDocs\" onclick=\"window.open('" + caseURL + "\', 'case')\"></a>");
                 html.Append("</span>");
                 html.Append("</div>");
                 html.Append("</div>");

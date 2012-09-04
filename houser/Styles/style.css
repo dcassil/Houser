@@ -61,7 +61,8 @@
             .beds { float: left; height: 14; padding: 4px 20px 4px 20px; width: 14px; text-align: left; }
             .baths { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
             .pricePerSqft { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
-            .caseDocs { float:left; height: 16px; margin: 4px 0px 4px 50px; width: 16px; background-image: url(/images/listingPanel/docs.png); background-repeat:no-repeat; }
+            .caseDocs { float:left; display: inline-block; height: 16px; margin: 4px 0px 4px 50px; width: 16px; background-image: url(/images/listingPanel/docs.png); background-repeat:no-repeat; }
+            .caseDocs a {  }
             .addToReview { float: right; height: 15px; margin: 4px; width: 15px; background-image: url(/images/listingPanel/success.png); background-repeat:no-repeat; }
             .inReviewList { background-image: url(/images/listingPanel/error.png);}
 
