@@ -65,7 +65,13 @@
     <Content Include="images\listingPanel\backgroundLight.png" />
     <Content Include="images\listingPanel\backgroundLightX.png" />
     <Content Include="images\listingPanel\backgroundLightXHov.png" />
+    <Content Include="images\listingPanel\docs.png" />
+    <Content Include="images\listingPanel\error.png" />
+    <Content Include="images\listingPanel\hasNote.png" />
+    <Content Include="images\listingPanel\note.png" />
     <Content Include="images\listingPanel\placeholder.png" />
+    <Content Include="images\listingPanel\Success.png" />
+    <Content Include="images\listingPanel\Warning.png" />
     <Content Include="images\menu\background.png" />
     <Content Include="Libs\Microsoft.ApplicationBlocks.Data.dll" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
