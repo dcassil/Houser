@@ -50,7 +50,8 @@
     <span class="sqft"><asp:Button ID="btnSqft" class="headerSortable" runat="server" Text="SQFT ▼" onclick="btnSortSQFT_Click"/></span>
     <span class="beds"><asp:Button ID="btnBeds" class="headerSortable" runat="server" Text="Beds ▼" onclick="btnSortBeds_Click"/></span>
     <span class="baths"><asp:Button ID="btnBaths" class="headerSortable" runat="server" Text="Baths ▼" onclick="btnSortBaths_Click"/></span>
-    <span class="baths"><asp:Button ID="btnPpSqft" class="headerSortable" runat="server" Text="PpSqft ▼"/></span>
+    <span class="baths"><asp:Button ID="btnPpSqft" class="headerSortable" runat="server" Text="PpSqft"/></span>
+    <span class="baths"><asp:Button ID="btnCaseDocs" class="headerSortable" runat="server" Text="Case Docs"/></span>
     </span>
     </div>
     </div>
@@ -258,7 +259,6 @@
                 // add remove class to indicate if prop is in the review list.
                 if ($(this).hasClass("inReviewList")) {
                     $(this).removeClass("inReviewList");
-                    $(this).text("Add to review list");
                     if ($("#ddlList").val() != "2") {
                         $(this).parent().parent().parent().remove();
                     }
@@ -274,7 +274,6 @@
                     });
                 } else {
                     $(this).addClass("inReviewList");
-                    $(this).text("Remove from list");
                     $.ajax({
                         type: "POST",
                         contentType: "application/json; charset=utf-8",
