@@ -53,7 +53,7 @@
         .selectedProperty { z-index: 1; background-color: #242424 !important;}
         
         .propertyData {color: #EDEDED; font-family:Arial; font-size:small; border: none;}
-            .notes { float: left; height: 16px; margin: 4px; width: 16px; text-align: center; background-image: url(/images/listingPanel/note.png); }
+            .notes { float: left; height: 16px; margin: 4px; width: 16px; text-align: center; background-image: url(/images/listingPanel/note.png); background-repeat:no-repeat;}
                 .hasNote { background-image: url(/images/listingPanel/hasNote.png); }
             .address { float: left; height: 14; padding: 4px 20px 4px 20px; width: 250px; text-align: right; font-size: smaller; }
             .minBidWrapper { float: left; height: 14; padding: 4px 20px 4px 40px; width: 75px; text-align: left; }
@@ -63,8 +63,8 @@
             .pricePerSqft { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
             .caseDocs { float:left; display: inline-block; height: 16px; margin: 4px 0px 4px 50px; width: 16px; background-image: url(/images/listingPanel/docs.png); background-repeat:no-repeat; }
             .caseDocs a {  }
-            .addToReview { float: right; height: 15px; margin: 4px; width: 15px; background-image: url(/images/listingPanel/success.png); background-repeat:no-repeat; }
-            .inReviewList { background-image: url(/images/listingPanel/error.png);}
+            .addToReview { float: right; height: 15px; margin: 4px; width: 15px; background-image: url(/images/listingPanel/star.png); background-repeat:no-repeat; }
+            .inReviewList { background-image: url(/images/listingPanel/star_selected.png);}
 
     
     
