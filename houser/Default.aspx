@@ -92,6 +92,7 @@
             var compData;
             var zoomLevel = 15;
             var mapMode = "roadmap";
+            var imgPath;
             // ------- NOTES MODAL ---------
             // Load modal and get note on click
             $('.notes').click(function (e) {
@@ -174,6 +175,7 @@
                 $(".mapBox").append('<div class="mapZoomIn">+</div>');
                 $(".mapBox").append('<div class="mapZoomOut">-</div>');
                 $(".mapBox").append('<div class="mapMode">mode</div>');
+                $(".mapBox").append('<div class="propertyPic pic1">pic</div>');
 
                 $(".mapZoomIn").click(function () {
                     zoomLevel += 1;
@@ -200,7 +202,11 @@
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
                 });
 
-
+                imgPath = $(this).children()[0].lastChild.value;
+                $(".propertyPic").click(function() {
+                    $(".mapImg").remove();
+                    $(".mapBox").append('<img class="mapImg" src="' + imgPath + '" />');
+                });
                 // get comp properties.
                 $.ajax({
                     type: "POST",

@@ -71,6 +71,8 @@
     <Content Include="images\listingPanel\note.png" />
     <Content Include="images\listingPanel\placeholder.png" />
     <Content Include="images\listingPanel\star.png" />
+    <Content Include="images\listingPanel\starX.png" />
+    <Content Include="images\listingPanel\starX_selected.png" />
     <Content Include="images\listingPanel\star_selected.png" />
     <Content Include="images\listingPanel\Success.png" />
     <Content Include="images\listingPanel\Warning.png" />

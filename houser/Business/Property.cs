@@ -24,6 +24,7 @@ namespace houser.Business
         protected int _yearBuilt;
         protected string _type;
         protected string _builtAs;
+        protected string _imgPath;
         #endregion
 
         #region Propertiese
@@ -41,6 +42,7 @@ namespace houser.Business
         public int YearBuilt { get { return _yearBuilt; } set { _yearBuilt = value; } }
         public string Type { get { return _type; } set { _type = value; } }
         public string BuiltAs { get { return _builtAs; } set { _builtAs = value; } }
+        public string ImgPath { get { return _imgPath; } set { _imgPath = value; } }
         #endregion
         
 
@@ -73,6 +75,7 @@ namespace houser.Business
                 _yearBuilt = Convert.ToInt32(!string.IsNullOrEmpty(property["YearBuilt"].ToString()) ? property["YearBuilt"] : 0);
                 _type = property["Type"].ToString();
                 _builtAs = property["BuiltAs"].ToString();
+                _imgPath = property["ImgPath"].ToString();
             }
         }
         #endregion
@@ -81,9 +84,9 @@ namespace houser.Business
         public void Save()
         {
             if (IsNew)
-                PropertyDB.InsertProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs);
+                PropertyDB.InsertProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs, ImgPath);
             else
-                PropertyDB.UpdateProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs);
+                PropertyDB.UpdateProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs, ImgPath);
         }
         #endregion
         public static DataRow GetPropertyByAccount(string accountNumber)
