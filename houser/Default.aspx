@@ -93,6 +93,14 @@
             var zoomLevel = 15;
             var mapMode = "roadmap";
             var imgPath;
+
+            // Set enter key to login
+            $("#txtPassword").bind('keypress', function(e) {
+                if (e.keyCode==13) {
+                    $("#btnSubmitLogin").click();
+                }
+            });
+
             // ------- NOTES MODAL ---------
             // Load modal and get note on click
             $('.notes').click(function (e) {
