@@ -15,15 +15,19 @@ namespace houser
     {
         #region Private Variables.
         public int userID = 0;
+        public string notification = "";
         private string userName;
         private string password;
         private bool logedIn;
         private User user;
+        private bool showNotification = false;
         #endregion
 
         #region UI events
         public void Page_Load(object sender, EventArgs e)
         {
+            CheckLoginCookie();
+            notification = "";
            //If this is not a post back (first page load)
             if (!IsPostBack)
             {
@@ -51,8 +55,8 @@ namespace houser
                 listItem2.Value = "1";
                 ddlList.Items.Add(listItem2);
                 chkNonLive.Checked = true;
+                notification = logedIn ? "Welcome back:  " + user.FirstName + " " + user.LastName : "You must log in to use this system";
             }
-            CheckLoginCookie();
         }
 
         // populate properties.
@@ -78,6 +82,11 @@ namespace houser
                     btnSubmitLogin.Text = "Log out";
                     txtUserName.Enabled = false;
                     txtPassword.Enabled = false;
+                    notification = "You are logged in as: " + user.FirstName;
+                }
+                else
+                {
+                    notification = "Epic Fail!!";
                 }
             }
             else
@@ -89,6 +98,7 @@ namespace houser
                 btnSubmitLogin.Text = "Login";
                 txtUserName.Enabled = true;
                 txtPassword.Enabled = true;
+                notification = "Peace out";
             }
         }
         

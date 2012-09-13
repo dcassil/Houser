@@ -14,6 +14,7 @@
     <form id="form1" runat="server" visible="true">
     <div class="pageWrapper">
     <div class="displayPanel">
+    <div class="notification"></div>
     <div class="displayPanelPlaceholder"></div>
     </div>
     <div class="displayPanelSpacer"></div>
@@ -94,6 +95,9 @@
             var mapMode = "roadmap";
             var imgPath;
 
+            // set notification display.
+            $(".notification").append("<%=notification %>");
+            $(".notification").fadeIn(400).delay(2000).fadeOut(400);
             // Set enter key to login
             $("#txtPassword").bind('keypress', function(e) {
                 if (e.keyCode==13) {
