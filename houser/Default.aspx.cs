@@ -86,7 +86,7 @@ namespace houser
                 }
                 else
                 {
-                    notification = "Epic Fail!!";
+                    notification = "The user / password does not match our records";
                 }
             }
             else

@@ -4,7 +4,7 @@
     .pageWrapper { left: -10px; }
     
     /* Top display panel */
-    .notification { position: relative; float: right; top:25px; right: 25px; width: 200px; height: 50px; color: White; padding: 20px; font-size: smaller; text-align: right; }
+    .notification { position: relative; float: right; right: -15px; width: 325px; height: 14px; color: #3B3B3B; padding: 6px; font-size: smaller; text-align: center; background-color: #E86348; border-radius: 10px; border: 1px solid black; }
     .displayPanelPlaceholder  { height: 241px; width: 468px; position: fixed; left: 50%; margin-left: -234px; top: 50px; background-image: url(/images/infoPanel/placeHolder.png); z-index: -300;}
     .displayPanel { position:fixed; width: 100%; height: 353px; left: 0px; top: 0px; z-index: 100;
         background: #0c0c0c; /* Old browsers */

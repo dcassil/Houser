@@ -28,11 +28,11 @@
             <asp:DropDownList ID="ddlList" class="dropDown" runat="server"
             ToolTip="Select List" OnSelectedIndexChanged="ddlList_SelectedIndexChanged" AutoPostBack="True" />
         </span>
-        <asp:CheckBox ID="chkNonLive" class="menuLable check" Text="Cached only" runat="server" ToolTip="Check this to show only local data" />
+        <asp:CheckBox ID="chkNonLive" class="menuLable check" Text="Cached only" runat="server" ToolTip="Uncheck this only if this is a new sale date or if it seems like the data is incomplete.  Expect it to take several minutes to load if you do." />
         <div class="loginControls">
             <asp:Button ID="btnSubmitLogin" CssClass="button" runat="server" Text="Login" onclick="btnSubmitLogin_Click" />
             <span class="menuLable">User Name
-                <asp:TextBox ID="txtUserName" CssClass="menuTextBox" runat="server" PlaceHolderText="your suername" />
+                <asp:TextBox ID="txtUserName" CssClass="menuTextBox" runat="server" PlaceHolderText="your username" />
             </span>
             <span class="menuLable">Password
                 <asp:TextBox ID="txtPassword" CssClass="menuTextBox" runat="server" TextMode="Password" />
@@ -97,7 +97,8 @@
 
             // set notification display.
             $(".notification").append("<%=notification %>");
-            $(".notification").fadeIn(400).delay(2000).fadeOut(400);
+            $(".notification").toggle();
+            $(".notification").slideToggle().delay(3000).slideToggle();
             // Set enter key to login
             $("#txtPassword").bind('keypress', function(e) {
                 if (e.keyCode==13) {
