@@ -98,7 +98,7 @@ namespace houser
                 btnSubmitLogin.Text = "Login";
                 txtUserName.Enabled = true;
                 txtPassword.Enabled = true;
-                notification = "Peace out";
+                notification = "You are now logged out.";
             }
         }
         
@@ -181,6 +181,7 @@ namespace houser
                 string indicatorClass = Regex.IsMatch(_address, "RECALLED") ? "indicatorRed" : "indicatorGreen";
                 string caseNumber = property["CaseNumber"].ToString();
                 string caseURL = "http://www.oscn.net/applications/oscn/getcaseinformation.asp?query=true&srch=0&web=true&db=Oklahoma&number=" + caseNumber + "&iLAST=&iFIRST=&iMIDDLE=&iID=&iDOBL=&iDOBH=&SearchType=0&iDCPT=&iapcasetype=All&idccasetype=All&iDATEL=&iDATEH=&iCLOSEDL=&iCLOSEDH=&iDCType=0&iYear=&iNumber=&icitation=&submitted=true";
+                string yearBuilt = property["YearBuilt"].ToString();
                 int _salePrice = -1;
                 Int32.TryParse(property["SalePrice"].ToString(), out _salePrice);
                 int _sqft = -1;
@@ -197,13 +198,14 @@ namespace houser
                 html.Append("<span class=\"propertyData\">");
                 html.Append("<div class=\"notes " + hasNoteClass + " \" id=\"" + _accountNumber + "\" > </div>");
                 html.Append("<span class=\"address\">" + _address.Substring(0, _address.Length > 40 ? 40 : _address.Length) + "</span>");
-                html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(_salePrice * .66) + "</span>");
+                html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(_salePrice) + "</span>");
                 html.Append("<span class=\"sqft\">" + Convert.ToString(_sqft) + "</span>");
                 html.Append("<span class=\"beds\">" + Convert.ToString(_beds) + "</span>");
                 html.Append("<span class=\"baths\">" + Convert.ToString(_baths) + "</span>");
-                html.Append("<span class=\"addToReview " + inReviewList + "\"></span>");
                 html.Append("<span class=\"pricePerSqft\">$" + Convert.ToString(_salePrice / _sqft) + "</span>");
+                html.Append("<span class=\"yearBuilt\">" + yearBuilt + "</span>");
                 html.Append("<span class=\"caseDocs\" onclick=\"window.open('" + caseURL + "\', 'case')\"></a></span>");
+                html.Append("<span class=\"addToReview " + inReviewList + "\"></span>");
                 html.Append("<input type=\"hidden\" class=\"propertyPhoto\" value=\"" + property["ImgPath"].ToString() + "\"/>");
                 html.Append("</div>");
                 html.Append("</div>");

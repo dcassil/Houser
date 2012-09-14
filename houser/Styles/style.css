@@ -63,6 +63,7 @@
             .beds { float: left; height: 14; padding: 4px 20px 4px 20px; width: 14px; text-align: left; }
             .baths { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
             .pricePerSqft { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
+            .yearBuilt { float: left; height: 14; padding: 4px 20px 4px 20px; width: 60px; text-align: center; }
             .caseDocs { float:left; display: inline-block; height: 16px; margin: 4px 0px 4px 50px; width: 16px; background-image: url(/images/listingPanel/docs.png); background-repeat:no-repeat; }
             .caseDocs a {  }
             .addToReview { float: right; height: 15px; margin: 4px; width: 15px; background-image: url(/images/listingPanel/starX.png); background-repeat:no-repeat; }
@@ -90,15 +91,18 @@
 
 
 /*Map Box*/
-.mapBox { width: 500px; height: 353px; padding: 15px; background-color: #171717; }
-.mapZoomIn { width: 25px; height: 25px; padding: 5px; position: fixed; top: 150px; left: 480px; font-size: x-large; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75; }
-.mapZoomOut { width: 25px; height: 25px; padding: 5px; position: fixed; top: 203px; left: 480px; font-size: x-large; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75;}
-.mapMode { width: 40px; height: 15px; padding: 5px; position: fixed; top: 25px; left: 450px; font-size:medium; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75;}
-.propertyPic { width: 40px; height: 15px; padding: 5px; position: fixed; top: 300px; font-size:medium; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75;}
-.pic1 { left:450px;}
-.pic2 { left: 400px; }
-.pic3 { left: 350px; }
-.pic4 { left: 300px; }
+.mapBox { width: 500px; height: 353px; padding: 15px; background-color: #171717; overflow: hidden; }
+
+.mapZoomIn { width: 25px; height: 25px; padding: 5px; position: fixed; top: 150px; left: 480px; font-size: x-large; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75; border-radius: 5px;}
+    .mapZoomIn:hover { background-color: #404040; color: #1C1C1C;}
+.mapZoomOut { width: 25px; height: 25px; padding: 5px; position: fixed; top: 203px; left: 480px; font-size: x-large; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75; border-radius: 5px;}
+    .mapZoomOut:hover { background-color: #404040; color: #1C1C1C;}
+.mapMode { width: 40px; height: 15px; padding: 5px; position: fixed; top: 20px; left: 460px; font-size: small; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75; border-radius: 5px;}
+    .mapMode:hover { background-color: #404040; color: #1C1C1C; }
+.propertyPic { width: 40px; height: 15px; padding: 5px; position: fixed; top: 310px; left: 460px; font-size: small; font-weight:bold; text-align:center; cursor:pointer; background-color:#b6b6b6; opacity: .75; border-radius: 5px;}
+    .propertyPic:hover { background-color: #404040; color: #1C1C1C;}
+
+
         
 
 /*Comp Box*/

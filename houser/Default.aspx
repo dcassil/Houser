@@ -52,6 +52,7 @@
     <span class="beds"><asp:Button ID="btnBeds" class="headerSortable" runat="server" Text="Beds ▼" onclick="btnSortBeds_Click"/></span>
     <span class="baths"><asp:Button ID="btnBaths" class="headerSortable" runat="server" Text="Baths ▼" onclick="btnSortBaths_Click"/></span>
     <span class="baths"><asp:Button ID="btnPpSqft" class="headerSortable" runat="server" Text="PpSqft"/></span>
+    <span class="yearBuilt"><asp:Button ID="btnYearBuilt" class="headerSortable" runat="server" Text="Year Built"/></span>
     <span class="baths"><asp:Button ID="btnCaseDocs" class="headerSortable" runat="server" Text="Case Docs"/></span>
     </span>
     </div>
@@ -94,11 +95,15 @@
             var zoomLevel = 15;
             var mapMode = "roadmap";
             var imgPath;
+            var temp;
 
             // set notification display.
+               
             $(".notification").append("<%=notification %>");
             $(".notification").toggle();
-            $(".notification").slideToggle().delay(3000).slideToggle();
+             if ("<%=notification %>" != "") {
+                $(".notification").slideToggle().delay(3000).slideToggle();
+            }
             // Set enter key to login
             $("#txtPassword").bind('keypress', function(e) {
                 if (e.keyCode==13) {
@@ -106,6 +111,22 @@
                 }
             });
 
+            // mouse over events for price.
+            $(".minBidWrapper").mouseover(function() {
+                temp = $(this).html();
+                $(this).html("$" + ($(this).html().replace("$","") * .66));
+            });
+            $(".minBidWrapper").mouseout(function() {
+                $(this).html(temp);
+            });
+            
+            $(".pricePerSqft").mouseover(function() {
+                temp = $(this).html();
+                $(this).html("$" + Math.round($(this).html().replace("$","") * .66));
+            });
+            $(".pricePerSqft").mouseout(function() {
+                $(this).html(temp);
+            });
             // ------- NOTES MODAL ---------
             // Load modal and get note on click
             $('.notes').click(function (e) {
@@ -195,6 +216,7 @@
                     $(".mapImg").remove();
                     mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "%20Oklahoma%20City%20Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+                    $(".propertyPic").html("pic");
                 });
 
                 $(".mapZoomOut").click(function () {
@@ -202,6 +224,7 @@
                     $(".mapImg").remove();
                     mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "%20Oklahoma%20City%20Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+                    $(".propertyPic").html("pic");
                 });
 
                 $(".mapMode").click(function () {
@@ -210,6 +233,7 @@
                     } else {
                         mapMode = "roadmap";
                     }
+                    $(".propertyPic").html("pic");
                     $(".mapImg").remove();
                     mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center=" + address + "Oklahoma&zoom=" + zoomLevel + "&size=500x323&maptype=" + mapMode + "&markers=color:red%7Clabel:S%" + address + "&sensor=false"
                     $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
@@ -217,8 +241,15 @@
 
                 imgPath = $(this).children()[0].lastChild.value;
                 $(".propertyPic").click(function() {
-                    $(".mapImg").remove();
-                    $(".mapBox").append('<img class="mapImg" src="' + imgPath + '" />');
+                    if ($(".propertyPic").html() == "pic") {
+                        $(".mapImg").remove();
+                        $(".mapBox").append('<img class="mapImg" src="' + imgPath + '" />');
+                        $(".propertyPic").html("map");
+                    } else {
+                        $(".mapImg").remove();
+                        $(".mapBox").append('<img class="mapImg" src="' + mapUrl + '" />');
+                        $(".propertyPic").html("pic");
+                    }
                 });
                 // get comp properties.
                 $.ajax({
@@ -251,6 +282,7 @@
                     compTable += '<th>LastSaleDate</th>';
                     compTable += '<th>LastSalePrice</th>';
                     compTable += '<th>$/Sqft</th>';
+                    compTable += '<th>Year</th>';
                     for (var i = 0; i < compData.Table.length; i++) {
                         if (i < 10) {
                             compTable += '<tr>';
@@ -261,6 +293,7 @@
                             compTable += '<td class="tLastSalePrice">' + compData.Table[i].LastSaleDate + '</td>';
                             compTable += '<td class="tLastSalePrice">$' + Number(compData.Table[i].LastSalePrice).toFixed(2) + '</td>';
                             compTable += '<td class="tPPSqftt">$' + Number(compData.Table[i].PricePerSqft).toFixed(2) + '</td>';
+                            compTable += '<td class="tyearBuilt">' + Number(compData.Table[i].YearBuilt) + '</td>';
                             compTable += '</tr>';
                         }
                     }
