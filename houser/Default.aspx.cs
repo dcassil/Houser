@@ -198,7 +198,7 @@ namespace houser
                 html.Append("<span class=\"propertyData\">");
                 html.Append("<div class=\"notes " + hasNoteClass + " \" id=\"" + _accountNumber + "\" > </div>");
                 html.Append("<span class=\"address\">" + _address.Substring(0, _address.Length > 40 ? 40 : _address.Length) + "</span>");
-                html.Append("<span class=\"minBidWrapper\">$" + Convert.ToString(_salePrice) + "</span>");
+                html.Append("<span class=\"minBidWrapper priceHoverable\">$" + Convert.ToString(_salePrice) + "</span>");
                 html.Append("<span class=\"sqft\">" + Convert.ToString(_sqft) + "</span>");
                 html.Append("<span class=\"beds\">" + Convert.ToString(_beds) + "</span>");
                 html.Append("<span class=\"baths\">" + Convert.ToString(_baths) + "</span>");
@@ -271,8 +271,10 @@ namespace houser
         /// </summary>
         private static string GetCompletePropertyList(string saleDate, bool nonLiveDataOnly)
         {
-            string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
-            string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
+            //string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
+            string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp";
+            //string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
+            string sherifSaleWebRequestData = PageRequester.HttpPost(sherifSaleUrl, "SaleDates=" + saleDate);
             if (!string.IsNullOrWhiteSpace(sherifSaleWebRequestData))
                 PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
             return "Finished Loading";

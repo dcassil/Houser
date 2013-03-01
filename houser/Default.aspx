@@ -112,11 +112,11 @@
             });
 
             // mouse over events for price.
-            $(".minBidWrapper").mouseover(function() {
+            $(".priceHoverable").mouseover(function() {
                 temp = $(this).html();
                 $(this).html("$" + ($(this).html().replace("$","") * .66));
             });
-            $(".minBidWrapper").mouseout(function() {
+            $(".priceHoverable").mouseout(function() {
                 $(this).html(temp);
             });
             
