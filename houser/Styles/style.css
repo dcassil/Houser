@@ -64,6 +64,7 @@
             .baths { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
             .pricePerSqft { float: left; height: 14; padding: 4px 20px 4px 20px; width: 20px; text-align: left; }
             .yearBuilt { float: left; height: 14; padding: 4px 20px 4px 20px; width: 60px; text-align: center; }
+            .lotSize { float: left; height: 14; padding: 4px 20px 4px 20px; width: 60px; text-align: center; }
             .caseDocs { float:left; display: inline-block; height: 16px; margin: 4px 0px 4px 50px; width: 16px; background-image: url(/images/listingPanel/docs.png); background-repeat:no-repeat; }
             .caseDocs a {  }
             .addToReview { float: right; height: 15px; margin: 4px; width: 15px; background-image: url(/images/listingPanel/starX.png); background-repeat:no-repeat; }
