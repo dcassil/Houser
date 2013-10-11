@@ -115,7 +115,8 @@ namespace houser.utilities
             MatchCollection salePrices = Regex.Matches(salesDocsDataSet, "<p align=\\\"right\\\"><font size=\\\"2\\\">(.*?)</font></td>", RegexOptions.Singleline);
             string topSalePrice = salePrices.Count > 0 ? salePrices[0].Groups[1].Value.Replace("\r\n\r\n", "").Replace("$", "").Replace(",", "") : null;
             property.LastSalePrice = Convert.ToDecimal(!string.IsNullOrWhiteSpace(topSalePrice) ? topSalePrice : "0");
-
+            string lotSizeHelper = Regex.Match(file, "Acres(.*?)</td>", RegexOptions.Singleline).Groups[1].Value.Trim();
+            property.LotSize = Regex.Match(lotSizeHelper, "\\r\\n(.*?)<", RegexOptions.Singleline).Groups[1].Value.Trim();
             MatchCollection pics = Regex.Matches(file, "href=\\\"sketches/picfile/(.*?).jpg", RegexOptions.Singleline);
             foreach (Match pic in pics)
             {

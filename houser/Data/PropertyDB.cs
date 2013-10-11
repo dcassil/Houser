@@ -28,13 +28,13 @@ namespace houser.Data
         }
 
         public static void InsertProperty(string accountNumber, string address, int sqft, double baths, int beds,
-             string exterior, string lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs, string imgPath)
+             string exterior, string lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs, string imgPath, string lotSize)
         {
             SqlHelper.ExecuteNonQuery(CONNECTIONSTRING, CommandType.Text,
                 @"INSERT INTO [Property]
                    ([AccountNumber] ,[Address] ,[Sqft] ,[Baths] ,[Beds] ,[Exterior] ,[LastSaleDate] ,[LastSalePrice] ,[GarageSize]
-                    ,[YearBuilt] ,[Type] ,[BuiltAs], [ImgPath])
-                VALUES (@AccountNumber, @Address, @Sqft, @Baths, @Beds, @Exterior, @LastSaleDate, @LastSalePrice, @GarageSize, @YearBuilt, @Type, @BuiltAS, @ImgPath)",
+                    ,[YearBuilt] ,[Type] ,[BuiltAs], [ImgPath], [LotSize])
+                VALUES (@AccountNumber, @Address, @Sqft, @Baths, @Beds, @Exterior, @LastSaleDate, @LastSalePrice, @GarageSize, @YearBuilt, @Type, @BuiltAS, @ImgPath, @LotSize)",
                 new SqlParameter("@AccountNumber", accountNumber),
                 new SqlParameter("@Address", address),
                 new SqlParameter("@Sqft", sqft),
@@ -47,16 +47,17 @@ namespace houser.Data
                 new SqlParameter("@YearBuilt", yearBuilt),
                 new SqlParameter("@Type", type),
                 new SqlParameter("@BuiltAs", builtAs),
-                new SqlParameter("@ImgPath", imgPath));
+                new SqlParameter("@ImgPath", imgPath),
+                new SqlParameter("@LotSize", lotSize));
         }
 
         public static void UpdateProperty(string accountNumber, string address, int sqft, double baths, int beds,
-             string exterior, string lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs, string imgPath)
+             string exterior, string lastSaleDate, decimal lastSalePrice, int garageSize, int yearBuilt, string type, string builtAs, string imgPath, string lotSize)
         {
             var result = SqlHelper.ExecuteScalar(CONNECTIONSTRING, CommandType.Text,
                 @"UPDATE [Property] SET [Address] = @Address ,[Sqft] = @Sqft ,[Baths] = @Baths ,[Beds] = @Beds 
                     ,[Exterior] = @Exterior ,[LastSaleDate] = @LastSaleDate ,[LastSalePrice] = @LastSalePrice ,[GarageSize] = @GarageSize
-                    ,[YearBuilt] = @YearBuilt ,[Type] = @Type ,[BuiltAs] = @BuiltAS, [ImgPath] = @ImgPath WHERE AccountNumber = @AccountNumber",
+                    ,[YearBuilt] = @YearBuilt ,[Type] = @Type ,[BuiltAs] = @BuiltAS, [ImgPath] = @ImgPath, [LotSize] = @LotSize WHERE AccountNumber = @AccountNumber",
                 new SqlParameter("@AccountNumber", accountNumber),
                 new SqlParameter("@Address", address),
                 new SqlParameter("@Sqft", sqft),
@@ -69,7 +70,8 @@ namespace houser.Data
                 new SqlParameter("@YearBuilt", yearBuilt),
                 new SqlParameter("@Type", type),
                 new SqlParameter("@BuiltAs", builtAs),
-                new SqlParameter("@ImgPath", imgPath));
+                new SqlParameter("@ImgPath", imgPath),
+                new SqlParameter("@LotSize", lotSize));
         }
 
 

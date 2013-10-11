@@ -25,6 +25,7 @@ namespace houser.Business
         protected string _type;
         protected string _builtAs;
         protected string _imgPath;
+        protected string _lotSize;
         #endregion
 
         #region Propertiese
@@ -43,6 +44,7 @@ namespace houser.Business
         public string Type { get { return _type; } set { _type = value; } }
         public string BuiltAs { get { return _builtAs; } set { _builtAs = value; } }
         public string ImgPath { get { return _imgPath; } set { _imgPath = value; } }
+        public string LotSize { get { return _lotSize; } set { _lotSize = value; } }
         #endregion
         
 
@@ -76,6 +78,7 @@ namespace houser.Business
                 _type = property["Type"].ToString();
                 _builtAs = property["BuiltAs"].ToString();
                 _imgPath = property["ImgPath"].ToString();
+                _lotSize = property["LotSize"].ToString();
             }
         }
         #endregion
@@ -84,9 +87,9 @@ namespace houser.Business
         public void Save()
         {
             if (IsNew)
-                PropertyDB.InsertProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs, ImgPath);
+                PropertyDB.InsertProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs, ImgPath, _lotSize);
             else
-                PropertyDB.UpdateProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs, ImgPath);
+                PropertyDB.UpdateProperty(_accountNumber, _Address, _sqft, _baths, _beds, _exterior, _lastSaleDate,_lastSalePrice, _garageSize, _yearBuilt, _type, _builtAs, ImgPath, _lotSize);
         }
         #endregion
         public static DataRow GetPropertyByAccount(string accountNumber)
