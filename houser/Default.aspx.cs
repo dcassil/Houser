@@ -123,6 +123,11 @@ namespace houser
             BuildSheriffSalePropertyList("Beds");
         }
         // needs to be replaced with jquery sort.
+        protected void btnSortLots_Click(object sender, EventArgs e)
+        {
+            BuildSheriffSalePropertyList("LotSize");
+        }
+        // needs to be replaced with jquery sort.
         protected void btnSortBaths_Click(object sender, EventArgs e)
         {
             BuildSheriffSalePropertyList("Baths");
@@ -181,6 +186,7 @@ namespace houser
                 string indicatorClass = Regex.IsMatch(_address, "RECALLED") ? "indicatorRed" : "indicatorGreen";
                 string caseNumber = property["CaseNumber"].ToString();
                 string caseURL = "http://www.oscn.net/applications/oscn/getcaseinformation.asp?query=true&srch=0&web=true&db=Oklahoma&number=" + caseNumber + "&iLAST=&iFIRST=&iMIDDLE=&iID=&iDOBL=&iDOBH=&SearchType=0&iDCPT=&iapcasetype=All&idccasetype=All&iDATEL=&iDATEH=&iCLOSEDL=&iCLOSEDH=&iDCType=0&iYear=&iNumber=&icitation=&submitted=true";
+                string accountUrl = "http://oklahomacounty.org/assessor/Searches/AN-R.asp?ACCOUNTNO=" + _accountNumber;
                 string yearBuilt = property["YearBuilt"].ToString();
                 string lotSize = property["LotSize"].ToString();
                 int _salePrice = -1;
@@ -207,6 +213,7 @@ namespace houser
                 html.Append("<span class=\"yearBuilt\">" + yearBuilt + "</span>");
                 html.Append("<span class=\"caseDocs\" onclick=\"window.open('" + caseURL + "\', 'case')\"></a></span>");
                 html.Append("<span class=\"lotSize\">" + lotSize + "</span>");
+                html.Append("<span class=\"accountUrl\" onclick=\"window.open('" + accountUrl + "\', 'account')\"></a></span>");
                 html.Append("<span class=\"addToReview " + inReviewList + "\"></span>");
                 html.Append("<input type=\"hidden\" class=\"propertyPhoto\" value=\"" + property["ImgPath"].ToString() + "\"/>");
                 html.Append("</div>");

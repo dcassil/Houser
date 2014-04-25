@@ -53,7 +53,9 @@
     <span class="baths"><asp:Button ID="btnBaths" class="headerSortable" runat="server" Text="Baths ▼" onclick="btnSortBaths_Click"/></span>
     <span class="baths"><asp:Button ID="btnPpSqft" class="headerSortable" runat="server" Text="PpSqft"/></span>
     <span class="yearBuilt"><asp:Button ID="btnYearBuilt" class="headerSortable" runat="server" Text="Year Built"/></span>
-    <span class="baths"><asp:Button ID="btnCaseDocs" class="headerSortable" runat="server" Text="Case Docs"/></span>
+    <span class="baths"><asp:Button ID="btnCaseDocs" class="headerSortable" runat="server" Text="cDocs"/></span>
+    <span class="baths"><asp:Button ID="btnLotSize" class="headerSortable" runat="server" Text="Lot ▼" onclick="btnSortLots_Click"/></span>
+    <span class="baths"><asp:Button ID="btnPropertUrl" class="headerSortable" runat="server" Text="View OklahomaCounty.org page"/></span>
     </span>
     </div>
     </div>

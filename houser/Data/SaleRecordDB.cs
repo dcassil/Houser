@@ -70,6 +70,7 @@ namespace houser.Data
                         WHEN 'SalePrice' THEN s.SalePrice   
                         WHEN 'Beds' THEN p.Beds 
                         WHEN 'Baths' THEN p.Baths
+                        WHEN 'LotSize' THEN p.LotSize
                         WHEN 'Sqft' THEN p.Sqft END",
                 new SqlParameter("@SaleDate", saleDate),
                 new SqlParameter("@ListID", listID),
