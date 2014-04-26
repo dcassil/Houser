@@ -10,7 +10,6 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="Scripts/jquery.simplemodal-1.4.2.js" type="text/javascript"></script>
     <script src="Scripts/underscore.js" type="text/javascript"></script>
-    <script src="Scripts/jquery.mobile-1.4.2.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -22,17 +21,6 @@
             _.templateSettings = {interpolate : /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
                 evaluate    : /\{%([\s\S]+?)%\}/g,   // excute code: {% code_to_execute %}
                 escape      : /\{%-([\s\S]+?)%\}/g}; // excape HTML: {%- <script> %} prints &lt;script&gt;
-
-            // test code
-            $('wrapper').live('swipeleft swiperight',function(event){
-                if (event.type == "swiperight") {
-                   $(".wrapper").html("");     
-                }
-                if (event.type == "swipeleft") {
-                    alert("swipped left side");
-                }
-                event.preventDefault();
-            }); 
 
             var userID = <%=userID%>
             var saleDate = "<%=saleDate%>"
@@ -70,15 +58,14 @@
 //                     for (var i = 0; i < propData.length; i++) {
                     var template = $("#tmpPropertyData").html();
                     $(".wrapper").html(_.template(template,{propData:propData}));
-//                        _.each(propData, function(prop) {
-//                            var propPage = '<div class="propPage">';
-//                            propPage += '<span><p class="address">' + prop.Address + '</p></span>'; 
-//                            var propTable = '<table class="propTable">';
-//                            propTable += '<tr class="row"><td>SQFT</td><td class="value">' + prop.Sqft + '</td></tr>';
-//                            propTable += '</table>';
-//                            propPage += propTable + "</div>";
-//                            $(".wrapper").append(propPage);
-//                        });
+                    $(document.body).on("touchmove scroll", function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    });
+                    $(".propPage").scroll(function() {
+                        var caller = $(this);
+                        $("body").scroll(caller.next("propPage"));
+                    });                    
                 }
 
         });
