@@ -25,7 +25,7 @@
             // test code
             $('body').live('swipeleft swiperight',function(event){
                 if (event.type == "swiperight") {
-                   alert("swipped right side");      
+                   $(".wrapper").html("");     
                 }
                 if (event.type == "swipeleft") {
                     alert("swipped left side");
