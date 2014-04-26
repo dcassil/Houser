@@ -72,7 +72,7 @@
             <p class="address"> {{ address[0] }} </p>
             <p class="city"> {{ address[1] }} </p>
         </span>
-        <div class="propdata">
+        <span class="propdata">
             <table class="propTable">
                 <tr class="row">
                     <td class="tCell">
@@ -107,11 +107,14 @@
                     </td>
                 </tr>
             </table>
-        </div>
+            
+        </span>
         <div class="notes">
-        <textarea rows="10" cols="60">{{prop.Note}}</textarea>
-        <input type="button" value="update"/>
+            <textarea rows="10" cols="20">{{prop.Note}}</textarea>
+            <input type="button" value="update"/>
         </div>
+        <img class="img" src={{prop.ImgPath}} />
+        
     </div>
     {%
     });

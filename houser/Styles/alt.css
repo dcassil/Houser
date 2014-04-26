@@ -13,7 +13,17 @@
 
 body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; font-size: 20px; }
 textarea { font-size: 24px; }
-
+.img 
+{
+    width: auto;
+    height: 50vh;
+    top: 0;
+}
+.notes 
+{
+    display:inline;
+    width:30%;
+}
 .address 
 {
     width: 100%;
@@ -34,7 +44,8 @@ textarea { font-size: 24px; }
 }
 .propData
 {
-    width: 40%;
+    display: inline;
+    width: 50%;
 }
 
 .tCell
