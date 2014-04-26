@@ -10,6 +10,7 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="Scripts/jquery.simplemodal-1.4.2.js" type="text/javascript"></script>
     <script src="Scripts/underscore.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.mobile-1.4.2.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">
