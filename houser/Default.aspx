@@ -29,6 +29,8 @@
             ToolTip="Select List" OnSelectedIndexChanged="ddlList_SelectedIndexChanged" AutoPostBack="True" />
         </span>
         <asp:CheckBox ID="chkNonLive" class="menuLable check" Text="Cached only" runat="server" ToolTip="Uncheck this only if this is a new sale date or if it seems like the data is incomplete.  Expect it to take several minutes to load if you do." />
+        <asp:button ID="btnPrint" class="button" Text="Print Review properties" runat="server" Visible="true" 
+        onclick="btnPrint_Click" ToolTip="Print review property pages."/>
         <div class="loginControls">
             <asp:Button ID="btnSubmitLogin" CssClass="button" runat="server" Text="Login" onclick="btnSubmitLogin_Click" />
             <span class="menuLable">User Name

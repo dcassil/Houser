@@ -6,6 +6,7 @@ using System.Web.Services;
 using houser.Business;
 using System.Data;
 using houser.utilities;
+using System.Web.Script.Serialization;
 
 namespace houser.WebUtilities
 {
@@ -51,5 +52,28 @@ namespace houser.WebUtilities
         {
             PropertyList.RemoveFromFromList(accountNumber, listID, userID);
         }
+
+        /// <summary>
+        /// Get property list by sale date and list type and return as json.
+        /// </summary>
+        [WebMethod]
+        public string GetPropertiesBySaleDate(string sDate, string list, string sUserID)
+        {
+            DateTime date = Convert.ToDateTime(sDate);
+            int userID = Convert.ToInt32(sUserID);
+            if (date != null && userID != null)
+            {
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                
+
+                DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(Convert.ToDateTime(date), "Address", "1", Convert.ToInt32(userID));
+                if (subjectProperties.Rows.Count > 0)
+                    return jsonHelper.GetJson(subjectProperties);
+                else
+                    return "";
+            }
+            else return "";
+        }
     }
 }
+

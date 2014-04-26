@@ -128,6 +128,11 @@ namespace houser
             BuildSheriffSalePropertyList("LotSize");
         }
         // needs to be replaced with jquery sort.
+        protected void btnPrint_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("alt.aspx?date=" + ddlSaleDate.SelectedItem.Value);
+        }
+                // needs to be replaced with jquery sort.
         protected void btnSortBaths_Click(object sender, EventArgs e)
         {
             BuildSheriffSalePropertyList("Baths");
