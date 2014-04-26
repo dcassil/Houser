@@ -11,12 +11,13 @@
 /*IPad*/
 @media screen and (device-aspect-ratio: 3/4) {}
 
-body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; font-size: smaller; }
+body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; font-size: 20px; }
+textarea { font-size: 24px; }
 
 .address 
 {
     width: 100%;
-    font-size: 24pt;
+    font-size: 28pt;
     color: White;
     text-align: center;
 }
@@ -29,11 +30,13 @@ body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica
 }
 .row 
 {
-    width:100%;
+    width:40%;
 }
-.propTable
+.propData
 {
+    width: 40%;
 }
+
 .tCell
 {
     border-right: medium solid Gray;
@@ -46,14 +49,14 @@ body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica
 .title
 {
     width: 50%;
-    font-size: 20pt;
+    font-size: 24pt;
     color: Gray;
     text-align: center;
 }
 .value
 {
     width: 50%;
-    font-size: 20pt;
+    font-size: 24pt;
     color: White;
     text-align: center;
 }

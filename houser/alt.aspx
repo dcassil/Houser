@@ -72,40 +72,42 @@
             <p class="address"> {{ address[0] }} </p>
             <p class="city"> {{ address[1] }} </p>
         </span>
-        <table class="propTable">
-            <tr class="row">
-                <td class="tCell">
-                    <span class="title">SQFT</span>
-                </td>
-                <td class="vCell">
-                    <span class="value">{{prop.Sqft }}</span>
-                </td>
-            </tr>
-            <tr class="row">
-                <td class="tCell">
-                    <span class="title">Beds</span>
-                </td>
-                <td class="vCell">
-                    <span class="value">{{prop.Beds }}</span>
-                </td>
-            </tr>
-            <tr class="row">
-                <td class="tCell">
-                    <span class="title">Baths</span>
-                </td>
-                <td class="vCell">
-                    <span class="value">{{prop.Baths }}</span>
-                </td>
-            </tr>
-            <tr class="row">
-                <td class="tCell">
-                    <span class="title">Price</span>
-                </td>
-                <td class="vCell">
-                    <span class="value">{{prop.SalePrice }}</span>
-                </td>
-            </tr>
-        </table>
+        <div class="propdata">
+            <table class="propTable">
+                <tr class="row">
+                    <td class="tCell">
+                        <span class="title">SQFT</span>
+                    </td>
+                    <td class="vCell">
+                        <span class="value">{{prop.Sqft }}</span>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="tCell">
+                        <span class="title">Beds</span>
+                    </td>
+                    <td class="vCell">
+                        <span class="value">{{prop.Beds }}</span>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="tCell">
+                        <span class="title">Baths</span>
+                    </td>
+                    <td class="vCell">
+                        <span class="value">{{prop.Baths }}</span>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="tCell">
+                        <span class="title">Price</span>
+                    </td>
+                    <td class="vCell">
+                        <span class="value">{{prop.SalePrice }}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <div class="notes">
         <textarea rows="10" cols="60">{{prop.Note}}</textarea>
         <input type="button" value="update"/>
