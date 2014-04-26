@@ -9,6 +9,7 @@
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="Scripts/jquery.simplemodal-1.4.2.js" type="text/javascript"></script>
+    <script src="Scripts/underscore.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -17,6 +18,10 @@
     </div>
     <script>
         jQuery(function ($) {
+            _.templateSettings = {interpolate : /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
+                evaluate    : /\{%([\s\S]+?)%\}/g,   // excute code: {% code_to_execute %}
+                escape      : /\{%-([\s\S]+?)%\}/g}; // excape HTML: {%- <script> %} prints &lt;script&gt;
+
             var userID = <%=userID%>
             var saleDate = "<%=saleDate%>"
             var account_number;
@@ -50,18 +55,70 @@
                 });
 
                 if (propData != null) {
-                     for (var i = 0; i < propData.length; i++) {
-                        var propPage = '<div class="propPage">';
-                        propPage += '<span><p class="address">' + propData[i].Address + '</p></span>'; 
-                        var propTable = '<table class="propTable">';
-                        propTable += '<tr class="row"><td>SQFT</td><td class="value">' + propData[i].Sqft + '</td></tr>';
-                        propTable += '</table>';
-                        propPage += propTable + "</div>";
-                        $(".wrapper").append(propPage);
-                        }
+//                     for (var i = 0; i < propData.length; i++) {
+                    var template = $("#tmpPropertyData").html();
+                    $(".wrapper").html(_.template(template,{propData:propData}));
+//                        _.each(propData, function(prop) {
+//                            var propPage = '<div class="propPage">';
+//                            propPage += '<span><p class="address">' + prop.Address + '</p></span>'; 
+//                            var propTable = '<table class="propTable">';
+//                            propTable += '<tr class="row"><td>SQFT</td><td class="value">' + prop.Sqft + '</td></tr>';
+//                            propTable += '</table>';
+//                            propPage += propTable + "</div>";
+//                            $(".wrapper").append(propPage);
+//                        });
                 }
 
         });
+    </script>
+    <script type="text/html" id="tmpPropertyData">
+    {% 
+    _.each(propData, function(prop) {
+    var address = prop.Address.split(",");
+    %}
+    <div class="propPage">
+        <span>
+            <p class="address"> {{ address[0] }} </p>
+            <p class="city"> {{ address[1] }} </p>
+        </span>
+        <table class="propTable">
+            <tr class="row">
+                <td class="tCell">
+                    <span class="title">SQFT</span>
+                </td>
+                <td class="vCell">
+                    <span class="value">{{prop.Sqft }}</span>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="tCell">
+                    <span class="title">Beds</span>
+                </td>
+                <td class="vCell">
+                    <span class="value">{{prop.Beds }}</span>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="tCell">
+                    <span class="title">Baths</span>
+                </td>
+                <td class="vCell">
+                    <span class="value">{{prop.Baths }}</span>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="tCell">
+                    <span class="title">Price</span>
+                </td>
+                <td class="vCell">
+                    <span class="value">{{prop.SalePrice }}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {%
+    });
+    %}
     </script>
     </form>
 </body>

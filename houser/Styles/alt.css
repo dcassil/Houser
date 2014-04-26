@@ -16,6 +16,43 @@ body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica
 .address 
 {
     width: 100%;
+    font-size: 24pt;
+    color: White;
+    text-align: center;
+}
+.city
+{
+    width: 100%;
+    font-size: 24pt;
+    color: White;
+    text-align: center;
+}
+.row 
+{
+    width:100%;
+}
+.propTable
+{
+}
+.tCell
+{
+    border-right: medium solid Gray;
+    padding-right: 25px;
+}
+.vCell
+{
+    padding-left:25px;
+}
+.title
+{
+    width: 50%;
+    font-size: 20pt;
+    color: Gray;
+    text-align: center;
+}
+.value
+{
+    width: 50%;
     font-size: 20pt;
     color: White;
     text-align: center;

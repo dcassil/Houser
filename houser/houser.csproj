@@ -84,6 +84,7 @@
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery.simplemodal-1.4.2.js" />
+    <Content Include="Scripts\underscore.js" />
     <Content Include="Styles\alt.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
