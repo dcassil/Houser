@@ -22,6 +22,17 @@
                 evaluate    : /\{%([\s\S]+?)%\}/g,   // excute code: {% code_to_execute %}
                 escape      : /\{%-([\s\S]+?)%\}/g}; // excape HTML: {%- <script> %} prints &lt;script&gt;
 
+            // test code
+            $('body').live('swipeleft swiperight',function(event){
+                if (event.type == "swiperight") {
+                   alert("swipped right side");      
+                }
+                if (event.type == "swipeleft") {
+                    alert("swipped left side");
+                }
+                event.preventDefault();
+            }); 
+
             var userID = <%=userID%>
             var saleDate = "<%=saleDate%>"
             var account_number;
