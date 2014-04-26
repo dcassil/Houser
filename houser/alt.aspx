@@ -58,14 +58,6 @@
 //                     for (var i = 0; i < propData.length; i++) {
                     var template = $("#tmpPropertyData").html();
                     $(".wrapper").html(_.template(template,{propData:propData}));
-                    $(document.body).on("touchmove scroll", function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    });
-                    $(".propPage").scroll(function() {
-                        var caller = $(this);
-                        $("body").scroll(caller.next("propPage"));
-                    });                    
                 }
 
         });
@@ -114,6 +106,10 @@
                 </td>
             </tr>
         </table>
+        <div class="notes">
+        <textarea rows="10" cols="60">{{prop.Note}}</textarea>
+        <input type="button" value="update"/>
+        </div>
     </div>
     {%
     });
