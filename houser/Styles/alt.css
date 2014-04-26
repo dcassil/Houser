@@ -1,0 +1,27 @@
+﻿
+/* Iphone < 5 */
+@media screen and (device-aspect-ratio: 2/3) {
+        
+}
+/*Iphone 5*/
+@media screen and (device-aspect-ratio: 40/71) 
+{
+    
+}
+/*IPad*/
+@media screen and (device-aspect-ratio: 3/4) {}
+
+body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; font-size: smaller; }
+
+.address 
+{
+    width: 100%;
+    font-size: 10pt;
+    color: White;
+    text-align: center;
+}
+.propPage 
+{
+    height: 568px;
+}
+    
