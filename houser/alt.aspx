@@ -24,7 +24,7 @@
                 escape      : /\{%-([\s\S]+?)%\}/g}; // excape HTML: {%- <script> %} prints &lt;script&gt;
 
             // test code
-            $('body').live('swipeleft swiperight',function(event){
+            $('wrapper').live('swipeleft swiperight',function(event){
                 if (event.type == "swiperight") {
                    $(".wrapper").html("");     
                 }
