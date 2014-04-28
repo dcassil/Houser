@@ -21,7 +21,6 @@ body
 {
     width: 100%;
 }
-textarea { font-size: 24px; }
 .img 
 {
     display: block;
@@ -40,7 +39,7 @@ textarea {
     width:100%;
     padding: 3px;
     border: none;
-    font-size: 24px;
+    font-size: 34px;
     }
 .address 
 {
