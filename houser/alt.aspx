@@ -13,61 +13,83 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <div class="menu">
+    <select class="list datesList">
+        <option value="" disabled selected="Select Date">Select Date</option>
+    </select>
+    <select class="list propList">
+        <option value="1" selected >Review List</option>
+        <option value="2" >Full List</option>
+    </select>
+    </div>
     <div class="wrapper">
     
     </div>
     <script>
+        var alt = {};
+        alt.userID = -1;
+        alt.saleDate = -1;
+        alt.list = "1";
+        alt.propData = {};
+        // get properties.
+        alt.getProperties = function(saleDate, list) {
+            var data;
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: '/WebUtilities/DetailsWebService.asmx/GetPropertiesBySaleDate',
+                data: "{sDate: '" + saleDate + "', list: '" + list + "', sUserID: '" + alt.userID + "'}",
+                dataType: "json",
+                async: false,
+                success: function (responce) {
+                    if (responce.d != "") {
+                        data = eval('(' + responce.d + ');');
+                    } else {
+                        data = null;
+                    }
+                },
+                error: function (error) {
+                    data = error;
+                }
+            });
+            return data;
+        }
+        alt.renderProperties = function(properties) {
+            if (alt.propData != null) {
+                var template = $("#tmpPropertyData").html();
+                $(".wrapper").html();
+                $(".wrapper").html(_.template(template,{propData:alt.propData}));
+            }
+        }
         jQuery(function ($) {
             _.templateSettings = {interpolate : /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
                 evaluate    : /\{%([\s\S]+?)%\}/g,   // excute code: {% code_to_execute %}
                 escape      : /\{%-([\s\S]+?)%\}/g}; // excape HTML: {%- <script> %} prints &lt;script&gt;
 
-            var userID = <%=userID%>
-            var saleDate = "<%=saleDate%>"
-            var account_number;
-            var address;
-            var isSaved;
-            var note;
-            var propData;
-            var zoomLevel = 15;
-            var mapMode = "roadmap";
-            var imgPath;
-            var temp;
+            alt.userID = <%=userID%>
+            alt.saleDate = "<%=saleDate%>"
+            alt.propData = alt.getProperties(alt.saleDate, alt.list);
+            alt.renderProperties(alt.propData);
 
-            // get properties.
-                $.ajax({
-                    type: "POST",
-                    contentType: "application/json; charset=utf-8",
-                    url: '/WebUtilities/DetailsWebService.asmx/GetPropertiesBySaleDate',
-                    data: "{sDate: '" + saleDate + "', list: '" + "1" + "', sUserID: '" + userID + "'}",
-                    dataType: "json",
-                    async: false,
-                    success: function (responce) {
-                        if (responce.d != "") {
-                            propData = eval('(' + responce.d + ');');
-                        } else {
-                            propData = null;
-                        }
-                    },
-                    error: function (error) {
-                        propData = error;
-                    }
-                });
-
-                if (propData != null) {
-//                     for (var i = 0; i < propData.length; i++) {
-                    var template = $("#tmpPropertyData").html();
-                    $(".wrapper").html(_.template(template,{propData:propData}));
-                }
-
+            //UI functions
+            $(".propList").on("change", function(){
+                alt.list = $(".propList").val();
+                alt.propData = alt.getProperties(alt.saleDate, alt.list);
+                alt.renderProperties(alt.propData);
+            });
+            $(".datesList").on("change", function(){
+                alt.saleDate = $(".datesList").val();
+                alt.propData = alt.getProperties(alt.saleDate, alt.list);
+                alt.renderProperties(alt.propData);
+            });
         });
     </script>
     <script type="text/html" id="tmpPropertyData">
     {% 
-    _.each(propData, function(prop) {
+    _.each(alt.propData, function(prop) {
     var address = prop.Address.split(",");
     %}
-    <div class="propPage">
+    <div class="propPage" ID={{prop.AccountNumber}}>
         <span>
             <p class="address"> {{ address[0] }} </p>
             <p class="city"> {{ address[1] }} </p>

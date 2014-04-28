@@ -64,15 +64,25 @@ namespace houser.WebUtilities
             if (date != null && userID != null)
             {
                 JavaScriptSerializer serializer = new JavaScriptSerializer();
-                
 
-                DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(Convert.ToDateTime(date), "Address", "1", Convert.ToInt32(userID));
+
+                DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(Convert.ToDateTime(date), "Address", list, Convert.ToInt32(userID));
                 if (subjectProperties.Rows.Count > 0)
                     return jsonHelper.GetJson(subjectProperties);
                 else
                     return "";
             }
             else return "";
+        }
+
+        [WebMethod]
+        public object GetSherifSaleDates()
+        {
+            // Request the sherifsale page so we can get the available sale dates.
+            string sheriffSaleDatePage = PageRequester.GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/");
+            // Create a list of dates
+            List<string> dates = PageScraper.GetSheriffSaleDates(sheriffSaleDatePage);
+            return dates;
         }
     }
 }
