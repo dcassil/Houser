@@ -36,9 +36,6 @@ namespace houser
             }
         }
 
-        /// <summary>
-        /// Check to see if there is a login cookie and if it is valid.
-        /// </summary>
         private void CheckLoginCookie()
         {
             if (Request.Cookies["HouserLogin"] != null)

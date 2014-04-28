@@ -1,38 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="alt.aspx.cs" Inherits="houser.print" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Houser App</title>
-    <link href="Styles/alt.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="Scripts/libs/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="Scripts/libs/underscore/underscore.js" type="text/javascript"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div class="menuPlaceHolder"></div>
-    <div class="menu">
-    <select class="list datesList">
-        <option value="" disabled selected="Select Date">Select Date</option>
-    </select>
-    <h3>Houser</h3>
-    <select class="list propList">
-        <option value="1" selected >Review List</option>
-        <option value="2" >Full List</option>
-    </select>
-    </div>
-    <div class="wrapper">
-    
-    </div>
-    <script type="text/javascript">
-        var xuid = <%=userID%>
-        var xdate = "<%=saleDate %>"
-    </script>
-    <script src="Scripts/alt.js" type="text/javascript"></script>
-    <script type="text/html" id="tmpPropertyData">
-    {% 
+﻿{% 
     _.each(alt.propData, function(prop) {
     var address = prop.Address.split(",");
     %}
@@ -79,7 +45,7 @@
             
         </span>
         <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>
-        <input type="button" id="addToList" name="addToList" value="Add to review list"/>
+        <input type="button" value="Add to review list"/>
         <div class="notes">
             <textarea rows="4" cols="20">{{prop.Note}}</textarea>
         </div>
@@ -89,7 +55,3 @@
     {%
     });
     %}
-    </script>
-    </form>
-</body>
-</html>
