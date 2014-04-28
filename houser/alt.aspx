@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0"></meta>
     <title>Houser App</title>
     <link href="Styles/alt.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
