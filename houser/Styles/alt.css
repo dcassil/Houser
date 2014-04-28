@@ -41,6 +41,16 @@ textarea {
     border: none;
     font-size: 34px;
     }
+input[type="button"] 
+{
+    display:block;
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .address 
 {
     width: 100%;

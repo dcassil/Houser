@@ -132,6 +132,7 @@
             
         </span>
         <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>
+        <input type="button" value="Add to review list"/>
         <div class="notes">
             <textarea rows="4" cols="20">{{prop.Note}}</textarea>
         </div>
