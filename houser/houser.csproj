@@ -93,7 +93,7 @@
     <Content Include="Scripts\libs\underscore\underscore.js" />
     <Content Include="Styles\alt.css" />
     <Content Include="Styles\style.css" />
-    <Content Include="templates\list.html" />
+    <Content Include="templates\property.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
