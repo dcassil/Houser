@@ -40,6 +40,7 @@ namespace houser.WebUtilities
         [WebMethod]
         public void AddToReviewList(string accountNumber, int listID, int userID)
         {
+            PropertyList.RemoveFromFromList(accountNumber, listID, userID);
             PropertyList.AddPropertyToList(accountNumber, listID, userID);
         }
 

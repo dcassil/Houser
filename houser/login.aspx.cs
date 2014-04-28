@@ -38,6 +38,7 @@ namespace houser
                     txtUserName.Enabled = false;
                     txtPassword.Enabled = false;
                     _notification = "You are logged in as: " + _user.FirstName;
+                    Response.Redirect("/alt.aspx?userID=" + _user.UserID);
                 }
                 else
                 {

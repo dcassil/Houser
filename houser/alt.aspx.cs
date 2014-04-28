@@ -28,9 +28,14 @@ namespace houser
             {
                 CheckLoginCookie();
                 string date = Request.QueryString["date"];
+                string s_userID = Request.QueryString["userID"];
                 if (date != null)
                 {
                     saleDate = Convert.ToDateTime(date);
+                }
+                if (s_userID != null)
+                {
+                    userID = Convert.ToInt32(s_userID);
                 }
 
             }
