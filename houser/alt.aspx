@@ -109,11 +109,11 @@
             </table>
             
         </span>
+        <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>
         <div class="notes">
-            <textarea rows="10" cols="20">{{prop.Note}}</textarea>
-            <input type="button" value="update"/>
+            <textarea rows="4" cols="20">{{prop.Note}}</textarea>
         </div>
-        <img class="img" src={{prop.ImgPath}} />
+        
         
     </div>
     {%

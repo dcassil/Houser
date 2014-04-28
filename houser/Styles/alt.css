@@ -11,19 +11,37 @@
 /*IPad*/
 @media screen and (device-aspect-ratio: 3/4) {}
 
-body { background-color: #353535; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; font-size: 20px; }
+body  
+{
+    background-color: #353535; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; 
+    font-size: 20px;
+}
+.propTable
+{
+    width: 100%;
+}
 textarea { font-size: 24px; }
 .img 
 {
-    width: auto;
-    height: 50vh;
-    top: 0;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50vw;
 }
-.notes 
+.imgWrapper
 {
-    display:inline;
-    width:30%;
+    width: 100%;
+    padding-left:auto;
+    padding-right:auto;
 }
+input[type="text"],
+textarea {
+    width:100%;
+    padding: 3px;
+    border: none;
+    font-size: 24px;
+    }
 .address 
 {
     width: 100%;
@@ -50,11 +68,14 @@ textarea { font-size: 24px; }
 
 .tCell
 {
+    text-align:right;
+    width:50%;
     border-right: medium solid Gray;
     padding-right: 25px;
 }
 .vCell
 {
+    width: 50%;
     padding-left:25px;
 }
 .title
@@ -74,5 +95,6 @@ textarea { font-size: 24px; }
 .propPage 
 {
     height: 100vh;
+    width: 100%;
 }
     
