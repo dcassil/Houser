@@ -28,7 +28,8 @@
     <script>
         var alt = {};
         alt.userID = -1;
-        alt.saleDate = -1;
+        alt.saleDates = {};
+        alt.selectedDate = -1;
         alt.list = "1";
         alt.propData = {};
         // get properties.
@@ -61,25 +62,53 @@
                 $(".wrapper").html(_.template(template,{propData:alt.propData}));
             }
         }
+        alt.getSaleDates = function() {
+            var dates;
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: '/WebUtilities/DetailsWebService.asmx/GetSherifSaleDates',
+                dataType: "json",
+                async: false,
+                success: function (responce) {
+                    if (responce.d != "") {
+                        dates = responce.d;
+                    } else {
+                        dates = null;
+                    }
+                },
+                error: function (error) {
+                    dates = error;
+                }
+            });
+            return dates;
+        }
         jQuery(function ($) {
             _.templateSettings = {interpolate : /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
                 evaluate    : /\{%([\s\S]+?)%\}/g,   // excute code: {% code_to_execute %}
                 escape      : /\{%-([\s\S]+?)%\}/g}; // excape HTML: {%- <script> %} prints &lt;script&gt;
 
             alt.userID = <%=userID%>
-            alt.saleDate = "<%=saleDate%>"
-            alt.propData = alt.getProperties(alt.saleDate, alt.list);
+            alt.selectedDate = "<%=saleDate%>"
+            alt.propData = alt.getProperties(alt.selectedDate, alt.list);
             alt.renderProperties(alt.propData);
+            alt.saleDates = alt.getSaleDates();
 
             //UI functions
+            $.each(alt.saleDates, function (index, value) {
+                $('.datesList').append($('<option/>', { 
+                    value: value,
+                    text : value 
+                }));
+            });  
             $(".propList").on("change", function(){
                 alt.list = $(".propList").val();
-                alt.propData = alt.getProperties(alt.saleDate, alt.list);
+                alt.propData = alt.getProperties(alt.selectedDate, alt.list);
                 alt.renderProperties(alt.propData);
             });
             $(".datesList").on("change", function(){
-                alt.saleDate = $(".datesList").val();
-                alt.propData = alt.getProperties(alt.saleDate, alt.list);
+                alt.selectedDate = $(".datesList").val();
+                alt.propData = alt.getProperties(alt.selectedDate, alt.list);
                 alt.renderProperties(alt.propData);
             });
         });
