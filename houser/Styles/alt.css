@@ -24,10 +24,12 @@ body
 select, input[type="button"]
 {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; 
-    color: Gray;
-    border:1px solid gray;
+    font-size: 12pt;
+    color: gray;
+    border:0;
     -webkit-appearance: none;
     height:30px;
+    outline:0px;
 }
 input[type="text"],
 textarea 
@@ -48,8 +50,9 @@ h3
 }
 .address
 {
-    font-size: 10pt;
+    font-size: 8pt;
     text-align: center;
+    color: #3D3D3D
 }
 .menuPlaceHolder
 {
@@ -95,6 +98,7 @@ h3
 .column1 dt, .column1 dd, .column2 dt, .column2 dd
 {
     text-align: center;
+    padding:0 0 0 0;
 }
 .column1 dt, .column2 dt
 {
@@ -102,7 +106,8 @@ h3
 }
 .column1 dd, .column2 dd
 {
-    font-size: 12pt;
+    font-size: 14pt;
+    padding:0 0 8px 0;
 }
 .img 
 {
