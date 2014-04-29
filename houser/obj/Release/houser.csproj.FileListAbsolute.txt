@@ -19,3 +19,4 @@ C:\git\Houser\houser\bin\houser.pdb
 C:\git\Houser\houser\bin\Microsoft.ApplicationBlocks.Data.dll
 C:\git\Houser\houser\obj\Release\houser.dll
 C:\git\Houser\houser\obj\Release\houser.pdb
+C:\git\Houser\houser\obj\Release\houser.csprojResolveAssemblyReference.cache

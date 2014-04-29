@@ -58,6 +58,15 @@ namespace houser {
         protected global::System.Web.UI.WebControls.CheckBox chkNonLive;
         
         /// <summary>
+        /// btnPrint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPrint;
+        
+        /// <summary>
         /// btnSubmitLogin control.
         /// </summary>
         /// <remarks>

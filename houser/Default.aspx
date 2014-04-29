@@ -6,9 +6,9 @@
 <head runat="server">
     <title>Houser App</title>
     <link href="Styles/style.css" rel="stylesheet" type="text/css" />
-    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/libs/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="Scripts/jquery.simplemodal-1.4.2.js" type="text/javascript"></script>
+    <script src="Scripts/libs/jquery.simplemodal-1.4.2.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server" visible="true">
