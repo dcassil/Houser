@@ -45,10 +45,10 @@
         <div class="column1">
             <dl>
                 <dt>Assessed Value</dt>
-                <dd>{{prop.SalePrice}}</dd>
+                <dd>${{prop.SalePrice.toFixed(0)}}</dd>
                 <dt>SQFT</dt>
                 <dd>{{prop.Sqft}}</dd>
-                <dt>Baths</dt>
+                <dt>Year Built</dt>
                 <dd>{{prop.YearBuilt}}</dd>
             </dl>    
         </div>
