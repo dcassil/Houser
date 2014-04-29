@@ -75,6 +75,16 @@
                 }
             });
         }
+        alt.saveNote = function (note, accountID, userID) {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: '/WebUtilities/NoteWebService.asmx/SaveAccountNote',
+                data: "{accountNumber: '" + accountID + "', userID: '" + userID + "', note: '" + note + "'}",
+                dataType: "json",
+                async: false
+                });
+        }
 
         jQuery(function ($) {
             _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
@@ -108,5 +118,10 @@
                 alt.selectedDate = $(".datesList").val();
                 alt.propData = alt.getProperties(alt.selectedDate, alt.list);
                 alt.renderProperties(alt.propData);
+            });
+            $(".notes textarea").on("blur", function () {
+                var accountID = $(this).parent().attr("id");
+                var note = $(this).val();
+                alt.saveNote(note, accountID, alt.userID);
             });
         });

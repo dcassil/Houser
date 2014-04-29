@@ -64,7 +64,7 @@
         </div>
         <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>
         <input type="button" id="addToList" name="addToList" value="Add to review list"/>
-        <div class="notes">
+        <div class="notes" id={{prop.AccountNumber}}>
             <textarea rows="4" cols="20">{{prop.Note}}</textarea>
         </div>
         
