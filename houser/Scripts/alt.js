@@ -85,6 +85,18 @@
                 async: false
                 });
         }
+        alt.removeFromList = function (accountNumber, userID) {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: '/WebUtilities/DetailsWebService.asmx/RemovePropertyFromList',
+                data: "{accountNumber: '" + accountNumber + "', listID: '" + "1" + "', userID: '" + userID + "'}",
+                dataType: "json",
+                async: false,
+                success: "",
+                error: ""
+            });
+        }
 
         jQuery(function ($) {
             _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
@@ -108,6 +120,10 @@
             $("body").on("click", '#addToList', function () {
                 var account = $(this).parent().attr('id');
                 alt.addToReviewList(account, alt.userID);
+            });
+            $("body").on("click", '#removeFromList', function () {
+                var account = $(this).parent().attr('id');
+                alt.removeFromList(account, alt.userID);
             });
             $(".propList").on("change", function () {
                 alt.list = $(".propList").val();

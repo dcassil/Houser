@@ -11,6 +11,7 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="Scripts/libs/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/libs/underscore/underscore.js" type="text/javascript"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -63,7 +64,11 @@
             </dl>    
         </div>
         <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>
-        <input type="button" id="addToList" name="addToList" value="Add to review list"/>
+        {%if (alt.list === "2") { %}
+            <input type="button" class="listButton" id="addToList" name="addToList" value="Add to review list"/>
+        {% } else { %}
+            <input type="button" class="listButton" id="removeFromList" name="removeFromList" value="Remove from review list"/>
+        {% } %}
         <div class="notes" id={{prop.AccountNumber}}>
             <textarea rows="4" cols="20">{{prop.Note}}</textarea>
         </div>

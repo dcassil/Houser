@@ -7,6 +7,7 @@ using houser.Business;
 using System.Data;
 using houser.utilities;
 using System.Web.Script.Serialization;
+using System.Web.Script.Services;
 
 namespace houser.WebUtilities
 {
@@ -58,6 +59,7 @@ namespace houser.WebUtilities
         /// Get property list by sale date and list type and return as json.
         /// </summary>
         [WebMethod]
+        //[ScriptMethod(UseHttpGet = true)]
         public string GetPropertiesBySaleDate(string sDate, string list, string sUserID)
         {
             DateTime date = Convert.ToDateTime(sDate);
