@@ -103,19 +103,21 @@
             });
         }
         alt.blockSwipe = function (event) {
-            // Tell Safari not to move the window.
-            event.preventDefault();
-            // Parse the swipe event and find the direction
-            alt.swipeDirection = touch.getSwipeDirection(event);
-            
-            //get direction and scroll accordingly
-            if (touch.swipeDirection !== null) {
-                if (alt.swipeDirection === touch.down || alt.swipeDirection === touch.right) {
-                    alt.scrollToNextProperty(event);
-                }
+            if (window.innerHeight > window.innerWidth) {
+                // Tell Safari not to move the window.
+                event.preventDefault();
+                // Parse the swipe event and find the direction
+                alt.swipeDirection = touch.getSwipeDirection(event);
+
                 //get direction and scroll accordingly
-                if (alt.swipeDirection === touch.up || alt.swipeDirection === touch.left) {
-                    alt.scrollToPreviousProperty(event);
+                if (touch.swipeDirection !== null) {
+                    if (alt.swipeDirection === touch.down || alt.swipeDirection === touch.right) {
+                        alt.scrollToNextProperty(event);
+                    }
+                    //get direction and scroll accordingly
+                    if (alt.swipeDirection === touch.up || alt.swipeDirection === touch.left) {
+                        alt.scrollToPreviousProperty(event);
+                    }
                 }
             }
         }
@@ -174,5 +176,13 @@
                 var accountID = $(this).parent().attr("id");
                 var note = $(this).val();
                 alt.saveNote(note, accountID, alt.userID);
+                $(this).css('height', '30px');
+                var scrollTo = $(this).parents(".propPage").position().top;
+                $('html, body').animate({
+                    scrollTop: (scrollTo - 30)
+                }, 300);
+            });
+            $(".notes textarea").on("focus", function () {
+                $(this).css('height', '120px');
             });
         });
