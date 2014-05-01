@@ -1,9 +1,14 @@
-﻿        var alt = {};
+﻿/// <reference path="touch.js" />
+
+        var alt = {};
         alt.userID = -1;
         alt.saleDates = {};
         alt.selectedDate = -1;
         alt.list = "1";
         alt.propData = {};
+        alt.swipeDirection = null;
+        alt.x = null;
+        alt.y = null;
         // get properties.
         alt.getProperties = function(saleDate, list) {
             var data;
@@ -97,7 +102,44 @@
                 error: ""
             });
         }
+        alt.blockSwipe = function (event) {
+            // Tell Safari not to move the window.
+            event.preventDefault();
 
+            setTimeout(function () {
+                alt.swipeDirection = null;
+                alt.x = null;
+                alt.y = null;
+            }, 800);
+
+            if (alt.swipeDirection === null) {
+                touch.handleTouchStart(event);
+                alt.swipeDirection = touch.swipeDirection(event);
+
+                //get direction and scroll accordingly
+                if (alt.swipeDirection === touch.down || alt.swipeDirection === touch.right) {
+                    alt.scrollToNextProperty(event);
+                }
+                //get direction and scroll accordingly
+                if (alt.swipeDirection === touch.up || alt.swipeDirection === touch.left) {
+                    alt.scrollToPreviousProperty(event);
+                }
+            }
+        }
+        alt.scrollToNextProperty = function(event) {
+            var scrollTo = $(event.target).parents(".propPage").next(".propPage").position().top;
+            $('html, body').animate({
+                scrollTop: (scrollTo - 30)
+            }, 600);
+            //$.scrollTo(0, scrollTo.top); 
+        }
+        alt.scrollToPreviousProperty = function (event) {
+            var scrollTo = $(event.target).parents(".propPage").prev(".propPage").position().top;
+            $('html, body').animate({
+                scrollTop: (scrollTo - 30)
+            }, 600);
+            //$.scrollTo(0, scrollTo.top); 
+        }
         jQuery(function ($) {
             _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
                 evaluate: /\{%([\s\S]+?)%\}/g,   // excute code: {% code_to_execute %}

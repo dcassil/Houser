@@ -13,9 +13,9 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="Scripts/libs/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/libs/underscore/underscore.js" type="text/javascript"></script>
-
+    
 </head>
-<body>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" ontouchmove="alt.blockSwipe(event);">
     <form id="form1" runat="server">
     <div class="menuPlaceHolder"></div>
     <div class="menu">
@@ -35,6 +35,7 @@
         var xdate = "<%=saleDate %>"
     </script>
     <script src="Scripts/alt.js" type="text/javascript"></script>
+    <script src="Scripts/touch.js" type="text/javascript"></script>
     <script type="text/html" id="tmpPropertyData">
     {% 
     _.each(alt.propData, function(prop) {
