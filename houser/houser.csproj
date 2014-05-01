@@ -92,6 +92,7 @@
     <Content Include="Scripts\libs\jquery.simplemodal-1.4.2.js" />
     <Content Include="Scripts\libs\require\require.js" />
     <Content Include="Scripts\libs\underscore\underscore.js" />
+    <Content Include="Scripts\touch.js" />
     <Content Include="Styles\alt.css" />
     <Content Include="Styles\reset.css" />
     <Content Include="Styles\style.css" />
