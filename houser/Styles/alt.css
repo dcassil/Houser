@@ -63,12 +63,14 @@ h3
 }
 .address
 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; 
     font-size: 8pt;
     text-align: center;
-    color: #3D3D3D
+    color: Gray;
 }
 .city
 {
+    font-weight: bold;
     padding-bottom: 8px;
 }
 .menuPlaceHolder
