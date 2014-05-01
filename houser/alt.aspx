@@ -40,8 +40,8 @@
     %}
     <div class="propPage" ID={{prop.AccountNumber}}>
         <span>
-            <p class="address"> {{ address[0] }} </p>
-            <p class="address"> {{ address[1] }} </p>
+            <p class="address"><a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}">{{address[0]}}</a>  </p>
+            <p class="address city"> {{ address[1] }} </p>
         </span>
         <div class="column1">
             <dl>

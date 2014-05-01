@@ -36,9 +36,22 @@ textarea
 {
 
     display:block;
-    width: 75%;
-    border: 1px solid gray;
+    width: 90%;
+    border: 0;
     margin: 0 auto 50px auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; 
+    font-size: 8pt;
+    color: gray;
+    -webkit-appearance: none;
+    height:30px;
+    outline:0px;
+    box-shadow: 0px 1px 5px #888888;
+}
+a
+{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; 
+    font-size: 12pt;
+    color: gray;
 }
 h3
 {
@@ -54,21 +67,27 @@ h3
     text-align: center;
     color: #3D3D3D
 }
+.city
+{
+    padding-bottom: 8px;
+}
 .menuPlaceHolder
 {
     width: 100%;
-    height: 30px;
+    height: 90px;
 }
 .menu 
 {
     top:0;
     width: 100%;
     height: 30px;
+    padding: 5px 0 0 0;
     position:fixed;
     background-color:White;
     text-align: center;
     font-size: 34pt;
     color: Gray;
+    box-shadow: 0px 1px 5px #888888;
 }
 
 .datesList
@@ -86,7 +105,7 @@ h3
     padding: 8px 0 0 0;
     margin:0;
     float:left;
-    border-right: 1px solid white;
+    border-right: 1px solid gray;
 }
 .column2
 {
@@ -108,6 +127,9 @@ h3
 {
     font-size: 14pt;
     padding:0 0 8px 0;
+}
+.column1 dd:not(:last-child) 
+{
 }
 .img 
 {
