@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0 minimal-ui"/>
     <link href="Styles/reset.css" rel="stylesheet" type="text/css" />
     <link href="Styles/alt.css" rel="stylesheet" type="text/css" />
 </head>

@@ -81,6 +81,7 @@
     });
     %}
     </script>
+    <asp:Button ID="btnSubmitLogOut" CssClass="button" runat="server" Text="log out" onclick="btnSubmitLogOut_Click" />
     </form>
 </body>
 </html>

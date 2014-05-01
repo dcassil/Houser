@@ -13,20 +13,20 @@ namespace houser
     {
         #region Private Variables.
         public int userID = 0;
-        public string notification = "";
-        private string userName;
-        private string password;
         private bool logedIn;
         private User user;
-        private bool showNotification = false;
         public DateTime saleDate;
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            CheckLoginCookie();
+            if (!logedIn)
+            {
+                Response.Redirect("/login.aspx");   
+            }
             if (!IsPostBack)
             {
-                CheckLoginCookie();
                 string date = Request.QueryString["date"];
                 string s_userID = Request.QueryString["userID"];
                 if (date != null)
@@ -41,12 +41,22 @@ namespace houser
             }
         }
 
+        // If login cookie does not exist and the user and password are verified then create the login cookie.
+        protected void btnSubmitLogOut_Click(object sender, EventArgs e)
+        {
+            logedIn = false;
+            HttpCookie loginCookie = new HttpCookie("HouserLogin");
+            loginCookie.Expires = DateTime.UtcNow.AddDays(-1);
+            HttpContext.Current.Response.Cookies.Set(loginCookie);
+            Response.Redirect("/login.aspx");
+        }
+
         private void CheckLoginCookie()
         {
             if (Request.Cookies["HouserLogin"] != null)
             {
-                userName = Request.Cookies["HouserLogin"]["UserName"];
-                password = Request.Cookies["HouserLogin"]["Password"];
+                string userName = Request.Cookies["HouserLogin"]["UserName"];
+                string password = Request.Cookies["HouserLogin"]["Password"];
                 user = new User(userName, password);
                 if (user.UserID != 0)
                 {
