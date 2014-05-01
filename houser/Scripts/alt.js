@@ -105,18 +105,11 @@
         alt.blockSwipe = function (event) {
             // Tell Safari not to move the window.
             event.preventDefault();
-
-            setTimeout(function () {
-                alt.swipeDirection = null;
-                alt.x = null;
-                alt.y = null;
-            }, 800);
-
-            if (alt.swipeDirection === null) {
-                touch.handleTouchStart(event);
-                alt.swipeDirection = touch.swipeDirection(event);
-
-                //get direction and scroll accordingly
+            // Parse the swipe event and find the direction
+            alt.swipeDirection = touch.getSwipeDirection(event);
+            
+            //get direction and scroll accordingly
+            if (touch.swipeDirection !== null) {
                 if (alt.swipeDirection === touch.down || alt.swipeDirection === touch.right) {
                     alt.scrollToNextProperty(event);
                 }
@@ -130,14 +123,14 @@
             var scrollTo = $(event.target).parents(".propPage").next(".propPage").position().top;
             $('html, body').animate({
                 scrollTop: (scrollTo - 30)
-            }, 600);
+            }, 400);
             //$.scrollTo(0, scrollTo.top); 
         }
         alt.scrollToPreviousProperty = function (event) {
             var scrollTo = $(event.target).parents(".propPage").prev(".propPage").position().top;
             $('html, body').animate({
                 scrollTop: (scrollTo - 30)
-            }, 600);
+            }, 400);
             //$.scrollTo(0, scrollTo.top); 
         }
         jQuery(function ($) {
