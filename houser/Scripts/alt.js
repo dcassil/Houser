@@ -125,14 +125,14 @@
             var scrollTo = $(event.target).parents(".propPage").next(".propPage").position().top;
             $('html, body').animate({
                 scrollTop: (scrollTo - 30)
-            }, 400);
+            }, 200);
             //$.scrollTo(0, scrollTo.top); 
         }
         alt.scrollToPreviousProperty = function (event) {
             var scrollTo = $(event.target).parents(".propPage").prev(".propPage").position().top;
             $('html, body').animate({
                 scrollTop: (scrollTo - 30)
-            }, 400);
+            }, 200);
             //$.scrollTo(0, scrollTo.top); 
         }
         jQuery(function ($) {

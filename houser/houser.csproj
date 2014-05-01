@@ -84,6 +84,7 @@
     <Content Include="Scripts\alt.js" />
     <Content Include="Scripts\altModels.js" />
     <Content Include="Scripts\libs\backbone\backbone.js" />
+    <Content Include="Scripts\libs\panelSnap\jquery.panelSnap.js" />
     <Content Include="Scripts\libs\jquery\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\libs\jquery\jquery.js" />
     <Content Include="Scripts\libs\jquery\jquery-1.4.1.min.js" />

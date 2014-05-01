@@ -13,7 +13,7 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="Scripts/libs/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/libs/underscore/underscore.js" type="text/javascript"></script>
-    
+    <script src="Scripts/libs/panelSnap/jquery.panelSnap.js" type="text/javascript"></script>
 </head>
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" ontouchmove="alt.blockSwipe(event);">
     <form id="form1" runat="server">
@@ -41,7 +41,7 @@
     _.each(alt.propData, function(prop) {
     var address = prop.Address.split(",");
     %}
-    <div class="propPage" ID={{prop.AccountNumber}}>
+    <div class="propPage section" ID={{prop.AccountNumber}}>
         <span>
             <p class="address"><a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}">{{address[0]}}</a><span class="address city"> {{ address[1] }} </span></p>
             
