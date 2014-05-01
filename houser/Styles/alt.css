@@ -185,7 +185,12 @@ h3
 {
     height: 20px;
     box-shadow:none;
+    text-align:center;
+    font-size: 18pt;
+    border-radius 25px;
+    border: 1px solid white;
 }
+
 
 
 

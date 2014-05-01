@@ -16,7 +16,7 @@
             <h3 class="menuLable">User Name</h3>
             <asp:TextBox ID="txtUserName" CssClass="menuTextBox" runat="server" PlaceHolderText="your username" />
             <h3 class="menuLable">Password</h3>
-            <asp:TextBox ID="txtPassword" CssClass="menuTextBox" runat="server" TextMode="Password" />
+            <asp:TextBox ID="txtPassword" CssClass="menuTextBox" runat="server" TextMode="Password" pattern="[0-9]*" inputmode="numeric" />
             <asp:Button ID="btnSubmitLogin" CssClass="button" runat="server" Text="Login" onclick="btnSubmitLogin_Click" />
         </div>
     </div>
