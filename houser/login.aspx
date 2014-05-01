@@ -5,18 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/alt.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="wrapper">
         <div class="loginControls">
+            <h3 class="menuLable">User Name</h3>
+            <asp:TextBox ID="txtUserName" CssClass="menuTextBox" runat="server" PlaceHolderText="your username" />
+            <h3 class="menuLable">Password</h3>
+            <asp:TextBox ID="txtPassword" CssClass="menuTextBox" runat="server" TextMode="Password" />
             <asp:Button ID="btnSubmitLogin" CssClass="button" runat="server" Text="Login" onclick="btnSubmitLogin_Click" />
-            <span class="menuLable">User Name
-                <asp:TextBox ID="txtUserName" CssClass="menuTextBox" runat="server" PlaceHolderText="your username" />
-            </span>
-            <span class="menuLable">Password
-                <asp:TextBox ID="txtPassword" CssClass="menuTextBox" runat="server" TextMode="Password" />
-            </span>
         </div>
     </div>
     </form>

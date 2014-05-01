@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta name="viewport" content="user-scalable=0, initial-scale=1.0"></meta>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0 minimal-ui"/>
     <title>Houser App</title>
     <link href="Styles/reset.css" rel="stylesheet" type="text/css" />
     <link href="Styles/alt.css" rel="stylesheet" type="text/css" />
@@ -40,8 +42,8 @@
     %}
     <div class="propPage" ID={{prop.AccountNumber}}>
         <span>
-            <p class="address"><a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}">{{address[0]}}</a>  </p>
-            <p class="address city"> {{ address[1] }} </p>
+            <p class="address"><a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}">{{address[0]}}</a><span class="address city"> {{ address[1] }} </span></p>
+            
         </span>
         <div class="column1">
             <dl>
