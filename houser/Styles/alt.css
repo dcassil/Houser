@@ -61,6 +61,14 @@ h3
     font-size: 12pt;
     text-align: center;
 }
+.datesList
+{
+    padding: 0 10px 0 10px;
+}
+.propList
+{
+    padding: 0 10px 0 10px;
+}
 .address
 {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial; 
@@ -83,7 +91,7 @@ h3
     top:0;
     width: 100%;
     height: 30px;
-    padding: 5px 0 0 0;
+    padding: 0;
     position:fixed;
     background-color:White;
     text-align: center;
