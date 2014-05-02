@@ -163,6 +163,14 @@ dd
     border: 1px solid white;
     border-radius: 7px;
 }
+.emptyPanel
+{
+    height: 480px;
+}
+#btnSubmitLogOut
+{
+    margin-top: 200px;
+}
 .loginControls
 {
     padding: 20%;

@@ -81,8 +81,13 @@
     {%
     });
     %}
+    <div class="propPage section">
+        <div class="emptyPanel">
+            <asp:Button ID="btnSubmitLogOut" CssClass="button" runat="server" Text="log out" onclick="btnSubmitLogOut_Click" />
+        </div>
+    </div>
     </script>
-    <asp:Button ID="btnSubmitLogOut" CssClass="button" runat="server" Text="log out" onclick="btnSubmitLogOut_Click" />
+    
     </form>
 </body>
 </html>
