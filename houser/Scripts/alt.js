@@ -172,7 +172,7 @@
                 alt.propData = alt.getProperties(alt.selectedDate, alt.list);
                 alt.renderProperties(alt.propData);
             });
-            $(".notes textarea").on("blur", function () {
+            $("body").on("blur", ".notes textarea", function () {
                 var accountID = $(this).parent().attr("id");
                 var note = $(this).val();
                 alt.saveNote(note, accountID, alt.userID);
@@ -182,7 +182,7 @@
                     scrollTop: (scrollTo - 30)
                 }, 300);
             });
-            $(".notes textarea").on("focus", function () {
+            $("body").on("focus", ".notes textarea", function () {
                 $(this).css('height', '120px');
             });
         });
