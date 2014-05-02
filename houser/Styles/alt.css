@@ -245,9 +245,7 @@ and (min-width : 1824px) {
 }
 
 /* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) 
+@media screen and (device-aspect-ratio: 2/3)
 {
     .img 
     {
