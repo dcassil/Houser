@@ -35,8 +35,13 @@ touch.getSwipeDirection = function getSwipeDirection(evt) {
             touch.y = evt.touches[0].clientY;
         }
         if (touch.x !== null && flag === 0) {
-            xDiff = x - touch.x;
-            yDiff = y - touch.y;
+            var tempXDiff = x - touch.x;
+            var tempYDiff = y - touch.y;
+            
+            if (Math.abs(tempXDiff) > 100 || Math.abs(tempYDiff) > 100) {
+                xDiff = x - touch.x;
+                yDiff = y - touch.y;
+            }
         }
 
         if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
