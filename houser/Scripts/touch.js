@@ -38,7 +38,7 @@ touch.getSwipeDirection = function getSwipeDirection(evt) {
             var tempXDiff = x - touch.x;
             var tempYDiff = y - touch.y;
             
-            if (Math.abs(tempXDiff) > 100 || Math.abs(tempYDiff) > 100) {
+            if (Math.abs(tempXDiff) > 40 || Math.abs(tempYDiff) > 60) {
                 xDiff = x - touch.x;
                 yDiff = y - touch.y;
             }
