@@ -22,7 +22,7 @@
     <select class="list datesList">
         <option value="" disabled selected="Select Date">Select Date</option>
     </select>
-    <p class="progress"></p>
+    <p class="progress hide"></p>
     <select class="list propList">
         <option value="1" selected >Review List</option>
         <option value="2" >Full List</option>

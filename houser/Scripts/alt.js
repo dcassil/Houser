@@ -156,11 +156,16 @@
         }
         alt.fadeInOutProgress = function () {
             $(".progress").html(alt.currentProperty + " / " + alt.totalProperties);
-            $(".progress").stop(true, true).fadeIn(5000, function () {
-                return true;
+            $(".progress").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+                $(".progress").addClass("hide");
             });
-            $(".progress").stop(true, true).fadeOut(2000, function () {
-            });
+            $(".progress").removeClass("hide");
+
+            //            $(".progress").stop(true, true).fadeIn(5000, function () {
+            //                return true;
+            //            });
+            //            $(".progress").stop(true, true).fadeOut(2000, function () {
+            //            });
         }
         jQuery(function ($) {
             _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}

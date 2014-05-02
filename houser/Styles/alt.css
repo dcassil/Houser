@@ -208,6 +208,14 @@ dd
     display: inline-block;
     font-size: 10pt;
     padding: 7px 0 0 0;
+    opacity: 1;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+}
+.progress.hide 
+{
+    -webkit-transition-delay: 1s;
+    opacity: 0;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
