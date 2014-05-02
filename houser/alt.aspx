@@ -22,6 +22,7 @@
     <select class="list datesList">
         <option value="" disabled selected="Select Date">Select Date</option>
     </select>
+    <p class="progress"></p>
     <select class="list propList">
         <option value="1" selected >Review List</option>
         <option value="2" >Full List</option>
@@ -38,10 +39,10 @@
     <script src="Scripts/touch.js" type="text/javascript"></script>
     <script type="text/html" id="tmpPropertyData">
     {% 
-    _.each(alt.propData, function(prop) {
+    _.each(alt.propData, function(prop, i) {
     var address = prop.Address.split(",");
     %}
-    <div class="propPage section" ID={{prop.AccountNumber}}>
+    <div class="propPage section" data={{i+1}} ID={{prop.AccountNumber}}>
         <span>
             <p class="address"><a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}">{{address[0]}}</a><span class="address city"> {{ address[1] }} </span></p>
             

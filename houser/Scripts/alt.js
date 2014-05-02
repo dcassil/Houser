@@ -9,6 +9,8 @@
         alt.swipeDirection = null;
         alt.x = null;
         alt.y = null;
+        alt.totalProperties = 0;
+        alt.currentProperty = 1;
         // get properties.
         alt.getProperties = function(saleDate, list) {
             var data;
@@ -36,7 +38,8 @@
             if (alt.propData != null) {
                 var template = $("#tmpPropertyData").html();
                 $(".wrapper").html();
-                $(".wrapper").html(_.template(template,{propData:alt.propData}));
+                $(".wrapper").html(_.template(template, { propData: alt.propData }));
+                alt.totalProperties = $(".propPage").last().prev().attr("data");
             }
         }
         alt.getSaleDates = function() {
@@ -124,6 +127,8 @@
         alt.scrollToNextProperty = function (event) {
             var $nextPage = $(event.target).parents(".propPage").next(".propPage");
             if ($nextPage.length > 0) {
+                alt.currentProperty = $nextPage.attr("data");
+                alt.fadeInOutProgress();
                 var scrollTo = $nextPage.position().top;
                 $('html, body').animate({
                     scrollTop: (scrollTo - 30)
@@ -137,6 +142,8 @@
         alt.scrollToPreviousProperty = function (event) {
             var $prevPage = $(event.target).parents(".propPage").prev(".propPage");
             if ($prevPage.length > 0) {
+                alt.currentProperty = $prevPage.attr("data");
+                alt.fadeInOutProgress();
                 var scrollTo = $prevPage.position().top;
                 $('html, body').animate({
                     scrollTop: (scrollTo - 30)
@@ -146,6 +153,14 @@
                     scrollTop: 0
                 }, 200);
             }
+        }
+        alt.fadeInOutProgress = function () {
+            $(".progress").html(alt.currentProperty + " / " + alt.totalProperties);
+            $(".progress").stop(true, true).fadeIn(5000, function () {
+                return true;
+            });
+            $(".progress").stop(true, true).fadeOut(2000, function () {
+            });
         }
         jQuery(function ($) {
             _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
@@ -158,7 +173,7 @@
             alt.propData = alt.getProperties(alt.selectedDate, alt.list);
             alt.renderProperties(alt.propData);
             alt.saleDates = alt.getSaleDates();
-
+            alt.totalProperties = $(".propPage").length - 1;
             //UI functions
             $.each(alt.saleDates, function (index, value) {
                 $('.datesList').append($('<option/>', {
