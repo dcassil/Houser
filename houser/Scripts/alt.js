@@ -121,19 +121,31 @@
                 }
             }
         }
-        alt.scrollToNextProperty = function(event) {
-            var scrollTo = $(event.target).parents(".propPage").next(".propPage").position().top;
-            $('html, body').animate({
-                scrollTop: (scrollTo - 30)
-            }, 200);
-            //$.scrollTo(0, scrollTo.top); 
+        alt.scrollToNextProperty = function (event) {
+            var $nextPage = $(event.target).parents(".propPage").next(".propPage");
+            if ($nextPage.length > 0) {
+                var scrollTo = $nextPage.position().top;
+                $('html, body').animate({
+                    scrollTop: (scrollTo - 30)
+                }, 200);
+            } else {
+                $('html, body').animate({
+                    scrollTop: $(document).height()
+                }, 200);
+            }
         }
         alt.scrollToPreviousProperty = function (event) {
-            var scrollTo = $(event.target).parents(".propPage").prev(".propPage").position().top;
-            $('html, body').animate({
-                scrollTop: (scrollTo - 30)
-            }, 200);
-            //$.scrollTo(0, scrollTo.top); 
+            var $prevPage = $(event.target).parents(".propPage").prev(".propPage");
+            if ($prevPage.length > 0) {
+                var scrollTo = $prevPage.position().top;
+                $('html, body').animate({
+                    scrollTop: (scrollTo - 30)
+                }, 200);
+            } else {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 200);
+            }
         }
         jQuery(function ($) {
             _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g,      // print value: {{ value_name }}
