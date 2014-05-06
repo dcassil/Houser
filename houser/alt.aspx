@@ -14,6 +14,8 @@
     <script src="Scripts/libs/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/libs/underscore/underscore.js" type="text/javascript"></script>
     <script src="Scripts/libs/panelSnap/jquery.panelSnap.js" type="text/javascript"></script>
+    <script src="Scripts/libs/spin/spinOptions.js" type="text/javascript"></script>
+    <script src="Scripts/libs/spin/spin.js" type="text/javascript"></script>
 </head>
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" ontouchmove="alt.blockSwipe(event);">
     <form id="form1" runat="server">

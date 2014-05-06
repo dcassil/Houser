@@ -92,6 +92,8 @@
     <Content Include="Scripts\libs\jquery.mobile-1.4.2.js" />
     <Content Include="Scripts\libs\jquery.simplemodal-1.4.2.js" />
     <Content Include="Scripts\libs\require\require.js" />
+    <Content Include="Scripts\libs\spin\spin.js" />
+    <Content Include="Scripts\libs\spin\spinOptions.js" />
     <Content Include="Scripts\libs\underscore\underscore.js" />
     <Content Include="Scripts\touch.js" />
     <Content Include="Styles\alt.css" />
@@ -121,12 +123,14 @@
     <Compile Include="Business\Property.cs" />
     <Compile Include="Business\PropertyComp.cs" />
     <Compile Include="Business\PropertyList.cs" />
+    <Compile Include="Business\SaleDate.cs" />
     <Compile Include="Business\User.cs" />
     <Compile Include="Data\ListDB.cs" />
     <Compile Include="Data\NoteDB.cs" />
     <Compile Include="Data\PropertyCompDB.cs" />
     <Compile Include="Data\PropertyDB.cs" />
     <Compile Include="Data\PropertyListDB.cs" />
+    <Compile Include="Data\SaleDateDB.cs" />
     <Compile Include="Data\SaleRecordDB.cs" />
     <Compile Include="Data\UserDB.cs" />
     <Compile Include="Default.aspx.cs">

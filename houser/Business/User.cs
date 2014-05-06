@@ -39,6 +39,17 @@ namespace houser.Business
             }
 
         }
+        public User(int userID)
+        {
+            DataRow user = UserDB.GetUserByUserID(userID);
+            if (user != null)
+            {
+                _userID = Convert.ToInt32(user["UserID"]);
+                _userName = user["UserName"].ToString();
+                _firstName = user["FirstName"].ToString();
+                _lasteName = user["LastName"].ToString();
+            }
+        }
         #endregion
         #region Static methods
         public static bool ThisIsAUser(string userName, string password)

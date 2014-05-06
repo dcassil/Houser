@@ -239,7 +239,7 @@ namespace houser
                 if (!chkNonLive.Checked)
                 {
                     string saleDate = ddlSaleDate.SelectedItem.Value.Replace("/", "%2f");
-                    string finishedLoading = GetCompletePropertyList(saleDate, chkNonLive.Checked);
+                    string finishedLoading = PageScraper.GetCompletePropertyList(saleDate);
                 }
 
                 BuildListingPanels(Convert.ToDateTime(ddlSaleDate.SelectedItem.Value), orderBy);
@@ -280,19 +280,7 @@ namespace houser
             Response.Cookies.Add(loginCookie);
         }
         
-        /// <summary>
-        /// Build the entire data structure for all properties.  Includes comparable data, property specs, ect.  03%2f15%2f2012
-        /// </summary>
-        private static string GetCompletePropertyList(string saleDate, bool nonLiveDataOnly)
-        {
-            //string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
-            string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp";
-            //string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
-            string sherifSaleWebRequestData = PageRequester.HttpPost(sherifSaleUrl, "SaleDates=" + saleDate);
-            if (!string.IsNullOrWhiteSpace(sherifSaleWebRequestData))
-                PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
-            return "Finished Loading";
-        }
+        
         
         //----The use of multiple strings to fill in for the order by on the query needs to go.
         //  Switch this to jquery sorts... there is no reason to get the data more than once.

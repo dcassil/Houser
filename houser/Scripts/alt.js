@@ -1,29 +1,32 @@
 ﻿/// <reference path="touch.js" />
+/// <reference path="libs/spin/spin.js" />
+/// <reference path="libs/spin/spinOptions.js" />
 
         var alt = {};
         alt.userID = -1;
         alt.saleDates = {};
         alt.selectedDate = -1;
-        alt.list = "1";
+        alt.selectedList = "2";
         alt.propData = {};
         alt.swipeDirection = null;
-        alt.x = null;
-        alt.y = null;
         alt.totalProperties = 0;
         alt.currentProperty = 1;
         // get properties.
-        alt.getProperties = function(saleDate, list) {
+        alt.getProperties = function (saleDate, list) {
             var data;
+
             $.ajax({
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
                 url: '/WebUtilities/DetailsWebService.asmx/GetPropertiesBySaleDate',
                 data: "{sDate: '" + saleDate + "', list: '" + list + "', sUserID: '" + alt.userID + "'}",
                 dataType: "json",
-                async: false,
+                async: true,
                 success: function (responce) {
                     if (responce.d != "") {
-                        data = eval('(' + responce.d + ');');
+                        alt.propData = eval('(' + responce.d + ');');
+                        alt.totalProperties = alt.propData.length;
+                        alt.renderProperties(alt.propData);
                     } else {
                         data = null;
                     }
@@ -174,11 +177,12 @@
             }; // excape HTML: {%- <script> %} prints &lt;script&gt;
 
             alt.userID = xuid;
-            alt.selectedDate = xdate;
-            alt.propData = alt.getProperties(alt.selectedDate, alt.list);
-            alt.renderProperties(alt.propData);
             alt.saleDates = alt.getSaleDates();
-            alt.totalProperties = $(".propPage").length - 1;
+            alt.selectedDate = alt.saleDates[0];
+            var spinner = new Spinner(spinOptions).spin();
+            $(".wrapper").html(spinner.el);
+            alt.getProperties(alt.selectedDate, alt.selectedList);
+            
             //UI functions
             $.each(alt.saleDates, function (index, value) {
                 $('.datesList').append($('<option/>', {
@@ -195,14 +199,16 @@
                 alt.removeFromList(account, alt.userID);
             });
             $(".propList").on("change", function () {
-                alt.list = $(".propList").val();
-                alt.propData = alt.getProperties(alt.selectedDate, alt.list);
-                alt.renderProperties(alt.propData);
+                var spinner = new Spinner(spinOptions).spin();
+                $(".wrapper").html(spinner.el);
+                alt.selectedList = $(".propList").val();
+                alt.getProperties(alt.selectedDate, alt.selectedList);
             });
             $(".datesList").on("change", function () {
+                var spinner = new Spinner(spinOptions).spin();
+                $(".wrapper").html(spinner.el);
                 alt.selectedDate = $(".datesList").val();
-                alt.propData = alt.getProperties(alt.selectedDate, alt.list);
-                alt.renderProperties(alt.propData);
+                alt.getProperties(alt.selectedDate, alt.selectedList);
             });
             $("body").on("blur", ".notes textarea", function () {
                 var accountID = $(this).parent().attr("id");

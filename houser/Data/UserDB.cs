@@ -33,6 +33,14 @@ namespace houser.Data
             return result.Tables[0].Rows.Count > 0 ? result.Tables[0].Rows[0] : null;
         }
 
+        public static DataRow GetUserByUserID(int userID)
+        {
+            DataSet result = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
+                "SELECT * FROM [User] WHERE UserID = @userID",
+                new SqlParameter("@userID", userID));
+            return result.Tables[0].Rows.Count > 0 ? result.Tables[0].Rows[0] : null;
+        }
+
         public static int InsertUser(string accountNumber, string password)
         {
             return Convert.ToInt32(SqlHelper.ExecuteScalar(CONNECTIONSTRING, CommandType.Text,

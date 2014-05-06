@@ -64,10 +64,17 @@ namespace houser.WebUtilities
         {
             DateTime date = Convert.ToDateTime(sDate);
             int userID = Convert.ToInt32(sUserID);
-            if (date != null && userID != null)
+            User user = new User(userID);
+            if (date != null && user != null)
             {
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                SaleDate saleDate = new SaleDate(date);
+                if (saleDate.LastIndexed.AddDays(1) < DateTime.Now)
+                {
+                    PageScraper.GetCompletePropertyList(sDate);
+                    saleDate.save();
+                }
 
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
 
                 DataTable subjectProperties = SaleRecord.GetSaleProperitesByDate(Convert.ToDateTime(date), "Address", list, Convert.ToInt32(userID));
                 if (subjectProperties.Rows.Count > 0)

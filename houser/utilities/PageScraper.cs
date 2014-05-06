@@ -218,5 +218,19 @@ namespace houser.utilities
                 
             return dates;
         }
+       
+        /// <summary>
+        /// Build the entire data structure for all properties.  Includes comparable data, property specs, ect.  03%2f15%2f2012
+        /// </summary>
+        public static string GetCompletePropertyList(string saleDate)
+        {
+            //string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp?SaleDates=" + saleDate;
+            string sherifSaleUrl = "http://oklahomacounty.org/sheriff/SheriffSales/saledetail.asp";
+            //string sherifSaleWebRequestData = PageRequester.GetWebRequest(sherifSaleUrl);
+            string sherifSaleWebRequestData = PageRequester.HttpPost(sherifSaleUrl, "SaleDates=" + saleDate);
+            if (!string.IsNullOrWhiteSpace(sherifSaleWebRequestData))
+                PageScraper.ScrapePropertyDatePiecesIntoDatabase(sherifSaleWebRequestData, saleDate);
+            return "Finished Loading";
+        }
     }
 }
