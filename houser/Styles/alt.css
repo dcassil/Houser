@@ -191,7 +191,7 @@ dd
     display:block;
     margin: 0 auto 50px auto;
     width: 40%;
-    border-radius 25px;
+    border-radius 7px;
     border: 1px solid white;
 }
 .menuTextBox
@@ -216,6 +216,10 @@ dd
 {
     -webkit-transition-delay: 1s;
     opacity: 0;
+}
+.clearFilter
+{
+    visibility:hidden;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 

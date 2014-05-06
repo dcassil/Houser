@@ -68,7 +68,7 @@ namespace houser.WebUtilities
             if (date != null && user != null)
             {
                 SaleDate saleDate = new SaleDate(date);
-                if (saleDate.LastIndexed.AddDays(1) < DateTime.Now)
+                if (saleDate.LastIndexed.AddDays(1) < DateTime.Now && list == "2")
                 {
                     PageScraper.GetCompletePropertyList(sDate);
                     saleDate.save();

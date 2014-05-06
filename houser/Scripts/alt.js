@@ -12,7 +12,7 @@
         alt.totalProperties = 0;
         alt.currentProperty = 1;
         // get properties.
-        alt.getProperties = function (saleDate, list) {
+        alt.getProperties = function (saleDate, list, filterBy, value) {
             var data;
 
             $.ajax({
@@ -28,6 +28,7 @@
                         alt.totalProperties = alt.propData.length;
                         alt.renderProperties(alt.propData);
                     } else {
+                        $(".wrapper").html("");
                         data = null;
                     }
                 },
@@ -37,11 +38,26 @@
             });
             return data;
         }
-        alt.renderProperties = function(properties) {
-            if (alt.propData != null) {
+        alt.filterProperties = function (filterBy, value, properties) {
+            var arr = [];
+            if (filterBy && value) {
+                for (var i in properties) {
+                    if (properties.hasOwnProperty(i)) {
+                        if (properties[i][filterBy] > value) {
+                            arr[i] = properties[i];
+                        }
+                    }
+                }
+                return arr;
+            } else {
+                return properties;
+            }
+        }
+        alt.renderProperties = function (properties) {
+            if (properties != null) {
                 var template = $("#tmpPropertyData").html();
                 $(".wrapper").html();
-                $(".wrapper").html(_.template(template, { propData: alt.propData }));
+                $(".wrapper").html(_.template(template, { propData: properties }));
                 alt.totalProperties = $(".propPage").last().prev().attr("data");
             }
         }
@@ -179,10 +195,11 @@
             alt.userID = xuid;
             alt.saleDates = alt.getSaleDates();
             alt.selectedDate = alt.saleDates[0];
+            alt.selectedList = $(".propList").val();
             var spinner = new Spinner(spinOptions).spin();
             $(".wrapper").html(spinner.el);
             alt.getProperties(alt.selectedDate, alt.selectedList);
-            
+
             //UI functions
             $.each(alt.saleDates, function (index, value) {
                 $('.datesList').append($('<option/>', {
@@ -197,6 +214,50 @@
             $("body").on("click", '#removeFromList', function () {
                 var account = $(this).parent().attr('id');
                 alt.removeFromList(account, alt.userID);
+            });
+
+            $("body").on("click", '.clearFilter', function () {
+                alt.renderProperties(alt.propData);
+                $(".clearFilter").hide();
+            });
+            $("body").on("click", "dd", function () {
+                var $self = $(this);
+                if ($self.prev("dt").html() === "SQFT") {
+                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                    var propArray = alt.filterProperties("Sqft", value, alt.propData);
+                    alt.renderProperties(propArray);
+                    $(".clearFilter").css('visibility', 'visible');
+                }
+                if ($self.prev("dt").html() === "Year Built") {
+                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                    var propArray = alt.filterProperties("YearBuilt", value, alt.propData);
+                    alt.renderProperties(propArray);
+                    $(".clearFilter").css('visibility', 'visible');
+                }
+                if ($self.prev("dt").html() === "Lot Size") {
+                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                    var propArray = alt.filterProperties("LotSize", value, alt.propData);
+                    alt.renderProperties(propArray);
+                    $(".clearFilter").css('visibility', 'visible');
+                }
+                if ($self.prev("dt").html() === "Assessed Value") {
+                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                    var propArray = alt.filterProperties("SalePrice", value, alt.propData);
+                    alt.renderProperties(propArray);
+                    $(".clearFilter").css('visibility', 'visible');
+                }
+                if ($self.prev("dt").html() === "Bedrooms") {
+                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                    var propArray = alt.filterProperties("Beds", value, alt.propData);
+                    alt.renderProperties(propArray);
+                    $(".clearFilter").css('visibility', 'visible');
+                }
+                if ($self.prev("dt").html() === "Bathrooms") {
+                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                    var propArray = alt.filterProperties("Baths", value, alt.propData);
+                    alt.renderProperties(propArray);
+                    $(".clearFilter").css('visibility', 'visible');
+                }
             });
             $(".propList").on("change", function () {
                 var spinner = new Spinner(spinOptions).spin();

@@ -26,8 +26,8 @@
     </select>
     <p class="progress hide"></p>
     <select class="list propList">
-        <option value="1" selected >Review List</option>
-        <option value="2" >Full List</option>
+        <option value="1" >Review List</option>
+        <option value="2" selected>Full List</option>
     </select>
     </div>
     <div class="wrapper">
@@ -41,7 +41,7 @@
     <script src="Scripts/touch.js" type="text/javascript"></script>
     <script type="text/html" id="tmpPropertyData">
     {% 
-    _.each(alt.propData, function(prop, i) {
+    _.each(propData, function(prop, i) {
     var address = prop.Address.split(",");
     %}
     <div class="propPage section" data={{i+1}} ID={{prop.AccountNumber}}>
@@ -87,6 +87,7 @@
     <div class="propPage section">
         <div class="emptyPanel">
             <asp:Button ID="btnSubmitLogOut" CssClass="button" runat="server" Text="log out" onclick="btnSubmitLogOut_Click" />
+            <input type="button" class="clearFilter button" value="Clear Filter"></input>
         </div>
     </div>
     </script>
