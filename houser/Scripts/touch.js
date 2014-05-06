@@ -7,10 +7,16 @@ touch.x = null;
 touch.y = null;
 touch.swipeDirection = null;
 
+touch.holdX = null;
+touch.holdY = null;
+touch.hold = null;
+
 touch.left = 1;
 touch.right = 2;
 touch.up = 3;
 touch.down = 4;
+touch.hold1 = 5;
+
 
 touch.getSwipeDirection = function getSwipeDirection(evt) {
     if (touch.swipeDirection === null) {

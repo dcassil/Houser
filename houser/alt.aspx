@@ -17,7 +17,7 @@
     <script src="Scripts/libs/spin/spinOptions.js" type="text/javascript"></script>
     <script src="Scripts/libs/spin/spin.js" type="text/javascript"></script>
 </head>
-<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" ontouchmove="alt.blockSwipe(event);">
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" ontouchend="alt.swipeEnd(event);" ontouchmove="alt.blockSwipe(event);" ongesturestart="alt.gestureStart(event);">
     <form id="form1" runat="server">
     <div class="menuPlaceHolder"></div>
     <div class="menu">
@@ -51,22 +51,22 @@
         </span>
         <div class="column1">
             <dl>
-                <dt>Assessed Value</dt>
-                <dd><input type="button" class="sortable" value=${{prop.SalePrice.toFixed(0)}}></input></dd>
-                <dt>SQFT</dt>
-                <dd><input type="button" class="sortable" value={{prop.Sqft}}></input></dd>
-                <dt>Year Built</dt>
-                <dd><input type="button" class="sortable" value={{prop.YearBuilt}}></input></dd>
+                <dt><input type="button" class="sortable" value="Assessed Value"></input></dt>
+                <dd>${{prop.SalePrice.toFixed(0)}}</dd>
+                <dt><input type="button" class="sortable" value="SQFT"></input></dt>
+                <dd>{{prop.Sqft}}</dd>
+                <dt><input type="button" class="sortable" value="Year Built"></input></dt>
+                <dd>{{prop.YearBuilt}}</dd>
             </dl>    
         </div>
         <div class="column2">
             <dl>
-                <dt>Bedrooms</dt>
-                <dd><input type="button" class="sortable" value={{prop.Beds }}></input></dd>
-                <dt>Bathrooms</dt>
-                <dd><input type="button" class="sortable" value={{prop.Baths }}></input></dd>
-                <dt>Lot Size</dt>
-                <dd><input type="button" class="sortable" value={{prop.LotSize }}></input></dd>
+                <dt><input type="button" class="sortable" value="Bedrooms"></input></dt>
+                <dd>{{prop.Beds }}</dd>
+                <dt><input type="button" class="sortable" value="Bathrooms"></input></dt>
+                <dd>{{prop.Baths }}</dd>
+                <dt><input type="button" class="sortable" value="Lot Size"></input></dt>
+                <dd>{{prop.LotSize }}</dd>
             </dl>    
         </div>
         <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>

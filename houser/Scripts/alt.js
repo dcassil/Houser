@@ -124,22 +124,26 @@
                 error: ""
             });
         }
+        alt.gestureStart = function (event) {
+            var check = event;
+        }
         alt.blockSwipe = function (event) {
             if (window.innerHeight > window.innerWidth) {
                 // Tell Safari not to move the window.
-                event.preventDefault();
+                //event.preventDefault();
                 // Parse the swipe event and find the direction
                 alt.swipeDirection = touch.getSwipeDirection(event);
-
+            }
+        }
+        alt.swipeEnd = function (event) {
+            //get direction and scroll accordingly
+            if (touch.swipeDirection !== null) {
+                if (touch.swipeDirection === touch.down || touch.swipeDirection === touch.right) {
+                    alt.scrollToNextProperty(event);
+                }
                 //get direction and scroll accordingly
-                if (touch.swipeDirection !== null) {
-                    if (alt.swipeDirection === touch.down || alt.swipeDirection === touch.right) {
-                        alt.scrollToNextProperty(event);
-                    }
-                    //get direction and scroll accordingly
-                    if (alt.swipeDirection === touch.up || alt.swipeDirection === touch.left) {
-                        alt.scrollToPreviousProperty(event);
-                    }
+                if (touch.swipeDirection === touch.up || touch.swipeDirection === touch.left) {
+                    alt.scrollToPreviousProperty(event);
                 }
             }
         }
@@ -222,38 +226,38 @@
             });
             $("body").on("click", ".sortable", function () {
                 var $self = $(this);
-                if ($self.parent().prev("dt").html() === "SQFT") {
-                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                if ($self.val() === "SQFT") {
+                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("Sqft", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.parent().prev("dt").html() === "Year Built") {
-                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                if ($self.val() === "Year Built") {
+                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("YearBuilt", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.parent().prev("dt").html() === "Lot Size") {
-                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                if ($self.val() === "Lot Size") {
+                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("LotSize", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.parent().prev("dt").html() === "Assessed Value") {
-                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                if ($self.val() === "Assessed Value") {
+                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html().replace("$", ""));
                     var propArray = alt.filterProperties("SalePrice", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.parent().prev("dt").html() === "Bedrooms") {
-                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                if ($self.val() === "Bedrooms") {
+                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("Beds", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.parent().prev("dt").html() === "Bathrooms") {
-                    var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
+                if ($self.val() === "Bathrooms") {
+                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("Baths", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
