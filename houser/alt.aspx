@@ -52,25 +52,25 @@
         <div class="column1">
             <dl>
                 <dt>Assessed Value</dt>
-                <dd>${{prop.SalePrice.toFixed(0)}}</dd>
+                <dd><input type="button" class="sortable" value=${{prop.SalePrice.toFixed(0)}}></input></dd>
                 <dt>SQFT</dt>
-                <dd>{{prop.Sqft}}</dd>
+                <dd><input type="button" class="sortable" value={{prop.Sqft}}></input></dd>
                 <dt>Year Built</dt>
-                <dd>{{prop.YearBuilt}}</dd>
+                <dd><input type="button" class="sortable" value={{prop.YearBuilt}}></input></dd>
             </dl>    
         </div>
         <div class="column2">
             <dl>
                 <dt>Bedrooms</dt>
-                <dd>{{prop.Beds }}</dd>
+                <dd><input type="button" class="sortable" value={{prop.Beds }}></input></dd>
                 <dt>Bathrooms</dt>
-                <dd>{{prop.Baths }}</dd>
+                <dd><input type="button" class="sortable" value={{prop.Baths }}></input></dd>
                 <dt>Lot Size</dt>
-                <dd>{{prop.LotSize }}</dd>
+                <dd><input type="button" class="sortable" value={{prop.LotSize }}></input></dd>
             </dl>    
         </div>
         <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>
-        {%if (alt.list === "2") { %}
+        {%if (alt.selectedList === "2") { %}
             <input type="button" class="listButton" id="addToList" name="addToList" value="Add to review list"/>
         {% } else { %}
             <input type="button" class="listButton" id="removeFromList" name="removeFromList" value="Remove from review list"/>

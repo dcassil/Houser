@@ -220,39 +220,39 @@
                 alt.renderProperties(alt.propData);
                 $(".clearFilter").hide();
             });
-            $("body").on("click", "dd", function () {
+            $("body").on("click", ".sortable", function () {
                 var $self = $(this);
-                if ($self.prev("dt").html() === "SQFT") {
+                if ($self.parent().prev("dt").html() === "SQFT") {
                     var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
                     var propArray = alt.filterProperties("Sqft", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.prev("dt").html() === "Year Built") {
+                if ($self.parent().prev("dt").html() === "Year Built") {
                     var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
                     var propArray = alt.filterProperties("YearBuilt", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.prev("dt").html() === "Lot Size") {
+                if ($self.parent().prev("dt").html() === "Lot Size") {
                     var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
                     var propArray = alt.filterProperties("LotSize", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.prev("dt").html() === "Assessed Value") {
+                if ($self.parent().prev("dt").html() === "Assessed Value") {
                     var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
                     var propArray = alt.filterProperties("SalePrice", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.prev("dt").html() === "Bedrooms") {
+                if ($self.parent().prev("dt").html() === "Bedrooms") {
                     var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
                     var propArray = alt.filterProperties("Beds", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
-                if ($self.prev("dt").html() === "Bathrooms") {
+                if ($self.parent().prev("dt").html() === "Bathrooms") {
                     var value = prompt("Filter by " + $self.prev("dt").html() + " grater than", "2000");
                     var propArray = alt.filterProperties("Baths", value, alt.propData);
                     alt.renderProperties(propArray);
