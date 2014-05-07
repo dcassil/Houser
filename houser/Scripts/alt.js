@@ -41,9 +41,13 @@
         alt.filterProperties = function (filterBy, value, properties) {
             var arr = [];
             if (filterBy && value) {
+                var valueAndComparer = value.split(",");
                 for (var i in properties) {
                     if (properties.hasOwnProperty(i)) {
-                        if (properties[i][filterBy] > value) {
+                        if (valueAndComparer[0] === ">" && properties[i][filterBy] > valueAndComparer[1]) {
+                            arr[i] = properties[i];
+                        }
+                        if (valueAndComparer[0] === "<" && properties[i][filterBy] < valueAndComparer[1]) {
                             arr[i] = properties[i];
                         }
                     }
@@ -153,11 +157,11 @@
                 alt.currentProperty = $nextPage.attr("data");
                 alt.fadeInOutProgress();
                 var scrollTo = $nextPage.position().top;
-                $('html, body').animate({
+                $('html, body').stop().animate({
                     scrollTop: (scrollTo - 30)
                 }, 200);
             } else {
-                $('html, body').animate({
+                $('html, body').stop().animate({
                     scrollTop: $(document).height()
                 }, 200);
             }
@@ -227,37 +231,37 @@
             $("body").on("click", ".sortable", function () {
                 var $self = $(this);
                 if ($self.val() === "SQFT") {
-                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
+                    var value = prompt("Filter by " + $self.val() + " with symbol like", ">, " + $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("Sqft", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
                 if ($self.val() === "Year Built") {
-                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
+                    var value = prompt("Filter by " + $self.val() + " with symbol like", ">, " + $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("YearBuilt", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
                 if ($self.val() === "Lot Size") {
-                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
+                    var value = prompt("Filter by " + $self.val() + " with symbol like", ">, " + $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("LotSize", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
                 if ($self.val() === "Assessed Value") {
-                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html().replace("$", ""));
-                    var propArray = alt.filterProperties("SalePrice", value, alt.propData);
+                    var value = prompt("Filter by " + $self.val() + " with symbol like", ">, " + $self.parent().next("dd").html());
+                    var propArray = alt.filterProperties("SalePrice", value.replace("$", ""), alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
                 if ($self.val() === "Bedrooms") {
-                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
+                    var value = prompt("Filter by " + $self.val() + " with symbol like", ">, " + $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("Beds", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');
                 }
                 if ($self.val() === "Bathrooms") {
-                    var value = prompt("Filter by " + $self.val() + " grater than", $self.parent().next("dd").html());
+                    var value = prompt("Filter by " + $self.val() + " with symbol like", ">, " + $self.parent().next("dd").html());
                     var propArray = alt.filterProperties("Baths", value, alt.propData);
                     alt.renderProperties(propArray);
                     $(".clearFilter").css('visibility', 'visible');

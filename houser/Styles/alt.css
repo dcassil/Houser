@@ -21,6 +21,7 @@ body
     width: 100%;
     margin: 0;
 }
+
 select, input[type="button"], .button
 {
     font-family: "Helvetica Neue", Helvetica, Arial; 
@@ -223,8 +224,8 @@ dd
 }
 .sortable
 {
-    
 }
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 

@@ -24,7 +24,7 @@ touch.getSwipeDirection = function getSwipeDirection(evt) {
             touch.swipeDirection = null;
             touch.x = null;
             touch.y = null;
-        }, 500);
+        }, 100);
 
         var x = evt.touches[0].clientX;
         var y = evt.touches[0].clientY;
@@ -44,7 +44,7 @@ touch.getSwipeDirection = function getSwipeDirection(evt) {
             var tempXDiff = x - touch.x;
             var tempYDiff = y - touch.y;
             
-            if (Math.abs(tempXDiff) > 40 || Math.abs(tempYDiff) > 60) {
+            if (Math.abs(tempXDiff) > 30 || Math.abs(tempYDiff) > 30) {
                 xDiff = x - touch.x;
                 yDiff = y - touch.y;
             }
