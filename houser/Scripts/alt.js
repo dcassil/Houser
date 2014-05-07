@@ -25,7 +25,7 @@
                 success: function (responce) {
                     if (responce.d != "") {
                         alt.propData = eval('(' + responce.d + ');');
-                        alt.totalProperties = alt.propData.length;
+                        
                         alt.renderProperties(alt.propData);
                     } else {
                         $(".wrapper").html("");
@@ -42,13 +42,16 @@
             var arr = [];
             if (filterBy && value) {
                 var valueAndComparer = value.split(",");
+                var index = 0;
                 for (var i in properties) {
                     if (properties.hasOwnProperty(i)) {
                         if (valueAndComparer[0] === ">" && properties[i][filterBy] > valueAndComparer[1]) {
-                            arr[i] = properties[i];
+                            arr[index] = properties[i];
+                            index++;
                         }
                         if (valueAndComparer[0] === "<" && properties[i][filterBy] < valueAndComparer[1]) {
-                            arr[i] = properties[i];
+                            arr[index] = properties[i];
+                            index++;
                         }
                     }
                 }
@@ -59,10 +62,11 @@
         }
         alt.renderProperties = function (properties) {
             if (properties != null) {
+                alt.totalProperties = properties.length;
                 var template = $("#tmpPropertyData").html();
                 $(".wrapper").html();
                 $(".wrapper").html(_.template(template, { propData: properties }));
-                alt.totalProperties = $(".propPage").last().prev().attr("data");
+                alt.fadeInOutProgress();
             }
         }
         alt.getSaleDates = function() {
@@ -139,6 +143,9 @@
                 alt.swipeDirection = touch.getSwipeDirection(event);
             }
         }
+        alt.swipeStart = function (event) {
+            touch.getStart(event);
+        }
         alt.swipeEnd = function (event) {
             //get direction and scroll accordingly
             if (touch.swipeDirection !== null) {
@@ -149,6 +156,8 @@
                 if (touch.swipeDirection === touch.up || touch.swipeDirection === touch.left) {
                     alt.scrollToPreviousProperty(event);
                 }
+                touch.swipeDirection = null;
+                alt.swipeDirection = null;
             }
         }
         alt.scrollToNextProperty = function (event) {
@@ -218,10 +227,12 @@
             $("body").on("click", '#addToList', function () {
                 var account = $(this).parent().attr('id');
                 alt.addToReviewList(account, alt.userID);
+                $(this).val("In Review");
             });
             $("body").on("click", '#removeFromList', function () {
                 var account = $(this).parent().attr('id');
                 alt.removeFromList(account, alt.userID);
+                $(this).parent().remove();
             });
 
             $("body").on("click", '.clearFilter', function () {

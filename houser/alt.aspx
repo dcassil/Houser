@@ -17,7 +17,7 @@
     <script src="Scripts/libs/spin/spinOptions.js" type="text/javascript"></script>
     <script src="Scripts/libs/spin/spin.js" type="text/javascript"></script>
 </head>
-<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" ontouchend="alt.swipeEnd(event);" ontouchmove="alt.blockSwipe(event);" ongesturestart="alt.gestureStart(event);">
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);" ontouchstart="alt.swipeStart(event);" ontouchend="alt.swipeEnd(event);" ontouchmove="alt.blockSwipe(event);" ongesturestart="alt.gestureStart(event);">
     <form id="form1" runat="server">
     <div class="menuPlaceHolder"></div>
     <div class="menu">
@@ -70,9 +70,13 @@
             </dl>    
         </div>
         <span class="imgWrapper"><img class="img" src={{prop.ImgPath}} /></span>
-        {%if (alt.selectedList === "2") { %}
-            <input type="button" class="listButton" id="addToList" name="addToList" value="Add to review list"/>
-        {% } else { %}
+        {%if (alt.selectedList === "2") {
+            if (prop.InReviewList === "true") { %}
+                <input type="button" class="listButton" id="addToList" name="addToList" value="In review"/>
+            {% } else { %}
+                <input type="button" class="listButton" id="addToList" name="addToList" value="Add to review list"/>
+            {% }
+            } else { %}
             <input type="button" class="listButton" id="removeFromList" name="removeFromList" value="Remove from review list"/>
         {% } %}
         <div class="notes" id={{prop.AccountNumber}}>
