@@ -32,9 +32,9 @@ namespace houser.Data
         public static void UpdateSaleDate(string saleDate)
         {
             SqlHelper.ExecuteNonQuery(CONNECTIONSTRING, CommandType.Text,
-                "UPDATE SaleDate SET LastIndexed = @lastIndexed WHERE SaleDate = @saleDate)",
+                "UPDATE SaleDate SET LastIndexed = @lastIndexed WHERE SaleDate = @saleDate",
                 new SqlParameter("@saleDate", saleDate),
-                new SqlParameter("lastIndexed", Convert.ToString(DateTime.Now)));
+                new SqlParameter("@lastIndexed", Convert.ToString(DateTime.Now)));
         }
     }
 }
