@@ -215,7 +215,6 @@ dd
 }
 .progress.hide 
 {
-    -webkit-transition-delay: 1s;
     opacity: 0;
 }
 .clearFilter

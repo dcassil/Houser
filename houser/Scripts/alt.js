@@ -192,9 +192,6 @@
         }
         alt.fadeInOutProgress = function () {
             $(".progress").html(alt.currentProperty + " / " + alt.totalProperties);
-            $(".progress").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-                $(".progress").addClass("hide");
-            });
             $(".progress").removeClass("hide");
 
             //            $(".progress").stop(true, true).fadeIn(5000, function () {
@@ -238,6 +235,9 @@
             $("body").on("click", '.clearFilter', function () {
                 alt.renderProperties(alt.propData);
                 $(".clearFilter").hide();
+            });
+            $("body").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", ".progress", function () {
+                $(".progress").addClass("hide");
             });
             $("body").on("click", ".sortable", function () {
                 var $self = $(this);
