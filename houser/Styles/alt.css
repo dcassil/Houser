@@ -224,6 +224,10 @@ dd
 .sortable
 {
 }
+.addressMenu
+{
+    display: none;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 

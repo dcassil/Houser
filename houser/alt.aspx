@@ -46,9 +46,14 @@
     %}
     <div class="propPage section" data={{i+1}} ID={{prop.AccountNumber}}>
         <span>
-            <p class="address"><a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}">{{address[0]}}</a><span class="address city"> {{ address[1] }} </span></p>
-            
+            <p class="address">{{address[0]}}<span class="address city"> {{ address[1] }} </span></p>
         </span>
+        <div class="addressMenu">
+            <p class="address">
+                <a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}"><input type="button" value="Open in Maps"/></a>
+                <a href={{prop.zillowUrl}}><input type="button" value="Open in Zillow"/></a>
+            </p>
+        </div>
         <div class="column1">
             <dl>
                 <dt><input type="button" class="sortable" value="Assessed Value"></input></dt>

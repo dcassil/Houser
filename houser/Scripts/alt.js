@@ -25,7 +25,7 @@
                 success: function (responce) {
                     if (responce.d != "") {
                         alt.propData = eval('(' + responce.d + ');');
-                        
+                        alt.setZillowUrl();
                         alt.renderProperties(alt.propData);
                     } else {
                         $(".wrapper").html("");
@@ -38,6 +38,13 @@
             });
             return data;
         }
+        alt.setZillowUrl = function () {
+            for (var prop in alt.propData) {
+                var zillowfiedAddress = alt.propData[prop].Address.trim().replace(/ /g, "-").replace(",", "-").replace("-(recalled)", "").replace("--", "-") + "_rb";
+                var zillowUrl = "http://www.zillow.com/homes/";
+                alt.propData[prop].zillowUrl = zillowUrl + zillowfiedAddress;
+            }
+        }
         alt.filterProperties = function (filterBy, value, properties) {
             var arr = [];
             if (filterBy && value) {
@@ -45,11 +52,11 @@
                 var index = 0;
                 for (var i in properties) {
                     if (properties.hasOwnProperty(i)) {
-                        if (valueAndComparer[0] === ">" && properties[i][filterBy] > valueAndComparer[1]) {
+                        if (valueAndComparer[0] === ">" && Number(properties[i][filterBy]) > Number(valueAndComparer[1])) {
                             arr[index] = properties[i];
                             index++;
                         }
-                        if (valueAndComparer[0] === "<" && properties[i][filterBy] < valueAndComparer[1]) {
+                        if (valueAndComparer[0] === "<" && Number(properties[i][filterBy]) < Number(valueAndComparer[1])) {
                             arr[index] = properties[i];
                             index++;
                         }
@@ -299,6 +306,9 @@
                 $('html, body').animate({
                     scrollTop: (scrollTo - 30)
                 }, 300);
+            });
+            $("body").on("click", ".address", function () {
+                $(this).parent().next(".addressMenu").toggle();
             });
             $("body").on("focus", ".notes textarea", function () {
                 $(this).css('height', '120px');
