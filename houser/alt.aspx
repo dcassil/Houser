@@ -45,9 +45,7 @@
     var address = prop.Address.split(",");
     %}
     <div class="propPage section" data={{i+1}} ID={{prop.AccountNumber}}>
-        <span>
-            <p class="address">{{address[0]}}<span class="address city"> {{ address[1] }} </span></p>
-        </span>
+        <p class="address"><input type="button" value="{{address[0]}}"/><span class="address city"> {{ address[1] }} </span></p>
         <div class="addressMenu">
             <p class="address">
                 <a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}"><input type="button" value="Open in Maps"/></a>

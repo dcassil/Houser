@@ -308,7 +308,7 @@
                 }, 300);
             });
             $("body").on("click", ".address", function () {
-                $(this).parent().next(".addressMenu").toggle();
+                $(this).next(".addressMenu").toggle();
             });
             $("body").on("focus", ".notes textarea", function () {
                 $(this).css('height', '120px');
