@@ -49,7 +49,7 @@
         <div class="addressMenu">
             <p class="address">
                 <a href="http://maps.apple.com/?q={{address[0]}} {{address[1]}}"><input type="button" value="Open in Maps"/></a>
-                <a href={{prop.zillowUrl}}><input type="button" value="Open in Zillow"/></a>
+                <input type="submit" onclick="window.open('{{prop.zillowUrl}}', 'zillow');" value="Open in Zillow"/>
             </p>
         </div>
         <div class="column1">

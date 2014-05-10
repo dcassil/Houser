@@ -56,6 +56,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.aspx" />
     <Content Include="backbone.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="images\indicators\red.png" />
@@ -109,8 +110,16 @@
     </Content>
     <Content Include="WebUtilities\DetailsWebService.asmx" />
     <Content Include="WebUtilities\NoteWebService.asmx" />
+    <Content Include="WebUtilities\UserService.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app.aspx.cs">
+      <DependentUpon>app.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.aspx.designer.cs">
+      <DependentUpon>app.aspx</DependentUpon>
+    </Compile>
     <Compile Include="backbone.aspx.cs">
       <DependentUpon>backbone.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,6 +175,10 @@
     </Compile>
     <Compile Include="WebUtilities\NoteWebService.asmx.cs">
       <DependentUpon>NoteWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebUtilities\UserService.asmx.cs">
+      <DependentUpon>UserService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

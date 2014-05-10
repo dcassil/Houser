@@ -41,6 +41,26 @@ namespace houser.Data
             return result.Tables[0].Rows.Count > 0 ? result.Tables[0].Rows[0] : null;
         }
 
+        public static DataRow GetUserByToken(Guid token)
+        {
+            DataSet result = SqlHelper.ExecuteDataset(CONNECTIONSTRING, CommandType.Text,
+                "SELECT * FROM [User] WHERE Token = @Token",
+                new SqlParameter("@Token", token));
+            return result.Tables[0].Rows.Count > 0 ? result.Tables[0].Rows[0] : null;
+        }
+
+        public static DateTime UpdateToken(int userID, Guid token, Guid oldToken)
+        {
+            DateTime tokenExp = DateTime.Now.AddDays(30);
+            SqlHelper.ExecuteNonQuery(CONNECTIONSTRING, CommandType.Text,
+                "UPDATE [User] SET Token = @Token, TokenExp = @TokenExp WHERE UserID = @userID AND Token = @OldToken",
+                new SqlParameter("@Token", token),
+                new SqlParameter("@OldToken", oldToken),
+                new SqlParameter("@TokenExp", tokenExp),
+                new SqlParameter("@userID", userID));
+            return tokenExp;
+        }
+
         public static int InsertUser(string accountNumber, string password)
         {
             return Convert.ToInt32(SqlHelper.ExecuteScalar(CONNECTIONSTRING, CommandType.Text,
