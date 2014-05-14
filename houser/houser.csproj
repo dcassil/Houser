@@ -79,11 +79,17 @@
     <Content Include="images\listingPanel\Success.png" />
     <Content Include="images\listingPanel\Warning.png" />
     <Content Include="images\menu\background.png" />
+    <Content Include="images\mobile\settings-arrow.png" />
+    <Content Include="images\mobile\switch\switch-back-off.png" />
+    <Content Include="images\mobile\switch\switch-back-on.png" />
+    <Content Include="images\mobile\switch\switch-switch.png" />
     <Content Include="Libs\Microsoft.ApplicationBlocks.Data.dll" />
     <Content Include="alt.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="mobile.htm" />
     <Content Include="Scripts\alt.js" />
     <Content Include="Scripts\altModels.js" />
+    <Content Include="Scripts\houser-mobile-ui.js" />
     <Content Include="Scripts\libs\backbone\backbone.js" />
     <Content Include="Scripts\libs\panelSnap\jquery.panelSnap.js" />
     <Content Include="Scripts\libs\jquery\jquery-1.4.1-vsdoc.js" />
@@ -98,6 +104,7 @@
     <Content Include="Scripts\libs\underscore\underscore.js" />
     <Content Include="Scripts\touch.js" />
     <Content Include="Styles\alt.css" />
+    <Content Include="Styles\mobile.css" />
     <Content Include="Styles\reset.css" />
     <Content Include="Styles\style.css" />
     <Content Include="templates\property.js" />

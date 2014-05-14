@@ -9,7 +9,7 @@
 }
 .top-menu
 {
-    height: 30px;
+    height: 33px;
     background-color: #666666;
     padding: 7px 0 0 0;
     text-align:center;
@@ -32,17 +32,24 @@
     font-weight: 200;
     padding: 0 0 5px 15px;
 }
-.setting-group .slider, .setting-group .switch
+.setting-group .slider
 {
     height: 60px;
     width: 100%;
     background-color:White;
     margin-top: 1px;
 }
-.setting-group .sub-select
+.setting-group .sub-select 
 {
     height: 43px;
     padding: 17px 0 0 15px;
+    background-color: White;
+    margin-top:1px;
+}
+.setting-group .switch
+{
+    height: 43px;
+    padding: 12px 0 0 15px;
     background-color: White;
     margin-top:1px;
 }
@@ -56,6 +63,62 @@
     background-repeat: no-repeat; 
     float: right;
     padding: 0 15px 0 0;
+}
+.switch .icon
+{
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    float: right;
+    padding: 0 15px 0 0;
+}
+.switch .icon .icon-sub
+{
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 1px 0 0 0;
+}
+.switch .icon-on
+{
+    background-image: url('../../images/mobile/switch/switch-back-on.png');
+}
+.switch .icon-on .icon-sub
+{
+    position:relative;
+    left: 30px;
+    transition: left .2s;
+    transition-timing-function: cubic-bezier(.1, .1, .6, 1);
+    background-image: url('../../images/mobile/switch/switch-switch.png');
+}
+.switch .icon-off
+{
+    background-image: url('../../images/mobile/switch/switch-back-off.png');
+}
+.switch .icon-off .icon-sub
+{
+    position:relative;
+    left: 0px;
+    transition: left .2s;
+    transition-timing-function: cubic-bezier(.1, .1, .6, 1);
+    background-image: url('../../images/mobile/switch/switch-switch.png');
+}
+.list-menu
+{
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    height: 600px;
+    left: 0;
+    top: 40px;
+    position: absolute;
+    background-color: White;
+}
+.list-menu.show
+{
+    
 }
 
 
