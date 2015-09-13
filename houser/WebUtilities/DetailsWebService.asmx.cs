@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Services;
-using houser.Business;
-using System.Data;
+﻿using System.Web.Services;
 using houser.utilities;
+
 
 namespace houser.WebUtilities
 {
@@ -20,25 +15,9 @@ namespace houser.WebUtilities
     public class DetailsWebService : System.Web.Services.WebService
     {
         [WebMethod]
-        public string GetPropertyCompsByAccountNumber(string accountNumber)
+        public string GetSaleDates()
         {
-            DataTable results =  PropertyComp.GetCompsForPropertyByAccountNumber(accountNumber);
-            if (results.Rows.Count > 0)
-                return jsonHelper.GetJSONString(results);
-            else
-                return "";
-        }
-
-        [WebMethod]
-        public void AddToReviewList(string accountNumber, int listID)
-        {
-            PropertyList.AddPropertyToList(accountNumber, listID);
-        }
-
-        [WebMethod]
-        public void RemovePropertyFromList(string accountNumber, int listID)
-        {
-            PropertyList.RemoveFromFromList(accountNumber, listID);
+            return PageRequester.GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/");
         }
     }
 }
