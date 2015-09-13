@@ -14,3 +14,9 @@ C:\git_project\Houser\houser\bin\Microsoft.ApplicationBlocks.Data.dll
 C:\git_project\Houser\houser\obj\Release\ResolveAssemblyReference.cache
 C:\git_project\Houser\houser\obj\Release\houser.dll
 C:\git_project\Houser\houser\obj\Release\houser.pdb
+\\vmware-host\Shared Folders\Code\Houser\Houser\houser\bin\houser.dll
+\\vmware-host\Shared Folders\Code\Houser\Houser\houser\bin\houser.pdb
+\\vmware-host\Shared Folders\Code\Houser\Houser\houser\bin\Microsoft.ApplicationBlocks.Data.dll
+\\vmware-host\Shared Folders\Code\Houser\Houser\houser\obj\Release\houser.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Code\Houser\Houser\houser\obj\Release\houser.dll
+\\vmware-host\Shared Folders\Code\Houser\Houser\houser\obj\Release\houser.pdb
