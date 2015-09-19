@@ -1,5 +1,6 @@
 ﻿using System.Web.Services;
 using houser.utilities;
+using System.Web;
 
 
 namespace houser.WebUtilities
@@ -21,9 +22,9 @@ namespace houser.WebUtilities
         }
 
         [WebMethod]
-        public string GetWebRequest(string url)
+        public void GetWebRequest(string url)
         {
-            return PageRequester.GetWebRequest(url);
+            HttpContext.Current.Response.Write(PageRequester.GetWebRequest(url));
         }
     }
 }

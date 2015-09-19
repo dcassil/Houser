@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utilities\jsonHelper.cs" />
     <Compile Include="utilities\PageRequester.cs" />
     <Compile Include="WebUtilities\DetailsWebService.asmx.cs">
       <DependentUpon>DetailsWebService.asmx</DependentUpon>

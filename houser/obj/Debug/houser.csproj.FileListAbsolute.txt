@@ -26,6 +26,5 @@ F:\houser\houser\obj\Debug\houser.pdb
 Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\houser.dll
 Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\houser.pdb
 Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\Microsoft.ApplicationBlocks.Data.dll
-Z:\Documents\Code\Houser\Dot Net Solution\houser\obj\Debug\houser.csprojResolveAssemblyReference.cache
 Z:\Documents\Code\Houser\Dot Net Solution\houser\obj\Debug\houser.dll
 Z:\Documents\Code\Houser\Dot Net Solution\houser\obj\Debug\houser.pdb
