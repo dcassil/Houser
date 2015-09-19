@@ -19,5 +19,11 @@ namespace houser.WebUtilities
         {
             return PageRequester.GetWebRequest("http://oklahomacounty.org/sheriff/SheriffSales/");
         }
+
+        [WebMethod]
+        public string GetWebRequest(string url)
+        {
+            return PageRequester.GetWebRequest(url);
+        }
     }
 }
