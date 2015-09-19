@@ -22,9 +22,9 @@ namespace houser.WebUtilities
         }
 
         [WebMethod]
-        public void GetWebRequest(string url)
+        public string GetWebRequest(string url)
         {
-            HttpContext.Current.Response.Write(PageRequester.GetWebRequest(url));
+            return PageRequester.GetWebRequest(url);
         }
     }
 }
