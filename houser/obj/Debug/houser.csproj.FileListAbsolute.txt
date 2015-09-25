@@ -28,3 +28,8 @@ Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\houser.pdb
 Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\Microsoft.ApplicationBlocks.Data.dll
 Z:\Documents\Code\Houser\Dot Net Solution\houser\obj\Debug\houser.dll
 Z:\Documents\Code\Houser\Dot Net Solution\houser\obj\Debug\houser.pdb
+Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\HtmlAgilityPack.dll
+Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\HtmlAgilityPack.pdb
+Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\HtmlAgilityPack.xml
+Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\Newtonsoft.Json.dll
+Z:\Documents\Code\Houser\Dot Net Solution\houser\bin\Newtonsoft.Json.xml
